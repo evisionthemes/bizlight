@@ -781,13 +781,10 @@ dd a{
 }
 
 @media only screen and (max-width: 991px){
-  .site-title {
-    text-align: center;
-  }
-
+  
   .site-title,
   .site-title a{
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
     font-size: 20px;
   }
@@ -795,7 +792,7 @@ dd a{
 
 @media only screen and (max-width: 767px){
   .site-title {
-    text-align: left;
+    text-align: center;
   }
 
   .site-branding,
@@ -954,29 +951,6 @@ dd a{
 /* Small menu. */
 .menu-toggle {
   display: none;
-}
-
-@media screen and (max-width: 991px){
-  .wrap-header{
-    padding-bottom: 15px;
-  }
-  .main-navigation a {
-    padding: 8px 14px 9px;
-  }
-  .main-navigation .current_page_item > a:before,
-  .main-navigation .current-menu-item > a:before,
-  .main-navigation .current_page_ancestor > a:before{
-    display: none;
-  }
-  .main-navigation .current_page_item > a,
-  .main-navigation .current-menu-item > a,
-  .main-navigation .current_page_ancestor > a,
-  .main-navigation .current_page_item > a:hover,
-  .main-navigation .current-menu-item > a:hover,
-  .main-navigation .current_page_ancestor > a:hover{
-    background: #028484;
-    color: #ffffff;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2044,6 +2018,7 @@ body.evision-no-sidebar #primary {
 .evision-social-section ul{
   list-style: none;
   margin-bottom: 0;
+  padding-left: 0;
 }
 
 .evision-social-section ul li{
@@ -2276,7 +2251,8 @@ body.evision-no-sidebar #primary {
 
 .site-header.evision-nav-right {
   background-color: rgba(0, 0, 0, 0);
-  position: relative;
+  position: absolute;
+  width: 100%;
   z-index: 2;
 }
 
@@ -2307,7 +2283,7 @@ body.evision-no-sidebar #primary {
 }
 
 .evision-banner-right-nav {
-  margin-top: -100px;
+/*  margin-top: -100px;*/
   position: relative;
   z-index: 1;
 }
@@ -2441,13 +2417,6 @@ body.evision-no-sidebar #primary {
   }
 }
 
-@media screen and (max-width: 1023px){
- .evision-slider-caption {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
-
 @media screen and (max-width: 991px){
   .evision-slider-caption {
     font-size: 14px;
@@ -2465,6 +2434,10 @@ body.evision-no-sidebar #primary {
   .evision-slider-caption .big-btn {
     margin-top: 5px;
     padding: 9px 16px 10px;
+  }
+
+  .evision-slider-caption .banner-con {
+    margin-bottom: 0;
   }
 }
 
@@ -2513,6 +2486,10 @@ body.evision-no-sidebar #primary {
 
   .bx-wrapper .bx-controls-direction i.fa-5x{
     font-size: 3em;
+  }
+
+  .bx-wrapper .bx-pager {
+    bottom: 170px;
   }
 }
 
@@ -2603,6 +2580,12 @@ body.evision-no-sidebar #primary {
   margin-top: 60px;
 }
 
+
+@media screen and (max-width: 991px){
+  .box-container{
+    margin-bottom: 30px;
+  }
+}
 /*-------------------- About section -----------------*/
 
 .wrap-about{
@@ -2666,12 +2649,24 @@ body.evision-no-sidebar #primary {
 
 }
 
+@media screen and (max-width: 991px){
+  .wrap-about .title-divider {
+    margin-right: auto;
+  }
+
+}
+
 /*-------------------- Highlight section -----------------*/
 
 .wrap-highlight{
   background-image: url(assets/img/heightlight-bg.jpg);
   padding-bottom: 70px;
   padding-top: 90px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;
 }
 
 .wrap-highlight h2{
@@ -2798,6 +2793,11 @@ body.evision-no-sidebar #primary {
     margin-right: auto;
     width: 359px;
   }
+
+  .single-thumb-content{
+    text-align: center;
+  }
+
 }
 
 @media screen and (max-width: 479px){
@@ -2858,6 +2858,12 @@ body.evision-no-sidebar #primary {
   border-bottom: 1px solid #555b5b;
 }
 
+.contact-list:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 .icon-area {
   float: left;
   margin-right: 15px;
@@ -2875,6 +2881,7 @@ body.evision-no-sidebar #primary {
 .contact-detail {
   float: left;
   text-align: left;
+  width: 80%; /*fallback*/
   width: calc(100% - 60px);
 }
 
@@ -2893,6 +2900,21 @@ body.evision-no-sidebar #primary {
   opacity: 0.6;
 }
 
+
+@media screen and (max-width: 991px){
+  .icon-area, 
+  .contact-detail {
+    display: block;
+    float: none;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .icon-area{
+    margin-top: 30px;
+  }
+}
 /*-------------------- Footer section -----------------*/
 
 .site-footer {
@@ -2903,7 +2925,11 @@ body.evision-no-sidebar #primary {
 }
 
 .footer-social-container{
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+.footer-social-container ul li{
+  margin-bottom: 15px;
 }
 
 .site-info{
