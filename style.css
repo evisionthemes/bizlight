@@ -2315,6 +2315,12 @@ body.evision-no-sidebar #primary {
 .evision-banner-right-nav .evision-slider-caption {
   margin-top: 10em;
 }
+
+@media screen and (max-width: 1199px){
+  .evision-banner-right-nav .evision-slider-caption {
+    margin-top: 7.5em;
+  }
+}
 /*==================== eVision Nav Right Start====================*/
 
 /*-------------------- Slider section -----------------*/
@@ -2357,6 +2363,7 @@ body.evision-no-sidebar #primary {
   right: 20px;
   text-align: right;
   z-index: 99;
+  width: 120px;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a{
@@ -2783,6 +2790,20 @@ body.evision-no-sidebar #primary {
   color: #028484;
   font-weight: 600;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 991px){
+  .single-thumb-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 359px;
+  }
+}
+
+@media screen and (max-width: 479px){
+  .single-thumb-image {
+    width: 290px;
+  }
 }
 
 /*-------------------- Testimonial section -----------------*/
