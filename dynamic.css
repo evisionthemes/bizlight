@@ -1,0 +1,230 @@
+/******* Dynamic Color Option *******/
+
+
+/*General Color Option*/
+/*-----------------------------------------------*/
+
+/*Body color*/
+
+body,
+p{
+    color: #565656; /*#565656*/
+}
+
+body{
+	background-color: #ffffff; /*#ffffff*/
+}
+
+/*Main Title color*/
+
+h1, h1 a,
+h2, h2 a,
+h3, h3 a,
+h4, h4 a,
+h5, h5 a,
+h6, h6 a,
+h1.site-title,
+h1.site-title a {
+  color: #212121; /*#212121*/
+}
+
+/*Link color*/
+
+a, 
+a > p,
+.posted-on a, 
+.cat-links a, 
+.tags-links a, 
+.author a,
+.comments-link a,
+.edit-link a,
+.nav-links .nav-previous a, 
+.nav-links .nav-next a,
+.page-links a {
+  color: #212121; /*#212121*/
+}
+
+a:active,
+a:hover,
+a:focus,
+.posted-on a:hover, 
+.cat-links a:hover, 
+.tags-links a:hover, 
+.author a:hover,
+.comments-link a:hover,
+.edit-link a:hover, 
+.edit-link a:focus,
+.nav-links .nav-previous a:hover, 
+.nav-links .nav-next a:hover,
+.page-links a:hover,
+.page-links a:focus {
+  color: #028484; /*#565656*/
+}
+
+/*Button color*/
+
+button,
+html input[type="button"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.widget_search .search-submit {
+	background-color: #000000; /*#000000*/
+}
+
+button,
+html input[type="button"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.widget_search .search-submit {
+	color: #ffffff; /*#ffffff*/
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+.widget_search .search-submit:hover {
+  background: #3b4141; /*#3b4141*/
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+.widget_search .search-submit:hover {
+  color: #ffffff; /*#ffffff*/
+}
+
+/*Header background color*/
+.site-header {
+  background-color: #ffffff; /*#ffffff*/
+}
+
+/*Nav item color*/
+.main-navigation a {
+  color: #ffffff; /*#ffffff*/
+}
+
+/*Active menu color*/
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation li.active > a,
+.main-navigation li.active > a,
+.main-navigation li.active > a {
+  color: #028484; /*#028484*/
+}
+
+/*widget title border color*/
+.widget-title,
+.widgettitle {
+  border-left-color: #e74c3c; /*#e74c3c*/
+}
+
+/*Post title color*/
+.single article.hentry .entry-title{
+  color: #028484; /*#028484*/
+}
+
+/*back-to-top bg color*/
+.evision-back-to-top {
+  background-color: #028484; /*#028484*/
+}
+
+/*Inner page title color*/
+.page-inner-title .entry-title{
+  color: #ffffff; /*#ffffff*/
+}
+
+/******* Dynamic Font Size *******/
+
+/*General Font Size*/
+/*-----------------------------------------------*/
+
+/*Title font size*/
+h1,
+h1.site-title,
+h1.site-title a {
+  font-size: 36px; /*36px*/
+}
+
+h2 {
+  font-size: 24px; /*24px*/
+}
+
+h3 {
+  font-size: 18px; /*18px*/
+}
+
+h4 {
+  font-size: 16px; /*16px*/
+}
+
+h5 {
+  font-size: 14px; /*14px*/
+}
+
+h6 {
+  font-size: 12px; /*12px*/
+}
+
+/*Menu item font size*/
+.main-navigation a{
+  font-size: 16px;
+}
+
+/******* Dynamic Font Family *******/
+
+/*General Font Family*/
+/*-----------------------------------------------*/
+
+/*Title font family*/
+
+body, p{
+  font-family: 'Raleway';
+}
+h1, h1 a,
+h1.site-title,
+h1.site-title a{
+  font-family: 'Raleway';
+}
+h2, h2 a{
+  font-family: 'Raleway';
+}
+h3, h3 a{
+  font-family: 'Raleway';
+}
+h4, h4 a{
+  font-family: 'Raleway';
+}
+h5, h5 a{
+  font-family: 'Raleway';
+}
+h6, h6 a{
+  font-family: 'Raleway';
+}
+
+/******* Dynamic background image *******/
+
+/*Inner page title bg image*/
+.page-inner-title {
+  background-image: url(assets/img/inner-banner.png);
+}
