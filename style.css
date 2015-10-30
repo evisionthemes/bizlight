@@ -748,7 +748,9 @@ dd a{
   padding-left: 15px;
   padding-right: 15px;
 }
-
+.evision-nav-right .menu{
+  width: auto;
+}
 .site-title,
 .site-title a{
   margin-top: 24px;
