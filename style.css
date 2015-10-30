@@ -320,7 +320,7 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1.6em;
-  font-family: 'Raleway', sans-serif;
+  font-family: "helvetica", "sans-serif";
 }
 
 code,
@@ -328,7 +328,7 @@ kbd,
 tt,
 var,
 samp {
-  font-family: 'Raleway', sans-serif;
+  font-family: "helvetica", "sans-serif";
   font-size: 14px;
 }
 
@@ -748,9 +748,12 @@ dd a{
   padding-left: 15px;
   padding-right: 15px;
 }
+
+
 .evision-nav-right .menu{
   width: auto;
 }
+
 .site-title,
 .site-title a{
   margin-top: 24px;
