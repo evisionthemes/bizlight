@@ -29,19 +29,6 @@ if(!defined('CODER_CUSTOMIZER_NAME')){
     define('CODER_CUSTOMIZER_NAME','bizlight-options');
 }
 
-/**
- * get all saved options
- * @param  null
- * @return array saved options
- *
- * @since bizlight 1.0
- */
-if ( ! function_exists( 'bizlight_get_all_options' ) ) :
-    function bizlight_get_all_options( ) {
-        $bizlight_customizer_saved_values = coder_get_customizer_all_values( CODER_CUSTOMIZER_NAME );
-        return $bizlight_customizer_saved_values;
-    }
-endif;
 
 /**
  * reset options
@@ -136,3 +123,22 @@ function bizlight_add_panels_sections_settings() {
 }
 add_filter( 'coder_panels_sections_settings', 'bizlight_add_panels_sections_settings' );
 /*registering panel section setting and control end*/
+
+
+/**
+ * get all saved options
+ * @param  null
+ * @return array saved options
+ *
+ * @since bizlight 1.0
+ */
+if ( ! function_exists( 'bizlight_get_all_options' ) ) :
+    function bizlight_get_all_options( $merge_default = 0 ) {
+        $bizlight_customizer_saved_values = coder_get_customizer_all_values( CODER_CUSTOMIZER_NAME );
+        if( 1 == $merge_default ){
+            global $bizlight_customizer_defaults;
+            $bizlight_customizer_saved_values = array_merge($bizlight_customizer_defaults, $bizlight_customizer_saved_values );
+        }
+        return $bizlight_customizer_saved_values;
+    }
+endif;

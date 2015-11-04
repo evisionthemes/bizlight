@@ -14,6 +14,12 @@ $bizlight_customizer_file_path = bizlight_file_directory('inc/customizer/customi
 require $bizlight_customizer_file_path;
 
 /**
+ * Layout additions.
+ */
+$bizlight_layout_meta_file_path = bizlight_file_directory('inc/post-meta/layout-meta.php');
+require $bizlight_layout_meta_file_path;
+
+/**
  * TGM-Plugin-Activation.
  */
 $bizlight_tgm_plugin_file_path = bizlight_file_directory('inc/frameworks/TGM-Plugin-Activation/class-tgm-plugin-activation.php');

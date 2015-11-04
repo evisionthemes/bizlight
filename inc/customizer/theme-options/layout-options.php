@@ -9,7 +9,6 @@ $bizlight_customizer_defaults['bizlight-default-banner-image'] = get_template_di
 $bizlight_customizer_defaults['bizlight-default-layout'] = 'right-sideabr';
 $bizlight_customizer_defaults['bizlight-archive-layout'] = 'thumbnail-and-excerpt';
 $bizlight_customizer_defaults['bizlight-archive-image-align'] = 'full';
-$bizlight_customizer_defaults['bizlight-single-post-image-options'] = 'full';
 $bizlight_customizer_defaults['bizlight-single-post-image-align'] = 'full';
 
 
@@ -95,26 +94,6 @@ $bizlight_settings_controls['bizlight-archive-image-align'] =
         )
     );
 
-$bizlight_settings_controls['bizlight-single-post-image-options'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-single-post-image-options'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Image in Single Post/Page', 'bizlight' ),
-            'section'               => 'bizlight-layout-options',
-            'type'                  => 'select',
-            'choices'               => array(
-                'full' => __( 'Full', 'bizlight' ),
-                'large' => __( 'Large', 'bizlight' ),
-                'medium' => __( 'Medium', 'bizlight' ),
-                'thumbnail' => __( 'Thumbnail', 'bizlight' ),
-                'no-image' => __( 'No image', 'bizlight' ),
-            ),
-            'priority'              => 40,
-        )
-    );
-
 $bizlight_settings_controls['bizlight-single-post-image-align'] =
     array(
         'setting' =>     array(
@@ -127,7 +106,8 @@ $bizlight_settings_controls['bizlight-single-post-image-align'] =
             'choices'               => array(
                 'full' => __( 'Full', 'bizlight' ),
                 'right' => __( 'Right', 'bizlight' ),
-                'left' => __( 'Left', 'bizlight' )
+                'left' => __( 'Left', 'bizlight' ),
+                'no-image' => __( 'No image', 'bizlight' )
             ),
             'priority'              => 40,
             'description'              => __('This option only work if you do not have selected "No image" in Image in Single Post/Page','bizlight'),
