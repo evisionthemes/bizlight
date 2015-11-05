@@ -5,7 +5,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-excerpt-lenght'] = '50';
+$bizlight_customizer_defaults['bizlight-excerpt-length'] = '50';
 $bizlight_customizer_defaults['bizlight-exclude-categories'] = '';
 
 $bizlight_sections['bizlight-blog-archive-options'] =
@@ -15,10 +15,10 @@ $bizlight_sections['bizlight-blog-archive-options'] =
         'panel'          => 'bizlight-theme-options',
     );
 
-$bizlight_settings_controls['bizlight-excerpt-lenght'] =
+$bizlight_settings_controls['bizlight-excerpt-length'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-excerpt-lenght'],
+            'default'              => $bizlight_customizer_defaults['bizlight-excerpt-length'],
         ),
         'control' => array(
             'label'                 =>  __( 'Excerpt Length (in words)', 'bizlight' ),
@@ -34,7 +34,7 @@ $bizlight_settings_controls['bizlight-exclude-categories'] =
             'default'              => $bizlight_customizer_defaults['bizlight-exclude-categories'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Exclude Categories in Blog', 'bizlight' ),
+            'label'                 =>  __( 'Exclude Categories in Blog and Archive Pages', 'bizlight' ),
             'description'           =>  __( 'Please enter categories ids in comma separated eg: 5,7. For including all categories left blank', 'bizlight' ),
             'section'               => 'bizlight-blog-archive-options',
             'type'                  => 'text',

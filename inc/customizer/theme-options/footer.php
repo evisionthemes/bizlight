@@ -6,9 +6,9 @@ global $bizlight_customizer_defaults;
 
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-footer-sidebar-number'] = 3;
-$bizlight_customizer_defaults['bizlight-copyright-text'] = __('Copyright &copy eVisionThemes; ','bizlight');
-$bizlight_customizer_defaults['bizlight-enable-social-icons'] = 0;
-$bizlight_customizer_defaults['bizlight-enable-theme-name'] = 0;
+$bizlight_customizer_defaults['bizlight-copyright-text'] = __('Copyright &copy; eVisionThemes','bizlight');
+$bizlight_customizer_defaults['bizlight-enable-social-icons'] = 1;
+$bizlight_customizer_defaults['bizlight-enable-theme-name'] = 1;
 $bizlight_customizer_defaults['bizlight-enable-back-top-top'] = 1;
 
 $bizlight_sections['bizlight-footer-options'] =
@@ -48,7 +48,7 @@ $bizlight_settings_controls['bizlight-copyright-text'] =
         'control' => array(
             'label'                 =>  __( 'Copyright text', 'bizlight' ),
             'section'               => 'bizlight-footer-options',
-            'type'                  => 'text',
+            'type'                  => 'text_html',
             'priority'              => 20,
         )
     );

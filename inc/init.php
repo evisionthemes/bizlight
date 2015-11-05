@@ -28,8 +28,12 @@ require $bizlight_tgm_plugin_file_path;
 /**
  * Include Functions
  */
+$bizlight_breadcrumb_file_path = bizlight_file_directory('inc/function/breadcrumb.php');
+require $bizlight_breadcrumb_file_path;
+
 $bizlight_words_count_file_path = bizlight_file_directory('inc/function/words-count.php');
 require $bizlight_words_count_file_path;
+
 
 $bizlight_front_disable_file_path = bizlight_file_directory('inc/function/front-disable.php');
 require $bizlight_front_disable_file_path;
@@ -37,6 +41,12 @@ require $bizlight_front_disable_file_path;
 /**
  * Include Hooks
  */
+$bizlight_hooks_excerpt_path = bizlight_file_directory('inc/hooks/excerpt.php');
+require $bizlight_hooks_excerpt_path;
+
+$bizlight_hooks_pre_get_posts_path = bizlight_file_directory('inc/hooks/pre-get-posts.php');
+require $bizlight_hooks_pre_get_posts_path;
+
 $bizlight_hooks_init_path = bizlight_file_directory('inc/hooks/init.php');
 require $bizlight_hooks_init_path;
 
@@ -56,7 +66,7 @@ $bizlight_hooks_sidebar_file_path = bizlight_file_directory('inc/hooks/sidebar.p
 require $bizlight_hooks_sidebar_file_path;
 
 $bizlight_hooks_front_page_file_path = bizlight_file_directory('inc/hooks/front-page.php');
-require $bizlight_hooks_front_page_file_path;
+//require $bizlight_hooks_front_page_file_path;
 
 /**
  * Include sidebar widgets

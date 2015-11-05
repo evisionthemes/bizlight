@@ -290,45 +290,4 @@ get_header();
 		</div>
 	</section> <!-- testimonial section -->
 
-	<section class="evision-wrapper block-section wrap-contact">
-		<div class="container">
-			<div class="contact-inner">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1">
-						<div class="row">
-							<div class="col-md-4 contact-list">
-								<div class="icon-area">
-									<i class="fa fa-phone"></i>
-								</div>
-								<div class="contact-detail">
-									<a href="tel:+01-234-567-8901">+01-234-567-8901</a>
-									<a href="tel:+01-876-543-2109">+01-876-543-2109</a>
-								</div>
-							</div>
-							<div class="col-md-4 contact-list">
-								<div class="icon-area">
-									<i class="fa fa-map-marker"></i>
-								</div>
-								<div class="contact-detail">
-									<p>99 Harrison Ave, Miller Place, <br> NY 12345, United States</p>
-								</div>
-							</div>
-							<div class="col-md-4 contact-list">
-								<div class="icon-area">
-									<i class="fa fa-envelope-o"></i>
-								</div>
-								<div class="contact-detail">
-									<a href="mailto: contactinfo@domain.com" target="_blank" title="email to contactinfo@domain.com">contactinfo@domain.com</a>
-									<a href="mailto: contactinfo@domain.com" target="_blank" title="email to contact@domain.com">contact@domain.com</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-	</section>
-
-
 <?php get_footer();

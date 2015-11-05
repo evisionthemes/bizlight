@@ -11,9 +11,9 @@ if ( ! function_exists( 'bizlight_sidebar' ) ) :
  */
 function bizlight_sidebar() {
     global $bizlight_customizer_all_values;
-    if( isset($bizlight_customizer_all_values['bizlight-layout-page']) ){
-        $bizlight_layout_page = $bizlight_customizer_all_values['bizlight-layout-page'];
-        if( 'sidebar-no' == $bizlight_layout_page ){
+    if( isset($bizlight_customizer_all_values['bizlight-layout-options']) ){
+        $bizlight_layout_page = $bizlight_customizer_all_values['bizlight-layout-options'];
+        if( 'no-sidebar' == $bizlight_layout_page ){
             $bizlight_sidebar_active = 0;
         }
         else {

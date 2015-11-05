@@ -1426,35 +1426,35 @@ dd a{
   padding: 30px 15px 60px;
 }
 
-/*sidebar-right start*/
+/*right-sidebar start*/
 
 #primary,
-body.evision-sidebar-right #primary {
+body.evision-right-sidebar #primary {
   float: left;
   width: 68%;
 }
 
 #secondary,
-body.evision-sidebar-right #secondary {
+body.evision-right-sidebar #secondary {
   float: right;
   width: 29%;
 }
 
-/*sidebar-right ends*/
+/*right-sidebar ends*/
 
-/*sidebar-left start*/
+/*left-sidebar start*/
 
-body.evision-sidebar-left #primary {
+body.evision-left-sidebar #primary {
   float: right;
   width: 68%;
 }
 
-body.evision-sidebar-left #secondary {
+body.evision-left-sidebar #secondary {
   float: left;
   width: 29%;
 }
 
-/*sidebar-left ends*/
+/*left-sidebar ends*/
 
 /*no-sidebar start*/
 
@@ -1487,11 +1487,11 @@ body.evision-no-sidebar #primary {
 
 @media only screen and (max-width: 767px){
   #primary,
-  body.evision-sidebar-right #primary,
-  body.evision-sidebar-left #primary,
+  body.evision-right-sidebar #primary,
+  body.evision-left-sidebar #primary,
   #secondary,
-  body.evision-sidebar-right #secondary,
-  body.evision-sidebar-left #secondary  {
+  body.evision-right-sidebar #secondary,
+  body.evision-left-sidebar #secondary  {
     width: 100%;
     float: none;
   }

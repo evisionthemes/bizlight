@@ -26,6 +26,11 @@ require $bizlight_customizer_blog_archive_options_setting_file_path;
 $bizlight_customizer_breadcrumb_options_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/breadcrumb.php');
 require $bizlight_customizer_breadcrumb_options_setting_file_path;
 
-/*breadcrumb options */
+
+/*header options */
+$bizlight_customizer_footer_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/header.php');
+require $bizlight_customizer_footer_setting_file_path;
+
+/*footer options */
 $bizlight_customizer_footer_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/footer.php');
 require $bizlight_customizer_footer_setting_file_path;

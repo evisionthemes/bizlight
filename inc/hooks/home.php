@@ -77,35 +77,10 @@ if ( ! function_exists( 'bizlight_front_page' ) ) :
             include( get_page_template() );
         }
         else {
-            /*home banner section*/
-            do_action( 'bizlight_action_front_slider' );
-
-            /*about section*/
-            do_action( 'bizlight_action_front_about' );
-
-            /*service section*/
-            do_action( 'bizlight_action_front_service' );
-
-            /*portfolio section*/
-            do_action( 'bizlight_action_front_portfolio' );
-
-            /*client section*/
-            do_action( 'bizlight_action_front_client' );
-
-            /*testimonial section*/
-            do_action( 'bizlight_action_front_testimonial' );
-
-            /*blog section*/
-            do_action( 'bizlight_action_front_blog' );
-
-            /*team section*/
-            do_action( 'bizlight_action_front_team' );
-
-            /*map section*/
-            do_action( 'bizlight_action_front_map' );
-
-            /*contact section*/
-            do_action( 'bizlight_action_front_contact' );
+            /*making compatible for this plugin
+            https://wordpress.org/plugins/homepage-control/
+            */
+            do_action( 'homepage' );
         }
 
     }

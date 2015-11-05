@@ -6,7 +6,7 @@ global $bizlight_customizer_defaults;
 
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-default-banner-image'] = get_template_directory_uri().'/assets/img/inner-banner.png';
-$bizlight_customizer_defaults['bizlight-default-layout'] = 'right-sideabr';
+$bizlight_customizer_defaults['bizlight-default-layout'] = 'right-sidebar';
 $bizlight_customizer_defaults['bizlight-archive-layout'] = 'thumbnail-and-excerpt';
 $bizlight_customizer_defaults['bizlight-archive-image-align'] = 'full';
 $bizlight_customizer_defaults['bizlight-single-post-image-align'] = 'full';
@@ -46,7 +46,7 @@ $bizlight_settings_controls['bizlight-default-layout'] =
             'section'               => 'bizlight-layout-options',
             'type'                  => 'select',
             'choices'               => array(
-                'right-sideabr' => __( 'Content - Primary Sidebar', 'bizlight' ),
+                'right-sidebar' => __( 'Content - Primary Sidebar', 'bizlight' ),
                 'left-sidebar' => __( 'Secondary Sidebar - Content', 'bizlight' ),
                 'both-sidebar' => __( 'Three Columns ( Both Sidebar )', 'bizlight' ),
                 'no-sidebar' => __( 'No Sidebar', 'bizlight' )
@@ -68,8 +68,9 @@ $bizlight_settings_controls['bizlight-archive-layout'] =
             'type'                  => 'select',
             'choices'               => array(
                 'excerpt-only' => __( 'Excerpt Only', 'bizlight' ),
+                'thumbnail-and-excerpt' => __( 'Thumbnail and Excerpt', 'bizlight' ),
                 'full-post' => __( 'Full Post', 'bizlight' ),
-                'thumbnail-and-excerpt' => __( 'Thumbnail and Excerpt', 'bizlight' )
+                'thumbnail-and-full-post' => __( 'Thumbnail and Full Post', 'bizlight' ),
             ),
             'priority'              => 30,
         )

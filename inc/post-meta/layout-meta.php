@@ -37,8 +37,8 @@ $bizlight_default_layout_options = array(
         'value'     => 'left-sidebar',
         'thumbnail' => get_template_directory_uri() . '/inc/images/left-sidebar.png'
     ),
-    'right-sideabr' => array(
-        'value' => 'right-sideabr',
+    'right-sidebar' => array(
+        'value' => 'right-sidebar',
         'thumbnail' => get_template_directory_uri() . '/inc/images/right-sidebar.png'
     ),
     'both-sidebar' => array(
@@ -83,7 +83,7 @@ function bizlight_layout_options_callback() {
         $bizlight_single_sidebar_layout = $bizlight_customizer_saved_values['bizlight-default-layout'];
     }
     else{
-        $bizlight_single_sidebar_layout = 'right-sideabr';
+        $bizlight_single_sidebar_layout = 'right-sidebar';
     }
 
     /*bizlight-single-post-image-align*/
@@ -194,6 +194,23 @@ function bizlight_layout_options_callback() {
                 <div class="clear"></div>
             </td>
         </tr>
+        <!--Disable in recent posts-->
+        <tr>
+            <td>
+                <?php
+                $bizlight_disable_recent_posts = 0;
+                if(!empty(get_post_meta( $post->ID, 'bizlight-disable-in-recent-posts', true ))){
+                    $bizlight_disable_recent_posts = get_post_meta( $post->ID, 'bizlight-disable-in-recent-posts', true );
+                }
+                ?>
+                <input id="bizlight-disable-in-recent-posts" type="checkbox" name="bizlight-disable-in-recent-posts" <?php checked( 1, $bizlight_disable_recent_posts ); ?>/>
+                <label class="description" for="bizlight-disable-in-recent-posts">
+                    <?php _e('Exclude it from latest posts', 'bizlight'); ?>
+                </label>
+                <div class="clear"></div>
+            </td>
+        </tr>
+
     </table>
 
 <?php }
@@ -239,6 +256,14 @@ function bizlight_save_sidebar_layout( $post_id ) {
         }
     }
 
+    /*bizlight-disable-in-recent-posts*/
+    if(isset($_POST['bizlight-disable-in-recent-posts']) ){
+        update_post_meta($post_id, 'bizlight-disable-in-recent-posts', 1);
+    }
+    else{
+        update_post_meta($post_id, 'bizlight-disable-in-recent-posts', 0);
+
+    }
     /*image layout*/
     if(isset($_POST['bizlight-banner-image'])){
         $old = get_post_meta( $post_id, 'bizlight-banner-image', true);

@@ -8,7 +8,6 @@ global $bizlight_customizer_defaults;
 $bizlight_customizer_defaults['bizlight-logo'] = '';
 $bizlight_customizer_defaults['bizlight-enable-title'] = 1;
 $bizlight_customizer_defaults['bizlight-enable-tagline'] = 1;
-$bizlight_customizer_defaults['bizlight-title-tagline-alignment'] = 'bottom-to-logo';
 
 /*creating setting control*/
 $bizlight_settings_controls['bizlight-logo'] =
