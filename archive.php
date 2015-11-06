@@ -38,7 +38,15 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php the_posts_navigation(); ?>
+				<?php
+				/**
+				 * bizlight_action_posts_navigation hook
+				 *
+				 * @hooked: bizlight_posts_navigation - 10
+				 *
+				 * @since  Bizlight 1.0.0
+				 */
+				do_action( 'bizlight_action_posts_navigation' );?>
 
 			<?php else : ?>
 

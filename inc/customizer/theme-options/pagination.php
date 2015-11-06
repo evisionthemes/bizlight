@@ -5,7 +5,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-default-pagination'] = 'default';
+$bizlight_customizer_defaults['bizlight-pagination-options'] = 'numeric';
 
 $bizlight_sections['bizlight-pagination-options'] =
     array(
@@ -14,10 +14,10 @@ $bizlight_sections['bizlight-pagination-options'] =
         'panel'          => 'bizlight-theme-options',
     );
 
-$bizlight_settings_controls['bizlight-default-pagination'] =
+$bizlight_settings_controls['bizlight-pagination-options'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-default-pagination'],
+            'default'              => $bizlight_customizer_defaults['bizlight-pagination-options'],
         ),
         'control' => array(
             'label'                 =>  __( 'Pagination Options', 'bizlight' ),
@@ -25,7 +25,8 @@ $bizlight_settings_controls['bizlight-default-pagination'] =
             'type'                  => 'select',
             'choices'               => array(
                 'default' => __( 'Default', 'bizlight' ),
-                'numeric' => __( 'Numeric', 'bizlight' )
+                'numeric' => __( 'Numeric', 'bizlight' ),
+                'advanced' => __( 'Advanced', 'bizlight' ),
             ),
             'priority'              => 20,
             'description'           => '',

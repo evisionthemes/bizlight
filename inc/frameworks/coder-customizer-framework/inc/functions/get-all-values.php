@@ -1,4 +1,4 @@
-<?php
+ <?php
 if ( ! function_exists( 'coder_get_customizer_all_values' ) ) :
     /**
      * Function to get all value
@@ -10,7 +10,7 @@ if ( ! function_exists( 'coder_get_customizer_all_values' ) ) :
      * @return array || other values
      *
      */
-    function coder_get_customizer_all_values($coder_customizer_name = null){
+    function coder_get_customizer_all_values( $coder_customizer_name = null ){
         if(defined('CODER_CUSTOMIZER_NAME')){
             $coder_customizer_name = CODER_CUSTOMIZER_NAME;
         }

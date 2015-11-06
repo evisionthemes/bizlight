@@ -55,6 +55,28 @@ function bizlight_before_wp_head() {
 endif;
 add_action( 'bizlight_action_before_wp_head', 'bizlight_before_wp_head', 10 );
 
+if( ! function_exists( 'bizlight_default_layout' ) ) :
+    /**
+     * Bizlight default layout function
+     *
+     * @since  Bizlight 1.0.0
+     *
+     * @param int
+     * @return string
+     */
+    function bizlight_default_layout( $post_id = null ){
+        global $bizlight_customizer_all_values,$post;
+        $bizlight_default_layout = $bizlight_customizer_all_values['bizlight-default-layout'];
+        if( null != $post_id ){
+            $post_id = $post->ID;
+        }
+        if( ! empty( get_post_meta( $post_id, 'bizlight-default-layout', true ) ) ) {
+            $bizlight_default_layout = get_post_meta( $post->ID, 'bizlight-default-layout', true );
+        }
+        return $bizlight_default_layout;
+    }
+endif;
+
 if ( ! function_exists( 'bizlight_body_class' ) ) :
 /**
  * add body class
@@ -67,19 +89,18 @@ if ( ! function_exists( 'bizlight_body_class' ) ) :
  */
 function bizlight_body_class( $bizlight_body_classes ) {
     if(!is_page_template( 'page-templates/template-home.php' )){
-        global $bizlight_customizer_all_values;
-        if( isset($bizlight_customizer_all_values['bizlight-layout-options']) ){
-            $bizlight_layout_page = $bizlight_customizer_all_values['bizlight-layout-options'];
-            if( 'left-sidebar' == $bizlight_layout_page ){
+        $bizlight_default_layout = bizlight_default_layout();
+        if( !empty( $bizlight_default_layout ) ){
+            if( 'left-sidebar' == $bizlight_default_layout ){
                 $bizlight_body_classes[] = 'bizlight-left-sidebar';
             }
-            elseif( 'right-sidebar' == $bizlight_layout_page ){
+            elseif( 'right-sidebar' == $bizlight_default_layout ){
                 $bizlight_body_classes[] = 'bizlight-right-sidebar';
             }
-            elseif( 'both-sidebar' == $bizlight_layout_page ){
+            elseif( 'both-sidebar' == $bizlight_default_layout ){
                 $bizlight_body_classes[] = 'bizlight-both-sidebar';
             }
-            elseif( 'no-sidebar' == $bizlight_layout_page ){
+            elseif( 'no-sidebar' == $bizlight_default_layout ){
                 $bizlight_body_classes[] = 'bizlight-no-sidebar';
             }
             else{

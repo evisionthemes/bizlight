@@ -34,7 +34,7 @@ $bizlight_settings_controls['bizlight-exclude-categories'] =
             'default'              => $bizlight_customizer_defaults['bizlight-exclude-categories'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Exclude Categories in Blog and Archive Pages', 'bizlight' ),
+            'label'                 =>  __( 'Exclude Categories in Blog Page', 'bizlight' ),
             'description'           =>  __( 'Please enter categories ids in comma separated eg: 5,7. For including all categories left blank', 'bizlight' ),
             'section'               => 'bizlight-blog-archive-options',
             'type'                  => 'text',

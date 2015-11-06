@@ -7,8 +7,18 @@
  * @subpackage Bizlight
  * @since Bizlight 1.0.0
  */
-
+/**
+ * homepage hook
+ * @since Bizlight 1.0.0
+ *
+ * @hooked bizlight_featured_slider -  10
+ * @hooked bizlight_homepage_service -  20
+ * @hooked bizlight_homepage_about -  30
+ * @hooked bizlight_homepage_featured -  40
+ * @hooked bizlight_homepage_testimonials -  50
+ */
 get_header();
+do_action('homepage');
 ?>
 	<div class="evision-wrapper evision-wrap-banner evision-banner-right-nav">
 		<ul class="evision-main-slider" id="evision-slider">
@@ -289,5 +299,4 @@ get_header();
 			</div>
 		</div>
 	</section> <!-- testimonial section -->
-
 <?php get_footer();

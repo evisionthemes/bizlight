@@ -35,7 +35,7 @@ $bizlight_words_count_file_path = bizlight_file_directory('inc/function/words-co
 require $bizlight_words_count_file_path;
 
 
-$bizlight_front_disable_file_path = bizlight_file_directory('inc/function/front-disable.php');
+$bizlight_front_disable_file_path = bizlight_file_directory('inc/function/feature-image-align.php');
 require $bizlight_front_disable_file_path;
 
 /**
@@ -61,6 +61,9 @@ require $bizlight_hooks_header_file_path;
 
 $bizlight_hooks_footer_file_path = bizlight_file_directory('inc/hooks/footer.php');
 require $bizlight_hooks_footer_file_path;
+
+$bizlight_hooks_posts_navigation_file_path = bizlight_file_directory('inc/hooks/posts-navigation.php');
+require $bizlight_hooks_posts_navigation_file_path;
 
 $bizlight_hooks_sidebar_file_path = bizlight_file_directory('inc/hooks/sidebar.php');
 require $bizlight_hooks_sidebar_file_path;

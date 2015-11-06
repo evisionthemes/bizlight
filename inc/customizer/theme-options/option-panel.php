@@ -34,3 +34,7 @@ require $bizlight_customizer_footer_setting_file_path;
 /*footer options */
 $bizlight_customizer_footer_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/footer.php');
 require $bizlight_customizer_footer_setting_file_path;
+
+/*custom css options */
+$bizlight_customizer_custom_css_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/custom-css.php');
+require $bizlight_customizer_custom_css_setting_file_path;

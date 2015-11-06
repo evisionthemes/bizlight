@@ -79,20 +79,11 @@ function bizlight_layout_options_callback() {
     $bizlight_banner_image = $bizlight_customizer_saved_values['bizlight-default-banner-image'];
 
     /*bizlight default layout*/
-    if( isset ( $bizlight_customizer_saved_values['bizlight-default-layout'] ) && !empty( $bizlight_customizer_saved_values['bizlight-default-layout'] )) {
-        $bizlight_single_sidebar_layout = $bizlight_customizer_saved_values['bizlight-default-layout'];
-    }
-    else{
-        $bizlight_single_sidebar_layout = 'right-sidebar';
-    }
+    $bizlight_single_sidebar_layout = $bizlight_customizer_saved_values['bizlight-default-layout'];
 
     /*bizlight-single-post-image-align*/
-    if( isset ( $bizlight_customizer_saved_values['bizlight-single-post-image-align'] ) && !empty( $bizlight_customizer_saved_values['bizlight-single-post-image-align'] )) {
-        $bizlight_single_post_image_align = $bizlight_customizer_saved_values['bizlight-single-post-image-align'];
-    }
-    else{
-        $bizlight_single_post_image_align = 'full';
-    }
+    $bizlight_single_post_image_align = $bizlight_customizer_saved_values['bizlight-single-post-image-align'];
+
     wp_nonce_field( basename( __FILE__ ), 'bizlight_layout_options_nonce' );
     ?>
     <style>

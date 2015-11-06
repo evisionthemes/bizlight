@@ -3,7 +3,7 @@ global $bizlight_panels;
 /*creating panel for fonts-setting*/
 $bizlight_panels['bizlight-featured-slider'] =
     array(
-        'title'          => __( 'Featured slider', 'bizlight' ),
+        'title'          => __( 'Home/Front Featured slider', 'bizlight' ),
         'priority'       => 150
     );
 /*enable slider options */

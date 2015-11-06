@@ -91,7 +91,7 @@ $bizlight_settings_controls['bizlight-archive-image-align'] =
                 'left' => __( 'Left', 'bizlight' )
             ),
             'priority'              => 40,
-            'description'              => __('This option only work if you have selected "Thumbnail and Excerpt" in Archive Layout options','bizlight'),
+            'description'              => __('This option only work if you have selected "Thumbnail and Excerpt" or "Thumbnail and Full Post" in Archive Layout options','bizlight'),
         )
     );
 

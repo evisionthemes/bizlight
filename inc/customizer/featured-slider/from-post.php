@@ -21,7 +21,7 @@ $bizlight_sections['bizlight-fs-posts'] =
 $bizlight_repeated_settings_controls['bizlight-fs-posts'] =
     array(
         'repeated' => 12,
-        'bizlight-fs-posts-posts' => array(
+        'bizlight-fs-posts-ids' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-fs-posts'],
             ),
