@@ -1,0 +1,57 @@
+<?php
+global $bizlight_panels;
+global $bizlight_sections;
+global $bizlight_settings_controls;
+global $bizlight_repeated_settings_controls;
+global $bizlight_customizer_defaults;
+
+/*defaults values*/
+$bizlight_customizer_defaults['bizlight-home-service-page-icon'] = 'fa-desktop';
+$bizlight_customizer_defaults['bizlight-home-service-pages'] = 0;
+
+/*page selection*/
+$bizlight_sections['bizlight-home-service-pages'] =
+    array(
+        'priority'       => 40,
+        'title'          => __( 'Select Service from Page', 'bizlight' ),
+        'description'    => __( 'This option only work when you have selected "Page" in "Service selection Options".', 'bizlight' ),
+        'panel'          => 'bizlight-home-service',
+    );
+
+/*creating setting control for bizlight-home-service-page start*/
+$bizlight_repeated_settings_controls['bizlight-home-service-pages'] =
+    array(
+        'repeated' => 12,
+        'bizlight-home-service-page-icon' => array(
+            'setting' =>     array(
+                'default'              => $bizlight_customizer_defaults['bizlight-home-service-page-icon'],
+            ),
+            'control' => array(
+                'label'                 =>  __( 'Icon %s', 'bizlight' ),
+                'section'               => 'bizlight-home-service-pages',
+                'type'                  => 'text',
+                'priority'              => 5,
+                'description'           => sprintf( __( 'Use font awesome icon: Eg: %s. %sSee more here%s', 'bizlight' ), 'fa-desktop','<a href="'.esc_url('http://fontawesome.io/cheatsheet/').'" target="_blank">','</a>' ),
+            )
+        ),
+        'bizlight-home-service-pages-pages' => array(
+            'setting' =>     array(
+                'default'              => $bizlight_customizer_defaults['bizlight-home-service-pages'],
+            ),
+            'control' => array(
+                'label'                 =>  __( 'Select page for service %s', 'bizlight' ),
+                'section'               => 'bizlight-home-service-pages',
+                'type'                  => 'dropdown-pages',
+                'priority'              => 10,
+                'description'           => ''
+            )
+        ),
+        'bizlight-home-service-pages-divider' => array(
+            'control' => array(
+                'section'               => 'bizlight-home-service-pages',
+                'type'                  => 'message',
+                'priority'              => 20,
+                'description'           => '<br /><hr />'
+            )
+        )
+    );

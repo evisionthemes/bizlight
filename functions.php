@@ -6,6 +6,31 @@
  *
  * @package Bizlight
  */
+/**
+ * Get the path for the file ( to support child theme )
+ *
+ * @since eVision Corporate 1.0.0
+ *
+ * @param string $file_path, path from the theme
+ * @return string full path of file inside theme
+ *
+ */
+if( !function_exists('bizlight_file_directory') ){
+	function bizlight_file_directory( $file_path ){
+
+		if( file_exists( trailingslashit( get_stylesheet_directory() ) . $file_path) ){
+			return trailingslashit( get_stylesheet_directory() ) . $file_path;
+		}
+		else{
+			return trailingslashit( get_template_directory() ) . $file_path;
+		}
+	}
+}
+/**
+ * require evision int.
+ */
+$bizlight_init_file_path = bizlight_file_directory('inc/init.php');
+require $bizlight_init_file_path;
 
 if ( ! function_exists( 'bizlight_setup' ) ) :
 /**
@@ -45,6 +70,8 @@ function bizlight_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'bizlight' ),
+		'social' => esc_html__( 'Social Menu', 'bizlight' ),
+		'404' => esc_html__( '404 Menu', 'bizlight' ),
 	) );
 
 	/*
@@ -114,18 +141,10 @@ function bizlight_scripts() {
     wp_enqueue_style( 'bizlight-style', get_stylesheet_uri() );
 
     /*jquery start*/
-    wp_register_script('bizlight-easing-js', get_template_directory_uri() . '/assets/frameworks/jquery.easing/jquery.easing.js', array('jquery'), '0.3.6', 1);
-    wp_register_script('bizlight-bootstrap-js', get_template_directory_uri() . '/assets/frameworks/bootstrap/js/bootstrap.min.js', array('jquery'), '3.3.5', 1);
-    wp_register_script('bizlight-bxslider-js', get_template_directory_uri() . '/assets/frameworks/bxslider/js/jquery.bxslider.js', array('jquery'), '4.0', 1);
-    wp_register_script('bizlight-custom', get_template_directory_uri() . '/assets/js/bizlight-custom.js', array('jquery'), '4.0', 1);
-
-    wp_enqueue_script('bizlight-easing-js');
-    wp_enqueue_script('bizlight-bootstrap-js');
-    wp_enqueue_script('bizlight-bxslider-js');
-
-    
-    wp_localize_script( 'bizlight-custom', 'bizlight_main', $translation_array );
-    wp_enqueue_script( 'bizlight-custom' );
+	wp_enqueue_script('bizlight-easing-js', get_template_directory_uri() . '/assets/frameworks/jquery.easing/jquery.easing.js', array('jquery'), '0.3.6', 1);
+	wp_enqueue_script('bizlight-bootstrap-js', get_template_directory_uri() . '/assets/frameworks/bootstrap/js/bootstrap.min.js', array('jquery'), '3.3.5', 1);
+	wp_enqueue_script('bizlight-bxslider-js', get_template_directory_uri() . '/assets/frameworks/bxslider/js/jquery.bxslider.js', array('jquery'), '4.0', 1);
+	wp_enqueue_script('bizlight-custom', get_template_directory_uri() . '/assets/js/bizlight-custom.js', array('jquery'), '4.0', 1);
 
     wp_enqueue_script( 'bizlight-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
@@ -138,45 +157,19 @@ function bizlight_scripts() {
 add_action( 'wp_enqueue_scripts', 'bizlight_scripts' );
 
 /**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function bizlight_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'bizlight' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'bizlight_widgets_init' );
-
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+$bizlight_template_tags = bizlight_file_directory('inc/template-tags.php');
+require $bizlight_template_tags;
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
+$bizlight_extras_tags = bizlight_file_directory('inc/extras.php');
+require $bizlight_extras_tags;
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+$bizlight_jetpack_tags = bizlight_file_directory('inc/jetpack.php');
+require $bizlight_jetpack_tags;
