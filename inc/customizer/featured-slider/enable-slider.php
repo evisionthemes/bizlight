@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-fs-enable-options'] = 1;
+$bizlight_customizer_defaults['bizlight-fs-enable'] = 1;
 
 /*fs setting*/
 $bizlight_sections['bizlight-fs-enable-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-fs-enable-setting'] =
 $bizlight_settings_controls['bizlight-fs-enable'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-fs-enable-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-enable']
         ),
         'control' => array(
             'label'                 =>  __( 'Enable Slider on', 'bizlight' ),

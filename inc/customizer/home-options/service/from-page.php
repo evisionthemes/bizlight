@@ -34,7 +34,7 @@ $bizlight_repeated_settings_controls['bizlight-home-service-pages'] =
                 'description'           => sprintf( __( 'Use font awesome icon: Eg: %s. %sSee more here%s', 'bizlight' ), 'fa-desktop','<a href="'.esc_url('http://fontawesome.io/cheatsheet/').'" target="_blank">','</a>' ),
             )
         ),
-        'bizlight-home-service-pages-pages' => array(
+        'bizlight-home-service-pages-ids' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-home-service-pages'],
             ),

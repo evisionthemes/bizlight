@@ -9,6 +9,7 @@ $bizlight_customizer_defaults['bizlight-home-featured-title'] = __( 'WANT TO KNO
 $bizlight_customizer_defaults['bizlight-home-featured-bg'] = get_template_directory_uri().'/assets/img/heightlight-bg.jpg';
 $bizlight_customizer_defaults['bizlight-home-featured-button-text'] = __('LEARN MORE', 'bizlight');
 $bizlight_customizer_defaults['bizlight-home-featured-button-url'] = esc_url( home_url( '/about-us' ) );
+$bizlight_customizer_defaults['bizlight-home-featured-enable'] = 1;
 
 $bizlight_sections['bizlight-home-featured'] =
     array(
@@ -48,7 +49,7 @@ $bizlight_settings_controls['bizlight-home-featured-button-text'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-featured-button-text'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Home featured featured button text', 'bizlight' ),
+            'label'                 =>  __( 'Home featured button text', 'bizlight' ),
             'section'               => 'bizlight-home-featured',
             'type'                  => 'text',
             'priority'              => 30,
@@ -61,9 +62,22 @@ $bizlight_settings_controls['bizlight-home-featured-button-url'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-featured-button-url'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Home featured featured button url', 'bizlight' ),
+            'label'                 =>  __( 'Home featured button url', 'bizlight' ),
             'section'               => 'bizlight-home-featured',
             'type'                  => 'text',
             'priority'              => 40,
+        )
+    );
+
+$bizlight_settings_controls['bizlight-home-featured-enable'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-featured-enable'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Home featured button url', 'bizlight' ),
+            'section'               => 'bizlight-home-featured',
+            'type'                  => 'checkbox',
+            'priority'              => 50,
         )
     );

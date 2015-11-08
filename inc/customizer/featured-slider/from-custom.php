@@ -6,6 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
+$bizlight_customizer_defaults['bizlight-fs-custom-image'] = '';
 $bizlight_customizer_defaults['bizlight-fs-custom-title'] = '';
 $bizlight_customizer_defaults['bizlight-fs-custom-content'] = '';
 $bizlight_customizer_defaults['bizlight-fs-custom-link'] = '';
@@ -23,6 +24,18 @@ $bizlight_sections['bizlight-fs-custom'] =
 $bizlight_repeated_settings_controls['bizlight-fs-custom'] =
     array(
         'repeated' => 12,
+        'bizlight-fs-custom-image' => array(
+            'setting' =>     array(
+                'default'              => $bizlight_customizer_defaults['bizlight-fs-custom-image'],
+            ),
+            'control' => array(
+                'label'                 =>  __( 'Title %s', 'bizlight' ),
+                'section'               => 'bizlight-fs-custom',
+                'type'                  => 'text',
+                'priority'              => 10,
+                'description'           => ''
+            )
+        ),
         'bizlight-fs-custom-title' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-fs-custom-title'],

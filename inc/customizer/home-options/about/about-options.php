@@ -8,6 +8,7 @@ global $bizlight_customizer_defaults;
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-home-about-title'] = __('WELCOME TO BIZLIGHT','bizlight');
 $bizlight_customizer_defaults['bizlight-home-about-content'] = __('About us short description','bizlight');
+$bizlight_customizer_defaults['bizlight-home-about-right-image'] = get_template_directory_uri().'/assets/img/product.png';
 $bizlight_customizer_defaults['bizlight-home-about-button-text'] = __('Browse more','bizlight');
 $bizlight_customizer_defaults['bizlight-home-about-button-link'] = esc_url( home_url( '/about-us' ) );
 $bizlight_customizer_defaults['bizlight-home-about-enable-single-link'] = 1;
@@ -45,6 +46,19 @@ $bizlight_settings_controls['bizlight-home-about-content'] =
             'section'               => 'bizlight-home-about-options',
             'type'                  => 'textarea_html',
             'priority'              => 30,
+            'active_callback'       => ''
+        )
+    );
+$bizlight_settings_controls['bizlight-home-about-right-image'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-about-right-image']
+        ),
+        'control' => array(
+            'label'                 =>  __( 'About right image', 'bizlight' ),
+            'section'               => 'bizlight-home-about-options',
+            'type'                  => 'image',
+            'priority'              => 35,
             'active_callback'       => ''
         )
     );

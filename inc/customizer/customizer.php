@@ -137,7 +137,12 @@ if ( ! function_exists( 'bizlight_get_all_options' ) ) :
         $bizlight_customizer_saved_values = coder_get_customizer_all_values( CODER_CUSTOMIZER_NAME );
         if( 1 == $merge_default ){
             global $bizlight_customizer_defaults;
-            $bizlight_customizer_saved_values = array_merge($bizlight_customizer_defaults, $bizlight_customizer_saved_values );
+            if(is_array( $bizlight_customizer_saved_values )){
+                $bizlight_customizer_saved_values = array_merge($bizlight_customizer_defaults, $bizlight_customizer_saved_values );
+            }
+            else{
+                $bizlight_customizer_saved_values = $bizlight_customizer_defaults;
+            }
         }
         return $bizlight_customizer_saved_values;
     }

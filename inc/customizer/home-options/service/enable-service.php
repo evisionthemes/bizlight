@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-service-enable-options'] = 1;
+$bizlight_customizer_defaults['bizlight-home-service-enable'] = 1;
 
 /*servicesetting*/
 $bizlight_sections['bizlight-home-service-enable-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-home-service-enable-setting'] =
 $bizlight_settings_controls['bizlight-home-service-enable'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-service-enable-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-home-service-enable']
         ),
         'control' => array(
             'label'                 =>  __( 'Enable Service', 'bizlight' ),

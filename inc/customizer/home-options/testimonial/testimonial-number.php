@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-testimonial-number-options'] = 5;
+$bizlight_customizer_defaults['bizlight-home-testimonial-number'] = 5;
 
 /*testimonialsetting*/
 $bizlight_sections['bizlight-home-testimonial-number-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-home-testimonial-number-setting'] =
 $bizlight_settings_controls['bizlight-home-testimonial-number'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-number-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-number']
         ),
         'control' => array(
             'label'                 =>  __( 'Number of testimonial/s', 'bizlight' ),

@@ -1,12 +1,12 @@
 jQuery(document).ready(function ($) {
-
     $('#evision-slider').bxSlider({
-      adaptiveHeight: true,
-      mode: 'fade',
-      auto: true,
-      speed: 2000,
-      pause: 7000,
-      controls: false
+        adaptiveHeight: true,
+        mode: $(this).data('mode'),
+        speed: $(this).data('speed'),
+        pause: $(this).data('pause'),
+        controls: false,
+        pager: $(this).data('controls'),
+        auto: $(this).data('controls'),
     });
 
 });

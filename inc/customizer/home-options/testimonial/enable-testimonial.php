@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-testimonial-enable-options'] = 1;
+$bizlight_customizer_defaults['bizlight-home-testimonial-enable'] = 1;
 
 /*testimonialsetting*/
 $bizlight_sections['bizlight-home-testimonial-enable-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-home-testimonial-enable-setting'] =
 $bizlight_settings_controls['bizlight-home-testimonial-enable'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-enable-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-enable']
         ),
         'control' => array(
             'label'                 =>  __( 'Enable Testimonial', 'bizlight' ),

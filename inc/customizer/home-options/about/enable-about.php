@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-about-enable-options'] = 1;
+$bizlight_customizer_defaults['bizlight-home-about-enable'] = 1;
 
 /*aboutsetting*/
 $bizlight_sections['bizlight-home-about-enable-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-home-about-enable-setting'] =
 $bizlight_settings_controls['bizlight-home-about-enable'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-about-enable-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-home-about-enable']
         ),
         'control' => array(
             'label'                 =>  __( 'Enable About', 'bizlight' ),

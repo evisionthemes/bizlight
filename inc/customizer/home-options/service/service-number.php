@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-service-number-options'] = 5;
+$bizlight_customizer_defaults['bizlight-home-service-number'] = 5;
 
 /*servicesetting*/
 $bizlight_sections['bizlight-home-service-number-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-home-service-number-setting'] =
 $bizlight_settings_controls['bizlight-home-service-number'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-service-number-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-home-service-number']
         ),
         'control' => array(
             'label'                 =>  __( 'Number of service/s', 'bizlight' ),

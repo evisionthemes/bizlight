@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-about-number-options'] = 5;
+$bizlight_customizer_defaults['bizlight-home-about-number'] = 5;
 
 /*aboutsetting*/
 $bizlight_sections['bizlight-home-about-number-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-home-about-number-setting'] =
 $bizlight_settings_controls['bizlight-home-about-number'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-about-number-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-home-about-number']
         ),
         'control' => array(
             'label'                 =>  __( 'Number of about/s', 'bizlight' ),

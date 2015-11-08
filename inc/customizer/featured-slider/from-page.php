@@ -21,7 +21,7 @@ $bizlight_sections['bizlight-fs-pages'] =
 $bizlight_repeated_settings_controls['bizlight-fs-pages'] =
     array(
         'repeated' => 12,
-        'bizlight-fs-pages-pages' => array(
+        'bizlight-fs-pages-ids' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-fs-pages'],
             ),

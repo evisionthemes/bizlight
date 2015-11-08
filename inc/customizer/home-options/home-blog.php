@@ -11,13 +11,13 @@ $bizlight_customizer_defaults['bizlight-home-blog-number'] = 3;
 $bizlight_customizer_defaults['bizlight-home-blog-column'] = 3;
 $bizlight_customizer_defaults['bizlight-home-blog-button-text'] = __('Browse more','bizlight');
 $bizlight_customizer_defaults['bizlight-home-blog-button-link'] = esc_url( home_url( '/blog' ) );
+$bizlight_customizer_defaults['bizlight-home-blog-enable'] = 1;
 
 /*aboutoptions*/
 $bizlight_sections['bizlight-home-blog-options'] =
     array(
-        'priority'       => 80,
-        'title'          => __( 'Latest blog Options', 'bizlight' ),
-        'panel'          => 'bizlight-home-blog',
+        'priority'       => 175,
+        'title'          => __( 'Home/Front Blog Options', 'bizlight' ),
     );
 
 
@@ -107,6 +107,19 @@ $bizlight_settings_controls['bizlight-home-blog-button-link'] =
             'section'               => 'bizlight-home-blog-options',
             'type'                  => 'url',
             'priority'              => 50,
+            'active_callback'       => ''
+        )
+    );
+$bizlight_settings_controls['bizlight-home-blog-enable'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-blog-enable']
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Enable Blog', 'bizlight' ),
+            'section'               => 'bizlight-home-blog-options',
+            'type'                  => 'checkbox',
+            'priority'              => 60,
             'active_callback'       => ''
         )
     );

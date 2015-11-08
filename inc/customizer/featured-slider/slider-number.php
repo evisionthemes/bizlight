@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-fs-number-options'] = 5;
+$bizlight_customizer_defaults['bizlight-fs-number'] = 5;
 
 /*fs setting*/
 $bizlight_sections['bizlight-fs-number-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-fs-number-setting'] =
 $bizlight_settings_controls['bizlight-fs-number'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-fs-number-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-number']
         ),
         'control' => array(
             'label'                 =>  __( 'Number of slider', 'bizlight' ),
