@@ -431,24 +431,24 @@ dd {
 
 .screen-reader-text:hover,
 .screen-reader-text:active,
-.screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: #21759b;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000; /* Above WP toolbar. */
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
 }
 
 /* Forms */
@@ -748,7 +748,6 @@ dd a{
   padding-left: 15px;
   padding-right: 15px;
 }
-
 
 .evision-nav-right .menu{
   width: auto;
@@ -1135,7 +1134,7 @@ dd a{
 /* Search widget */
 /* ------------------------------------ */
 
-.search-form .search-submit {
+/*.search-form .search-submit {
   background-color: #028484;
   border: medium none;
   box-shadow: none;
@@ -1145,8 +1144,34 @@ dd a{
   padding: 14px 30px 26px;
   text-shadow: none;
   width: 102px;
+}*/
+/*.widget_search .search-submit {
+  background-color: #028484;
+  border: medium none;
+  box-shadow: none;
+  color: #ffffff;
+  height: 39px;
+  text-shadow: none;
+  width: 102px;
+}*/
+.search-form .search-field {
+  height: 22px;
+  margin-bottom: 15px;
+  padding: 8px 15px 8px 17px;
+  vertical-align: middle;
 }
-
+.widget_search .search-submit {
+  background-color: #028484;
+  border: medium none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #ffffff;
+  float: right;
+  height: 39px;
+  line-height: 3px;
+  text-shadow: none;
+  width: 102px;
+}
 .search-form .search-submit:hover{
   background-color: #212121;
   box-shadow: none;
@@ -1426,35 +1451,35 @@ dd a{
   padding: 30px 15px 60px;
 }
 
-/*right-sidebar start*/
+/*sidebar-right start*/
 
 #primary,
-body.evision-right-sidebar #primary {
+body.evision-sidebar-right #primary {
   float: left;
   width: 68%;
 }
 
 #secondary,
-body.evision-right-sidebar #secondary {
+body.evision-sidebar-right #secondary {
   float: right;
   width: 29%;
 }
 
-/*right-sidebar ends*/
+/*sidebar-right ends*/
 
-/*left-sidebar start*/
+/*sidebar-left start*/
 
-body.evision-left-sidebar #primary {
+body.evision-sidebar-left #primary {
   float: right;
   width: 68%;
 }
 
-body.evision-left-sidebar #secondary {
+body.evision-sidebar-left #secondary {
   float: left;
   width: 29%;
 }
 
-/*left-sidebar ends*/
+/*sidebar-left ends*/
 
 /*no-sidebar start*/
 
@@ -1487,11 +1512,11 @@ body.evision-no-sidebar #primary {
 
 @media only screen and (max-width: 767px){
   #primary,
-  body.evision-right-sidebar #primary,
-  body.evision-left-sidebar #primary,
+  body.evision-sidebar-right #primary,
+  body.evision-sidebar-left #primary,
   #secondary,
-  body.evision-right-sidebar #secondary,
-  body.evision-left-sidebar #secondary  {
+  body.evision-sidebar-right #secondary,
+  body.evision-sidebar-left #secondary  {
     width: 100%;
     float: none;
   }
@@ -2244,12 +2269,10 @@ body.evision-no-sidebar #primary {
 .block-section{
   padding-top: 70px;
   padding-bottom: 40px;
+  text-align: center;
   position: relative;
 }
 
-body.home .block-section{
-  text-align: center;
-}
 
 /*-------------------- header section -----------------*/
 
@@ -2554,7 +2577,6 @@ body.home .block-section{
   z-index: 1;
 }
 
-.box-container a:hover .icon-container i,
 .box-container a .box-content,
 .box-container a h3,
 .box-container a .box-content p{
@@ -2564,7 +2586,14 @@ body.home .block-section{
     -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-
+.box-container a:hover .icon-container i{
+  transform: rotate(360deg);
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
 .box-container a .box-content{
   color: #565656;
 }
@@ -2949,77 +2978,4 @@ body.home .block-section{
 
 .site-info a:hover{
   color: #ffffff;
-}
-
-
-/*----------------------------------------------------*/
-/*-------------------- Contact Page -----------------*/
-
-.wrap-contact-page{
-  font-size: 14px;
-}
-
-.wrap-contact-page h2{
-  color: #24baba;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-.contact-form{
-  color: #414141;
-  margin-top: 50px;
-}
-
-
-
-.contact-form .wpcf7-textarea{
-  min-height: 210px;
-}
-
-.contact-form input,
-.contact-form textarea{
-  margin-top: 10px;
-}
-
-
-.contact-sidebar p{
-  margin-bottom: 10px;
-}
-
-.contact-widget{
-  font-size: 15px;
-  margin-bottom: 60px;
-}
-
-.contact-widget h3{
-  color: #24baba;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-@media screen and (min-width: 992px){
-
-  .contact-right{
-    margin-right: 20px;
-  }
-
-  .contact-sidebar{
-    margin-left: 30px;
-  }
-
-  .contact-form .wpcf7-submit {
-    display: inline-block;
-    padding-left: 50px;
-    padding-right: 50px;
-    width: auto;
-  }
-
-}
-
-@media screen and (max-width: 991px){
-  .contact-sidebar{
-    text-align: center;
-    margin-top: 40px;
-  }
 }
