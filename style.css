@@ -2244,10 +2244,12 @@ body.evision-no-sidebar #primary {
 .block-section{
   padding-top: 70px;
   padding-bottom: 40px;
-  text-align: center;
   position: relative;
 }
 
+body.home .block-section{
+  text-align: center;
+}
 
 /*-------------------- header section -----------------*/
 
@@ -2947,4 +2949,77 @@ body.evision-no-sidebar #primary {
 
 .site-info a:hover{
   color: #ffffff;
+}
+
+
+/*----------------------------------------------------*/
+/*-------------------- Contact Page -----------------*/
+
+.wrap-contact-page{
+  font-size: 14px;
+}
+
+.wrap-contact-page h2{
+  color: #24baba;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact-form{
+  color: #414141;
+  margin-top: 50px;
+}
+
+
+
+.contact-form .wpcf7-textarea{
+  min-height: 210px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  margin-top: 10px;
+}
+
+
+.contact-sidebar p{
+  margin-bottom: 10px;
+}
+
+.contact-widget{
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
+.contact-widget h3{
+  color: #24baba;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 992px){
+
+  .contact-right{
+    margin-right: 20px;
+  }
+
+  .contact-sidebar{
+    margin-left: 30px;
+  }
+
+  .contact-form .wpcf7-submit {
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: auto;
+  }
+
+}
+
+@media screen and (max-width: 991px){
+  .contact-sidebar{
+    text-align: center;
+    margin-top: 40px;
+  }
 }
