@@ -77,8 +77,14 @@ require $bizlight_hooks_homepage_about_file_path;
 $bizlight_hooks_homepage_featured_file_path = bizlight_file_directory('inc/hooks/homepage-featured.php');
 require $bizlight_hooks_homepage_featured_file_path;
 
+$bizlight_hooks_homepage_blog_file_path = bizlight_file_directory('inc/hooks/homepage-blog.php');
+require $bizlight_hooks_homepage_blog_file_path;
+
 $bizlight_hooks_homepage_testimonial_file_path = bizlight_file_directory('inc/hooks/homepage-testimonial.php');
 require $bizlight_hooks_homepage_testimonial_file_path;
+
+$bizlight_hooks_front_page_file_path = bizlight_file_directory('inc/hooks/front-page.php');
+require $bizlight_hooks_front_page_file_path;
 /**
  * Include sidebar widgets
  */

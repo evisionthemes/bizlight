@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Home Page
+ * Template Name: Home Page backup
  *
  * @package eVision themes
  * @subpackage Bizlight
@@ -60,9 +60,6 @@ get_header();
 		      </li>
 		</ul>
 	</div><!-- slider section -->
-<?php
-do_action('homepage');
-?>
 	<section class="evision-wrapper block-section wrap-service">
 		<div class="container">
 			<h2>our services</h2>
@@ -78,7 +75,8 @@ do_action('homepage');
 								<div class="box-content">
 									<h3>LOVELY DESIGN</h3>
 									<div class="box-content-text">
-										<p>The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness. every bring in it.</p>
+										<p>
+											The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness. every bring in it.</p>
 									</div>
 								</div>
 							</a>
@@ -138,7 +136,8 @@ do_action('homepage');
 							</span>
 							<div class="about-list-content">
 								<h3>Public Voice</h3>
-								<p> The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness.</p>
+								<p>
+									The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness.</p>
 							</div>
 						</div>
 						<div class="about-list">
@@ -273,7 +272,8 @@ do_action('homepage');
 				        <div class="carousel-inner testimonial-items-wrapper">
 			                <div class="item active">
 			                    <div class="content-text">
-			                        <p>The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness. every bring in it.</p>
+			                        <p>
+										The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness. every bring in it.</p>
 			                    </div>
 			                    <div class="testimonial-sayer">
 									<h3>Sayer Name, CEO </h3>

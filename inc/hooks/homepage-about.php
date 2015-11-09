@@ -8,14 +8,25 @@ if (!function_exists('bizlight_home_about_array')) :
      * @param string $from_about
      * @return array
      */
-    function bizlight_home_about_array($from_about)
-    {
+    function bizlight_home_about_array($from_about) {
         global $bizlight_customizer_all_values;
+        $bizlight_home_about_number = absint( $bizlight_customizer_all_values['bizlight-home-about-number'] );
+
         $bizlight_home_about_contents_array = array();
         $bizlight_home_about_contents_array[0]['bizlight-home-about-title'] = __('Public Voice','bizlight');
         $bizlight_home_about_contents_array[0]['bizlight-home-about-content'] = __(" The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness.",'bizlight');
-        $bizlight_home_about_contents_array[0]['bizlight-home-about-link'] = #;
+        $bizlight_home_about_contents_array[0]['bizlight-home-about-link'] = '#';
         $bizlight_home_about_contents_array[0]['bizlight-home-about-icon'] = 'fa-bullhorn';
+
+        $bizlight_home_about_contents_array[1]['bizlight-home-about-title'] = __('Photography','bizlight');
+        $bizlight_home_about_contents_array[1]['bizlight-home-about-content'] = __(" The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness.",'bizlight');
+        $bizlight_home_about_contents_array[1]['bizlight-home-about-link'] = '#';
+        $bizlight_home_about_contents_array[1]['bizlight-home-about-icon'] = 'fa-camera-retro';
+
+        $bizlight_home_about_contents_array[2]['bizlight-home-about-title'] = __('Customization','bizlight');
+        $bizlight_home_about_contents_array[2]['bizlight-home-about-content'] = __(" The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness.",'bizlight');
+        $bizlight_home_about_contents_array[2]['bizlight-home-about-link'] = '#';
+        $bizlight_home_about_contents_array[2]['bizlight-home-about-icon'] = 'fa-cog';
 
         $bizlight_icons_arrays = array();
         $bizlight_home_about_args = array();
@@ -32,7 +43,7 @@ if (!function_exists('bizlight_home_about_array')) :
                 $bizlight_home_about_args = array(
                     'post_type' => 'post',
                     'post__in' => $bizlight_home_about_posts_ids,
-                    'posts_per_page' => 3,
+                    'posts_per_page' => $bizlight_home_about_number,
                     'orderby' => 'post__in'
                 );
             }
@@ -49,13 +60,32 @@ if (!function_exists('bizlight_home_about_array')) :
         } elseif ('from-custom' == $from_about) {
             $bizlight_home_about_customs = coder_get_repeated_all_value('bizlight-home-about-custom');
             if ( null != $bizlight_home_about_customs) {
+                $bizlight_home_about_contents_array = array();
                 $i = 0;
                 foreach ($bizlight_home_about_customs as $bizlight_home_about_custom) {
-                    if (0 != $bizlight_home_about_custom['bizlight-home-about-posts-ids']) {
+                    if( isset ( $bizlight_home_about_custom['bizlight-home-about-custom-title'] )){
                         $bizlight_home_about_contents_array[$i]['bizlight-home-about-title'] = $bizlight_home_about_custom['bizlight-home-about-custom-title'];
+                    }
+                    else{
+                        $bizlight_home_about_contents_array[$i]['bizlight-home-about-title'] = '';
+                    }
+                    if( isset ( $bizlight_home_about_custom['bizlight-home-about-custom-content'] )){
                         $bizlight_home_about_contents_array[$i]['bizlight-home-about-content'] = $bizlight_home_about_custom['bizlight-home-about-custom-content'];
+                    }
+                    else{
+                        $bizlight_home_about_contents_array[$i]['bizlight-home-about-content'] = '';
+                    }
+                    if( isset( $bizlight_home_about_custom['bizlight-home-about-custom-link'] )){
                         $bizlight_home_about_contents_array[$i]['bizlight-home-about-link'] = $bizlight_home_about_custom['bizlight-home-about-custom-link'];
+                    }
+                    else{
+                        $bizlight_home_about_contents_array[$i]['bizlight-home-about-link'] = '';
+                    }
+                    if( isset($bizlight_home_about_custom['bizlight-home-about-custom-icon'])){
                         $bizlight_home_about_contents_array[$i]['bizlight-home-about-icon'] = $bizlight_home_about_custom['bizlight-home-about-custom-icon'];
+                    }
+                    else{
+                        $bizlight_home_about_contents_array[$i]['bizlight-home-about-icon'] = '';
                     }
                     $i++;
                 }
@@ -79,7 +109,7 @@ if (!function_exists('bizlight_home_about_array')) :
                 $bizlight_home_about_args = array(
                     'post_type' => 'page',
                     'post__in' => $bizlight_home_about_posts_ids,
-                    'posts_per_page' => 3,
+                    'posts_per_page' => $bizlight_home_about_number,
                     'orderby' => 'post__in'
                 );
             }
@@ -88,6 +118,7 @@ if (!function_exists('bizlight_home_about_array')) :
         }
         // the query
         if( !empty( $bizlight_home_about_args )){
+            $bizlight_home_about_contents_array = array();
             $bizlight_home_about_post_query = new WP_Query($bizlight_home_about_args);
             if ($bizlight_home_about_post_query->have_posts()) :
                 $i = 0;
@@ -125,10 +156,10 @@ if (!function_exists('bizlight_home_about')) :
         if (1 != $bizlight_customizer_all_values['bizlight-home-about-enable']) {
             return null;
         }
-        $bizlight_home_about_selection_options = $bizlight_customizer_all_values['bizlight-home-about-selection-options'];
+        $bizlight_home_about_selection_options = $bizlight_customizer_all_values['bizlight-home-about-selection'];
         $bizlight_about_arrays = bizlight_home_about_array($bizlight_home_about_selection_options);
         if (is_array($bizlight_about_arrays)) {
-            $bizlight_home_about_number = $bizlight_customizer_all_values['bizlight-home-about-number'];
+            $bizlight_home_about_number = absint( $bizlight_customizer_all_values['bizlight-home-about-number'] );
             $bizlight_home_about_title = $bizlight_customizer_all_values['bizlight-home-about-title'];
             $bizlight_home_about_content = $bizlight_customizer_all_values['bizlight-home-about-content'];
             $bizlight_home_about_right_image = $bizlight_customizer_all_values['bizlight-home-about-right-image'];

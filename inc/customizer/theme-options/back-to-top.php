@@ -5,7 +5,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-enable-theme-name'] = 0;
+$bizlight_customizer_defaults['bizlight-enable-back-top-top'] = 0;
 
 $bizlight_sections['bizlight-footer-options'] =
     array(
@@ -14,10 +14,10 @@ $bizlight_sections['bizlight-footer-options'] =
         'panel'          => 'bizlight-theme-options'
     );
 
-$bizlight_settings_controls['bizlight-enable-theme-name'] =
+$bizlight_settings_controls['bizlight-enable-back-top-top'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-enable-theme-name'],
+            'default'              => $bizlight_customizer_defaults['bizlight-enable-back-top-top'],
         ),
         'control' => array(
             'label'                 =>  __( 'Enable theme name and powered by text', 'bizlight' ),

@@ -37,6 +37,8 @@ $bizlight_customizer_defaults['bizlight-home-color-message'] = sprintf( __( '%s 
 $bizlight_customizer_defaults['bizlight-home-service-section-bg'] = '#FFFFFF';
 $bizlight_customizer_defaults['bizlight-home-about-section-bg'] = '#F8F8F9';
 $bizlight_customizer_defaults['bizlight-home-featured-section-bg'] = '#028484';
+$bizlight_customizer_defaults['bizlight-home-blog-bg'] = '#FFFFFF';
+$bizlight_customizer_defaults['bizlight-home-testimonial-bg'] = '#028484';
 
 $bizlight_customizer_defaults['bizlight-color-reset'] = '';
 
@@ -63,6 +65,8 @@ if ( ! function_exists( 'bizlight_color_reset' ) ) :
             $bizlight_customizer_saved_values['bizlight-home-service-section-bg'] = $bizlight_customizer_defaults['bizlight-home-service-section-bg'];
             $bizlight_customizer_saved_values['bizlight-home-about-section-bg'] = $bizlight_customizer_defaults['bizlight-home-about-section-bg'];
             $bizlight_customizer_saved_values['bizlight-home-featured-section-bg'] = $bizlight_customizer_defaults['bizlight-home-featured-section-bg'];
+            $bizlight_customizer_saved_values['bizlight-home-blog-bg'] = $bizlight_customizer_defaults['bizlight-home-blog-bg'];
+            $bizlight_customizer_saved_values['bizlight-home-testimonial-bg'] = $bizlight_customizer_defaults['bizlight-home-testimonial-bg'];
 
             $bizlight_customizer_defaults['bizlight-color-reset'] = '';
 
@@ -174,6 +178,34 @@ $bizlight_settings_controls['bizlight-home-featured-section-bg'] =
         ),
         'control' => array(
             'label'                 =>  __( 'Featured Section Background', 'bizlight' ),
+            'section'               => 'bizlight-colors',
+            'type'                  => 'color',
+            'priority'              => 70,
+            'active_callback'       => ''
+        )
+    );
+/*
+ * */
+$bizlight_settings_controls['bizlight-home-blog-bg'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-blog-bg'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Blog Background', 'bizlight' ),
+            'section'               => 'bizlight-colors',
+            'type'                  => 'color',
+            'priority'              => 73,
+            'active_callback'       => ''
+        )
+    );
+$bizlight_settings_controls['bizlight-home-testimonial-bg'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-bg'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Testimonial Background', 'bizlight' ),
             'section'               => 'bizlight-colors',
             'type'                  => 'color',
             'priority'              => 70,

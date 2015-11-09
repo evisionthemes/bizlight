@@ -5,29 +5,6 @@
 /*-----------------------------------------------*/
 
 /*Body color*/
-
-body,
-p{
-    color: #565656; /*#565656*/
-}
-
-body{
-	background-color: #ffffff; /*#ffffff*/
-}
-
-/*Main Title color*/
-
-h1, h1 a,
-h2, h2 a,
-h3, h3 a,
-h4, h4 a,
-h5, h5 a,
-h6, h6 a,
-h1.site-title,
-h1.site-title a {
-  color: #212121; /*#212121*/
-}
-
 /*Link color*/
 
 a, 
@@ -156,41 +133,6 @@ input[type="submit"]:active,
 
 /******* Dynamic Font Size *******/
 
-/*General Font Size*/
-/*-----------------------------------------------*/
-
-/*Title font size*/
-h1,
-h1.site-title,
-h1.site-title a {
-  font-size: 36px; /*36px*/
-}
-
-h2 {
-  font-size: 24px; /*24px*/
-}
-
-h3 {
-  font-size: 18px; /*18px*/
-}
-
-h4 {
-  font-size: 16px; /*16px*/
-}
-
-h5 {
-  font-size: 14px; /*14px*/
-}
-
-h6 {
-  font-size: 12px; /*12px*/
-}
-
-/*Menu item font size*/
-.main-navigation a{
-  font-size: 16px;
-}
-
 /******* Dynamic Font Family *******/
 
 /*General Font Family*/
@@ -220,11 +162,4 @@ h5, h5 a{
 }
 h6, h6 a{
   font-family: 'Raleway';
-}
-
-/******* Dynamic background image *******/
-
-/*Inner page title bg image*/
-.page-inner-title {
-  background-image: url(assets/img/inner-banner.png);
 }

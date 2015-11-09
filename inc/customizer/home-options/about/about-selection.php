@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-about-selection-options'] = 'from-page';
+$bizlight_customizer_defaults['bizlight-home-about-selection'] = 'from-page';
 
 /*aboutsetting*/
 $bizlight_sections['bizlight-home-about-selection-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-home-about-selection-setting'] =
 $bizlight_settings_controls['bizlight-home-about-selection'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-about-selection-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-home-about-selection']
         ),
         'control' => array(
             'label'                 =>  __( 'Select About From', 'bizlight' ),

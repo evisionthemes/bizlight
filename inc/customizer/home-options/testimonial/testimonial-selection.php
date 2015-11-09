@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-testimonial-selection-options'] = 'from-page';
+$bizlight_customizer_defaults['bizlight-home-testimonial-selection'] = 'from-page';
 
 /*testimonialsetting*/
 $bizlight_sections['bizlight-home-testimonial-selection-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-home-testimonial-selection-setting'] =
 $bizlight_settings_controls['bizlight-home-testimonial-selection'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-selection-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-selection']
         ),
         'control' => array(
             'label'                 =>  __( 'Select Testimonial From', 'bizlight' ),

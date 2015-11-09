@@ -13,6 +13,7 @@ $bizlight_panels['bizlight-fonts'] =
     );
 
 /*font array*/
+global $bizlight_google_fonts;
 $bizlight_google_fonts = array(
     'Open+Sans:400,400italic,600,700' => 'Open Sans',
     'Roboto:400,500,300,700,400italic' => 'Roboto',
@@ -142,8 +143,8 @@ $bizlight_google_fonts = array(
 );
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-font-family-h1-h6'] = 'Roboto:400,500,300,700,400italic';
-$bizlight_customizer_defaults['bizlight-font-family-body'] = 'Roboto:400,500,300,700,400italic';
+$bizlight_customizer_defaults['bizlight-font-family-h1-h6'] = 'Raleway:400,300,500,600,700,900';
+$bizlight_customizer_defaults['bizlight-font-family-body'] = 'Raleway:400,300,500,600,700,900';
 
 
 /*section*/
