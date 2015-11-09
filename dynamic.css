@@ -154,6 +154,11 @@ input[type="submit"]:active,
   color: #ffffff; /*#ffffff*/
 }
 
+/*breadcrumb background color*/
+#breadcrumb {
+  background-color: #FF4646 !important; /*#009292*/
+}
+
 /******* Dynamic Font Size *******/
 
 /*General Font Size*/
@@ -222,9 +227,167 @@ h6, h6 a{
   font-family: 'Raleway';
 }
 
+
+/******* Dynamic Site Color Option *******/
+
+
+button,
+html input[type="button"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  background: #028484;
+}
+
+.widget-title,
+.widgettitle {
+  border-left-color: #028484;
+}
+
+.search-form .search-submit {
+  background-color: #028484;
+}
+
+.page article.hentry .entry-title,
+.blog article.hentry,
+#blog-post article.hentry, 
+.search article.hentry, 
+.archive article.hentry, 
+.tag article.hentry, 
+.category article.hentry, 
+#ak-blog-post article.hentry {
+  border-bottom-color: #028484;
+}
+
+.single article.hentry .entry-title{
+  color: #028484;
+}
+
+.bizlight-back-to-top {
+  background-color: #028484;
+}
+
+body:not(.home) .site-header.evision-nav-right{
+  background-color: #028484;
+}
+
+.box-container a:hover .box-content{
+  background-color: #028484;
+}
+
+.evision-wrap-banner{
+  border-bottom-color: #028484;
+  background-color: #028484;
+}
+
+.title-divider{
+  background-color: #028484;
+}
+
+.icon-container i {
+  border-color: #028484;
+}
+
+.icon-section i {
+  background-color: #028484;
+}
+
+.single-thumb-image .icon span {
+  background-color: #028484;
+}
+
+.single-thumb-container h3{
+  color: #028484;
+}
+
+.wrap-testimonial{
+  background-color: #028484;
+}
+
+
+/******* Dynamic Site Hover Color Option *******/
+
+a:active,
+a:hover,
+a:focus {
+  color: #014949;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background: #014949;
+}
+
+/*Active menu color*/
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation li.active > a,
+.main-navigation li.active > a,
+.main-navigation li.active > a {
+  color: #014949; /*#028484*/
+}
+
+.widget li a:hover{
+  color: #014949;
+}
+
+.posted-on a:hover, 
+.cat-links a:hover, 
+.tags-links a:hover, 
+.author a:hover,
+.comments-link a:hover {
+  color: #014949;
+}
+
+.edit-link a:hover, 
+.edit-link a:focus{
+  color: #014949;
+}
+
+.nav-links .nav-previous a:hover, 
+.nav-links .nav-next a:hover{
+  border-color: #014949;
+  color: #014949;
+}
+
+.page-links a:hover,
+.page-links a:focus,
+.page-links > span:hover,
+.page-links > span:focus {
+  color: #014949;
+}
+
+.page-numbers:hover,
+.page-numbers:focus,
+.page-numbers.current {
+  border-color: #014949;
+  color: #014949;
+}
+
+.evision-slider-caption .main-title:hover a{
+  color: #014949;
+}
+
+.bizlight-back-to-top:hover,
+.bizlight-back-to-top:focus {
+  background-color: #014949;
+}
+
 /******* Dynamic background image *******/
 
 /*Inner page title bg image*/
 .page-inner-title {
   background-image: url(assets/img/inner-banner.png);
 }
+
