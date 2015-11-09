@@ -26,6 +26,12 @@ $bizlight_tgm_plugin_file_path = bizlight_file_directory('inc/frameworks/TGM-Plu
 require $bizlight_tgm_plugin_file_path;
 
 /**
+ * Update Notifier
+ */
+$bizlight_update_notifier_file_path = bizlight_file_directory('inc/frameworks/update-notifier/evisionthemes-update-notifier.php');
+require $bizlight_update_notifier_file_path;
+
+/**
  * Include Functions
  */
 $bizlight_breadcrumb_file_path = bizlight_file_directory('inc/function/breadcrumb.php');
