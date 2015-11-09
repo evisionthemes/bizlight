@@ -20,12 +20,6 @@ $bizlight_layout_meta_file_path = bizlight_file_directory('inc/post-meta/layout-
 require $bizlight_layout_meta_file_path;
 
 /**
- * TGM-Plugin-Activation.
- */
-$bizlight_tgm_plugin_file_path = bizlight_file_directory('inc/frameworks/TGM-Plugin-Activation/class-tgm-plugin-activation.php');
-require $bizlight_tgm_plugin_file_path;
-
-/**
  * Update Notifier
  */
 $bizlight_update_notifier_file_path = bizlight_file_directory('inc/frameworks/update-notifier/evisionthemes-update-notifier.php');
@@ -55,9 +49,6 @@ require $bizlight_hooks_pre_get_posts_path;
 
 $bizlight_hooks_init_path = bizlight_file_directory('inc/hooks/init.php');
 require $bizlight_hooks_init_path;
-
-$bizlight_hooks_tgmpa_file_path = bizlight_file_directory('inc/hooks/tgmpa.php');
-require $bizlight_hooks_tgmpa_file_path;
 
 $bizlight_hooks_wp_head_file_path = bizlight_file_directory('inc/hooks/wp-head.php');
 require $bizlight_hooks_wp_head_file_path;
