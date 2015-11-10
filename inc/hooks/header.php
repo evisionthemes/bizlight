@@ -89,23 +89,26 @@ if ( ! function_exists( 'bizlight_body_class' ) ) :
  */
 function bizlight_body_class( $bizlight_body_classes ) {
     if(!is_front_page() || ( is_front_page() && 1 != bizlight_if_all_disable())){
-        $bizlight_default_layout = bizlight_default_layout( get_the_ID() );
+        $bizlight_default_layout = bizlight_default_layout();
         if( !empty( $bizlight_default_layout ) ){
             if( 'left-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'evision-left-sidebar';
+                $bizlight_body_classes[] = 'bizlight-left-sidebar';
             }
             elseif( 'right-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'evision-right-sidebar';
+                $bizlight_body_classes[] = 'bizlight-right-sidebar';
+            }
+            elseif( 'both-sidebar' == $bizlight_default_layout ){
+                $bizlight_body_classes[] = 'bizlight-both-sidebar';
             }
             elseif( 'no-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'evision-no-sidebar';
+                $bizlight_body_classes[] = 'bizlight-no-sidebar';
             }
             else{
-                $bizlight_body_classes[] = 'evision-right-sidebar';
+                $bizlight_body_classes[] = 'bizlight-right-sidebar';
             }
         }
         else{
-            $bizlight_body_classes[] = 'evision-right-sidebar';
+            $bizlight_body_classes[] = 'bizlight-right-sidebar';
         }
     }
     return $bizlight_body_classes;
@@ -125,7 +128,28 @@ if ( ! function_exists( 'bizlight_before_page_start' ) ) :
  *
  */
 function bizlight_before_page_start() {
-    /**/
+    global $bizlight_customizer_all_values;
+
+    if ( 1 == $bizlight_customizer_all_values['bizlight-enable-intro'] ) {
+        $bizlight_intro_bg_color =  $bizlight_customizer_all_values['bizlight-intro-bg-color'];
+        $bizlight_intro_middle_image =  $bizlight_customizer_all_values['bizlight-intro-middle-image'];
+        ?>
+        <div id="bizlight-intro-loader" style="background: <?php echo $bizlight_intro_bg_color; ?>">
+            <div id="bizlight-mask">
+                <?php
+                 if( !empty( $bizlight_intro_middle_image ) ){
+                    echo "<img src='".$bizlight_intro_middle_image."'>";
+                 }
+                 else{
+                    echo "<div class='loader-outer'><div class='et-loader'></div></div>";
+                 }
+                ?>
+            </div>
+        </div>
+    <?php
+    }
+    ?>
+<?php
 }
 endif;
 add_action( 'bizlight_action_before', 'bizlight_before_page_start', 10 );
@@ -178,7 +202,7 @@ if ( ! function_exists( 'bizlight_header' ) ) :
  */
 function bizlight_header() {
     global $bizlight_customizer_all_values;
-    $bizlight_enable_sticky_menu = $bizlight_customizer_all_values['bizlight-enable-sticky-menu'];
+    
     ?>
     <?php if( 'header-layout-1' == $bizlight_customizer_all_values['bizlight-header-layout']){
         ?>
@@ -326,6 +350,7 @@ if( ! function_exists( 'bizlight_add_breadcrumb' ) ) :
         global $bizlight_customizer_all_values;
         // Bail if Breadcrumb disabled
         $breadcrumb_enable_breadcrumb = $bizlight_customizer_all_values['bizlight-enable-breadcrumb' ];
+        $breadcrumb_type = $bizlight_customizer_all_values['bizlight-breadcrumb-type' ];
         if ( 1 != $breadcrumb_enable_breadcrumb ) {
             return;
         }
@@ -334,7 +359,19 @@ if( ! function_exists( 'bizlight_add_breadcrumb' ) ) :
             return;
         }
         echo '<div id="breadcrumb"><div class="container">';
-        bizlight_simple_breadcrumb();
+        switch ( $breadcrumb_type ) {
+            case 'advanced':
+                if ( function_exists( 'bcn_display' ) ) {
+                    bcn_display();
+                }
+                else{
+                    bizlight_simple_breadcrumb();
+                }
+                break;
+            default:
+                bizlight_simple_breadcrumb();
+                break;
+        }
         //
         echo '</div><!-- .container --></div><!-- #breadcrumb -->';
         return;
