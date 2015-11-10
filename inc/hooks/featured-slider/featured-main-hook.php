@@ -106,7 +106,7 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
                     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
                     $url = $thumb['0'];
                     $bizlight_fs_contents_array[$i]['bizlight-fs-title'] = get_the_title();
-                    $bizlight_fs_contents_array[$i]['bizlight-fs-content'] = get_the_content();
+                    $bizlight_fs_contents_array[$i]['bizlight-fs-content'] = get_the_excerpt();
                     $bizlight_fs_contents_array[$i]['bizlight-fs-link'] = get_permalink();
                     $bizlight_fs_contents_array[$i]['bizlight-fs-image'] = $url;
                     $i++;

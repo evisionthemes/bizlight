@@ -35,6 +35,8 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
         $bizlight_font_family_body = $bizlight_google_fonts[$bizlight_customizer_all_values['bizlight-font-family-body']];
         /*Color options */
         $bizlight_h1_h6_color = $bizlight_customizer_all_values['bizlight-h1-h6-color'];
+        $bizlight_link_color = $bizlight_customizer_all_values['bizlight-link-color'];
+        $breadcrumb_bg_color = $bizlight_customizer_all_values['breadcrumb-bg-color'];
         $bizlight_footer_bg_color = $bizlight_customizer_all_values['bizlight-footer-bg-color'];
         $bizlight_primary_color = $bizlight_customizer_all_values['bizlight-primary-color'];
         $bizlight_primary_hover_color = $bizlight_customizer_all_values['bizlight-primary-hover-color'];
@@ -71,7 +73,33 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             h6, h6 a,
             h1.site-title,
             h1.site-title a {
-                color: <?php echo esc_attr( $bizlight_h1_h6_color );?>; /*#212121*/
+                color: <?php echo esc_attr( $bizlight_h1_h6_color );?> !important; ; /*#212121*/
+            }
+            <?php
+            }
+          /*Link color*/
+            if( !empty($bizlight_link_color) ){
+            ?>
+            a,
+            a > p,
+            .posted-on a,
+            .cat-links a,
+            .tags-links a,
+            .author a,
+            .comments-link a,
+            .edit-link a,
+            .nav-links .nav-previous a,
+            .nav-links .nav-next a,
+            .page-links a {
+                color: <?php echo esc_attr( $bizlight_link_color ); ?> !important; /*#212121*/
+            }
+            <?php
+            }
+            /*breadcrumb background color*/
+            if( !empty($breadcrumb_bg_color) ){
+            ?>
+            #breadcrumb {
+                background-color: <?php echo esc_html( $breadcrumb_bg_color )?> !important; /*#009292*/
             }
             <?php
             }
@@ -91,6 +119,116 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             .wrap-contact,.site-footer{
                 background-color: <?php echo esc_attr( $bizlight_footer_bg_color )?>;
             }
+            <?php
+            }
+
+            /*Dynamic Site Color Option*/
+            if( !empty( $bizlight_primary_color ) ){
+            ?>
+
+            button,
+            html input[type="button"],
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"],
+            button:focus,
+            input[type="button"]:focus,
+            input[type="reset"]:focus,
+            input[type="submit"]:focus,
+            .search-form .search-submit,
+            .bizlight-back-to-top,
+            body:not(.home) .site-header.evision-nav-right,
+            .box-container a:hover .box-content,
+            .evision-wrap-banner,
+            .title-divider,
+            .icon-section i,
+            .single-thumb-image .icon span,
+            .wrap-testimonial {
+                background-color: <?php echo esc_attr( $bizlight_primary_color)?> !important; /*#000000*/
+            }
+            @media screen and (max-width: 767px){
+                body.home .site-header.evision-nav-right{
+                    background-color:  <?php echo esc_attr( $bizlight_primary_color)?> !important; /*#000000*/
+                }
+            }
+            .single article.hentry .entry-title,
+            .single-thumb-container h3{
+                color:  <?php echo esc_attr( $bizlight_primary_color)?> !important; /*#028484*/
+            }
+            .widget-title,
+            .widgettitle {
+                border-left-color:  <?php echo esc_attr( $bizlight_primary_color)?> !important; /*#028484*/
+            }
+            .page article.hentry .entry-title,
+            .blog article.hentry,
+            #blog-post article.hentry,
+            .search article.hentry,
+            .archive article.hentry,
+            .tag article.hentry,
+            .category article.hentry,
+            #ak-blog-post article.hentry,
+            .evision-wrap-banner {
+                border-bottom-color:  <?php echo esc_attr( $bizlight_primary_color)?> !important; /*#028484*/
+            }
+            .icon-container i {
+                border-color:  <?php echo esc_attr( $bizlight_primary_color)?> !important; /*#028484*/
+            }
+            <?php
+            }
+            /******* Dynamic Site Hover Color Option *******/
+            if( !empty( $bizlight_primary_hover_color ) ){
+            ?>
+            button:hover,
+            input[type="button"]:hover,
+            input[type="reset"]:hover,
+            input[type="submit"]:hover,
+            button:active,
+            input[type="button"]:active,
+            input[type="reset"]:active,
+            input[type="submit"]:active,
+            .bizlight-back-to-top:hover,
+            .bizlight-back-to-top:focus {
+                background: <?php echo esc_attr( $bizlight_primary_hover_color );?> !important; /*#3b4141*/
+            }
+
+            a:active,
+            a:hover,
+            a:focus,
+            .main-navigation .current_page_item > a,
+            .main-navigation .current-menu-item > a,
+            .main-navigation .current_page_ancestor > a,
+            .main-navigation li.active > a,
+            .main-navigation li.active > a,
+            .main-navigation li.active > a,
+            .widget li a:hover,
+            .posted-on a:hover,
+            .cat-links a:hover,
+            .tags-links a:hover,
+            .author a:hover,
+            .comments-link a:hover,
+            .edit-link a:hover,
+            .edit-link a:focus,
+            .nav-links .nav-previous a:hover,
+            .nav-links .nav-next a:hover,
+            .page-links a:hover,
+            .page-links a:focus,
+            .page-links > span:hover,
+            .page-links > span:focus,
+            .page-numbers:hover,
+            .page-numbers:focus,
+            .page-numbers.current,
+            .evision-slider-caption .main-title:hover a {
+                color: <?php echo esc_attr( $bizlight_primary_hover_color );?> !important; /*#028484*/
+            }
+
+            .nav-links .nav-previous a:hover,
+            .nav-links .nav-next a:hover,
+            .page-numbers:hover,
+            .page-numbers:focus,
+            .page-numbers.current{
+                border-color: <?php echo esc_attr( $bizlight_primary_hover_color );?> !important; /*#028484*/
+            }
+
             <?php
             }
             /* service bg */

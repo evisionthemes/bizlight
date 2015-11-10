@@ -109,7 +109,7 @@ if (!function_exists('bizlight_home_testimonial_array')) :
                 $i = 0;
                 while ($bizlight_home_testimonial_post_query->have_posts()) : $bizlight_home_testimonial_post_query->the_post();
                     $bizlight_home_testimonial_contents_array[$i]['bizlight-home-testimonial-title'] = get_the_title();
-                    $bizlight_home_testimonial_contents_array[$i]['bizlight-home-testimonial-content'] = get_the_content();
+                    $bizlight_home_testimonial_contents_array[$i]['bizlight-home-testimonial-content'] = get_the_excerpt();
                     $i++;
                 endwhile;
                 wp_reset_postdata();
