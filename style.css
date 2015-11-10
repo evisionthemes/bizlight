@@ -595,6 +595,7 @@ input[type="submit"]:focus {
   border-radius: 3px;
 }
 
+
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -606,6 +607,11 @@ input[type="submit"]:active {
   border: none;
   background: #3b4141;
   color: #ffffff;
+}
+
+button a,
+button:hover a{
+  color: #ffffff !important;
 }
 
 button[disabled],
@@ -2066,37 +2072,6 @@ body.evision-no-sidebar #primary {
   vertical-align: middle;
 }
 
-.row-same-height {
-  display: table;
-  width: 100%;
-  /* fix overflow */
-  table-layout: fixed;
-}
-
-.col-xs-height {
-  display: table-cell;
-  float: none !important;
-}
-
-@media (min-width: 768px) {
-  .col-sm-height {
-    display: table-cell;
-    float: none !important;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-height {
-    display: table-cell;
-    float: none !important;
-  }
-}
-@media (min-width: 1200px) {
-  .col-lg-height {
-    display: table-cell;
-    float: none !important;
-  }
-}
-
 /* vertical alignment styles */
 
 .col-top {
@@ -2799,17 +2774,6 @@ body:not(.home) .site-header.evision-nav-right{
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 50px;
-}
-
-.btn-outline button {
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #ffffff;
-  font-size: 14px;
-  padding: 15px 35px 17px;
-}
-
-.btn-outline button:hover{
-  background-color: #3b4141;
 }
 
 /*-------------------- Blog section -----------------*/
