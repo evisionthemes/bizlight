@@ -6,7 +6,13 @@
  *
  * @package Bizlight
  */
+$bizlight_default_layout = bizlight_default_layout( get_the_ID());
+if( !empty( $bizlight_default_layout ) ){
+	if( 'no-sidebar' == $bizlight_default_layout ){
+		return;
+	}
 
+}
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }

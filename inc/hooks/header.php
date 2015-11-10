@@ -89,26 +89,23 @@ if ( ! function_exists( 'bizlight_body_class' ) ) :
  */
 function bizlight_body_class( $bizlight_body_classes ) {
     if(!is_front_page() || ( is_front_page() && 1 != bizlight_if_all_disable())){
-        $bizlight_default_layout = bizlight_default_layout();
+        $bizlight_default_layout = bizlight_default_layout( get_the_ID() );
         if( !empty( $bizlight_default_layout ) ){
             if( 'left-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'bizlight-left-sidebar';
+                $bizlight_body_classes[] = 'evision-left-sidebar';
             }
             elseif( 'right-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'bizlight-right-sidebar';
-            }
-            elseif( 'both-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'bizlight-both-sidebar';
+                $bizlight_body_classes[] = 'evision-right-sidebar';
             }
             elseif( 'no-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'bizlight-no-sidebar';
+                $bizlight_body_classes[] = 'evision-no-sidebar';
             }
             else{
-                $bizlight_body_classes[] = 'bizlight-right-sidebar';
+                $bizlight_body_classes[] = 'evision-right-sidebar';
             }
         }
         else{
-            $bizlight_body_classes[] = 'bizlight-right-sidebar';
+            $bizlight_body_classes[] = 'evision-right-sidebar';
         }
     }
     return $bizlight_body_classes;

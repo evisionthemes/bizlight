@@ -47,8 +47,7 @@ $bizlight_settings_controls['bizlight-default-layout'] =
             'type'                  => 'select',
             'choices'               => array(
                 'right-sidebar' => __( 'Content - Primary Sidebar', 'bizlight' ),
-                'left-sidebar' => __( 'Secondary Sidebar - Content', 'bizlight' ),
-                'both-sidebar' => __( 'Three Columns ( Both Sidebar )', 'bizlight' ),
+                'left-sidebar' => __( 'Primary Sidebar - Content', 'bizlight' ),
                 'no-sidebar' => __( 'No Sidebar', 'bizlight' )
             ),
             'priority'              => 20,

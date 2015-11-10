@@ -41,10 +41,6 @@ $bizlight_default_layout_options = array(
         'value' => 'right-sidebar',
         'thumbnail' => get_template_directory_uri() . '/inc/images/right-sidebar.png'
     ),
-    'both-sidebar' => array(
-        'value' => 'both-sidebar',
-        'thumbnail' => get_template_directory_uri() . '/inc/images/both-sidebar.png'
-    ),
     'no-sidebar' => array(
         'value'     => 'no-sidebar',
         'thumbnail' => get_template_directory_uri() . '/inc/images/no-sidebar.png'
