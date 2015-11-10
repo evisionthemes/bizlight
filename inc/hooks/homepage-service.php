@@ -89,7 +89,7 @@ if ( ! function_exists( 'bizlight_home_service_array' ) ) :
                         $bizlight_home_service_contents_array[$i]['bizlight-home-service-icon'] = $bizlight_home_service_custom['bizlight-home-service-custom-icon'];
                     }
                     else{
-                        $bizlight_home_service_contents_array[$i]['bizlight-home-service-icon'] = '';
+                        $bizlight_home_service_contents_array[$i]['bizlight-home-service-icon'] = 'fa-desktop';
                     }
                     $i++;
                 }
@@ -210,7 +210,7 @@ if ( ! function_exists( 'bizlight_home_service' ) ) :
                 }
 
                 ?>
-                <div class="<?php echo esc_attr( $col )?> col-md-height box-container">
+                <div class="<?php echo esc_attr( $col )?> box-container">
                         <div class="box-inner">
                             <a href="<?php echo $bizlight_home_service_link;/*escaping done above*/?>" title="link">
                                 <div class="icon-container">
@@ -228,6 +228,9 @@ if ( ! function_exists( 'bizlight_home_service' ) ) :
                         </div>
                 </div>
                 <?php
+                if( $i % $bizlight_home_service_column == 0 ){
+                    echo "<div class='clearfix'></div>";
+                }
                 $i++;
             }
         }

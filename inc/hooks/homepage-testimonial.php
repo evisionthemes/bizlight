@@ -138,7 +138,6 @@ if (!function_exists('bizlight_home_testimonial')) :
         $bizlight_testimonial_arrays = bizlight_home_testimonial_array($bizlight_home_testimonial_selection_options);
         if (is_array($bizlight_testimonial_arrays)) {
             $bizlight_home_testimonial_number = absint( $bizlight_customizer_all_values['bizlight-home-testimonial-number'] );
-
             ?>
             <section class="evision-wrapper block-section wrap-testimonial">
                 <div class="container">
@@ -151,13 +150,13 @@ if (!function_exists('bizlight_home_testimonial')) :
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
                                     <?php
-                                    $i = 1;
+                                    $i = 0;
                                     foreach( $bizlight_testimonial_arrays as $bizlight_testimonial_array ){
                                         if ($bizlight_home_testimonial_number < $i) {
                                             break;
                                         }
                                         ?>
-                                        <li data-target="#carousel-testimonial" data-slide-to="<?php echo absint($i);?>" class="<?php echo $i == 1 ? 'active' : '';?>"></li>
+                                        <li data-target="#carousel-testimonial" data-slide-to="<?php echo absint($i);?>" class="<?php echo $i == 0 ? 'active' : '';?>"></li>
                                         <?php
                                         $i++;
                                     }
@@ -166,13 +165,13 @@ if (!function_exists('bizlight_home_testimonial')) :
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner testimonial-items-wrapper">
                                     <?php
-                                    $i = 1;
+                                    $i = 0;
                                     foreach( $bizlight_testimonial_arrays as $bizlight_testimonial_array ){
                                         if ($bizlight_home_testimonial_number < $i) {
                                             break;
                                         }
                                         ?>
-                                        <div class="item <?php echo $i == 1 ? 'active' : '';?>">
+                                        <div class="item <?php echo $i == 0 ? 'active' : '';?>">
                                             <div class="content-text">
                                                 <p>
                                                     <?php echo wp_kses_post( $bizlight_testimonial_array['bizlight-home-testimonial-content'] ); ?>

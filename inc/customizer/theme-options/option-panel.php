@@ -6,9 +6,6 @@ $bizlight_panels['bizlight-theme-options'] =
         'title'          => __( 'Theme Options', 'bizlight' ),
         'priority'       => 200
     );
-/*enable slider options */
-$bizlight_customizer_intro_loader_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/intro-loader.php');
-require $bizlight_customizer_intro_loader_setting_file_path;
 
 /*layout options */
 $bizlight_customizer_layout_options_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/layout-options.php');

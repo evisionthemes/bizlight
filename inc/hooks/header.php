@@ -128,28 +128,7 @@ if ( ! function_exists( 'bizlight_before_page_start' ) ) :
  *
  */
 function bizlight_before_page_start() {
-    global $bizlight_customizer_all_values;
-
-    if ( 1 == $bizlight_customizer_all_values['bizlight-enable-intro'] ) {
-        $bizlight_intro_bg_color =  $bizlight_customizer_all_values['bizlight-intro-bg-color'];
-        $bizlight_intro_middle_image =  $bizlight_customizer_all_values['bizlight-intro-middle-image'];
-        ?>
-        <div id="bizlight-intro-loader" style="background: <?php echo $bizlight_intro_bg_color; ?>">
-            <div id="bizlight-mask">
-                <?php
-                 if( !empty( $bizlight_intro_middle_image ) ){
-                    echo "<img src='".$bizlight_intro_middle_image."'>";
-                 }
-                 else{
-                    echo "<div class='loader-outer'><div class='et-loader'></div></div>";
-                 }
-                ?>
-            </div>
-        </div>
-    <?php
-    }
-    ?>
-<?php
+    /*intro loader will be added*/
 }
 endif;
 add_action( 'bizlight_action_before', 'bizlight_before_page_start', 10 );

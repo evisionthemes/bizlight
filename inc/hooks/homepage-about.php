@@ -85,7 +85,7 @@ if (!function_exists('bizlight_home_about_array')) :
                         $bizlight_home_about_contents_array[$i]['bizlight-home-about-icon'] = $bizlight_home_about_custom['bizlight-home-about-custom-icon'];
                     }
                     else{
-                        $bizlight_home_about_contents_array[$i]['bizlight-home-about-icon'] = '';
+                        $bizlight_home_about_contents_array[$i]['bizlight-home-about-icon'] = 'fa-desktop';
                     }
                     $i++;
                 }
@@ -101,7 +101,7 @@ if (!function_exists('bizlight_home_about_array')) :
                         if (isset($bizlight_home_about_post['bizlight-home-about-page-icon'])) {
                             $bizlight_home_about_page_icon = $bizlight_home_about_post['bizlight-home-about-page-icon'];
                         } else {
-                            $bizlight_home_about_page_icon = ' fa-desktop';
+                            $bizlight_home_about_page_icon = 'fa-desktop';
                         }
                         $bizlight_icons_arrays[] = $bizlight_home_about_page_icon;
                     }
