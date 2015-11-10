@@ -70,8 +70,7 @@ function bizlight_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'bizlight' ),
-		'social' => esc_html__( 'Social Menu', 'bizlight' ),
-		'404' => esc_html__( '404 Menu', 'bizlight' ),
+		'social' => esc_html__( 'Social Menu', 'bizlight' )
 	) );
 
 	/*
