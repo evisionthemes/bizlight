@@ -7,6 +7,7 @@ global $bizlight_customizer_defaults;
 
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-home-service-title'] = __('Our Services','bizlight');
+$bizlight_customizer_defaults['bizlight-home-service-single-words'] = 30;
 $bizlight_customizer_defaults['bizlight-home-service-column'] = 3;
 $bizlight_customizer_defaults['bizlight-home-service-button-text'] = __('Browse more services','bizlight');
 $bizlight_customizer_defaults['bizlight-home-service-button-link'] = esc_url( home_url( '/services' ) );
@@ -27,14 +28,27 @@ $bizlight_settings_controls['bizlight-home-service-title'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-service-title']
         ),
         'control' => array(
-            'label'                 =>  __( 'Service Title', 'bizlight' ),
+            'label'                 =>  __( 'Service title', 'bizlight' ),
             'section'               => 'bizlight-home-service-options',
             'type'                  => 'text',
             'priority'              => 20,
             'active_callback'       => ''
         )
     );
-
+$bizlight_settings_controls['bizlight-home-service-single-words'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-service-single-words']
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Single service number of words', 'bizlight' ),
+            'description'           =>  __( 'If you do not have selected from - Custom', 'bizlight' ),
+            'section'               => 'bizlight-home-service-options',
+            'type'                  => 'number',
+            'priority'              => 25,
+            'active_callback'       => ''
+        )
+    );
 $bizlight_settings_controls['bizlight-home-service-column'] =
     array(
         'setting' =>     array(

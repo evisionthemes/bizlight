@@ -34,9 +34,11 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
         $bizlight_font_family_h1_h6 = $bizlight_google_fonts[$bizlight_customizer_all_values['bizlight-font-family-h1-h6']];
         $bizlight_font_family_body = $bizlight_google_fonts[$bizlight_customizer_all_values['bizlight-font-family-body']];
         /*Color options */
+        $bizlight_main_title_color = $bizlight_customizer_all_values['bizlight-main-title-color'];
         $bizlight_h1_h6_color = $bizlight_customizer_all_values['bizlight-h1-h6-color'];
         $bizlight_link_color = $bizlight_customizer_all_values['bizlight-link-color'];
         $breadcrumb_bg_color = $bizlight_customizer_all_values['breadcrumb-bg-color'];
+        $bizlight_header_main_color = $bizlight_customizer_all_values['bizlight-header-main-color'];
         $bizlight_footer_bg_color = $bizlight_customizer_all_values['bizlight-footer-bg-color'];
         $bizlight_primary_color = $bizlight_customizer_all_values['bizlight-primary-color'];
         $bizlight_primary_hover_color = $bizlight_customizer_all_values['bizlight-primary-hover-color'];
@@ -62,7 +64,17 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
                 font-family: '<?php echo esc_attr( $bizlight_font_family_h1_h6 ); ?>';
             }
             <?php
-            /*Main Title color*/
+            /*main title color*/
+            if( !empty($bizlight_main_title_color) ){
+            ?>
+            .page-inner-title h1,.page-inner-title h1 a,
+            .evision-slider-caption .main-title,
+            .wrap-highlight h2{
+                color: <?php echo esc_attr( $bizlight_main_title_color );?> !important; ; /*#ffffff*/
+            }
+            <?php
+            }
+            /*Main hn-h6 color*/
             if( !empty($bizlight_h1_h6_color) ){
             ?>
             h1, h1 a,
@@ -113,6 +125,7 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             }
             <?php
             }
+
             /*footer bg color */
             if( !empty( $bizlight_footer_bg_color ) ){
             ?>
@@ -121,7 +134,6 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             }
             <?php
             }
-
             /*Dynamic Site Color Option*/
             if( !empty( $bizlight_primary_color ) ){
             ?>
@@ -144,7 +156,8 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             .title-divider,
             .icon-section i,
             .single-thumb-image .icon span,
-            .wrap-testimonial {
+            .wrap-testimonial,
+            .evision-nav-type-2{
                 background-color: <?php echo esc_attr( $bizlight_primary_color)?> !important; /*#000000*/
             }
             @media screen and (max-width: 767px){
@@ -230,6 +243,25 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
                 border-color: <?php echo esc_attr( $bizlight_primary_hover_color );?> !important; /*#028484*/
             }
 
+            <?php
+            }
+            /*header main text*/
+            if( !empty( $bizlight_header_main_color ) ){
+            ?>
+            .site-title,
+            .site-title a,
+            .site-description,
+            .site-description a,
+            .main-navigation li:hover > a,
+            .main-navigation .current_page_item > a,
+            .main-navigation .current-menu-item > a,
+            .main-navigation .current_page_ancestor > a,
+            .main-navigation .current_page_parent > a,
+            .main-navigation li.active > a,
+            .main-navigation li.active > a,
+            .main-navigation li.active > a {
+                color: <?php echo esc_attr( $bizlight_header_main_color )?>!important;
+            }
             <?php
             }
             /* service bg */

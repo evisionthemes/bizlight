@@ -11,6 +11,7 @@ if (!function_exists('bizlight_home_about_array')) :
     function bizlight_home_about_array($from_about) {
         global $bizlight_customizer_all_values;
         $bizlight_home_about_number = absint( $bizlight_customizer_all_values['bizlight-home-about-number'] );
+        $bizlight_home_about_single_words = absint( $bizlight_customizer_all_values['bizlight-home-about-single-words'] );
 
         $bizlight_home_about_contents_array = array();
         $bizlight_home_about_contents_array[0]['bizlight-home-about-title'] = __('Public Voice','bizlight');
@@ -124,7 +125,7 @@ if (!function_exists('bizlight_home_about_array')) :
                 $i = 0;
                 while ($bizlight_home_about_post_query->have_posts()) : $bizlight_home_about_post_query->the_post();
                     $bizlight_home_about_contents_array[$i]['bizlight-home-about-title'] = get_the_title();
-                    $bizlight_home_about_contents_array[$i]['bizlight-home-about-content'] = get_the_excerpt();
+                    $bizlight_home_about_contents_array[$i]['bizlight-home-about-content'] = bizlight_words_count( $bizlight_home_about_single_words ,get_the_content());
                     $bizlight_home_about_contents_array[$i]['bizlight-home-about-link'] = get_permalink();
                     if(isset( $bizlight_icons_arrays[$i] )){
                         $bizlight_home_about_contents_array[$i]['bizlight-home-about-icon'] = $bizlight_icons_arrays[$i];

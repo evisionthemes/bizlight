@@ -54,8 +54,13 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                         if ($bizlight_home_about_post_query->have_posts()) :
                             $clearfix = 1;
                             while ($bizlight_home_about_post_query->have_posts()) : $bizlight_home_about_post_query->the_post();
-                                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
-                                $url = $thumb['0'];
+                                if(has_post_thumbnail()){
+                                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
+                                    $url = $thumb['0'];
+                                }
+                                else{
+                                    $url = get_template_directory_uri().'/assets/img/no-image.jpg';
+                                }
                                 ?>
                                 <div class="<?php echo esc_attr( $col )?> single-thumb-container">
                                     <div class="single-thumb-inner">

@@ -11,6 +11,7 @@ if ( ! function_exists( 'bizlight_home_service_array' ) ) :
     function bizlight_home_service_array( $from_service ){
         global $bizlight_customizer_all_values;
         $bizlight_home_service_number = absint($bizlight_customizer_all_values['bizlight-home-service-number']);
+        $bizlight_home_service_single_words = absint($bizlight_customizer_all_values['bizlight-home-service-single-words']);
 
         $bizlight_home_service_contents_array = array();
 
@@ -128,7 +129,7 @@ if ( ! function_exists( 'bizlight_home_service_array' ) ) :
                 $i = 0;
                 while ( $bizlight_home_service_post_query->have_posts() ) : $bizlight_home_service_post_query->the_post();
                     $bizlight_home_service_contents_array[$i]['bizlight-home-service-title'] = get_the_title();
-                    $bizlight_home_service_contents_array[$i]['bizlight-home-service-content'] = get_the_excerpt();
+                    $bizlight_home_service_contents_array[$i]['bizlight-home-service-content'] = bizlight_words_count( $bizlight_home_service_single_words ,get_the_content());
                     $bizlight_home_service_contents_array[$i]['bizlight-home-service-link'] = get_permalink();
                     if(isset( $bizlight_icons_arrays[$i] )){
                         $bizlight_home_service_contents_array[$i]['bizlight-home-service-icon'] = $bizlight_icons_arrays[$i];

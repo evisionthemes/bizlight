@@ -22,11 +22,11 @@
 		if( 'no-image' != $bizlight_single_post_image_align ){
 			if( 'left' == $bizlight_single_post_image_align ){
 				echo "<div class='image-left'>";
-				the_post_thumbnail();
+				the_post_thumbnail('medium');
 			}
 			elseif( 'right' == $bizlight_single_post_image_align ){
 				echo "<div class='image-right'>";
-				the_post_thumbnail();
+				the_post_thumbnail('medium');
 			}
 			else{
 				echo "<div class='image-full'>";

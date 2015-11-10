@@ -33,3 +33,7 @@ require $bizlight_customizer_testimonial_from_category_file_path;
 /*testimonial selection from custom options */
 $bizlight_customizer_testimonial_from_custom_file_path = bizlight_file_directory('inc/customizer/home-options/testimonial/from-custom.php');
 require $bizlight_customizer_testimonial_from_custom_file_path;
+
+/*testimonial options */
+$bizlight_customizer_testimonial_options_file_path = bizlight_file_directory('inc/customizer/home-options/testimonial/testimonial-options.php');
+require $bizlight_customizer_testimonial_options_file_path;

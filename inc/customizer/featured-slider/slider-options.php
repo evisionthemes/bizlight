@@ -6,6 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
+$bizlight_customizer_defaults['bizlight-fs-single-words'] = 30;
 $bizlight_customizer_defaults['bizlight-fs-slider-mode'] = 'horizontal';
 $bizlight_customizer_defaults['bizlight-fs-slider-time'] = 2000;
 $bizlight_customizer_defaults['bizlight-fs-slider-pause-time'] = 7000;
@@ -22,6 +23,21 @@ $bizlight_sections['bizlight-fs-slider-options'] =
         'priority'       => 80,
         'title'          => __( 'Slider Options', 'bizlight' ),
         'panel'          => 'bizlight-featured-slider',
+    );
+
+$bizlight_settings_controls['bizlight-fs-single-words'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-single-words']
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Single slider number of words', 'bizlight' ),
+            'description'           =>  __( 'If you do not have selected from - Custom', 'bizlight' ),
+            'section'               => 'bizlight-fs-slider-options',
+            'type'                  => 'number',
+            'priority'              => 5,
+            'active_callback'       => ''
+        )
     );
 
 $bizlight_settings_controls['bizlight-fs-slider-mode'] =

@@ -7,6 +7,7 @@ global $bizlight_customizer_defaults;
 
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-home-about-title'] = __('WELCOME TO BIZLIGHT','bizlight');
+$bizlight_customizer_defaults['bizlight-home-about-single-words'] = 30;
 $bizlight_customizer_defaults['bizlight-home-about-content'] = __('About us short description','bizlight');
 $bizlight_customizer_defaults['bizlight-home-about-right-image'] = get_template_directory_uri().'/assets/img/product.png';
 $bizlight_customizer_defaults['bizlight-home-about-button-text'] = __('Browse more','bizlight');
@@ -35,7 +36,20 @@ $bizlight_settings_controls['bizlight-home-about-title'] =
             'active_callback'       => ''
         )
     );
-
+$bizlight_settings_controls['bizlight-home-about-single-words'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-about-single-words']
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Single about number of words', 'bizlight' ),
+            'description'           =>  __( 'If you do not have selected from - Custom', 'bizlight' ),
+            'section'               => 'bizlight-home-about-options',
+            'type'                  => 'number',
+            'priority'              => 25,
+            'active_callback'       => ''
+        )
+    );
 $bizlight_settings_controls['bizlight-home-about-content'] =
     array(
         'setting' =>     array(

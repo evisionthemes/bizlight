@@ -17,7 +17,7 @@ $bizlight_customizer_defaults['bizlight-home-blog-enable'] = 1;
 $bizlight_sections['bizlight-home-blog-options'] =
     array(
         'priority'       => 175,
-        'title'          => __( 'Home/Front blog Options', 'bizlight' ),
+        'title'          => __( 'Home/Front Blog Options', 'bizlight' ),
     );
 
 

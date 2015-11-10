@@ -11,6 +11,7 @@ if (!function_exists('bizlight_home_testimonial_array')) :
     function bizlight_home_testimonial_array($from_testimonial){
         global $bizlight_customizer_all_values;
         $bizlight_home_testimonial_number = absint( $bizlight_customizer_all_values['bizlight-home-testimonial-number'] );
+        $bizlight_home_testimonial_single_words = absint( $bizlight_customizer_all_values['bizlight-home-testimonial-single-words'] );
 
         $bizlight_home_testimonial_contents_array = array();
         $bizlight_home_testimonial_contents_array[0]['bizlight-home-testimonial-title'] = __('Sayer Name, CEO','bizlight');
@@ -109,7 +110,7 @@ if (!function_exists('bizlight_home_testimonial_array')) :
                 $i = 0;
                 while ($bizlight_home_testimonial_post_query->have_posts()) : $bizlight_home_testimonial_post_query->the_post();
                     $bizlight_home_testimonial_contents_array[$i]['bizlight-home-testimonial-title'] = get_the_title();
-                    $bizlight_home_testimonial_contents_array[$i]['bizlight-home-testimonial-content'] = get_the_excerpt();
+                    $bizlight_home_testimonial_contents_array[$i]['bizlight-home-testimonial-content'] = bizlight_words_count( $bizlight_home_testimonial_single_words ,get_the_content());
                     $i++;
                 endwhile;
                 wp_reset_postdata();

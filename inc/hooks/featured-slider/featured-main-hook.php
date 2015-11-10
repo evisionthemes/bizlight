@@ -11,11 +11,12 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
     function bizlight_featured_slider_array( $from_slider ){
         global $bizlight_customizer_all_values;
         $bizlight_fs_number = absint( $bizlight_customizer_all_values['bizlight-fs-number'] );
+        $bizlight_fs_single_words = absint( $bizlight_customizer_all_values['bizlight-home-about-single-words'] );
 
         $bizlight_fs_contents_array[0]['bizlight-fs-title'] = __('Welcome to bizlight','bizlight');
         $bizlight_fs_contents_array[0]['bizlight-fs-content'] = __('Unlike other companies, we do not charge hundreds of dollars per theme.','bizlight');
         $bizlight_fs_contents_array[0]['bizlight-fs-link'] = #;
-        $bizlight_fs_contents_array[0]['bizlight-fs-image'] = get_template_directory_uri()."/assets/img/slider1.jpg";
+        $bizlight_fs_contents_array[0]['bizlight-fs-image'] = get_template_directory_uri()."/assets/img/no-image-126_530.jpg";
 
         $bizlight_fs_args = array();
         if( 'from-post' ==  $from_slider ){
@@ -103,10 +104,15 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
             if ( $bizlight_fs_post_query->have_posts() ) :
                 $i = 0;
                 while ( $bizlight_fs_post_query->have_posts() ) : $bizlight_fs_post_query->the_post();
-                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
-                    $url = $thumb['0'];
+                    if(has_post_thumbnail()){
+                        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
+                        $url = $thumb['0'];
+                    }
+                    else{
+                        $url =  $url = get_template_directory_uri().'/assets/img/no-image-slider.jpg';;
+                    }
                     $bizlight_fs_contents_array[$i]['bizlight-fs-title'] = get_the_title();
-                    $bizlight_fs_contents_array[$i]['bizlight-fs-content'] = get_the_excerpt();
+                    $bizlight_fs_contents_array[$i]['bizlight-fs-content'] = bizlight_words_count( $bizlight_fs_single_words ,get_the_content());;
                     $bizlight_fs_contents_array[$i]['bizlight-fs-link'] = get_permalink();
                     $bizlight_fs_contents_array[$i]['bizlight-fs-image'] = $url;
                     $i++;
