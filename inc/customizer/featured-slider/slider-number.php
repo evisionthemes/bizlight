@@ -12,7 +12,7 @@ $bizlight_customizer_defaults['bizlight-fs-number'] = 5;
 $bizlight_sections['bizlight-fs-number-setting'] =
     array(
         'priority'       => 30,
-        'title'          => __( 'Slider number Options', 'bizlight' ),
+        'title'          => __( 'Slider Number Options', 'bizlight' ),
         'panel'          => 'bizlight-featured-slider',
     );
 
@@ -22,7 +22,7 @@ $bizlight_settings_controls['bizlight-fs-number'] =
             'default'              => $bizlight_customizer_defaults['bizlight-fs-number']
         ),
         'control' => array(
-            'label'                 =>  __( 'Number of slider', 'bizlight' ),
+            'label'                 =>  __( 'Number of Slider', 'bizlight' ),
             'section'               => 'bizlight-fs-number-setting',
             'type'                  => 'select',
             'choices'               => array(

@@ -12,7 +12,7 @@ $bizlight_customizer_defaults['bizlight-home-about-selection'] = 'from-page';
 $bizlight_sections['bizlight-home-about-selection-setting'] =
     array(
         'priority'       => 20,
-        'title'          => __( 'About selection Options', 'bizlight' ),
+        'title'          => __( 'About Selection Options', 'bizlight' ),
         'panel'          => 'bizlight-home-about',
     );
 

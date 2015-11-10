@@ -3,7 +3,7 @@ if ( ! function_exists( 'bizlight_sidebar' ) ) :
 /**
  * Sidebar
  *
- * @since eVision Corporate 1.0.0
+ * @since Bizlight 1.0.0
  *
  * @param null
  * @return null

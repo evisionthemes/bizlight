@@ -3,8 +3,8 @@
  * evision themes Theme Customizer
  *
  * @package eVision themes
- * @subpackage eVision Corporate
- * @since eVision Corporate 1.0.0
+ * @subpackage Bizlight
+ * @since Bizlight 1.0.0
  */
 add_filter('coder_customizer_framework_url', 'bizlight_customizer_framework_url');
 
@@ -71,12 +71,6 @@ Added font setting options
  *******************************************/
 $bizlight_customizer_options_font_family_file_path = bizlight_file_directory('inc/customizer/font-setting/font-family.php');
 require $bizlight_customizer_options_font_family_file_path;
-
-/******************************************
-Added menu setting options
- *******************************************/
-$bizlight_customizer_options_menu_setting_file_path = bizlight_file_directory('inc/customizer/menu/menu-setting.php');
-require $bizlight_customizer_options_menu_setting_file_path;
 
 /******************************************
 Featured Slider options

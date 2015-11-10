@@ -12,7 +12,7 @@ $bizlight_customizer_defaults['bizlight-home-testimonial-number'] = 5;
 $bizlight_sections['bizlight-home-testimonial-number-setting'] =
     array(
         'priority'       => 30,
-        'title'          => __( 'Testimonial number Options', 'bizlight' ),
+        'title'          => __( 'Testimonial Number Options', 'bizlight' ),
         'panel'          => 'bizlight-home-testimonial',
     );
 
@@ -22,7 +22,7 @@ $bizlight_settings_controls['bizlight-home-testimonial-number'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-number']
         ),
         'control' => array(
-            'label'                 =>  __( 'Number of testimonial/s', 'bizlight' ),
+            'label'                 =>  __( 'Number of Testimonial/s', 'bizlight' ),
             'section'               => 'bizlight-home-testimonial-number-setting',
             'type'                  => 'select',
             'choices'               => array(

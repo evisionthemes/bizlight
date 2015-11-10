@@ -30,6 +30,8 @@ $bizlight_sections['bizlight-colors'] =
     );
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-h1-h6-color'] = '#212121';
+$bizlight_customizer_defaults['bizlight-link-color'] = '#212121';
+$bizlight_customizer_defaults['breadcrumb-bg-color'] = '#009292';
 $bizlight_customizer_defaults['bizlight-footer-bg-color'] = '#3e4444';
 $bizlight_customizer_defaults['bizlight-primary-color'] = '#028484';
 $bizlight_customizer_defaults['bizlight-primary-hover-color'] = '#3b4141';
@@ -59,6 +61,8 @@ if ( ! function_exists( 'bizlight_color_reset' ) ) :
 
             /*setting fields */
             $bizlight_customizer_saved_values['bizlight-h1-h6-color'] = $bizlight_customizer_defaults['bizlight-h1-h6-color'];
+            $bizlight_customizer_saved_values['bizlight-link-color'] = $bizlight_customizer_defaults['bizlight-link-color'];
+            $bizlight_customizer_saved_values['breadcrumb-bg-color'] = $bizlight_customizer_defaults['breadcrumb-bg-color'];
             $bizlight_customizer_saved_values['bizlight-footer-bg-color'] = $bizlight_customizer_defaults['bizlight-footer-bg-color'];
             $bizlight_customizer_saved_values['bizlight-primary-color'] = $bizlight_customizer_defaults['bizlight-primary-color'];
             $bizlight_customizer_saved_values['bizlight-primary-hover-color'] = $bizlight_customizer_defaults['bizlight-primary-hover-color'];
@@ -90,6 +94,32 @@ $bizlight_settings_controls['bizlight-h1-h6-color'] =
             'section'               => 'bizlight-colors',
             'type'                  => 'color',
             'priority'              => 5,
+            'active_callback'       => ''
+        )
+    );
+$bizlight_settings_controls['bizlight-link-color'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-link-color'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Link color', 'bizlight' ),
+            'section'               => 'bizlight-colors',
+            'type'                  => 'color',
+            'priority'              => 10,
+            'active_callback'       => ''
+        )
+    );
+$bizlight_settings_controls['breadcrumb-bg-color'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['breadcrumb-bg-color'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Breadcrumb color', 'bizlight' ),
+            'section'               => 'bizlight-colors',
+            'type'                  => 'color',
+            'priority'              => 10,
             'active_callback'       => ''
         )
     );

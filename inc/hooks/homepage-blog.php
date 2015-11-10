@@ -14,11 +14,11 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
     function bizlight_home_blog() {
         global $bizlight_customizer_all_values;
 
-        $bizlight_home_blog_title = $bizlight_customizer_defaults['bizlight-home-blog-title'] = __('LATEST NEWS','bizlight');
-        $bizlight_home_blog_number = $bizlight_customizer_defaults['bizlight-home-blog-number'] = 3;
-        $bizlight_home_blog_column = $bizlight_customizer_defaults['bizlight-home-blog-column'] = 3;
-        $bizlight_home_blog_button_text = $bizlight_customizer_defaults['bizlight-home-blog-button-text'] = __('Browse more','bizlight');
-        $bizlight_home_blog_button_link = $bizlight_customizer_defaults['bizlight-home-blog-button-link'] = esc_url( home_url( '/blog' ) );
+        $bizlight_home_blog_title = $bizlight_customizer_all_values['bizlight-home-blog-title'];
+        $bizlight_home_blog_number = $bizlight_customizer_all_values['bizlight-home-blog-number'];
+        $bizlight_home_blog_column = $bizlight_customizer_all_values['bizlight-home-blog-column'];
+        $bizlight_home_blog_button_text = $bizlight_customizer_all_values['bizlight-home-blog-button-text'];
+        $bizlight_home_blog_button_link = $bizlight_customizer_all_values['bizlight-home-blog-button-link'];
 
         if( 1 == $bizlight_home_blog_column ){
             $col = 'col-md-12';
@@ -52,11 +52,12 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                         );
                         $bizlight_home_about_post_query = new WP_Query($bizlight_home_about_args);
                         if ($bizlight_home_about_post_query->have_posts()) :
+                            $clearfix = 1;
                             while ($bizlight_home_about_post_query->have_posts()) : $bizlight_home_about_post_query->the_post();
                                 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
                                 $url = $thumb['0'];
                                 ?>
-                                <div class="<?php echo esc_attr( $col )?> col-md-height single-thumb-container">
+                                <div class="<?php echo esc_attr( $col )?> single-thumb-container">
                                     <div class="single-thumb-inner">
                                         <div class="single-thumb-image">
                                             <img src="<?php echo esc_url( $url ); ?>" alt="<?php the_title_attribute()?>">
@@ -78,6 +79,10 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                                     </div>
                                 </div>
                                 <?php
+                                if( $clearfix % $bizlight_home_blog_column == 0 ){
+                                    echo "<div class='clearfix'></div>";
+                                }
+                            $clearfix++;
                             endwhile;
                             wp_reset_postdata();
                         endif;

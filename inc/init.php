@@ -3,8 +3,8 @@
  * evision themes init file
  *
  * @package eVision themes
- * @subpackage eVision Corporate
- * @since eVision Corporate 1.0.0
+ * @subpackage Bizlight
+ * @since Bizlight 1.0.0
  */
 
 /**

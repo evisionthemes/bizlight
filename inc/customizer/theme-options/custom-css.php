@@ -22,7 +22,7 @@ $bizlight_settings_controls['bizlight-custom-css'] =
         'control' => array(
             'label'                 =>  __( 'Custom CSS', 'bizlight' ),
             'section'               => 'bizlight-custom-css',
-            'type'                  => 'checkbox',
+            'type'                  => 'textarea',
             'priority'              => 40,
         )
     );

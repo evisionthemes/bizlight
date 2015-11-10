@@ -25,8 +25,7 @@ $bizlight_settings_controls['bizlight-pagination-options'] =
             'type'                  => 'select',
             'choices'               => array(
                 'default' => __( 'Default', 'bizlight' ),
-                'numeric' => __( 'Numeric', 'bizlight' ),
-                'advanced' => __( 'Advanced', 'bizlight' ),
+                'numeric' => __( 'Numeric', 'bizlight' )
             ),
             'priority'              => 20,
             'description'           => '',

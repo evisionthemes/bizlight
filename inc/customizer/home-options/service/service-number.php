@@ -12,7 +12,7 @@ $bizlight_customizer_defaults['bizlight-home-service-number'] = 5;
 $bizlight_sections['bizlight-home-service-number-setting'] =
     array(
         'priority'       => 30,
-        'title'          => __( 'Service number Options', 'bizlight' ),
+        'title'          => __( 'Service Number Options', 'bizlight' ),
         'panel'          => 'bizlight-home-service',
     );
 

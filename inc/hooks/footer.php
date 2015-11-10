@@ -116,7 +116,7 @@ if ( ! function_exists( 'bizlight_footer' ) ) :
              <div class="site-info">
                 <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bizlight' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'bizlight' ), 'WordPress' ); ?></a>
                 <span class="sep"> | </span>
-                <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'bizlight' ), 'bizlight', '<a href="http://evisionthemes.com/" rel="designer">evisiontheme</a>' ); ?>
+                <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'bizlight' ), 'Bizlight', '<a href="http://evisionthemes.com/" rel="designer">eVisionThemes</a>' ); ?>
             </div><!-- .site-info -->
             <?php
             }
@@ -145,7 +145,7 @@ if ( ! function_exists( 'bizlight_page_end' ) ) :
         global $bizlight_customizer_all_values;
         if( isset( $bizlight_customizer_all_values['bizlight-enable-back-top-top'] )  && 1 == $bizlight_customizer_all_values['bizlight-enable-back-top-top']) {
         ?>
-            <a class="bizlight-back-to-top" href="#page"><i class="fa fa-angle-up"></i></a>
+            <a class="evision-back-to-top" href="#page"><i class="fa fa-angle-up"></i></a>
         <?php
         }
         ?>

@@ -12,7 +12,7 @@ $bizlight_customizer_defaults['bizlight-home-testimonial-selection'] = 'from-pag
 $bizlight_sections['bizlight-home-testimonial-selection-setting'] =
     array(
         'priority'       => 20,
-        'title'          => __( 'Testimonial selection Options', 'bizlight' ),
+        'title'          => __( 'Testimonial Selection Options', 'bizlight' ),
         'panel'          => 'bizlight-home-testimonial',
     );
 

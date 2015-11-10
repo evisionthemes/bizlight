@@ -9,7 +9,7 @@
 /**
  * Get the path for the file ( to support child theme )
  *
- * @since eVision Corporate 1.0.0
+ * @since Bizlight 1.0.0
  *
  * @param string $file_path, path from the theme
  * @return string full path of file inside theme
@@ -70,8 +70,7 @@ function bizlight_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'bizlight' ),
-		'social' => esc_html__( 'Social Menu', 'bizlight' ),
-		'404' => esc_html__( '404 Menu', 'bizlight' ),
+		'social' => esc_html__( 'Social Menu', 'bizlight' )
 	) );
 
 	/*

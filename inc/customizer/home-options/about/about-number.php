@@ -12,7 +12,7 @@ $bizlight_customizer_defaults['bizlight-home-about-number'] = 5;
 $bizlight_sections['bizlight-home-about-number-setting'] =
     array(
         'priority'       => 30,
-        'title'          => __( 'About number Options', 'bizlight' ),
+        'title'          => __( 'About Number Options', 'bizlight' ),
         'panel'          => 'bizlight-home-about',
     );
 
@@ -22,7 +22,7 @@ $bizlight_settings_controls['bizlight-home-about-number'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-about-number']
         ),
         'control' => array(
-            'label'                 =>  __( 'Number of about/s', 'bizlight' ),
+            'label'                 =>  __( 'Number of About/s', 'bizlight' ),
             'section'               => 'bizlight-home-about-number-setting',
             'type'                  => 'select',
             'choices'               => array(
