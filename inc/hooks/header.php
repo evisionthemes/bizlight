@@ -216,7 +216,7 @@ function bizlight_header() {
         <header id="masthead" class="site-header evision-nav-right <?php echo esc_attr( $bizlight_sticky_menu );?>" role="banner">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3 col-md-4">
+                    <div class="col-xs-12 col-sm-3 col-md-4">
                         <?php if ( isset($bizlight_customizer_all_values['bizlight-logo']) && !empty($bizlight_customizer_all_values['bizlight-logo'])) :
                             if ( is_front_page() && is_home() ){
                                 echo '<h1 class="site-title">';
@@ -263,9 +263,9 @@ function bizlight_header() {
                             }
                         endif; ?>
                     </div>
-                    <div class="col-sm-9 col-md-8">
+                    <div class="col-xs-12 col-sm-9 col-md-8">
                         <nav id="site-navigation" class="main-navigation" role="navigation">
-                            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bizlight' ); ?></button>
+                            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
                             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
                         </nav>
                     </div>

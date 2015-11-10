@@ -20,8 +20,6 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
-@import url(dynamic.css);
-
 /*======================================
 Bizlight - Table Of Content
 
@@ -396,21 +394,21 @@ dd {
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
   }
 
   h3 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
   }
 
   h4 {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   h5 {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   h6 {
@@ -720,6 +718,7 @@ dd a{
 
 .site-header {
   background: none repeat scroll 0 0 #ffffff;
+  text-align: center;
 }
 
 .page-inner-title {
@@ -807,12 +806,11 @@ body.home .page-inner-title {
 }
 
 @media only screen and (max-width: 767px){
-  .site-title {
-    text-align: center;
-  }
-
+  .site-title, 
+  .site-title a,
+  .site-description,
   .site-branding,
-  .menu{
+  .menu {
     text-align: center;
   }
 }
@@ -826,10 +824,10 @@ body.home .page-inner-title {
   display: block;
   float: left;
   width: 100%;
-  background: none repeat scroll 0 0 #212121;
+  background: none repeat scroll 0 0 #028484;
   text-align: left;
   margin-top: 15px;
-} 
+}
 
 .main-navigation .nav-menu{
   width: 1170px;
@@ -982,11 +980,11 @@ body.home .page-inner-title {
     margin-right: auto;
   }
 
-  .menu-toggle {
-    border: 1px solid #cccccc;
+  .menu-toggle,
+  #site-navigation .toggled .menu-toggle{
     font-size: 15px;
     margin-bottom: 5px;
-    padding-bottom: 10px;
+    padding: 5px 10px !important;
   }
 
   .main-navigation ul {
@@ -1044,8 +1042,9 @@ body.home .page-inner-title {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: none;
     box-shadow: none;
-    float: right;
-    margin-top: -53px;
+    float: none;
+    /*margin-top: -53px;*/
+    text-align: center;
   }
 
   .main-navigation .menu-toggle i{
@@ -1544,12 +1543,6 @@ body.evision-no-sidebar #primary {
   }
 }
 
-@media screen and (max-width: 991px){
-  .site-content {
-    padding-top: 210px;
-  }
-}
-
 @media only screen and (max-width: 767px){
   #primary,
   body.evision-right-sidebar #primary,
@@ -1561,9 +1554,42 @@ body.evision-no-sidebar #primary {
     float: none;
   }
 
-  .site-content {
-    padding-top: 180px;
+}
+
+/*post image position*/
+
+article.hentry .image-full{
+  margin-bottom: 20px;
+}
+
+.entry-content .image-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.entry-content .image-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.entry-content .image-left {
+  float: left;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 991px){
+  .entry-content .left-image {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
+
+  .entry-content .right-image {
+    float: none;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
 }
 
 /* Alignments */
@@ -2110,149 +2136,93 @@ body.evision-no-sidebar #primary {
   width: 42px;
   background-color: #3E4444;
   color: #a7a7a7;
+  display: inline-block;
+  color: #313131;
   border: 1px solid #a7a7a7;
-}
-
-.evision-social-section a[href*="facebook.com"]{
-  color: #313131;
-  display: inline-block;
-  background-color: #3E4444;
   margin-left: 5px;
   margin-right: 5px;  
-  color: #a7a7a7;
-  border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     -o-border-radius: 50px;
     -ms-border-radius: 50px;
-}
-
-.evision-social-section a[href*="twitter.com"]{
-  color: #313131;
-  display: inline-block;
-  background-color: #3E4444;
-  margin-left: 5px;
-  margin-right: 5px;  
-  color: #a7a7a7;
   border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -o-border-radius: 50px;
-    -ms-border-radius: 50px;
 }
 
-.evision-social-section a[href*="linkedin.com"]{
-  color: #313131;
-  display: inline-block;
-  background-color: #3E4444;
-  margin-left: 5px;
-  margin-right: 5px;  
-  color: #a7a7a7;
-  border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -o-border-radius: 50px;
-    -ms-border-radius: 50px;
+.evision-social-section a:hover{
+  border: 1px solid rgba(0,0,0,0);
+  color: #ffffff;
 }
 
-.evision-social-section a[href*="instagram.com"]{
-  color: #313131;
-  display: inline-block;
-  background-color: #3E4444;
-  margin-left: 5px;
-  margin-right: 5px;  
-  color: #a7a7a7;
-  border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -o-border-radius: 50px;
-    -ms-border-radius: 50px;
+.evision-social-section a[href*="facebook.com"]:before {
+  content: "\f09a";
 }
 
-.evision-social-section a[href*="youtube.com"]{
-  color: #313131;
-  display: inline-block;
-  background-color: #3E4444;
-  margin-left: 5px;
-  margin-right: 5px;  
-  color: #a7a7a7;
-  border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -o-border-radius: 50px;
-    -ms-border-radius: 50px;
+.evision-social-section a[href*="twitter.com"]:before {
+  content: "\f099";
 }
 
-.evision-social-section a[href*="plus.google.com"]{
-  color: #313131;
-  display: inline-block;
-  background-color: #3E4444;
-  margin-left: 5px;
-  margin-right: 5px;  
-  color: #a7a7a7;
-  border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -o-border-radius: 50px;
-    -ms-border-radius: 50px;
+.evision-social-section a[href*="linkedin.com"]:before {
+  content: "\f0e1";
 }
 
-.evision-social-section a[href*="facebook.com"]::before {
-  content: "";
+.evision-social-section a[href*="instagram.com"]:before {
+  content: "\f16d";
 }
 
-.evision-social-section a[href*="twitter.com"]::before {
-  content: "";
+.evision-social-section a[href*="youtube.com"]:before {
+  content: "\f167";
 }
 
-.evision-social-section a[href*="linkedin.com"]::before {
-  content: "";
+.evision-social-section a[href*="plus.google.com"]:before {
+  content: "\f0d5";
 }
 
-.evision-social-section a[href*="instagram.com"]::before {
-  content: "";
+.evision-social-section a[href*="pinterest.com"]:before {
+  content: "\f0d2";
 }
 
-.evision-social-section a[href*="youtube.com"]::before {
-  content: "";
+.evision-social-section a[href*="flickr.com"]:before {
+  content: "\f16e";
 }
 
-.evision-social-section a[href*="plus.google.com"]::before {
-  content: "";
+.evision-social-section a[href*="tumblr.com"]:before {
+  content: "\f173";
 }
 
 .evision-social-section a:hover[href*="facebook.com"] {
   background-color: #3C579E;
-  border: 1px solid rgba(0,0,0,0);
 }
 
 .evision-social-section a:hover[href*="twitter.com"] {
   background-color: #01BBF6;
-  border: 1px solid rgba(0,0,0,0);
 }
 
 .evision-social-section a:hover[href*="linkedin.com"] {
   background-color: #1484C3;
-  border: 1px solid rgba(0,0,0,0);
 }
 
 .evision-social-section a:hover[href*="instagram.com"] {
   background-color: #2D6A93;
-  border: 1px solid rgba(0,0,0,0);
 }
 
 .evision-social-section a:hover[href*="youtube.com"] {
   background-color: #D62424;
-  border: 1px solid rgba(0,0,0,0);
+}
+
+.evision-social-section a:hover[href*="pinterest.com"] {
+  background-color: #BD2126;
 }
 
 .evision-social-section a:hover[href*="plus.google.com"] {
-  background-color: #DE4D38;
-  border: 1px solid rgba(0,0,0,0);
+  background-color: #D73D32;
 }
 
-.evision-social-section a:hover{
-  color: #ffffff;
+.evision-social-section a:hover[href*="flickr.com"] {
+  background-color: #FD0083;
+}
+
+.evision-social-section a:hover[href*="tumblr.com"] {
+  background-color: #34465D;
 }
 
 /*social group in nav section*/
@@ -2274,7 +2244,7 @@ body.evision-no-sidebar #primary {
 }
 
 /*back-to-top section*/
-.bizlight-back-to-top {
+.evision-back-to-top {
   background: #028484 none repeat scroll 0 0;
   border-radius: 2px;
   bottom: 15px;
@@ -2287,12 +2257,12 @@ body.evision-no-sidebar #primary {
   z-index: 9999999;
 }
 
-.bizlight-back-to-top i{
+.evision-back-to-top i{
   color: #ffffff;
 }
 
-.bizlight-back-to-top:hover,
-.bizlight-back-to-top:focus {
+.evision-back-to-top:hover,
+.evision-back-to-top:focus {
   background: #656169 none repeat scroll 0 0;
 }
 
@@ -2356,12 +2326,12 @@ body.home .block-section{
   z-index: 2;
   color: #ffffff;
   padding-bottom: 15px;
+  text-align: left;
 }
 
 body:not(.home) .site-header.evision-nav-right{
   position: static;
   background-color: #028484;
-
 }
 
 .evision-nav-right .site-title:hover,
@@ -2377,8 +2347,8 @@ body:not(.home) .site-header.evision-nav-right{
   width: auto;
 }
 
-.evision-nav-right .main-navigation{
-  background-color: transparent;
+.site-header.evision-nav-right .main-navigation{
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .evision-nav-right .main-navigation ul {
@@ -2386,7 +2356,6 @@ body:not(.home) .site-header.evision-nav-right{
 }
 
 .evision-banner-right-nav {
-/*  margin-top: -100px;*/
   position: relative;
   z-index: 1;
 }
@@ -2400,6 +2369,18 @@ body:not(.home) .site-header.evision-nav-right{
     margin-top: 7.5em;
   }
 }
+
+@media screen and (max-width: 767px){
+  body.home .site-header.evision-nav-right{
+    position: static;
+    background-color: #028484;
+  }
+
+  .evision-nav-right .main-navigation ul {
+    text-align: center;
+  }
+}
+
 /*==================== eVision Nav Right Start====================*/
 
 /*-------------------- Slider section -----------------*/
@@ -2564,6 +2545,7 @@ body:not(.home) .site-header.evision-nav-right{
   .evision-slider-content {
     position: static;
     background: #393D3D;
+    padding-bottom: 30px;
   }
 
   .evision-slider-caption{
@@ -2588,13 +2570,7 @@ body:not(.home) .site-header.evision-nav-right{
   }
 
   .bx-wrapper .bx-pager {
-    bottom: 170px;
-  }
-}
-
-@media screen and (max-width: 480px){
-  .evision-slider-caption .main-title {
-    font-size: 16px;
+    bottom: 200px;
   }
 }
 
@@ -2622,6 +2598,7 @@ body:not(.home) .site-header.evision-nav-right{
 
 .box-inner{
   background-color: #ffffff;
+  margin-bottom: 30px;
 }
 
 .icon-container{
@@ -2777,6 +2754,10 @@ body:not(.home) .site-header.evision-nav-right{
 }
 
 /*-------------------- Blog section -----------------*/
+
+.single-thumb-inner{
+  margin-bottom: 30px;
+}
 
 .single-thumb-image{
   position: relative;
