@@ -179,17 +179,11 @@ if ( ! function_exists( 'bizlight_header' ) ) :
 function bizlight_header() {
     global $bizlight_customizer_all_values;
     $bizlight_enable_sticky_menu = $bizlight_customizer_all_values['bizlight-enable-sticky-menu'];
-    if(1 == $bizlight_enable_sticky_menu ){
-        $bizlight_sticky_menu = 'evision-nav=fixed';
-    }
-    else{
-        $bizlight_sticky_menu = '';
-    }
     ?>
     <?php if( 'header-layout-1' == $bizlight_customizer_all_values['bizlight-header-layout']){
         ?>
         <!-- header and navigation option second - navigation right  -->
-        <header id="masthead" class="site-header evision-nav-right <?php echo esc_attr( $bizlight_sticky_menu );?>" role="banner">
+        <header id="masthead" class="site-header evision-nav-right" role="banner">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3 col-md-4">
@@ -253,7 +247,7 @@ function bizlight_header() {
     else{
     ?>
     <!-- ///////// header and navigation default format - navigation bottom ( option for pro version) \\\\\\\\\\ -->
- <header id="masthead" class="site-header <?php echo esc_attr( $bizlight_sticky_menu );?>" role="banner">
+ <header id="masthead" class="site-header evision-nav-type-2" role="banner">
     <div class="site-branding">
         <?php if ( isset($bizlight_customizer_all_values['bizlight-logo']) && !empty($bizlight_customizer_all_values['bizlight-logo'])) :
             if ( is_front_page() && is_home() ){

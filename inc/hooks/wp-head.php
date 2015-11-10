@@ -138,7 +138,7 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             .search-form .search-submit,
             .bizlight-back-to-top,
             body:not(.home) .site-header.evision-nav-right,
-            .main-navigation,
+            .evision-nav-type-2 .main-navigation,
             .box-container a:hover .box-content,
             .evision-wrap-banner,
             .title-divider,
