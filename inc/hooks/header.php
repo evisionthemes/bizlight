@@ -128,7 +128,7 @@ if ( ! function_exists( 'bizlight_before_page_start' ) ) :
  *
  */
 function bizlight_before_page_start() {
-    /*intro loader will be added*/
+    /**/
 }
 endif;
 add_action( 'bizlight_action_before', 'bizlight_before_page_start', 10 );
@@ -335,7 +335,6 @@ if( ! function_exists( 'bizlight_add_breadcrumb' ) ) :
         global $bizlight_customizer_all_values;
         // Bail if Breadcrumb disabled
         $breadcrumb_enable_breadcrumb = $bizlight_customizer_all_values['bizlight-enable-breadcrumb' ];
-        $breadcrumb_type = $bizlight_customizer_all_values['bizlight-breadcrumb-type' ];
         if ( 1 != $breadcrumb_enable_breadcrumb ) {
             return;
         }
@@ -344,19 +343,7 @@ if( ! function_exists( 'bizlight_add_breadcrumb' ) ) :
             return;
         }
         echo '<div id="breadcrumb"><div class="container">';
-        switch ( $breadcrumb_type ) {
-            case 'advanced':
-                if ( function_exists( 'bcn_display' ) ) {
-                    bcn_display();
-                }
-                else{
-                    bizlight_simple_breadcrumb();
-                }
-                break;
-            default:
-                bizlight_simple_breadcrumb();
-                break;
-        }
+        bizlight_simple_breadcrumb();
         //
         echo '</div><!-- .container --></div><!-- #breadcrumb -->';
         return;
