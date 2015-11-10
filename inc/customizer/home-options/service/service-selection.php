@@ -12,7 +12,7 @@ $bizlight_customizer_defaults['bizlight-home-service-selection'] = 'from-page';
 $bizlight_sections['bizlight-home-service-selection-setting'] =
     array(
         'priority'       => 20,
-        'title'          => __( 'Service selection Options', 'bizlight' ),
+        'title'          => __( 'Service Selection Options', 'bizlight' ),
         'panel'          => 'bizlight-home-service',
     );
 

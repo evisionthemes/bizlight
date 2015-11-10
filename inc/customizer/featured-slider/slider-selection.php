@@ -12,7 +12,7 @@ $bizlight_customizer_defaults['bizlight-fs-selection'] = 'from-page';
 $bizlight_sections['bizlight-fs-selection-setting'] =
     array(
         'priority'       => 20,
-        'title'          => __( 'Slider selection Options', 'bizlight' ),
+        'title'          => __( 'Slider Selection Options', 'bizlight' ),
         'panel'          => 'bizlight-featured-slider',
     );
 

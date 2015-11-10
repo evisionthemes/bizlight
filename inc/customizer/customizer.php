@@ -73,12 +73,6 @@ $bizlight_customizer_options_font_family_file_path = bizlight_file_directory('in
 require $bizlight_customizer_options_font_family_file_path;
 
 /******************************************
-Added menu setting options
- *******************************************/
-$bizlight_customizer_options_menu_setting_file_path = bizlight_file_directory('inc/customizer/menu/menu-setting.php');
-require $bizlight_customizer_options_menu_setting_file_path;
-
-/******************************************
 Featured Slider options
  *******************************************/
 $bizlight_customizer_featured_slider_setting_file_path = bizlight_file_directory('inc/customizer/featured-slider/slider-panel.php');
