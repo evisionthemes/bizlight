@@ -2,7 +2,7 @@
 /**
 * Returns word count of the sentences.
 *
-* @since @since Evision Corporate 1.0.0
+* @since @since Bizlight 1.0.0
 */
 if ( ! function_exists( 'bizlight_words_count' ) ) :
 	function bizlight_words_count( $length = 25, $bizlight_content = null ) {

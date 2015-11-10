@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 /**
  * Returns bizlight_important_links
  *
- * @since Evision Corporate 1.1.3
+ * @since Bizlight 1.1.3
  */
 if ( ! function_exists( 'bizlight_important_links' ) ) :
     function bizlight_important_links(){

@@ -2,7 +2,7 @@
 /**
  * Implement Editor Styles
  *
- * @since eVision Corporate 1.0.0.5
+ * @since Bizlight 1.0.0.5
  *
  * @param null
  * @return null

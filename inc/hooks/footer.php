@@ -145,7 +145,7 @@ if ( ! function_exists( 'bizlight_page_end' ) ) :
         global $bizlight_customizer_all_values;
         if( isset( $bizlight_customizer_all_values['bizlight-enable-back-top-top'] )  && 1 == $bizlight_customizer_all_values['bizlight-enable-back-top-top']) {
         ?>
-            <a class="bizlight-back-to-top" href="#page"><i class="fa fa-angle-up"></i></a>
+            <a class="evision-back-to-top" href="#page"><i class="fa fa-angle-up"></i></a>
         <?php
         }
         ?>

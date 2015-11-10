@@ -9,7 +9,7 @@
 /**
  * Get the path for the file ( to support child theme )
  *
- * @since eVision Corporate 1.0.0
+ * @since Bizlight 1.0.0
  *
  * @param string $file_path, path from the theme
  * @return string full path of file inside theme

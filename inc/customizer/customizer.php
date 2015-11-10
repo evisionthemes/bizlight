@@ -3,8 +3,8 @@
  * evision themes Theme Customizer
  *
  * @package eVision themes
- * @subpackage eVision Corporate
- * @since eVision Corporate 1.0.0
+ * @subpackage Bizlight
+ * @since Bizlight 1.0.0
  */
 add_filter('coder_customizer_framework_url', 'bizlight_customizer_framework_url');
 
