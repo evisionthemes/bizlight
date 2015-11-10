@@ -125,11 +125,21 @@ add_action( 'after_setup_theme', 'bizlight_content_width', 0 );
  */
 function bizlight_scripts() {
 
+	global $bizlight_customizer_all_values;
+
 	/*Bootstrap css*/
     wp_enqueue_style( 'bizlight-bootstrap-css', get_template_directory_uri() . '/assets/frameworks/bootstrap/css/bootstrap.css', array(), '3.3.4' );/*added*/
 
 	/*google font*/
-    wp_enqueue_style( 'bizlight-googleapis', '//fonts.googleapis.com/css?family=Raleway:400,300,600,700', array(), '' );/*added*/
+	$bizlight_font_family_h1_h6 = $bizlight_customizer_all_values['bizlight-font-family-h1-h6'];
+	$bizlight_font_family_body = $bizlight_customizer_all_values['bizlight-font-family-body'];
+	if( $bizlight_font_family_h1_h6 == $bizlight_font_family_body ){
+		wp_enqueue_style( 'bizlight-googleapis', '//fonts.googleapis.com/css?family='.$bizlight_font_family_h1_h6.'', array(), '' );/*added*/
+	}
+	else{
+		wp_enqueue_style( 'bizlight-googleapis-heading', '//fonts.googleapis.com/css?family='.$bizlight_font_family_h1_h6.'', array(), '' );/*added*/
+		wp_enqueue_style( 'bizlight-googleapis-other', '//fonts.googleapis.com/css?family='.$bizlight_font_family_body.'', array(), '' );/*added*/
+	}
 
 	/*Font-Awesome-master*/
     wp_enqueue_style( 'bizlight-fontawesome', get_template_directory_uri() . '/assets/frameworks/Font-Awesome/css/font-awesome.min.css', array(), '4.4.0' );/*added*/

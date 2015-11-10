@@ -10,6 +10,8 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
      */
     function bizlight_featured_slider_array( $from_slider ){
         global $bizlight_customizer_all_values;
+        $bizlight_fs_number = absint( $bizlight_customizer_all_values['bizlight-fs-number'] );
+
         $bizlight_fs_contents_array[0]['bizlight-fs-title'] = __('Welcome to bizlight','bizlight');
         $bizlight_fs_contents_array[0]['bizlight-fs-content'] = __('Unlike other companies, we do not charge hundreds of dollars per theme.','bizlight');
         $bizlight_fs_contents_array[0]['bizlight-fs-link'] = #;
@@ -28,7 +30,7 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
                 $bizlight_fs_args =    array(
                     'post_type' => 'post',
                     'post__in' => $bizlight_fs_posts_ids,
-                    'posts_per_page' => 3,
+                    'posts_per_page' => $bizlight_fs_number,
                     'orderby' => 'post__in'
                 );
             }
@@ -49,11 +51,29 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
             if( null != $bizlight_fs_customs ) {
                 $i = 0;
                 foreach( $bizlight_fs_customs as $bizlight_fs_custom ) {
-                    if( 0 != $bizlight_fs_custom['bizlight-fs-posts-ids'] ){
+                    if(isset( $bizlight_fs_custom['bizlight-fs-custom-title'] )){
                         $bizlight_fs_contents_array[$i]['bizlight-fs-title'] = $bizlight_fs_custom['bizlight-fs-custom-title'];
+                    }
+                    else{
+                        $bizlight_fs_contents_array[$i]['bizlight-fs-title'] = '';
+                    }
+                    if( isset( $bizlight_fs_custom['bizlight-fs-custom-content'] )){
                         $bizlight_fs_contents_array[$i]['bizlight-fs-content'] = $bizlight_fs_custom['bizlight-fs-custom-content'];
+                    }
+                    else{
+                        $bizlight_fs_contents_array[$i]['bizlight-fs-content'] = '';
+                    }
+                    if( isset( $bizlight_fs_custom['bizlight-fs-custom-link'] )){
                         $bizlight_fs_contents_array[$i]['bizlight-fs-link'] = $bizlight_fs_custom['bizlight-fs-custom-link'];
+                    }
+                    else{
+                        $bizlight_fs_contents_array[$i]['bizlight-fs-link'] = '';
+                    }
+                    if( isset( $bizlight_fs_custom['bizlight-fs-custom-image'] )){
                         $bizlight_fs_contents_array[$i]['bizlight-fs-image'] = $bizlight_fs_custom['bizlight-fs-custom-image'];
+                    }
+                    else{
+                        $bizlight_fs_contents_array[$i]['bizlight-fs-image'] = '';
                     }
                     $i++;
                 }
@@ -72,7 +92,7 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
                 $bizlight_fs_args =    array(
                     'post_type' => 'page',
                     'post__in' => $bizlight_fs_posts_ids,
-                    'posts_per_page' => 3,
+                    'posts_per_page' => $bizlight_fs_number,
                     'orderby' => 'post__in'
                 );
             }
@@ -113,10 +133,10 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
         if( 1 != $bizlight_customizer_all_values['bizlight-fs-enable'] ){
             return null;
         }
-        $bizlight_fs_selection_options = $bizlight_customizer_all_values['bizlight-fs-selection-options'];
+        $bizlight_fs_selection_options = $bizlight_customizer_all_values['bizlight-fs-selection'];
         $bizlight_slider_arrays = bizlight_featured_slider_array( $bizlight_fs_selection_options );
         if( is_array( $bizlight_slider_arrays )){
-        $bizlight_fs_number = $bizlight_customizer_all_values['bizlight-fs-number'];
+        $bizlight_fs_number = absint( $bizlight_customizer_all_values['bizlight-fs-number'] );
         $bizlight_fs_slider_mode = $bizlight_customizer_all_values['bizlight-fs-slider-mode'];
         $bizlight_fs_slider_time = $bizlight_customizer_all_values['bizlight-fs-slider-time'];
         $bizlight_fs_slider_pause_time = $bizlight_customizer_all_values['bizlight-fs-slider-pause-time'];

@@ -75,7 +75,7 @@ $bizlight_settings_controls['bizlight-home-featured-enable'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-featured-enable'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Home featured button url', 'bizlight' ),
+            'label'                 =>  __( 'Home featured enable', 'bizlight' ),
             'section'               => 'bizlight-home-featured',
             'type'                  => 'checkbox',
             'priority'              => 50,

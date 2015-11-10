@@ -1,9 +1,9 @@
 <?php
 
 
-if ( ! function_exists( 'bizlight_home_featured' ) ) :
+if ( ! function_exists( 'bizlight_home_blog' ) ) :
     /**
-     * Featured Slider
+     * blog Slider
      *
      * @since Bizlight 1.0.0
      *
@@ -11,7 +11,7 @@ if ( ! function_exists( 'bizlight_home_featured' ) ) :
      * @return null
      *
      */
-    function bizlight_home_featured() {
+    function bizlight_home_blog() {
         global $bizlight_customizer_all_values;
 
         $bizlight_home_blog_title = $bizlight_customizer_defaults['bizlight-home-blog-title'] = __('LATEST NEWS','bizlight');
@@ -35,7 +35,7 @@ if ( ! function_exists( 'bizlight_home_featured' ) ) :
         else{
             $col = 'col-md-3';
         }
-        if( 1 != $bizlight_customizer_all_values['bizlight-home-featured-enable'] ){
+        if( 1 != $bizlight_customizer_all_values['bizlight-home-blog-enable'] ){
             return null;
         }
         ?>
@@ -96,4 +96,4 @@ if ( ! function_exists( 'bizlight_home_featured' ) ) :
         <?php
     }
 endif;
-add_action( 'homepage', 'bizlight_home_featured', 20 );
+add_action( 'homepage', 'bizlight_home_blog', 20 );

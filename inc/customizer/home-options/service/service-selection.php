@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-service-selection-options'] = 'from-page';
+$bizlight_customizer_defaults['bizlight-home-service-selection'] = 'from-page';
 
 /*servicesetting*/
 $bizlight_sections['bizlight-home-service-selection-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-home-service-selection-setting'] =
 $bizlight_settings_controls['bizlight-home-service-selection'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-service-selection-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-home-service-selection']
         ),
         'control' => array(
             'label'                 =>  __( 'Select Service From', 'bizlight' ),

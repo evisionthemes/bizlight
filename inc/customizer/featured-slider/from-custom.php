@@ -29,10 +29,10 @@ $bizlight_repeated_settings_controls['bizlight-fs-custom'] =
                 'default'              => $bizlight_customizer_defaults['bizlight-fs-custom-image'],
             ),
             'control' => array(
-                'label'                 =>  __( 'Title %s', 'bizlight' ),
+                'label'                 =>  __( 'Image %s', 'bizlight' ),
                 'section'               => 'bizlight-fs-custom',
-                'type'                  => 'text',
-                'priority'              => 10,
+                'type'                  => 'image',
+                'priority'              => 5,
                 'description'           => ''
             )
         ),

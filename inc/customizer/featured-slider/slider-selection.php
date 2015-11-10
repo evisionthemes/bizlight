@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-fs-selection-options'] = 'from-page';
+$bizlight_customizer_defaults['bizlight-fs-selection'] = 'from-page';
 
 /*fs setting*/
 $bizlight_sections['bizlight-fs-selection-setting'] =
@@ -19,7 +19,7 @@ $bizlight_sections['bizlight-fs-selection-setting'] =
 $bizlight_settings_controls['bizlight-fs-selection'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-fs-selection-options']
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-selection']
         ),
         'control' => array(
             'label'                 =>  __( 'Select Slider From', 'bizlight' ),
