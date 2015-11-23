@@ -13,7 +13,7 @@ $bizlight_customizer_defaults['bizlight-home-about-pages'] = 0;
 $bizlight_sections['bizlight-home-about-pages'] =
     array(
         'priority'       => 40,
-        'title'          => __( 'Select About from Page', 'bizlight' ),
+        'title'          => __( 'Select About From Page', 'bizlight' ),
         'description'    => __( 'This option only work when you have selected "Page" in "About selection Options".', 'bizlight' ),
         'panel'          => 'bizlight-home-about',
     );
@@ -21,7 +21,7 @@ $bizlight_sections['bizlight-home-about-pages'] =
 /*creating setting control for bizlight-home-about-page start*/
 $bizlight_repeated_settings_controls['bizlight-home-about-pages'] =
     array(
-        'repeated' => 12,
+        'repeated' => 6,
         'bizlight-home-about-page-icon' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-home-about-page-icon'],
@@ -39,7 +39,7 @@ $bizlight_repeated_settings_controls['bizlight-home-about-pages'] =
                 'default'              => $bizlight_customizer_defaults['bizlight-home-about-pages'],
             ),
             'control' => array(
-                'label'                 =>  __( 'Select page for about %s', 'bizlight' ),
+                'label'                 =>  __( 'Select Page For About %s', 'bizlight' ),
                 'section'               => 'bizlight-home-about-pages',
                 'type'                  => 'dropdown-pages',
                 'priority'              => 10,

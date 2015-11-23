@@ -118,8 +118,9 @@ function bizlight_layout_options_callback() {
                     <?php _e( 'Select Banner Image', 'bizlight' ); ?>
                 </label>
                 <?php
-                if(!empty(get_post_meta( $post->ID, 'bizlight-banner-image', true ))){
-                    $bizlight_banner_image = get_post_meta( $post->ID, 'bizlight-banner-image', true );
+                $bizlight_banner_image_meta = get_post_meta( $post->ID, 'bizlight-banner-image', true );
+                if( 0 != $bizlight_banner_image_meta){
+                    $bizlight_banner_image = $bizlight_banner_image_meta;
                 }
                 if(!empty( $bizlight_banner_image )){
                     ?>
@@ -140,14 +141,15 @@ function bizlight_layout_options_callback() {
         <tr>
             <td>
                 <?php
-                if(!empty(get_post_meta( $post->ID, 'bizlight-default-layout', true ))){
-                    $bizlight_single_sidebar_layout = get_post_meta( $post->ID, 'bizlight-default-layout', true );
+                $bizlight_single_sidebar_layout_meta = get_post_meta( $post->ID, 'bizlight-default-layout', true );
+                if( 0 != $bizlight_single_sidebar_layout_meta ){
+                    $bizlight_single_sidebar_layout = $bizlight_single_sidebar_layout_meta;
                 }
                 foreach ($bizlight_default_layout_options as $field) {
                     ?>
                     <div class="hide-radio radio-image-wrapper" style="float:left; margin-right:30px;">
-                        <input id="<?php echo $field['value']; ?>" type="radio" name="bizlight-default-layout" value="<?php echo $field['value']; ?>" <?php checked( $field['value'], $bizlight_single_sidebar_layout ); if(empty($bizlight_single_sidebar_layout) && $field['value']== $bizlight_single_sidebar_layout ){ echo "checked='checked'";} ?>/>
-                        <label class="description" for="<?php echo $field['value']; ?>">
+                        <input id="<?php echo esc_attr( $field['value'] ); ?>" type="radio" name="bizlight-default-layout" value="<?php echo esc_attr( $field['value'] ); ?>" <?php checked( $field['value'], $bizlight_single_sidebar_layout ); if(empty($bizlight_single_sidebar_layout) && $field['value']== $bizlight_single_sidebar_layout ){ echo "checked='checked'";} ?>/>
+                        <label class="description" for="<?php echo esc_attr( $field['value'] ); ?>">
                             <img src="<?php echo esc_url( $field['thumbnail'] ); ?>" alt="" />
                         </label>
                     </div>
@@ -157,23 +159,24 @@ function bizlight_layout_options_callback() {
             </td>
         </tr>
         <tr>
-            <td><em class="f13"><?php _e( 'You can set up the sidebar content', 'bizlight' ); ?> <a href="<?php echo admin_url('/widgets.php'); ?>"><?php _e( 'here', 'bizlight' ); ?></a></em></td>
+            <td><em class="f13"><?php _e( 'You can set up the sidebar content', 'bizlight' ); ?> <a href="<?php echo esc_url( admin_url('/widgets.php') ); ?>"><?php _e( 'here', 'bizlight' ); ?></a></em></td>
         </tr>
 
         <!--Image alignment-->
         <tr>
-            <td colspan="4"><?php _e( 'Featured Image alignment', 'bizlight' ); ?></td>
+            <td colspan="4"><?php _e( 'Featured Image Alignment', 'bizlight' ); ?></td>
         </tr>
         <tr>
             <td>
                 <?php
-                if(!empty(get_post_meta( $post->ID, 'bizlight-single-post-image-align', true ))){
-                    $bizlight_single_post_image_align = get_post_meta( $post->ID, 'bizlight-single-post-image-align', true );
+                $bizlight_single_post_image_align_meta = get_post_meta( $post->ID, 'bizlight-single-post-image-align', true );
+                if( 0 != $bizlight_single_post_image_align_meta ){
+                    $bizlight_single_post_image_align = $bizlight_single_post_image_align_meta;
                 }
                 foreach ($bizlight_single_post_image_align_options as $field) {
                     ?>
-                    <input id="<?php echo $field['value']; ?>" type="radio" name="bizlight-single-post-image-align" value="<?php echo $field['value']; ?>" <?php checked( $field['value'], $bizlight_single_post_image_align ); if(empty($bizlight_single_post_image_align) && $field['value']== $bizlight_single_post_image_align ){ echo "checked='checked'";} ?>/>
-                    <label class="description" for="<?php echo $field['value']; ?>">
+                    <input id="<?php echo esc_attr( $field['value'] ); ?>" type="radio" name="bizlight-single-post-image-align" value="<?php echo esc_attr( $field['value'] ); ?>" <?php checked( $field['value'], $bizlight_single_post_image_align ); if(empty($bizlight_single_post_image_align) && $field['value']== $bizlight_single_post_image_align ){ echo "checked='checked'";} ?>/>
+                    <label class="description" for="<?php echo esc_attr( $field['value'] ); ?>">
                         <?php echo esc_html( $field['label'] ); ?>
                     </label>
                 <?php } // end foreach
@@ -182,22 +185,28 @@ function bizlight_layout_options_callback() {
             </td>
         </tr>
         <!--Disable in recent posts-->
-        <tr>
-            <td>
-                <?php
-                $bizlight_disable_recent_posts = 0;
-                if(!empty(get_post_meta( $post->ID, 'bizlight-disable-in-recent-posts', true ))){
-                    $bizlight_disable_recent_posts = get_post_meta( $post->ID, 'bizlight-disable-in-recent-posts', true );
-                }
-                ?>
-                <input id="bizlight-disable-in-recent-posts" type="checkbox" name="bizlight-disable-in-recent-posts" <?php checked( 1, $bizlight_disable_recent_posts ); ?>/>
-                <label class="description" for="bizlight-disable-in-recent-posts">
-                    <?php _e('Exclude it from latest posts', 'bizlight'); ?>
-                </label>
-                <div class="clear"></div>
-            </td>
-        </tr>
-
+        <?php
+        if( 'post' == $post->post_type ){
+            ?>
+            <tr>
+                <td>
+                    <?php
+                    $bizlight_disable_recent_posts = 0;
+                    $bizlight_disable_recent_posts_meta = get_post_meta( $post->ID, 'bizlight-disable-in-recent-posts', true );
+                    if( 0 != $bizlight_disable_recent_posts_meta ){
+                        $bizlight_disable_recent_posts = $bizlight_disable_recent_posts_meta;
+                    }
+                    ?>
+                    <input id="bizlight-disable-in-recent-posts" type="checkbox" name="bizlight-disable-in-recent-posts" <?php checked( 1, $bizlight_disable_recent_posts ); ?>/>
+                    <label class="description" for="bizlight-disable-in-recent-posts">
+                        <?php _e('Exclude It From Blog Posts', 'bizlight'); ?>
+                    </label>
+                    <div class="clear"></div>
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
     </table>
 
 <?php }
@@ -207,6 +216,7 @@ function bizlight_layout_options_callback() {
  * @hooked to save_post hook
  */
 function bizlight_save_sidebar_layout( $post_id ) {
+    global $post;
     // Verify the nonce before proceeding.
     if ( !isset( $_POST[ 'bizlight_layout_options_nonce' ] ) || !wp_verify_nonce( $_POST[ 'bizlight_layout_options_nonce' ], basename( __FILE__ ) ) ) {
         return;
@@ -243,13 +253,15 @@ function bizlight_save_sidebar_layout( $post_id ) {
         }
     }
 
-    /*bizlight-disable-in-recent-posts*/
-    if(isset($_POST['bizlight-disable-in-recent-posts']) ){
-        update_post_meta($post_id, 'bizlight-disable-in-recent-posts', 1);
-    }
-    else{
-        update_post_meta($post_id, 'bizlight-disable-in-recent-posts', 0);
+    if( 'post' == $post->post_type ){
+        /*bizlight-disable-in-recent-posts*/
+        if(isset($_POST['bizlight-disable-in-recent-posts']) ){
+            update_post_meta($post_id, 'bizlight-disable-in-recent-posts', 1);
+        }
+        else{
+            update_post_meta($post_id, 'bizlight-disable-in-recent-posts', 0);
 
+        }
     }
     /*image layout*/
     if(isset($_POST['bizlight-banner-image'])){

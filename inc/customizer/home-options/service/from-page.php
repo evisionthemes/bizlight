@@ -13,7 +13,7 @@ $bizlight_customizer_defaults['bizlight-home-service-pages'] = 0;
 $bizlight_sections['bizlight-home-service-pages'] =
     array(
         'priority'       => 40,
-        'title'          => __( 'Select Service from Page', 'bizlight' ),
+        'title'          => __( 'Select Service From Page', 'bizlight' ),
         'description'    => __( 'This option only work when you have selected "Page" in "Service selection Options".', 'bizlight' ),
         'panel'          => 'bizlight-home-service',
     );
@@ -21,7 +21,7 @@ $bizlight_sections['bizlight-home-service-pages'] =
 /*creating setting control for bizlight-home-service-page start*/
 $bizlight_repeated_settings_controls['bizlight-home-service-pages'] =
     array(
-        'repeated' => 12,
+        'repeated' => 3,
         'bizlight-home-service-page-icon' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-home-service-page-icon'],
@@ -39,7 +39,7 @@ $bizlight_repeated_settings_controls['bizlight-home-service-pages'] =
                 'default'              => $bizlight_customizer_defaults['bizlight-home-service-pages'],
             ),
             'control' => array(
-                'label'                 =>  __( 'Select page for service %s', 'bizlight' ),
+                'label'                 =>  __( 'Select Page For Service %s', 'bizlight' ),
                 'section'               => 'bizlight-home-service-pages',
                 'type'                  => 'dropdown-pages',
                 'priority'              => 10,

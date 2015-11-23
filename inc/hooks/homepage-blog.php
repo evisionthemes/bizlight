@@ -41,10 +41,10 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
         ?>
         <section class="evision-wrapper block-section wrap-blog">
             <div class="container">
-                <h2><?php echo esc_html( $bizlight_home_blog_title ); ?></h2>
+                <h2 class="evision-animate slideInDown"><?php echo esc_html( $bizlight_home_blog_title ); ?></h2>
                 <span class="title-divider"></span>
                 <div class="row block-row">
-                    <div class="row-same-height">
+                    <div class="row-same-height overhidden">
                         <?php
                         $bizlight_home_about_args = array(
                             'post_type' => 'post',
@@ -53,6 +53,7 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                         $bizlight_home_about_post_query = new WP_Query($bizlight_home_about_args);
                         if ($bizlight_home_about_post_query->have_posts()) :
                             $clearfix = 1;
+                            $data_delay = 0;
                             while ($bizlight_home_about_post_query->have_posts()) : $bizlight_home_about_post_query->the_post();
                                 if(has_post_thumbnail()){
                                     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
@@ -61,15 +62,16 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                                 else{
                                     $url = get_template_directory_uri().'/assets/img/no-image.jpg';
                                 }
+                                $data_wow_delay = 'data-wow-delay='.$data_delay.'s';
                                 ?>
-                                <div class="<?php echo esc_attr( $col )?> single-thumb-container">
+                                <div class="<?php echo esc_attr( $col )?> single-thumb-container evision-animate fadeInUp" <?php echo esc_attr( $data_wow_delay );?>>
                                     <div class="single-thumb-inner">
                                         <div class="single-thumb-image">
                                             <img src="<?php echo esc_url( $url ); ?>" alt="<?php the_title_attribute()?>">
                                             <div class="overlay"></div>
                                             <div class="icon">
                                                 <a href="<?php the_permalink();?>" title="<?php the_title_attribute();?>">
-                                                    <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/plus-icon.png" alt="link icon"></span>
+                                                    <span><img src="<?php echo esc_url( get_template_directory_uri().'/assets/img/plus-icon.png')?>" alt="link icon"></span>
                                                 </a>
                                             </div>
                                         </div>
@@ -87,20 +89,32 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                                 if( $clearfix % $bizlight_home_blog_column == 0 ){
                                     echo "<div class='clearfix'></div>";
                                 }
+                                if( $clearfix % $bizlight_home_blog_column == 0 ){
+                                    $data_delay = 0;
+                                }
+                                else{
+                                    $data_delay = $data_delay + 0.5;
+                                }
+
                             $clearfix++;
+
                             endwhile;
                             wp_reset_postdata();
                         endif;
                         ?>
                     </div>
                 </div>
-                <div class="btn-container browse-more-btn">
-                    <button>
-                        <a href="<?php echo esc_url( $bizlight_home_blog_button_link )?>">
+                <?php
+                if( !empty ( $bizlight_home_blog_button_text ) ){
+                    ?>
+                    <div class="btn-container browse-more-btn">
+                        <a class="button" href="<?php echo esc_url( $bizlight_home_blog_button_link )?>">
                             <?php echo esc_html( $bizlight_home_blog_button_text );?>
                         </a>
-                    </button>
-                </div>
+                    </div>
+                    <?php
+                }
+                ?>
             </div>
         </section> <!-- blog section -->
         <?php

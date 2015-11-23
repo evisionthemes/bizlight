@@ -22,10 +22,6 @@ require $bizlight_customizer_testimonial_number_setting_file_path;
 $bizlight_customizer_testimonial_from_page_file_path = bizlight_file_directory('inc/customizer/home-options/testimonial/from-page.php');
 require $bizlight_customizer_testimonial_from_page_file_path;
 
-/*testimonial selection from post options */
-$bizlight_customizer_testimonial_from_post_file_path = bizlight_file_directory('inc/customizer/home-options/testimonial/from-post.php');
-require $bizlight_customizer_testimonial_from_post_file_path;
-
 /*testimonial selection from category options */
 $bizlight_customizer_testimonial_from_category_file_path = bizlight_file_directory('inc/customizer/home-options/testimonial/from-category.php');
 require $bizlight_customizer_testimonial_from_category_file_path;

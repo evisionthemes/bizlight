@@ -66,12 +66,14 @@ if( ! function_exists( 'bizlight_default_layout' ) ) :
      */
     function bizlight_default_layout( $post_id = null ){
         global $bizlight_customizer_all_values,$post;
-        $bizlight_default_layout = $bizlight_customizer_all_values['bizlight-default-layout'];
         if( null != $post_id ){
             $post_id = $post->ID;
         }
-        if( ! empty( get_post_meta( $post_id, 'bizlight-default-layout', true ) ) ) {
-            $bizlight_default_layout = get_post_meta( $post->ID, 'bizlight-default-layout', true );
+        $bizlight_default_layout = $bizlight_customizer_all_values['bizlight-default-layout'];
+        $bizlight_default_layout_meta = get_post_meta( $post_id, 'bizlight-default-layout', true );
+
+        if( false != $bizlight_default_layout_meta ) {
+            $bizlight_default_layout = $bizlight_default_layout_meta;
         }
         return $bizlight_default_layout;
     }
@@ -182,12 +184,16 @@ if ( ! function_exists( 'bizlight_header' ) ) :
  */
 function bizlight_header() {
     global $bizlight_customizer_all_values;
-    
+    $navbar_fixed_top = '';
+    $bizlight_fixed_header = $bizlight_customizer_all_values['bizlight-fixed-header'];
+    if( 1 == $bizlight_fixed_header ){
+            $navbar_fixed_top = 'navbar-fixed-top';
+    }
     ?>
     <?php if( 'header-layout-1' == $bizlight_customizer_all_values['bizlight-header-layout']){
         ?>
         <!-- header and navigation option second - navigation right  -->
-        <header id="masthead" class="site-header evision-nav-right" role="banner">
+        <header id="masthead" class="site-header evision-nav-right <?php echo esc_attr( $navbar_fixed_top );?>" role="banner">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-md-4">
@@ -251,7 +257,7 @@ function bizlight_header() {
     else{
     ?>
     <!-- ///////// header and navigation default format - navigation bottom ( option for pro version) \\\\\\\\\\ -->
- <header id="masthead" class="site-header evision-nav-type-2" role="banner">
+ <header id="masthead" class="site-header evision-nav-type-2 <?php echo esc_attr( $navbar_fixed_top );?>" role="banner">
     <div class="site-branding">
         <?php if ( isset($bizlight_customizer_all_values['bizlight-logo']) && !empty($bizlight_customizer_all_values['bizlight-logo'])) :
             if ( is_front_page() && is_home() ){
@@ -287,7 +293,7 @@ function bizlight_header() {
                 ?>
                 <?php
                 if ( 1 == $bizlight_customizer_all_values['bizlight-enable-tagline'] ) :
-                    echo '<p class="site-description">'. get_bloginfo( 'description' ).'</p>';
+                    echo '<p class="site-description">'. esc_html( get_bloginfo( 'description' ) ).'</p>';
                 endif;
                 ?>
             </a>
@@ -339,7 +345,6 @@ if( ! function_exists( 'bizlight_add_breadcrumb' ) ) :
         }
         echo '<div id="breadcrumb"><div class="container">';
          bizlight_simple_breadcrumb();
-        //
         echo '</div><!-- .container --></div><!-- #breadcrumb -->';
         return;
     }

@@ -47,7 +47,7 @@ global $bizlight_customizer_all_values;
 				echo "<div class='image-full'>";
 				the_post_thumbnail('full');
 			}
-			echo "</div>";
+			echo "</div>";/*div end*/
 			the_content( sprintf(
 			/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'bizlight' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -67,7 +67,7 @@ global $bizlight_customizer_all_values;
 				echo "<div class='image-full'>";
 				the_post_thumbnail('full');
 			}
-			echo "</div>";
+			echo "</div>";/*div end*/
 			the_excerpt();
 		}
 		?>

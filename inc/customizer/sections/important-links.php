@@ -71,7 +71,7 @@ $bizlight_sections['bizlight-imp-links'] =
 $bizlight_settings_controls['bizlight-imp-links-copyright'] =
     array(
         'control' => array(
-            'label'                 =>  __( 'Copyright text', 'bizlight' ),
+            'label'                 =>  __( 'Copyright Text', 'bizlight' ),
             'section'               => 'bizlight-imp-links',
             'type'                  => 'message',
             'priority'              => 2,

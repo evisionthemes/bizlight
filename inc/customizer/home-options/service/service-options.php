@@ -7,10 +7,6 @@ global $bizlight_customizer_defaults;
 
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-home-service-title'] = __('Our Services','bizlight');
-$bizlight_customizer_defaults['bizlight-home-service-single-words'] = 30;
-$bizlight_customizer_defaults['bizlight-home-service-column'] = 3;
-$bizlight_customizer_defaults['bizlight-home-service-button-text'] = __('Browse more services','bizlight');
-$bizlight_customizer_defaults['bizlight-home-service-button-link'] = esc_url( home_url( '/services' ) );
 $bizlight_customizer_defaults['bizlight-home-service-enable-single-link'] = 1;
 
 /*serviceoptions*/
@@ -28,71 +24,10 @@ $bizlight_settings_controls['bizlight-home-service-title'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-service-title']
         ),
         'control' => array(
-            'label'                 =>  __( 'Service title', 'bizlight' ),
+            'label'                 =>  __( 'Main Title', 'bizlight' ),
             'section'               => 'bizlight-home-service-options',
             'type'                  => 'text',
             'priority'              => 20,
-            'active_callback'       => ''
-        )
-    );
-$bizlight_settings_controls['bizlight-home-service-single-words'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-service-single-words']
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Single service number of words', 'bizlight' ),
-            'description'           =>  __( 'If you do not have selected from - Custom', 'bizlight' ),
-            'section'               => 'bizlight-home-service-options',
-            'type'                  => 'number',
-            'priority'              => 25,
-            'active_callback'       => ''
-        )
-    );
-$bizlight_settings_controls['bizlight-home-service-column'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-service-column']
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Number of columns', 'bizlight' ),
-            'section'               => 'bizlight-home-service-options',
-            'type'                  => 'select',
-            'choices'               => array(
-                1 => __( '1', 'bizlight' ),
-                2 => __( '2', 'bizlight' ),
-                3 => __( '3', 'bizlight' ),
-                4 => __( '4', 'bizlight' ),
-            ),
-            'priority'              => 30,
-            'active_callback'       => ''
-        )
-    );
-
-$bizlight_settings_controls['bizlight-home-service-button-text'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-service-button-text']
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Service button text', 'bizlight' ),
-            'section'               => 'bizlight-home-service-options',
-            'type'                  => 'text',
-            'priority'              => 40,
-            'active_callback'       => ''
-        )
-    );
-
-$bizlight_settings_controls['bizlight-home-service-button-link'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-service-button-link']
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Service button text', 'bizlight' ),
-            'section'               => 'bizlight-home-service-options',
-            'type'                  => 'url',
-            'priority'              => 50,
             'active_callback'       => ''
         )
     );
@@ -103,10 +38,10 @@ $bizlight_settings_controls['bizlight-home-service-enable-single-link'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-service-enable-single-link']
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable service single link', 'bizlight' ),
+            'label'                 =>  __( 'Enable Link In Single Column', 'bizlight' ),
             'section'               => 'bizlight-home-service-options',
             'type'                  => 'checkbox',
-            'priority'              => 60,
+            'priority'              => 35,
             'active_callback'       => ''
         )
     );

@@ -27,7 +27,7 @@ $bizlight_settings_controls['bizlight-home-blog-title'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-blog-title']
         ),
         'control' => array(
-            'label'                 =>  __( 'Latest Blog title', 'bizlight' ),
+            'label'                 =>  __( 'Main Title', 'bizlight' ),
             'section'               => 'bizlight-home-blog-options',
             'type'                  => 'text',
             'priority'              => 10,
@@ -41,7 +41,7 @@ $bizlight_settings_controls['bizlight-home-blog-number'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-blog-number']
         ),
         'control' => array(
-            'label'                 =>  __( 'Number of blog/s', 'bizlight' ),
+            'label'                 =>  __( 'Number Of Blog/s', 'bizlight' ),
             'section'               => 'bizlight-home-blog-options',
             'type'                  => 'select',
             'choices'               => array(
@@ -69,7 +69,7 @@ $bizlight_settings_controls['bizlight-home-blog-column'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-blog-column']
         ),
         'control' => array(
-            'label'                 =>  __( 'Number of columns', 'bizlight' ),
+            'label'                 =>  __( 'Number Of Columns', 'bizlight' ),
             'section'               => 'bizlight-home-blog-options',
             'type'                  => 'select',
             'choices'               => array(
@@ -89,7 +89,7 @@ $bizlight_settings_controls['bizlight-home-blog-button-text'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-blog-button-text']
         ),
         'control' => array(
-            'label'                 =>  __( 'Blog button text', 'bizlight' ),
+            'label'                 =>  __( 'Browse All Button Text', 'bizlight' ),
             'section'               => 'bizlight-home-blog-options',
             'type'                  => 'text',
             'priority'              => 40,
@@ -103,7 +103,7 @@ $bizlight_settings_controls['bizlight-home-blog-button-link'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-blog-button-link']
         ),
         'control' => array(
-            'label'                 =>  __( 'Blog button link', 'bizlight' ),
+            'label'                 =>  __( 'Browse All Button Link', 'bizlight' ),
             'section'               => 'bizlight-home-blog-options',
             'type'                  => 'url',
             'priority'              => 50,

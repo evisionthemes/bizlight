@@ -11,7 +11,7 @@ $bizlight_customizer_defaults['bizlight-exclude-categories'] = '';
 $bizlight_sections['bizlight-blog-archive-options'] =
     array(
         'priority'       => 40,
-        'title'          => __( 'Blog/Archive options', 'bizlight' ),
+        'title'          => __( 'Blog/Archive Options', 'bizlight' ),
         'panel'          => 'bizlight-theme-options',
     );
 
@@ -34,7 +34,7 @@ $bizlight_settings_controls['bizlight-exclude-categories'] =
             'default'              => $bizlight_customizer_defaults['bizlight-exclude-categories'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Exclude Categories in Blog Page', 'bizlight' ),
+            'label'                 =>  __( 'Exclude Categories In Blog Page', 'bizlight' ),
             'description'           =>  __( 'Please enter categories ids in comma separated eg: 5,7. For including all categories left blank', 'bizlight' ),
             'section'               => 'bizlight-blog-archive-options',
             'type'                  => 'text',

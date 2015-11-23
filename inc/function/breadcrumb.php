@@ -94,7 +94,7 @@ if( ! function_exists( 'bizlight_simple_breadcrumb' ) ) :
                     if ($showCurrent == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
                     $cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
                     $cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-                    echo $cats;
+                    echo  $cats;
                     if ($showCurrent == 1) echo $before . get_the_title() . $after;
                 }
 

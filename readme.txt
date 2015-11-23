@@ -1,4 +1,4 @@
-=== Bizlight Pro ===
+=== Bizlight ===
 
 * by the eVision Themes (info@evisionthemes.com)
 
@@ -15,19 +15,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Description: Bizlight Pro theme is clean and elegant lightweight WordPress theme, adequate enough to create a standard site for any corporate house. Bizlight is basically designed for the normal WordPress users, in order to create a site quickly and efficiently. However, it has many competencies including responsive, bootstrap, HTML5, CSS3, retina ready, font awesome, google font, cross-browser compatibility, color control, layout control, logo upload, translation-ready, custom CSS field, etc. Documentation consists of several parts and shows you the entire process of setting up WordPress and Bizlight theme from scratch.Demo : http://demo.evisionthemes.com/bizlight-pro/ Documentation : http://doc.evisionthemes.com/bizlight-pro/
+Description: Bizlight theme is clean and elegant lightweight WordPress theme, adequate enough to create a standard site for any corporate house. Bizlight is basically designed for the normal WordPress users, in order to create a site quickly and efficiently. However, it has many competencies including responsive, bootstrap, HTML5, CSS3, retina ready, font awesome, google font, cross-browser compatibility, color control, layout control, logo upload, translation-ready, custom CSS field, etc. Documentation consists of several parts and shows you the entire process of setting up WordPress and Bizlight theme from scratch.Demo : http://demo.evisionthemes.com/bizlight/ Documentation : http://doc.evisionthemes.com/bizlight/
 
 == Translation ==
 
-Bizlight Pro theme is translation ready.
+Bizlight theme is translation ready.
 
 == License ==
-Bizlight Pro is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Bizlight is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License Version 3, see file license.txt
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Bizlight Pro WordPress Theme, Copyright 2015 eVision Themes
-Bizlight Pro is distributed under the terms of the GNU General Public License v3
+Bizlight WordPress Theme, Copyright 2015 eVision Themes
+Bizlight is distributed under the terms of the GNU General Public License v3
 The exceptions to license are as follows:
 
 * Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -39,6 +39,8 @@ The exceptions to license are as follows:
 * html5shiv https://github.com/afarkas/html5shiv [MIT](http://opensource.org/licenses/MIT)
 * jquery.easing https://raw.github.com/gdsmith/jquery-easing/master/LICENSE [MIT](http://opensource.org/licenses/MIT)
 * respond js https://github.com/scottjehl/Respond [MIT](http://opensource.org/licenses/MIT)
+* WOW https://github.com/matthieua/WOW [MIT](http://opensource.org/licenses/MIT)
+* animate css http://daneden.github.io/animate.css/ [MIT](http://opensource.org/licenses/MIT)
 * Coder Customizer Framework - by codersantosh - GPL-2.0 or later license
 
 Image used in screenshot
@@ -54,5 +56,5 @@ Self/Default blog
 
 = Does this theme support any plugins? =
 
-evision themes includes support for Infinite Scroll in Jetpack and conform 7.
+Our Bizlight themes includes support for Infinite Scroll in Jetpack and also support for WooCommerce, BBPress, Contact Form 7.
 

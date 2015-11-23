@@ -17,32 +17,20 @@ $bizlight_panels['bizlight-colors'] =
 $bizlight_sections['colors'] =
     array(
         'priority'       => 40,
-        'title'          => __( 'General Colors Options', 'bizlight' ),
+        'title'          => __( 'Basic Colors Options', 'bizlight' ),
         'panel'          => 'bizlight-colors',
     );
-
-/*Bizlight colors*/
-$bizlight_sections['bizlight-colors'] =
+/*Bizlight colors reset*/
+$bizlight_sections['bizlight-colors-reset'] =
     array(
-        'priority'       => 50,
-        'title'          => __( 'Bizlight Colors Options', 'bizlight' ),
+        'priority'       => 60,
+        'title'          => __( 'Bizlight Colors Reset', 'bizlight' ),
         'panel'          => 'bizlight-colors',
     );
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-main-title-color'] = '#ffffff';
 $bizlight_customizer_defaults['bizlight-h1-h6-color'] = '#212121';
 $bizlight_customizer_defaults['bizlight-link-color'] = '#212121';
-$bizlight_customizer_defaults['breadcrumb-bg-color'] = '#009292';
-$bizlight_customizer_defaults['bizlight-header-main-color'] = '#ffffff';
-$bizlight_customizer_defaults['bizlight-footer-bg-color'] = '#3e4444';
-$bizlight_customizer_defaults['bizlight-primary-color'] = '#028484';
-$bizlight_customizer_defaults['bizlight-primary-hover-color'] = '#016161';
-$bizlight_customizer_defaults['bizlight-home-color-message'] = sprintf( __( '%s Homepage/frontpage color options %s', 'bizlight' ), '<h3>','</h3>' );
-$bizlight_customizer_defaults['bizlight-home-service-section-bg'] = '#FFFFFF';
-$bizlight_customizer_defaults['bizlight-home-about-section-bg'] = '#F8F8F9';
-$bizlight_customizer_defaults['bizlight-home-featured-section-bg'] = '#028484';
-$bizlight_customizer_defaults['bizlight-home-blog-bg'] = '#FFFFFF';
-$bizlight_customizer_defaults['bizlight-home-testimonial-bg'] = '#028484';
+$bizlight_customizer_defaults['bizlight-site-identity-color'] = '#ffffff';
 
 $bizlight_customizer_defaults['bizlight-color-reset'] = '';
 
@@ -62,19 +50,9 @@ if ( ! function_exists( 'bizlight_color_reset' ) ) :
             $bizlight_customizer_saved_values = bizlight_get_all_options();
 
             /*setting fields */
-            $bizlight_customizer_saved_values['bizlight-main-title-color'] = $bizlight_customizer_defaults['bizlight-main-title-color'];
             $bizlight_customizer_saved_values['bizlight-h1-h6-color'] = $bizlight_customizer_defaults['bizlight-h1-h6-color'];
             $bizlight_customizer_saved_values['bizlight-link-color'] = $bizlight_customizer_defaults['bizlight-link-color'];
-            $bizlight_customizer_saved_values['breadcrumb-bg-color'] = $bizlight_customizer_defaults['breadcrumb-bg-color'];
-            $bizlight_customizer_saved_values['bizlight-header-main-color'] = $bizlight_customizer_defaults['bizlight-header-main-color'];
-            $bizlight_customizer_saved_values['bizlight-footer-bg-color'] = $bizlight_customizer_defaults['bizlight-footer-bg-color'];
-            $bizlight_customizer_saved_values['bizlight-primary-color'] = $bizlight_customizer_defaults['bizlight-primary-color'];
-            $bizlight_customizer_saved_values['bizlight-primary-hover-color'] = $bizlight_customizer_defaults['bizlight-primary-hover-color'];
-            $bizlight_customizer_saved_values['bizlight-home-service-section-bg'] = $bizlight_customizer_defaults['bizlight-home-service-section-bg'];
-            $bizlight_customizer_saved_values['bizlight-home-about-section-bg'] = $bizlight_customizer_defaults['bizlight-home-about-section-bg'];
-            $bizlight_customizer_saved_values['bizlight-home-featured-section-bg'] = $bizlight_customizer_defaults['bizlight-home-featured-section-bg'];
-            $bizlight_customizer_saved_values['bizlight-home-blog-bg'] = $bizlight_customizer_defaults['bizlight-home-blog-bg'];
-            $bizlight_customizer_saved_values['bizlight-home-testimonial-bg'] = $bizlight_customizer_defaults['bizlight-home-testimonial-bg'];
+            $bizlight_customizer_saved_values['bizlight-site-identity-color'] = $bizlight_customizer_defaults['bizlight-site-identity-color'];
 
             $bizlight_customizer_defaults['bizlight-color-reset'] = '';
 
@@ -87,194 +65,48 @@ if ( ! function_exists( 'bizlight_color_reset' ) ) :
     }
 endif;
 
-/*Bizlight colors setting controls*/
-$bizlight_settings_controls['bizlight-main-title-color'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-main-title-color'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Main title color', 'bizlight' ),
-            'description'           =>  __( 'Banner highlighted blog section and Inner page banner title color', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 5,
-            'active_callback'       => ''
-        )
-    );
-
-$bizlight_settings_controls['bizlight-h1-h6-color'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-h1-h6-color'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Heading color (H1-h6) color', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 5,
-            'active_callback'       => ''
-        )
-    );
 $bizlight_settings_controls['bizlight-link-color'] =
     array(
         'setting' =>     array(
             'default'              => $bizlight_customizer_defaults['bizlight-link-color'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Link color', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 10,
-            'active_callback'       => ''
-        )
-    );
-$bizlight_settings_controls['breadcrumb-bg-color'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['breadcrumb-bg-color'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Breadcrumb background color', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 10,
-            'active_callback'       => ''
-        )
-    );
-$bizlight_settings_controls['bizlight-header-main-color'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-header-main-color'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Header highlight text color', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 20,
-            'active_callback'       => ''
-        )
-    );
-
-$bizlight_settings_controls['bizlight-footer-bg-color'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-footer-bg-color'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Footer Background Color', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 20,
-            'active_callback'       => ''
-        )
-    );
-$bizlight_settings_controls['bizlight-primary-color'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-primary-color'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Primary Color', 'bizlight' ),
-            'description'           =>  __( 'This color will come in several places of your site, plese select color according to you site', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 30,
-            'active_callback'       => ''
-        )
-    );
-$bizlight_settings_controls['bizlight-primary-hover-color'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-primary-hover-color'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Primary Hover Color', 'bizlight' ),
-            'description'           =>  __( 'This color will come in several places of your site while hovering, plese select color according to you site', 'bizlight' ),
-            'section'               => 'bizlight-colors',
+            'label'                 =>  __( 'Link Color', 'bizlight' ),
+            'section'               => 'colors',
             'type'                  => 'color',
             'priority'              => 40,
             'active_callback'       => ''
         )
     );
-
-$bizlight_settings_controls['bizlight-home-color-message'] =
+$bizlight_settings_controls['bizlight-h1-h6-color'] =
     array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-h1-h6-color'],
+        ),
         'control' => array(
-            'description'           =>   $bizlight_customizer_defaults['bizlight-home-color-message'],
-            'section'               => 'bizlight-colors',
-            'type'                  => 'message',
+            'label'                 =>  __( 'Heading (H1-H6) Color', 'bizlight' ),
+            'section'               => 'colors',
+            'type'                  => 'color',
             'priority'              => 50,
             'active_callback'       => ''
         )
     );
-$bizlight_settings_controls['bizlight-home-service-section-bg'] =
+$bizlight_settings_controls['bizlight-site-identity-color'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-service-section-bg'],
+            'default'              => $bizlight_customizer_defaults['bizlight-site-identity-color'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Service Section Background', 'bizlight' ),
-            'section'               => 'bizlight-colors',
+            'label'                 =>  __( 'Site Identity Color', 'bizlight' ),
+            'description'           =>  __( 'Site title and tagline color', 'bizlight' ),
+            'section'               => 'colors',
             'type'                  => 'color',
-            'priority'              => 60,
+            'priority'              => 65,
             'active_callback'       => ''
         )
     );
-$bizlight_settings_controls['bizlight-home-about-section-bg'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-about-section-bg'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'About Section Background', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 70,
-            'active_callback'       => ''
-        )
-    );
-$bizlight_settings_controls['bizlight-home-featured-section-bg'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-featured-section-bg'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Featured Section Background', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 70,
-            'active_callback'       => ''
-        )
-    );
-/*
- * */
-$bizlight_settings_controls['bizlight-home-blog-bg'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-blog-bg'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Blog Background', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 73,
-            'active_callback'       => ''
-        )
-    );
-$bizlight_settings_controls['bizlight-home-testimonial-bg'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-bg'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Testimonial Background', 'bizlight' ),
-            'section'               => 'bizlight-colors',
-            'type'                  => 'color',
-            'priority'              => 70,
-            'active_callback'       => ''
-        )
-    );
+
+/*Bizlight colors setting controls*/
 $bizlight_settings_controls['bizlight-color-reset'] =
     array(
         'setting' =>     array(
@@ -285,9 +117,9 @@ $bizlight_settings_controls['bizlight-color-reset'] =
         'control' => array(
             'label'                 =>  __( 'Reset', 'bizlight' ),
             'description'           =>  __( 'Caution: Reset all above color settings to default. Refresh the page after save to view the effects. ', 'bizlight' ),
-            'section'               => 'bizlight-colors',
+            'section'               => 'bizlight-colors-reset',
             'type'                  => 'checkbox',
-            'priority'              => 80,
+            'priority'              => 220,
             'active_callback'       => ''
         )
     );

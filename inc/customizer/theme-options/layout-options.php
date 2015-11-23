@@ -27,7 +27,7 @@ $bizlight_settings_controls['bizlight-default-banner-image'] =
             'default'              => $bizlight_customizer_defaults['bizlight-default-banner-image'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Default banner image', 'bizlight' ),
+            'label'                 =>  __( 'Default Banner Image', 'bizlight' ),
             'section'               => 'bizlight-layout-options',
             'type'                  => 'image',
             'priority'              => 10,
@@ -100,7 +100,7 @@ $bizlight_settings_controls['bizlight-single-post-image-align'] =
             'default'              => $bizlight_customizer_defaults['bizlight-single-post-image-align'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Alignment of Image in Single Post/Page', 'bizlight' ),
+            'label'                 =>  __( 'Alignment Of Image In Single Post/Page', 'bizlight' ),
             'section'               => 'bizlight-layout-options',
             'type'                  => 'select',
             'choices'               => array(

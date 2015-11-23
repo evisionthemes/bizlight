@@ -143,26 +143,42 @@ $bizlight_google_fonts = array(
 );
 
 /*defaults values*/
+$bizlight_customizer_defaults['bizlight-font-family-site-identity'] = 'Raleway:400,300,500,600,700,900';
 $bizlight_customizer_defaults['bizlight-font-family-h1-h6'] = 'Raleway:400,300,500,600,700,900';
-$bizlight_customizer_defaults['bizlight-font-family-body'] = 'Raleway:400,300,500,600,700,900';
 
 
 /*section*/
 $bizlight_sections['bizlight-family'] =
     array(
         'priority'       => 20,
-        'title'          => __( 'Font family', 'bizlight' ),
+        'title'          => __( 'Font Family', 'bizlight' ),
         'panel'          => 'bizlight-fonts',
     );
 
 /*setting - controls*/
+$bizlight_settings_controls['bizlight-font-family-site-identity'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-font-family-site-identity'],
+        ),
+        'control' => array(
+            'label'                 => __( 'Site Identity Font Family', 'bizlight' ),
+            'description'           => __( 'Site title and tagline font family', 'bizlight' ),
+            'section'               => 'bizlight-family',
+            'type'                  => 'select',
+            'choices'               => $bizlight_google_fonts,
+            'priority'              => 2,
+            'active_callback'       => ''
+        )
+    );
+
 $bizlight_settings_controls['bizlight-font-family-h1-h6'] =
     array(
         'setting' =>     array(
             'default'              => $bizlight_customizer_defaults['bizlight-font-family-h1-h6'],
         ),
         'control' => array(
-            'label'                 => __( 'H1-H6 font family', 'bizlight' ),
+            'label'                 => __( 'H1-H6 Font Family', 'bizlight' ),
             'section'               => 'bizlight-family',
             'type'                  => 'select',
             'choices'               => $bizlight_google_fonts,
@@ -171,17 +187,3 @@ $bizlight_settings_controls['bizlight-font-family-h1-h6'] =
         )
     );
 
-$bizlight_settings_controls['bizlight-font-family-body'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-font-family-body'],
-        ),
-        'control' => array(
-            'label'                 => __( 'Body ( paragraph ) font family', 'bizlight' ),
-            'section'               => 'bizlight-family',
-            'type'                  => 'select',
-            'choices'               => $bizlight_google_fonts,
-            'priority'              => 10,
-            'active_callback'       => ''
-        )
-    );

@@ -9,7 +9,7 @@ $bizlight_customizer_defaults['bizlight-footer-sidebar-number'] = 3;
 $bizlight_customizer_defaults['bizlight-copyright-text'] = __('Copyright &copy; eVisionThemes','bizlight');
 $bizlight_customizer_defaults['bizlight-enable-social-icons'] = 0;
 $bizlight_customizer_defaults['bizlight-enable-theme-name'] = 1;
-$bizlight_customizer_defaults['bizlight-enable-back-top-top'] = 1;
+$bizlight_customizer_defaults['bizlight-enable-back-to-top'] = 1;
 
 $bizlight_sections['bizlight-footer-options'] =
     array(
@@ -24,7 +24,7 @@ $bizlight_settings_controls['bizlight-footer-sidebar-number'] =
             'default'              => $bizlight_customizer_defaults['bizlight-footer-sidebar-number'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Number of sidebars in footer area', 'bizlight' ),
+            'label'                 =>  __( 'Number of Sidebars In Footer Area', 'bizlight' ),
             'section'               => 'bizlight-footer-options',
             'type'                  => 'select',
             'choices'               => array(
@@ -46,7 +46,7 @@ $bizlight_settings_controls['bizlight-copyright-text'] =
             'default'              => $bizlight_customizer_defaults['bizlight-copyright-text'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Copyright text', 'bizlight' ),
+            'label'                 =>  __( 'Copyright Text', 'bizlight' ),
             'section'               => 'bizlight-footer-options',
             'type'                  => 'text_html',
             'priority'              => 20,
@@ -59,7 +59,7 @@ $bizlight_settings_controls['bizlight-enable-social-icons'] =
             'default'              => $bizlight_customizer_defaults['bizlight-enable-social-icons'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable social', 'bizlight' ),
+            'label'                 =>  __( 'Enable Social', 'bizlight' ),
             'description'                 =>  __( 'Please add Social menus for enabling Social menus. Go to Menus for setting up', 'bizlight' ),
             'section'               => 'bizlight-footer-options',
             'type'                  => 'checkbox',
@@ -73,22 +73,9 @@ $bizlight_settings_controls['bizlight-enable-theme-name'] =
             'default'              => $bizlight_customizer_defaults['bizlight-enable-theme-name'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable theme name and powered by text', 'bizlight' ),
+            'label'                 =>  __( 'Enable Theme Name And Powered By Text', 'bizlight' ),
             'section'               => 'bizlight-footer-options',
             'type'                  => 'checkbox',
             'priority'              => 40,
-        )
-    );
-
-$bizlight_settings_controls['bizlight-enable-back-top-top'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-enable-back-top-top'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Enable back to top', 'bizlight' ),
-            'section'               => 'bizlight-footer-options',
-            'type'                  => 'checkbox',
-            'priority'              => 50,
         )
     );

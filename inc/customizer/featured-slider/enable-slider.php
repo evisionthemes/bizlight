@@ -22,7 +22,7 @@ $bizlight_settings_controls['bizlight-fs-enable'] =
             'default'              => $bizlight_customizer_defaults['bizlight-fs-enable']
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable Slider on', 'bizlight' ),
+            'label'                 =>  __( 'Enable Slider On', 'bizlight' ),
             'section'               => 'bizlight-fs-enable-setting',
             'type'                  => 'checkbox',
             'priority'              => 50,

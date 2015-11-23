@@ -19,11 +19,6 @@ require $bizlight_customizer_file_path;
 $bizlight_layout_meta_file_path = bizlight_file_directory('inc/post-meta/layout-meta.php');
 require $bizlight_layout_meta_file_path;
 
-/**
- * Update Notifier
- */
-$bizlight_update_notifier_file_path = bizlight_file_directory('inc/frameworks/update-notifier/evisionthemes-update-notifier.php');
-require $bizlight_update_notifier_file_path;
 
 /**
  * Include Functions

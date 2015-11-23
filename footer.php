@@ -5,7 +5,7 @@
  * Contains the closing of the #content div and all content after
  *
  * @package eVision themes
- * @subpackage Bizlight Pro
+ * @subpackage Bizlight
  * @since Bizlight 1.0.0
  */
 

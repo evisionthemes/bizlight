@@ -15,6 +15,9 @@ if ( ! function_exists( 'bizlight_before_footer' ) ) :
         if( $bizlight_footer_widgets_number <= 0 ){
             return false;
         }
+        if( !is_active_sidebar( 'footer-col-one' ) && !is_active_sidebar( 'footer-col-two' ) && !is_active_sidebar( 'footer-col-three' ) && !is_active_sidebar( 'footer-col-four' )){
+            return false;
+        }
         if( 1 == $bizlight_footer_widgets_number ){
                 $col = 'col-md-12';
             }
@@ -35,28 +38,28 @@ if ( ! function_exists( 'bizlight_before_footer' ) ) :
              Footer before section
     ****************************************** -->
         <section class="evision-wrapper block-section wrap-contact">
-		<div class="container">
-			<div class="contact-inner">
+		<div class="container overhidden">
+			<div class="contact-inner evision-animate fadeInUp">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="row">
                             <?php if( is_active_sidebar( 'footer-col-one' ) && $bizlight_footer_widgets_number > 0 ) : ?>
-                                <div class="contact-list <?php echo $col;?>">
+                                <div class="contact-list <?php echo esc_attr( $col );?>">
                                     <?php dynamic_sidebar( 'footer-col-one' ); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( is_active_sidebar( 'footer-col-two' ) && $bizlight_footer_widgets_number > 1 ) : ?>
-                                <div class="contact-list <?php echo $col;?>">
+                                <div class="contact-list <?php echo esc_attr( $col );?>">
                                     <?php dynamic_sidebar( 'footer-col-two' ); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( is_active_sidebar( 'footer-col-three' ) && $bizlight_footer_widgets_number > 2 ) : ?>
-                                <div class="contact-list <?php echo $col;?>">
+                                <div class="contact-list <?php echo esc_attr( $col );?>">
                                     <?php dynamic_sidebar( 'footer-col-three' ); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( is_active_sidebar( 'footer-col-four' ) && $bizlight_footer_widgets_number > 3 ) : ?>
-                                <div class="contact-list <?php echo $col;?>">
+                                <div class="contact-list <?php echo esc_attr( $col );?>">
                                     <?php dynamic_sidebar( 'footer-col-four' ); ?>
                                 </div>
                             <?php endif; ?>
@@ -143,7 +146,7 @@ if ( ! function_exists( 'bizlight_page_end' ) ) :
      */
     function bizlight_page_end() {
         global $bizlight_customizer_all_values;
-        if( isset( $bizlight_customizer_all_values['bizlight-enable-back-top-top'] )  && 1 == $bizlight_customizer_all_values['bizlight-enable-back-top-top']) {
+        if( isset( $bizlight_customizer_all_values['bizlight-enable-back-to-top'] )  && 1 == $bizlight_customizer_all_values['bizlight-enable-back-to-top']) {
         ?>
             <a class="evision-back-to-top" href="#page"><i class="fa fa-angle-up"></i></a>
         <?php

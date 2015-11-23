@@ -24,7 +24,7 @@ $bizlight_settings_controls['bizlight-home-testimonial-single-words'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-single-words']
         ),
         'control' => array(
-            'label'                 =>  __( 'Single testimonial number of words', 'bizlight' ),
+            'label'                 =>  __( 'Single Testimonial- Number Of Words', 'bizlight' ),
             'description'           =>  __( 'If you do not have selected from - Custom', 'bizlight' ),
             'section'               => 'bizlight-home-testimonial-options',
             'type'                  => 'number',

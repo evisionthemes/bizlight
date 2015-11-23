@@ -30,13 +30,16 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-
+				$bizlight_disable_recent_posts_meta = get_post_meta( get_the_ID(), 'bizlight-disable-in-recent-posts', true );
+				if( 1 != $bizlight_disable_recent_posts_meta ){
 					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
+                 * Include the Post-Format-specific template for the content.
+                 * If you want to override this in a child theme, then include a file
+                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                 */
 					get_template_part( 'template-parts/content', get_post_format() );
+				}
+
 				?>
 
 			<?php endwhile; ?>

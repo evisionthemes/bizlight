@@ -5,7 +5,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-custom-css'] = 0;
+$bizlight_customizer_defaults['bizlight-custom-css'] = '';
 
 $bizlight_sections['bizlight-custom-css'] =
     array(

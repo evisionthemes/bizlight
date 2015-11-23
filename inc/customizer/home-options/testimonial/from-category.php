@@ -12,7 +12,7 @@ $bizlight_customizer_defaults['bizlight-home-testimonial-category'] = 0;
 $bizlight_sections['bizlight-home-testimonial-category'] =
     array(
         'priority'       => 60,
-        'title'          => __( 'Select Testimonial from Category', 'bizlight' ),
+        'title'          => __( 'Select Testimonial From Category', 'bizlight' ),
         'description'    => __( 'This option only work when you have selected "Category" in "Testimonial selection Options".', 'bizlight' ),
         'panel'          => 'bizlight-home-testimonial',
     );
@@ -24,7 +24,7 @@ $bizlight_settings_controls['bizlight-home-testimonial-category'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-category']
         ),
         'control' => array(
-            'label'                 =>  __( 'Select Category for testimonial', 'bizlight' ),
+            'label'                 =>  __( 'Select Category For Testimonial', 'bizlight' ),
             'section'               => 'bizlight-home-testimonial-category',
             'type'                  => 'category_dropdown',
             'priority'              => 30,

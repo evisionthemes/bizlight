@@ -27,7 +27,7 @@
 				echo "<div class='image-full'>";
 				the_post_thumbnail('full');
 			}
-			echo "</div>";
+			echo "</div>";/*div end*/
 		}
 		?>
 		<?php the_content(); ?>

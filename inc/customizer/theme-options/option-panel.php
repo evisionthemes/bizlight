@@ -32,6 +32,14 @@ require $bizlight_customizer_footer_setting_file_path;
 $bizlight_customizer_footer_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/footer.php');
 require $bizlight_customizer_footer_setting_file_path;
 
+/*back to top options */
+$bizlight_customizer_back_to_top_file_path = bizlight_file_directory('inc/customizer/theme-options/back-to-top.php');
+require $bizlight_customizer_back_to_top_file_path;
+
+/*animation options */
+$bizlight_customizer_animation_options_file_path = bizlight_file_directory('inc/customizer/theme-options/animation-options.php');
+require $bizlight_customizer_animation_options_file_path;
+
 /*custom css options */
 $bizlight_customizer_custom_css_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/custom-css.php');
 require $bizlight_customizer_custom_css_setting_file_path;
