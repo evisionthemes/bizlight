@@ -14,7 +14,6 @@ $bizlight_sections['bizlight-home-service-pages'] =
     array(
         'priority'       => 40,
         'title'          => __( 'Select Service From Page', 'bizlight' ),
-        'description'    => __( 'This option only work when you have selected "Page" in "Service selection Options".', 'bizlight' ),
         'panel'          => 'bizlight-home-service',
     );
 

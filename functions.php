@@ -150,7 +150,6 @@ function bizlight_scripts() {
 	/*google font*/
 	$bizlight_font_family_h1_h6 = $bizlight_customizer_all_values['bizlight-font-family-h1-h6'];
 	$bizlight_font_family_site_identity = $bizlight_customizer_all_values['bizlight-font-family-site-identity'];
-	$bizlight_enable_animation_options = $bizlight_customizer_all_values['bizlight-enable-animation-options'];
 
 	if( $bizlight_font_family_h1_h6 == $bizlight_font_family_site_identity ){
 		wp_enqueue_style( 'bizlight-googleapis', '//fonts.googleapis.com/css?family='.$bizlight_font_family_h1_h6.'', array(), '' );/*added*/
@@ -167,10 +166,8 @@ function bizlight_scripts() {
     wp_enqueue_style( 'bizlight-bxslider-css', get_template_directory_uri() . '/assets/frameworks/bxslider/css/jquery.bxslider.css', array(), '4.0' );/*added*/
 
 	/*animate css*/
-	if( 1 == $bizlight_enable_animation_options ){
-		wp_enqueue_style( 'bizlight-animate-css', get_template_directory_uri() . '/assets/frameworks/wow/css/animate.min.css', array(), '3.4.0' );/*added*/
-		wp_enqueue_script('bizlight-wow', get_template_directory_uri() . '/assets/frameworks/wow/js/wow.min.js', array('jquery'), '1.1.2', 1);
-	}
+	wp_enqueue_style( 'bizlight-animate-css', get_template_directory_uri() . '/assets/frameworks/wow/css/animate.min.css', array(), '3.4.0' );/*added*/
+	wp_enqueue_script('bizlight-wow', get_template_directory_uri() . '/assets/frameworks/wow/js/wow.min.js', array('jquery'), '1.1.2', 1);
 
 	/*main style*/
     wp_enqueue_style( 'bizlight-style', get_stylesheet_uri() );
@@ -187,13 +184,7 @@ function bizlight_scripts() {
     }
 
 	/*custom js*/
-	wp_register_script('bizlight-custom', get_template_directory_uri() . '/assets/js/bizlight-custom.js', array('jquery'), '4.0', 1);
-
-	$translation_array = array(
-		'bizlight_enable_animation_options' => $bizlight_enable_animation_options
-	);
-	wp_localize_script( 'bizlight-custom', 'bizlight_main', $translation_array );
-	wp_enqueue_script( 'bizlight-custom' );
+	wp_enqueue_script('bizlight-custom', get_template_directory_uri() . '/assets/js/bizlight-custom.js', array('jquery'), '1.0.0', 1);
 	// Load the html5 shiv and respond js.
 	wp_enqueue_script( 'bizlight-html5', get_template_directory_uri() . '/assets/frameworks/html5shiv/html5shiv.min.js', array(), '3.7.3' );
 	wp_script_add_data( 'bizlight-html5', 'conditional', 'lt IE 9' );

@@ -14,14 +14,13 @@ $bizlight_sections['bizlight-home-about-pages'] =
     array(
         'priority'       => 40,
         'title'          => __( 'Select About From Page', 'bizlight' ),
-        'description'    => __( 'This option only work when you have selected "Page" in "About selection Options".', 'bizlight' ),
         'panel'          => 'bizlight-home-about',
     );
 
 /*creating setting control for bizlight-home-about-page start*/
 $bizlight_repeated_settings_controls['bizlight-home-about-pages'] =
     array(
-        'repeated' => 6,
+        'repeated' => 3,
         'bizlight-home-about-page-icon' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-home-about-page-icon'],

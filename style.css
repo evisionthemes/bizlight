@@ -951,7 +951,7 @@ body.home .page-inner-title {
 }
 
 .main-navigation a {
-  color: #ffffff;
+  color: #ffffff!important;
   display: block;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
@@ -2254,28 +2254,8 @@ article.hentry .image-full{
   content: "\f0e1";
 }
 
-.evision-social-section a[href*="instagram.com"]:before {
-  content: "\f16d";
-}
-
 .evision-social-section a[href*="youtube.com"]:before {
   content: "\f167";
-}
-
-.evision-social-section a[href*="plus.google.com"]:before {
-  content: "\f0d5";
-}
-
-.evision-social-section a[href*="pinterest.com"]:before {
-  content: "\f0d2";
-}
-
-.evision-social-section a[href*="flickr.com"]:before {
-  content: "\f16e";
-}
-
-.evision-social-section a[href*="tumblr.com"]:before {
-  content: "\f173";
 }
 
 .evision-social-section a:hover[href*="facebook.com"] {
@@ -2290,28 +2270,8 @@ article.hentry .image-full{
   background-color: #1484C3;
 }
 
-.evision-social-section a:hover[href*="instagram.com"] {
-  background-color: #2D6A93;
-}
-
 .evision-social-section a:hover[href*="youtube.com"] {
   background-color: #D62424;
-}
-
-.evision-social-section a:hover[href*="pinterest.com"] {
-  background-color: #BD2126;
-}
-
-.evision-social-section a:hover[href*="plus.google.com"] {
-  background-color: #D73D32;
-}
-
-.evision-social-section a:hover[href*="flickr.com"] {
-  background-color: #FD0083;
-}
-
-.evision-social-section a:hover[href*="tumblr.com"] {
-  background-color: #34465D;
 }
 
 /*social group in nav section*/
@@ -2595,7 +2555,7 @@ body:not(.home) .site-header.evision-nav-right{
 }
 
 .evision-slider-caption .main-title {
-  color: #ffffff;
+  color: #ffffff!important;
   font-size: 36px;
   font-weight: 600;
   line-height: 1.2;

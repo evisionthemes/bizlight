@@ -5,11 +5,10 @@ if ( ! function_exists( 'bizlight_home_service_array' ) ) :
      *
      * @since Bizlight 1.0.0
      *
-     * @param string $from_service
+     * @param null
      * @return array
      */
-    function bizlight_home_service_array( $from_service ){
-        global $bizlight_customizer_all_values;
+    function bizlight_home_service_array(  ){
 
         $bizlight_home_service_contents_array = array();
 
@@ -35,7 +34,7 @@ if ( ! function_exists( 'bizlight_home_service_array' ) ) :
         $bizlight_home_service_posts_ids = array();
         if( null != $bizlight_home_service_posts ) {
             foreach( $bizlight_home_service_posts as $bizlight_home_service_post ) {
-                if( 0 != $bizlight_home_service_post['bizlight-home-service-pages-ids'] ){
+                if( isset($bizlight_home_service_post['bizlight-home-service-pages-ids']) && 0 != $bizlight_home_service_post['bizlight-home-service-pages-ids'] ){
                     $bizlight_home_service_posts_ids[] = $bizlight_home_service_post['bizlight-home-service-pages-ids'];
                     if( isset( $bizlight_home_service_post['bizlight-home-service-page-icon'] )){
                         $bizlight_home_service_page_icon = $bizlight_home_service_post['bizlight-home-service-page-icon'];
@@ -95,11 +94,9 @@ if ( ! function_exists( 'bizlight_home_service' ) ) :
         if( 1 != $bizlight_customizer_all_values['bizlight-home-service-enable'] ){
             return null;
         }
-        $bizlight_home_service_selection_options = $bizlight_customizer_all_values['bizlight-home-service-selection'];
-        $bizlight_service_arrays = bizlight_home_service_array( $bizlight_home_service_selection_options );
+        $bizlight_service_arrays = bizlight_home_service_array(  );
         if( is_array( $bizlight_service_arrays )){
             $bizlight_home_service_title = $bizlight_customizer_all_values['bizlight-home-service-title'];
-            $bizlight_home_service_enable_single_link = $bizlight_customizer_all_values['bizlight-home-service-enable-single-link'];
             ?>
             <section class="evision-wrapper block-section wrap-service">
                 <div class="container">
@@ -121,14 +118,7 @@ if ( ! function_exists( 'bizlight_home_service' ) ) :
                             ?>
                             <div class="col-md-4 box-container evision-animate fadeInUp" <?php echo esc_attr( $data_wow_delay );?>>
                                 <div class="box-inner">
-                                    <?php
-                                    if( 1 == $bizlight_home_service_enable_single_link ){
-                                        ?>
                                     <a href="<?php echo esc_url( $bizlight_service_array['bizlight-home-service-link'] );?>" title="<?php echo esc_attr( $bizlight_service_array['bizlight-home-service-title'] )?>">
-                                        <?php
-                                    }
-                                    ?>
-
                                         <div class="icon-container">
                                             <span><i class="fa <?php echo esc_attr( $bizlight_service_array['bizlight-home-service-icon'] ); ?>"></i></span>
                                         </div>
@@ -140,13 +130,7 @@ if ( ! function_exists( 'bizlight_home_service' ) ) :
                                                 </p>
                                             </div>
                                         </div>
-                                        <?php
-                                        if( 1 == $bizlight_home_service_enable_single_link ){
-                                        ?>
                                     </a>
-                                <?php
-                                }
-                                ?>
                                 </div>
                             </div>
                             <?php

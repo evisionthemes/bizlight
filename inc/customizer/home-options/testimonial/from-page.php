@@ -13,14 +13,13 @@ $bizlight_sections['bizlight-home-testimonial-pages'] =
     array(
         'priority'       => 40,
         'title'          => __( 'Select Testimonial From Page', 'bizlight' ),
-        'description'    => __( 'This option only work when you have selected "Page" in "Testimonial selection Options".', 'bizlight' ),
         'panel'          => 'bizlight-home-testimonial',
     );
 
 /*creating setting control for bizlight-home-testimonial-page start*/
 $bizlight_repeated_settings_controls['bizlight-home-testimonial-pages'] =
     array(
-        'repeated' => 6,
+        'repeated' => 3,
         'bizlight-home-testimonial-pages-ids' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-pages'],

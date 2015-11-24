@@ -1,27 +1,5 @@
 <?php
-if( ! function_exists( 'bizlight_banner_image' ) ) :
-    /**
-     * Bizlight banner image
-     *
-     * @since  Bizlight 1.0.0
-     *
-     * @param int
-     * @return string
-     */
-    function bizlight_banner_image( $post_id = null ){
-        global $bizlight_customizer_all_values,$post;
-        if( null != $post_id ){
-            $post_id = $post->ID;
-        }
-        $bizlight_banner_image = $bizlight_customizer_all_values['bizlight-default-banner-image'];
-        $bizlight_banner_image_meta = get_post_meta( $post_id, 'bizlight-banner-image', true );
 
-        if( false != $bizlight_banner_image_meta ) {
-            $bizlight_banner_image = $bizlight_banner_image_meta;
-        }
-        return $bizlight_banner_image;
-    }
-endif;
 
 if( ! function_exists( 'bizlight_wp_head' ) ) :
 
@@ -86,17 +64,6 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             .nav-links .nav-next a,
             .page-links a {
                 color: <?php echo esc_attr( $bizlight_link_color ); ?> !important; /*#212121*/
-            }
-            <?php
-            }
-            /*banner image*/
-            $bizlight_banner_image = bizlight_banner_image(get_the_ID());
-            if( !empty( $bizlight_banner_image ) ){
-            ?>
-            .page-inner-title {
-                background-image: url(<?php echo esc_url($bizlight_banner_image)?>);
-                background-position: center top;
-                background-color: #565656;
             }
             <?php
             }
