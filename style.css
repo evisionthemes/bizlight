@@ -826,7 +826,7 @@ body.home .page-inner-title {
 .page-inner-title .page-title{
   padding-left: 15px;
   padding-right: 15px;
-  color: #ffffff;
+  color: #ffffff!important;
 }
 
 .wrap-header .nav-tabs{
@@ -2224,9 +2224,8 @@ article.hentry .image-full{
   text-align: center;
   width: 42px;
   background-color: #3E4444;
-  color: #a7a7a7;
+  color: #a7a7a7!important;
   display: inline-block;
-  color: #313131;
   border: 1px solid #a7a7a7;
   margin-left: 5px;
   margin-right: 5px;  
