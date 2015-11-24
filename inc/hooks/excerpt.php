@@ -11,7 +11,6 @@ if( ! function_exists( 'bizlight_excerpt_length' ) ) :
      */
     function bizlight_excerpt_length( ){
         return esc_attr( 30 );
-
     }
 
 endif;

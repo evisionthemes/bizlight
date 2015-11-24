@@ -108,23 +108,6 @@ function bizlight_body_class( $bizlight_body_classes ) {
 endif;
 add_action( 'body_class', 'bizlight_body_class', 10, 1);
 
-if ( ! function_exists( 'bizlight_before_page_start' ) ) :
-/**
- * intro loader
- *
- * @since Bizlight 1.0.0
- *
- * @param null
- * @return null
- *
- */
-function bizlight_before_page_start() {
-    global $bizlight_customizer_all_values;
-    /*intro loader*/
-}
-endif;
-add_action( 'bizlight_action_before', 'bizlight_before_page_start', 10 );
-
 if ( ! function_exists( 'bizlight_page_start' ) ) :
 /**
  * page start

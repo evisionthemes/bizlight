@@ -53,7 +53,7 @@ $bizlight_settings_controls['bizlight-home-about-right-image'] =
         ),
         'control' => array(
             'label'                 =>  __( 'Right Site Image', 'bizlight' ),
-            'description'           =>  __( 'Recommended image size 480 * 540', 'bizlight' ),
+            'description'           =>  __( 'Recommended image size 480 * 540, If you remove image the default image will show', 'bizlight' ),
             'section'               => 'bizlight-home-about-options',
             'type'                  => 'image',
             'priority'              => 35,

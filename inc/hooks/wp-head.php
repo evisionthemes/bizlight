@@ -1,6 +1,4 @@
 <?php
-
-
 if( ! function_exists( 'bizlight_wp_head' ) ) :
 
     /**

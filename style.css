@@ -4,7 +4,7 @@ Theme URI: http://evisionthemes.com/bizlight
 Author: evisiontheme
 Author URI: http://evisionthemes.com/
 Description: Bizlight theme is clean and elegant lightweight WordPress theme, adequate enough to create a standard site for any corporate house. Bizlight is basically designed for the normal WordPress users, in order to create a site quickly and efficiently. However, it has many competencies including responsive, bootstrap, HTML5, CSS3, retina ready, font awesome, google font, cross-browser compatibility, color control, layout control, logo upload, translation-ready, custom CSS field, etc. Documentation consists of several parts and shows you the entire process of setting up WordPress and Bizlight theme from scratch.Demo : http://demo.evisionthemes.com/bizlight/ Documentation : http://doc.evisionthemes.com/bizlight/
-Version: 2.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Bizlight
@@ -2383,14 +2383,14 @@ body.home .block-section{
   text-align: left;
 }
 
-.site-header.navbar-fixed-top{
+.home .site-header.navbar-fixed-top{
   position: fixed;
   z-index: 999;
 }
 
 body:not(.home) .site-header.evision-nav-right{
   position: static;
-  background-color: #028484;
+  background-color: #028484!important;
 }
 
 .evision-nav-right .site-title:hover,

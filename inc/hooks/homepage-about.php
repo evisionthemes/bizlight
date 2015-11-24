@@ -9,7 +9,6 @@ if (!function_exists('bizlight_home_about_array')) :
      * @return array
      */
     function bizlight_home_about_array() {
-        global $bizlight_customizer_all_values;
 
         $bizlight_home_about_contents_array = array();
         $bizlight_home_about_contents_array[0]['bizlight-home-about-title'] = __('Public Voice','bizlight');

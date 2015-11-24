@@ -90,6 +90,12 @@ Theme options panel
 $bizlight_customizer_theme_options_setting_file_path = bizlight_file_directory('inc/customizer/theme-options/option-panel.php');
 require $bizlight_customizer_theme_options_setting_file_path;
 
+/******************************************
+Important Links
+ *******************************************/
+$bizlight_customizer_important_links_file_path = bizlight_file_directory('inc/customizer/sections/important-links.php');
+require $bizlight_customizer_important_links_file_path;
+
 /*Resetting all Values*/
 /**
  * Reset color settings to default

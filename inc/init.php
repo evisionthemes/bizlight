@@ -13,7 +13,6 @@
 $bizlight_customizer_file_path = bizlight_file_directory('inc/customizer/customizer.php');
 require $bizlight_customizer_file_path;
 
-
 /**
  * Include Functions
  */

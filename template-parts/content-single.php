@@ -18,9 +18,11 @@
 
 	<div class="entry-content">
 		<?php
-		echo "<div class='image-full'>";
-		the_post_thumbnail('full');
-		echo "</div>";/*div end*/
+		if( has_post_thumbnail()){
+			echo "<div class='image-full'>";
+			the_post_thumbnail('full');
+			echo "</div>";/*div end*/
+		}
 		?>
 		<?php the_content(); ?>
 		<?php
