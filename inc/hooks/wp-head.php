@@ -14,9 +14,7 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
         /*Color options */
         $bizlight_h1_h6_color = $bizlight_customizer_all_values['bizlight-h1-h6-color'];
         $bizlight_link_color = $bizlight_customizer_all_values['bizlight-link-color'];
-
         $bizlight_link_hover_color = $bizlight_customizer_all_values['bizlight-link-hover-color'];
-
         $bizlight_site_identity_color = $bizlight_customizer_all_values['bizlight-site-identity-color'];
         ?>
         <style type="text/css">
@@ -68,7 +66,6 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             }
             <?php
             }
-
             /*Link Hover color*/
               if( !empty($bizlight_link_hover_color) ){
               ?>
@@ -87,7 +84,6 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
               }
               <?php
               }
-
             /*header menu text*/
             if( !empty( $bizlight_site_identity_color ) ){
             ?>
@@ -107,7 +103,7 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             echo $bizlight_custom_css_output;/*escaping done above*/
             ?>
         </style>
-    <?php 
+    <?php
     }
 endif;
 add_action( 'wp_head', 'bizlight_wp_head' );

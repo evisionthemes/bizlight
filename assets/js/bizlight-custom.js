@@ -42,21 +42,15 @@ jQuery(document).ready(function ($) {
      var stickyHeaderTop = $(this).scrollTop();
 
        if(stickyHeaderTop>=30){
-
         if(!$('.navbar-fixed-top').hasClass("navbar-fixed-active"))
         {
             $('.navbar-fixed-top').addClass("navbar-fixed-active").css('paddingBottom', '0');
         }
        }else{
             $('.navbar-fixed-top').removeClass("navbar-fixed-active").css('paddingBottom', '15px');;
-
-            $('.navbar-fixed-top').css({background: '#212121'});
-       }
-       if(stickyHeaderTop<30){
-        $('.navbar-fixed-top').css({background: '#028484'});
-
        }
     });
+
 
 });
 /**
