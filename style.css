@@ -695,7 +695,11 @@ button a,
 button:hover a,
 a.button,
 a.button:hover{
+<<<<<<< HEAD
   color: #ffffff !important;
+=======
+  color: #ffffff;
+>>>>>>> 7362a71c75be6764b5542774ae07d35ee804e0bc
   display: inline-block;
 }
 
@@ -2599,6 +2603,7 @@ body:not(.home) .site-header.evision-nav-right{
   
   .evision-slider-caption .main-title {
     font-size: 30px;
+<<<<<<< HEAD
   }
 
   .evision-slider-caption .banner-con {
@@ -2606,6 +2611,15 @@ body:not(.home) .site-header.evision-nav-right{
     margin-top: 15px;
   }
 
+=======
+  }
+
+  .evision-slider-caption .banner-con {
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+
+>>>>>>> 7362a71c75be6764b5542774ae07d35ee804e0bc
 }
 
 @media screen and (max-width: 991px){
@@ -2876,7 +2890,10 @@ body:not(.home) .site-header.evision-nav-right{
 
 .wrap-about{
   background-color: #f8f8f9;
+<<<<<<< HEAD
   padding-bottom: 60px;
+=======
+>>>>>>> 7362a71c75be6764b5542774ae07d35ee804e0bc
 }
 
 .wrap-about .title-divider {
@@ -3225,8 +3242,11 @@ body:not(.home) .site-header.evision-nav-right{
   margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
 .site-footer,
 .site-info,
+=======
+>>>>>>> 7362a71c75be6764b5542774ae07d35ee804e0bc
 .site-info a{
   color: #cccccc !important;
 }
