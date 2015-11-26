@@ -1,13 +1,13 @@
 jQuery(document).ready(function ($) {
-    $('#evision-slider').bxSlider({
-        adaptiveHeight: true,
-        mode: $(this).data('mode'),
-        speed: $(this).data('speed'),
-        pause: $(this).data('pause'),
-        controls: false,
-        pager: $(this).data('controls'),
-        auto: $(this).data('controls'),
+    $('.evision-main-slider').each(function(){
+        $(this).bxSlider({
+            adaptiveHeight: true,
+            controls: false,
+            pager: $(this).data('control'),
+            auto: $(this).data('auto')
+        });
     });
+
     //What happen on window scroll
     function back_to_top(){
         var scrollTop = $(window).scrollTop();
@@ -28,6 +28,29 @@ jQuery(document).ready(function ($) {
             $("html, body").stop().animate({scrollTop: $(this.hash).offset().top - 70}, 2e3, "easeInOutExpo");
         }
     });
+
+    /*wow js*/
+    wow = new WOW({
+            boxClass: 'evision-animate'
+        }
+    );
+    wow.init();
+
+    // fixed navigation
+    jQuery(window).on('scroll', function(){
+
+     var stickyHeaderTop = $(this).scrollTop();
+
+       if(stickyHeaderTop>=30){
+        if(!$('.navbar-fixed-top').hasClass("navbar-fixed-active"))
+        {
+            $('.navbar-fixed-top').addClass("navbar-fixed-active").css('paddingBottom', '0');
+        }
+       }else{
+            $('.navbar-fixed-top').removeClass("navbar-fixed-active").css('paddingBottom', '15px');;
+       }
+    });
+
 
 });
 /**

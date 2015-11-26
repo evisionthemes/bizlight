@@ -6,8 +6,6 @@ global $bizlight_customizer_defaults;
 
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-home-featured-title'] = __( 'WANT TO KNOW MORE ABOUT OUR COMPANY?', 'bizlight' );
-$bizlight_customizer_defaults['bizlight-home-featured-bg'] = get_template_directory_uri().'/assets/img/heightlight-bg.jpg';
-$bizlight_customizer_defaults['bizlight-home-featured-button-text'] = __('LEARN MORE', 'bizlight');
 $bizlight_customizer_defaults['bizlight-home-featured-button-url'] = esc_url( home_url( '/about-us' ) );
 $bizlight_customizer_defaults['bizlight-home-featured-enable'] = 1;
 
@@ -23,36 +21,10 @@ $bizlight_settings_controls['bizlight-home-featured-title'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-featured-title'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Home featured section title', 'bizlight' ),
+            'label'                 =>  __( 'Main Title', 'bizlight' ),
             'section'               => 'bizlight-home-featured',
             'type'                  => 'text',
             'priority'              => 10,
-        )
-    );
-
-$bizlight_settings_controls['bizlight-home-featured-bg'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-featured-bg'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Home featured section background image', 'bizlight' ),
-            'section'               => 'bizlight-home-featured',
-            'type'                  => 'image',
-            'priority'              => 20,
-        )
-    );
-
-$bizlight_settings_controls['bizlight-home-featured-button-text'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-featured-button-text'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Home featured button text', 'bizlight' ),
-            'section'               => 'bizlight-home-featured',
-            'type'                  => 'text',
-            'priority'              => 30,
         )
     );
 
@@ -62,7 +34,7 @@ $bizlight_settings_controls['bizlight-home-featured-button-url'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-featured-button-url'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Home featured button url', 'bizlight' ),
+            'label'                 =>  __( 'Learn More Button Link', 'bizlight' ),
             'section'               => 'bizlight-home-featured',
             'type'                  => 'text',
             'priority'              => 40,
@@ -75,7 +47,7 @@ $bizlight_settings_controls['bizlight-home-featured-enable'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-featured-enable'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Home featured enable', 'bizlight' ),
+            'label'                 =>  __( 'Home Featured Enable', 'bizlight' ),
             'section'               => 'bizlight-home-featured',
             'type'                  => 'checkbox',
             'priority'              => 50,

@@ -64,15 +64,9 @@ if( ! function_exists( 'bizlight_default_layout' ) ) :
      * @param int
      * @return string
      */
-    function bizlight_default_layout( $post_id = null ){
+    function bizlight_default_layout(){
         global $bizlight_customizer_all_values,$post;
         $bizlight_default_layout = $bizlight_customizer_all_values['bizlight-default-layout'];
-        if( null != $post_id ){
-            $post_id = $post->ID;
-        }
-        if( ! empty( get_post_meta( $post_id, 'bizlight-default-layout', true ) ) ) {
-            $bizlight_default_layout = get_post_meta( $post->ID, 'bizlight-default-layout', true );
-        }
         return $bizlight_default_layout;
     }
 endif;
@@ -92,19 +86,16 @@ function bizlight_body_class( $bizlight_body_classes ) {
         $bizlight_default_layout = bizlight_default_layout();
         if( !empty( $bizlight_default_layout ) ){
             if( 'left-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'bizlight-left-sidebar';
+                $bizlight_body_classes[] = 'evision-left-sidebar';
             }
             elseif( 'right-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'bizlight-right-sidebar';
-            }
-            elseif( 'both-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'bizlight-both-sidebar';
+                $bizlight_body_classes[] = 'evision-right-sidebar';
             }
             elseif( 'no-sidebar' == $bizlight_default_layout ){
-                $bizlight_body_classes[] = 'bizlight-no-sidebar';
+                $bizlight_body_classes[] = 'evision-no-sidebar';
             }
             else{
-                $bizlight_body_classes[] = 'bizlight-right-sidebar';
+                $bizlight_body_classes[] = 'evision-right-sidebar';
             }
         }
         else{
@@ -116,43 +107,6 @@ function bizlight_body_class( $bizlight_body_classes ) {
 }
 endif;
 add_action( 'body_class', 'bizlight_body_class', 10, 1);
-
-if ( ! function_exists( 'bizlight_before_page_start' ) ) :
-/**
- * intro loader
- *
- * @since Bizlight 1.0.0
- *
- * @param null
- * @return null
- *
- */
-function bizlight_before_page_start() {
-    global $bizlight_customizer_all_values;
-
-    if ( 1 == $bizlight_customizer_all_values['bizlight-enable-intro'] ) {
-        $bizlight_intro_bg_color =  $bizlight_customizer_all_values['bizlight-intro-bg-color'];
-        $bizlight_intro_middle_image =  $bizlight_customizer_all_values['bizlight-intro-middle-image'];
-        ?>
-        <div id="bizlight-intro-loader" style="background: <?php echo $bizlight_intro_bg_color; ?>">
-            <div id="bizlight-mask">
-                <?php
-                 if( !empty( $bizlight_intro_middle_image ) ){
-                    echo "<img src='".$bizlight_intro_middle_image."'>";
-                 }
-                 else{
-                    echo "<div class='loader-outer'><div class='et-loader'></div></div>";
-                 }
-                ?>
-            </div>
-        </div>
-    <?php
-    }
-    ?>
-<?php
-}
-endif;
-add_action( 'bizlight_action_before', 'bizlight_before_page_start', 10 );
 
 if ( ! function_exists( 'bizlight_page_start' ) ) :
 /**
@@ -202,12 +156,9 @@ if ( ! function_exists( 'bizlight_header' ) ) :
  */
 function bizlight_header() {
     global $bizlight_customizer_all_values;
-    
     ?>
-    <?php if( 'header-layout-1' == $bizlight_customizer_all_values['bizlight-header-layout']){
-        ?>
-        <!-- header and navigation option second - navigation right  -->
-        <header id="masthead" class="site-header evision-nav-right" role="banner">
+     <!-- header and navigation option second - navigation right  -->
+        <header id="masthead" class="site-header evision-nav-right navbar-fixed-top" role="banner">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-md-4">
@@ -266,70 +217,7 @@ function bizlight_header() {
                 </div>
             </div>
         </header>
-        <?php
-    }
-    else{
-    ?>
-    <!-- ///////// header and navigation default format - navigation bottom ( option for pro version) \\\\\\\\\\ -->
- <header id="masthead" class="site-header evision-nav-type-2" role="banner">
-    <div class="site-branding">
-        <?php if ( isset($bizlight_customizer_all_values['bizlight-logo']) && !empty($bizlight_customizer_all_values['bizlight-logo'])) :
-            if ( is_front_page() && is_home() ){
-                echo '<h1 class="site-title">';
-            }
-            else{
-                echo '<p class="site-title">';
-            }
-            ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img class="header-logo" src="<?php echo esc_url($bizlight_customizer_all_values['bizlight-logo']); ?>" alt="<?php bloginfo( 'name' )?>">
-            </a>
-            <?php if ( is_front_page() && is_home() ){
-                echo '</h1>';
-            }
-            else{
-                echo '</p>';
-            }
-        ?>
-        <?php else :
-            if ( is_front_page() && is_home() ){
-                echo '<h1 class="site-title">';
-            }
-            else{
-                echo '<p class="site-title">';
-            }
-            ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php
-                if ( 1 == $bizlight_customizer_all_values['bizlight-enable-title'] ) :
-                    bloginfo( 'name' );
-                endif;
-                ?>
-                <?php
-                if ( 1 == $bizlight_customizer_all_values['bizlight-enable-tagline'] ) :
-                    echo '<p class="site-description">'. get_bloginfo( 'description' ).'</p>';
-                endif;
-                ?>
-            </a>
-            <?php if ( is_front_page() && is_home() ){
-                echo '</h1>';
-            }
-            else{
-                echo '</p>';
-            }
-        endif; ?>
-    </div>
 
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-            <?php esc_html_e( 'Primary Menu', 'bizlight' ); ?>
-        </button>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-    </nav>
-</header><!-- #masthead -->
-    <?php
-    }
-    ?>
 <?php
 }
 endif;
@@ -347,32 +235,12 @@ if( ! function_exists( 'bizlight_add_breadcrumb' ) ) :
  *
  */
     function bizlight_add_breadcrumb(){
-        global $bizlight_customizer_all_values;
-        // Bail if Breadcrumb disabled
-        $breadcrumb_enable_breadcrumb = $bizlight_customizer_all_values['bizlight-enable-breadcrumb' ];
-        $breadcrumb_type = $bizlight_customizer_all_values['bizlight-breadcrumb-type' ];
-        if ( 1 != $breadcrumb_enable_breadcrumb ) {
-            return;
-        }
         // Bail if Home Page
         if ( is_front_page() || is_home() ) {
             return;
         }
         echo '<div id="breadcrumb"><div class="container">';
-        switch ( $breadcrumb_type ) {
-            case 'advanced':
-                if ( function_exists( 'bcn_display' ) ) {
-                    bcn_display();
-                }
-                else{
-                    bizlight_simple_breadcrumb();
-                }
-                break;
-            default:
-                bizlight_simple_breadcrumb();
-                break;
-        }
-        //
+         bizlight_simple_breadcrumb();
         echo '</div><!-- .container --></div><!-- #breadcrumb -->';
         return;
     }

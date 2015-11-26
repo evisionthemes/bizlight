@@ -1,4 +1,4 @@
-=== Bizlight Pro ===
+=== Bizlight ===
 
 * by the eVision Themes (info@evisionthemes.com)
 
@@ -8,14 +8,14 @@ Tags: light, white, blue, two-columns, right-sidebar, left-sidebar custom-backgr
 
 Requires at least: 4.0
 Tested up to: 4.3.1
-Stable tag: 2.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 == Description ==
 
-eVision Themes  ( http://evisionthemes.com ) proudly presents Bizlight. Bizlight is a strong, attractive and responsive business theme. It has been introduced after a long research and analysis. It is suitable for any type of business organizations.
+Description: Bizlight theme is clean and elegant lightweight WordPress theme, adequate enough to create a standard site for any corporate house. Bizlight is basically designed for the normal WordPress users, in order to create a site quickly and efficiently. However, it has many competencies including responsive, bootstrap, HTML5, CSS3, retina ready, font awesome, google font, cross-browser compatibility, color control, layout control, logo upload, translation-ready, custom CSS field, etc. Documentation consists of several parts and shows you the entire process of setting up WordPress and Bizlight theme from scratch.Demo : http://demo.evisionthemes.com/bizlight/ Documentation : http://doc.evisionthemes.com/bizlight/
 
 == Translation ==
 
@@ -39,6 +39,8 @@ The exceptions to license are as follows:
 * html5shiv https://github.com/afarkas/html5shiv [MIT](http://opensource.org/licenses/MIT)
 * jquery.easing https://raw.github.com/gdsmith/jquery-easing/master/LICENSE [MIT](http://opensource.org/licenses/MIT)
 * respond js https://github.com/scottjehl/Respond [MIT](http://opensource.org/licenses/MIT)
+* WOW https://github.com/matthieua/WOW [MIT](http://opensource.org/licenses/MIT)
+* animate css http://daneden.github.io/animate.css/ [MIT](http://opensource.org/licenses/MIT)
 * Coder Customizer Framework - by codersantosh - GPL-2.0 or later license
 
 Image used in screenshot
@@ -54,5 +56,5 @@ Self/Default blog
 
 = Does this theme support any plugins? =
 
-evision themes includes support for Infinite Scroll in Jetpack and conform 7.
+Our Bizlight themes includes support for Infinite Scroll in Jetpack and also support for WooCommerce, BBPress, Contact Form 7.
 

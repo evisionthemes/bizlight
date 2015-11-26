@@ -12,21 +12,21 @@ $bizlight_customizer_defaults['bizlight-fs-pages'] = 0;
 $bizlight_sections['bizlight-fs-pages'] =
     array(
         'priority'       => 40,
-        'title'          => __( 'Select Slider from Page', 'bizlight' ),
-        'description'    => __( 'This option only work when you have selected "Page" in "Slider selection Options".', 'bizlight' ),
+        'title'          => __( 'Select Slider From Page', 'bizlight' ),
+        'description'    => __( ' Recommended featured image size 1360 * 530 for selected pages', 'bizlight' ),
         'panel'          => 'bizlight-featured-slider',
     );
 
 /*creating setting control for bizlight-fs-page start*/
 $bizlight_repeated_settings_controls['bizlight-fs-pages'] =
     array(
-        'repeated' => 12,
+        'repeated' => 3,
         'bizlight-fs-pages-ids' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-fs-pages'],
             ),
             'control' => array(
-                'label'                 =>  __( 'Select page for slide %s', 'bizlight' ),
+                'label'                 =>  __( 'Select Page For Slide %s', 'bizlight' ),
                 'section'               => 'bizlight-fs-pages',
                 'type'                  => 'dropdown-pages',
                 'priority'              => 10,

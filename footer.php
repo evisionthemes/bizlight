@@ -5,7 +5,7 @@
  * Contains the closing of the #content div and all content after
  *
  * @package eVision themes
- * @subpackage Bizlight Pro
+ * @subpackage Bizlight
  * @since Bizlight 1.0.0
  */
 
@@ -21,7 +21,7 @@ do_action( 'bizlight_action_after_content' );
  * bizlight_action_before_footer hook
  * @since Bizlight 1.0.0
  *
- * @hooked bizlight_before_footer - 10
+ * @hooked null
  */
 do_action( 'bizlight_action_before_footer' );
 

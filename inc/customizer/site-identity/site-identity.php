@@ -6,6 +6,7 @@ global $bizlight_customizer_defaults;
 
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-logo'] = '';
+$bizlight_customizer_defaults['bizlight-title-tagline-message'] = sprintf( __( '%s If you do not have a logo %s', 'bizlight' ), '<span class="customize-control-title">','</span>' );
 $bizlight_customizer_defaults['bizlight-enable-title'] = 1;
 $bizlight_customizer_defaults['bizlight-enable-tagline'] = 1;
 
@@ -26,13 +27,24 @@ $bizlight_settings_controls['bizlight-logo'] =
     );
 
 /*enable option for enable tagline in header*/
+$bizlight_settings_controls['bizlight-title-tagline-message'] =
+    array(
+        'control' => array(
+            'description'           =>  $bizlight_customizer_defaults['bizlight-title-tagline-message'],
+            'section'               => 'title_tagline',
+            'type'                  => 'message',
+            'priority'              => 75,
+            'active_callback'       => ''
+        )
+    );
+/*enable option for enable tagline in header*/
 $bizlight_settings_controls['bizlight-enable-title'] =
     array(
         'setting' =>     array(
             'default'              => $bizlight_customizer_defaults['bizlight-enable-title'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable title ( If you do not have logo )', 'bizlight' ),
+            'label'                 =>  __( 'Enable Title', 'bizlight' ),
             'section'               => 'title_tagline',
             'type'                  => 'checkbox',
             'priority'              => 80,
@@ -45,7 +57,7 @@ $bizlight_settings_controls['bizlight-enable-tagline'] =
             'default'              => $bizlight_customizer_defaults['bizlight-enable-tagline'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable tagline ( If you do not have logo )', 'bizlight' ),
+            'label'                 =>  __( 'Enable Tagline', 'bizlight' ),
             'section'               => 'title_tagline',
             'type'                  => 'checkbox',
             'priority'              => 90,

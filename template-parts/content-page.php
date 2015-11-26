@@ -13,21 +13,10 @@
 
 	<div class="entry-content">
 		<?php
-		$bizlight_single_post_image_align = bizlight_single_post_image_align(get_the_ID());
-		if( 'no-image' != $bizlight_single_post_image_align ){
-			if( 'left' == $bizlight_single_post_image_align ){
-				echo "<div class='image-left'>";
-				the_post_thumbnail();
-			}
-			elseif( 'right' == $bizlight_single_post_image_align ){
-				echo "<div class='image-right'>";
-				the_post_thumbnail();
-			}
-			else{
-				echo "<div class='image-full'>";
-				the_post_thumbnail('full');
-			}
-			echo "</div>";
+		if( has_post_thumbnail()){
+			echo "<div class='image-full'>";
+			the_post_thumbnail('full');
+			echo "</div>";/*div end*/
 		}
 		?>
 		<?php the_content(); ?>

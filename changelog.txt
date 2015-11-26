@@ -1,7 +1,7 @@
 == Changelog ==
 
-= 2.0.0 =
-* Pro version released
+= 1.0.1 =
+* Features added
 
 = 1.0.0 =
 * Initial submission to WordPress repository

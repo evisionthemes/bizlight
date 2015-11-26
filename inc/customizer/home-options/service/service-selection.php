@@ -23,11 +23,11 @@ $bizlight_settings_controls['bizlight-home-service-selection'] =
         ),
         'control' => array(
             'label'                 =>  __( 'Select Service From', 'bizlight' ),
+            'description'           =>  __( 'After selecting one of the option, please go back and go to particular section to add', 'bizlight' ),
             'section'               => 'bizlight-home-service-selection-setting',
             'type'                  => 'select',
             'choices'               => array(
                 'from-page' => __( 'Page', 'bizlight' ),
-                'from-post' => __( 'Post', 'bizlight' ),
                 'from-category' => __( 'Category', 'bizlight' ),
                 'from-custom' => __( 'Custom', 'bizlight' )
             ),

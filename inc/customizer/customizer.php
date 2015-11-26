@@ -91,6 +91,56 @@ $bizlight_customizer_theme_options_setting_file_path = bizlight_file_directory('
 require $bizlight_customizer_theme_options_setting_file_path;
 
 /******************************************
+Important Links
+ *******************************************/
+$bizlight_customizer_important_links_file_path = bizlight_file_directory('inc/customizer/sections/important-links.php');
+require $bizlight_customizer_important_links_file_path;
+
+/*Resetting all Values*/
+/**
+ * Reset color settings to default
+ * @param  $input
+ *
+ * @since bizlight 1.0
+ */
+$bizlight_customizer_defaults['bizlight-customizer-reset'] = '';
+if ( ! function_exists( 'bizlight_customizer_reset' ) ) :
+    function bizlight_customizer_reset( $input ) {
+        if ( $input == 1 ) {
+            global $bizlight_customizer_defaults;
+
+            $bizlight_customizer_defaults['bizlight-customizer-reset'] = '';
+            /*resetting fields*/
+            bizlight_reset_options( $bizlight_customizer_defaults );
+        }
+        else {
+            return '';
+        }
+    }
+endif;
+$bizlight_sections['bizlight-customizer-reset'] =
+    array(
+        'priority'       => 999,
+        'title'          => __( 'Reset All Options', 'bizlight' )
+    );
+$bizlight_settings_controls['bizlight-customizer-reset'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-customizer-reset'],
+            'sanitize_callback'    => 'bizlight_customizer_reset',
+            'transport'            => 'postmessage',
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Reset All Options', 'bizlight' ),
+            'description'           =>  __( 'Caution: Reset all options settings to default. Refresh the page after save to view the effects. ', 'bizlight' ),
+            'section'               => 'bizlight-customizer-reset',
+            'type'                  => 'checkbox',
+            'priority'              => 10,
+            'active_callback'       => ''
+        )
+    );
+
+/******************************************
 Removing section setting control
  *******************************************/
 $bizlight_remove_sections =

@@ -9,14 +9,8 @@ if( ! function_exists( 'bizlight_excerpt_length' ) ) :
      * @param null
      * @return int
      */
-    function bizlight_excerpt_length( $length ){
-        global $bizlight_customizer_all_values;
-        $excerpt_length = $bizlight_customizer_all_values['bizlight-excerpt-length'];
-        if ( empty( $excerpt_length) ) {
-            $excerpt_length = $length;
-        }
-        return esc_attr( $excerpt_length );
-
+    function bizlight_excerpt_length( ){
+        return esc_attr( 30 );
     }
 
 endif;
