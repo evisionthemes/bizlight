@@ -118,15 +118,15 @@ if ( ! function_exists( 'bizlight_home_service' ) ) :
                             ?>
                             <div class="col-md-4 box-container evision-animate fadeInUp" <?php echo esc_attr( $data_wow_delay );?>>
                                 <div class="box-inner">
-                                    <a href="<?php echo esc_url( $bizlight_service_array['bizlight-home-service-link'] );?>" title="<?php echo esc_attr( $bizlight_service_array['bizlight-home-service-title'] )?>">
+                                    <a href="<?php echo esc_url( $bizlight_service_array['bizlight-home-service-link'] );?>" title="<?php echo esc_attr( $bizlight_service_array['bizlight-home-service-title'] ); ?>">
                                         <div class="icon-container">
                                             <span><i class="fa <?php echo esc_attr( $bizlight_service_array['bizlight-home-service-icon'] ); ?>"></i></span>
                                         </div>
                                         <div class="box-content">
-                                            <h3><?php echo esc_html( $bizlight_service_array['bizlight-home-service-title'] )?></h3>
+                                            <h3><?php echo esc_html( $bizlight_service_array['bizlight-home-service-title'] );?></h3>
                                             <div class="box-content-text">
                                                 <p>
-                                                    <?php echo wp_kses_post( $bizlight_service_array['bizlight-home-service-content'] )?>
+                                                    <?php echo wp_kses_post( $bizlight_service_array['bizlight-home-service-content'] );?>
                                                 </p>
                                             </div>
                                         </div>

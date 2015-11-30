@@ -1,6 +1,6 @@
 === Bizlight ===
 
-* by the eVision Themes (info@evisionthemes.com)
+* by eVision Themes (info@evisionthemes.com)
 
 Contributors: evisiontheme
 
@@ -24,10 +24,10 @@ Bizlight theme is translation ready.
 == License ==
 Bizlight is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License Version 3, see file license.txt
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Bizlight WordPress Theme, Copyright 2015 eVision Themes
-Bizlight is distributed under the terms of the GNU General Public License v3
+Bizlight is distributed under the terms of the GNU General Public License v2
 The exceptions to license are as follows:
 
 * Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

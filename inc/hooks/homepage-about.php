@@ -105,7 +105,7 @@ if (!function_exists('bizlight_home_about')) :
                                     <h2><?php echo esc_html( $bizlight_home_about_title );?></h2>
                                     <span class="title-divider"></span>
                                     <p class="about-hero-par">
-                                        <?php echo wp_kses_post( $bizlight_home_about_content )?>
+                                        <?php echo wp_kses_post( $bizlight_home_about_content );?>
                                     </p>
                                     <?php
                                     $i = 1;
@@ -140,7 +140,7 @@ if (!function_exists('bizlight_home_about')) :
                             </div>
                             <div class="col-md-5 evision-animate fadeInUp">
                                 <div class="product-thumb">
-                                    <img src="<?php echo esc_url( $bizlight_home_about_right_image )?>" alt="">
+                                    <img src="<?php echo esc_url( $bizlight_home_about_right_image );?>" />
                                 </div>
                             </div>
                         </div>

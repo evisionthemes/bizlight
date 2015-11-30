@@ -72,7 +72,7 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             .site-title a,
             .site-description,
             .site-description a{
-                color: <?php echo esc_attr( $bizlight_site_identity_color )?>!important;
+                color: <?php echo esc_attr( $bizlight_site_identity_color );?>!important;
             }
             <?php
             }

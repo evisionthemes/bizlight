@@ -82,8 +82,8 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
             <div class="evision-wrapper evision-wrap-banner evision-banner-right-nav">
                 <ul class="evision-main-slider"
                     id="evision-slider"
-                    data-control="<?php echo esc_attr( $bizlight_fs_enable_control )?>"
-                    data-auto="<?php echo esc_attr( $bizlight_fs_enable_autoplay )?>"
+                    data-control="<?php echo esc_attr( $bizlight_fs_enable_control ); ?>"
+                    data-auto="<?php echo esc_attr( $bizlight_fs_enable_autoplay ); ?>"
                     >
             <?php
             $i = 1;
@@ -98,19 +98,19 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
                     $bizlight_fs_image =$bizlight_slider_array['bizlight-fs-image'];
                 }
                 ?>
-                <li style="background-image: url('<?php echo esc_url( $bizlight_fs_image )?>');">
+                <li style="background-image: url('<?php echo esc_url( $bizlight_fs_image ); ?>');">
                     <div class="container evision-slider-content overhidden">
                         <div class="evision-slider-caption evision-animate fadeInUp">
-                            <h1 class="main-title"><?php echo esc_html( $bizlight_slider_array['bizlight-fs-title'] )?></h1>
+                            <h1 class="main-title"><?php echo esc_html( $bizlight_slider_array['bizlight-fs-title'] ); ?></h1>
                             <div class="banner-divider-container">
                                 <span class="banner-divider"></span>
                             </div>
                             <div class="banner-con">
                                 <p>
-                                    <?php echo wp_kses_post( $bizlight_slider_array['bizlight-fs-content'] )?>
+                                    <?php echo wp_kses_post( $bizlight_slider_array['bizlight-fs-content'] ); ?>
                                 </p>
                             </div>
-                            <a class="banner-btn button" href="<?php echo esc_url( $bizlight_slider_array['bizlight-fs-link'] )?>">
+                            <a class="banner-btn button" href="<?php echo esc_url( $bizlight_slider_array['bizlight-fs-link'] ); ?>">
                                 <?php _e('Click to start', 'bizlight'); ?>
                             </a>
                         </div>

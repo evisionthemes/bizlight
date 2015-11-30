@@ -171,7 +171,7 @@ function bizlight_header() {
                             }
                             ?>
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                <img class="header-logo" src="<?php echo esc_url($bizlight_customizer_all_values['bizlight-logo']); ?>" alt="<?php bloginfo( 'name' )?>">
+                                <img class="header-logo" src="<?php echo esc_url($bizlight_customizer_all_values['bizlight-logo']); ?>" alt="<?php bloginfo( 'name' );?>">
                             </a>
                             <?php if ( is_front_page() && is_home() ){
                                 echo '</h1>';

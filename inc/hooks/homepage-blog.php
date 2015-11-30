@@ -46,11 +46,11 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                                 <div class="col-md-4 single-thumb-container evision-animate fadeInUp" <?php echo esc_attr( $data_wow_delay );?>>
                                     <div class="single-thumb-inner">
                                         <div class="single-thumb-image">
-                                            <img src="<?php echo esc_url( $url ); ?>" alt="<?php the_title_attribute()?>">
+                                            <img src="<?php echo esc_url( $url ); ?>" alt="<?php the_title_attribute();?>">
                                             <div class="overlay"></div>
                                             <div class="icon">
                                                 <a href="<?php the_permalink();?>" title="<?php the_title_attribute();?>">
-                                                    <span><img src="<?php echo esc_url( get_template_directory_uri().'/assets/img/plus-icon.png')?>" alt="link icon"></span>
+                                                    <span><img src="<?php echo esc_url( get_template_directory_uri().'/assets/img/plus-icon.png'); ?>" alt="link icon"></span>
                                                 </a>
                                             </div>
                                         </div>
