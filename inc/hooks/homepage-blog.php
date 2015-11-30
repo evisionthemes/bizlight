@@ -50,7 +50,7 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                                             <div class="overlay"></div>
                                             <div class="icon">
                                                 <a href="<?php the_permalink();?>" title="<?php the_title_attribute();?>">
-                                                    <span><img src="<?php echo esc_url( get_template_directory_uri().'/assets/img/plus-icon.png'); ?>" alt="link icon"></span>
+                                                    <span><img src="<?php echo esc_url( get_template_directory_uri().'/assets/img/plus-icon.png'); ?>"></span>
                                                 </a>
                                             </div>
                                         </div>
