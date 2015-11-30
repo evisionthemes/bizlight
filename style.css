@@ -216,7 +216,7 @@ a:focus {
   outline: 0;
   border: none;
   text-decoration: none;
-  color: #028484;
+  color: #ff0000;
 }
 
 /* Typography */
@@ -695,7 +695,7 @@ button a,
 button:hover a,
 a.button,
 a.button:hover{
-  color: #ffffff;
+  color: #ffffff !important;
   display: inline-block;
 }
 
@@ -834,7 +834,13 @@ body.home .page-inner-title {
 }
 
 .navbar-fixed-top {
+  background: rgba(0,0,0,0);
   z-index: 99;
+  transition: all 0.5s;
+}
+
+.navbar-fixed-active{
+  background-color: #212121 !important;
 }
 
 .site-branding,
@@ -2677,7 +2683,7 @@ body:not(.home) .site-header.evision-nav-right{
 
 .wrap-service.block-section {
   padding-top: 35px;
-  padding-bottom: 75px;
+  padding-bottom: 0;
 }
 
 .title-divider{
@@ -2870,6 +2876,7 @@ body:not(.home) .site-header.evision-nav-right{
 
 .wrap-about{
   background-color: #f8f8f9;
+  padding-bottom: 60px;
 }
 
 .wrap-about .title-divider {
@@ -2963,7 +2970,7 @@ body:not(.home) .site-header.evision-nav-right{
 }
 
 .wrap-highlight h2{
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
@@ -3218,12 +3225,14 @@ body:not(.home) .site-header.evision-nav-right{
   margin-bottom: 15px;
 }
 
+.site-footer,
+.site-info,
 .site-info a{
-  color: #a7a7a7;
+  color: #cccccc !important;
 }
 
 .site-info a:hover{
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 

@@ -30,6 +30,7 @@ $bizlight_sections['bizlight-colors-reset'] =
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-h1-h6-color'] = '#212121';
 $bizlight_customizer_defaults['bizlight-link-color'] = '#212121';
+$bizlight_customizer_defaults['bizlight-link-hover-color'] = '#ff0000';
 $bizlight_customizer_defaults['bizlight-site-identity-color'] = '#ffffff';
 
 $bizlight_customizer_defaults['bizlight-color-reset'] = '';
@@ -52,6 +53,7 @@ if ( ! function_exists( 'bizlight_color_reset' ) ) :
             /*setting fields */
             $bizlight_customizer_saved_values['bizlight-h1-h6-color'] = $bizlight_customizer_defaults['bizlight-h1-h6-color'];
             $bizlight_customizer_saved_values['bizlight-link-color'] = $bizlight_customizer_defaults['bizlight-link-color'];
+            $bizlight_customizer_saved_values['bizlight-link-hover-color'] = $bizlight_customizer_defaults['bizlight-link-hover-color'];
             $bizlight_customizer_saved_values['bizlight-site-identity-color'] = $bizlight_customizer_defaults['bizlight-site-identity-color'];
 
             $bizlight_customizer_defaults['bizlight-color-reset'] = '';
@@ -75,6 +77,19 @@ $bizlight_settings_controls['bizlight-link-color'] =
             'section'               => 'colors',
             'type'                  => 'color',
             'priority'              => 40,
+            'active_callback'       => ''
+        )
+    );
+$bizlight_settings_controls['bizlight-link-hover-color'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-link-hover-color'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Link Hover Color', 'bizlight' ),
+            'section'               => 'colors',
+            'type'                  => 'color',
+            'priority'              => 45,
             'active_callback'       => ''
         )
     );
