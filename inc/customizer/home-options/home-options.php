@@ -1,12 +1,4 @@
 <?php
-global $bizlight_panels;
-/*creating panel for fonts-setting*/
-$bizlight_panels['bizlight-home-front-options'] =
-    array(
-        'title'          => __( 'Home/Front Page Options', 'bizlight' ),
-        'priority'       => 150
-    );
-
 /*Service Section*/
 $bizlight_customizer_service_setting_file_path = bizlight_file_directory('inc/customizer/home-options/service/service-panel.php');
 require $bizlight_customizer_service_setting_file_path;
