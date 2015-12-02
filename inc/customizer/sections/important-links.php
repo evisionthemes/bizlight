@@ -12,11 +12,11 @@ if ( ! function_exists( 'bizlight_important_links' ) ) :
     function bizlight_important_links(){
         $important_links = array(
             'theme_docs' => array(
-                'link'	=> esc_url( 'http://doc.evisionthemes.com/bizlight/' ),
+                'link'	=> esc_url( 'http://themepalace.com/theme-instructions/bizlight-pro/' ),
                 'text' 	=> __( 'Theme Documentation', 'bizlight' ),
             ),
             'theme_demo' => array(
-                'link'	=> esc_url( 'http://demo.evisionthemes.com/bizlight/' ),
+                'link'	=> esc_url( 'http://demo.evisionthemes.com/bizlight-pro/' ),
                 'text' 	=> __( 'Theme Demo', 'bizlight' ),
             ),
             'theme_author' => array(
@@ -30,31 +30,11 @@ if ( ! function_exists( 'bizlight_important_links' ) ) :
             'review' => array(
                 'link'	=> esc_url( 'https://wordpress.org/support/view/theme-reviews/bizlight' ),
                 'text' 	=> __( 'Review', 'bizlight' ),
-            ),
-            'facebook' => array(
-                'link'	=> esc_url( 'https://www.facebook.com/evisionthemes/' ),
-                'text' 	=> __( 'Facebook', 'bizlight' ),
-            ),
-            'twitter' => array(
-                'link'	=> esc_url( 'https://twitter.com/evisionthemes' ),
-                'text' 	=> __( 'Twitter', 'bizlight' ),
-            ),
-            'linkedin' => array(
-                'link'	=> esc_url( 'https://www.linkedin.com/in/evisionthemes' ),
-                'text' 	=> __( 'Linkedin', 'bizlight' ),
-            ),
-            'gplus' => array(
-                'link'	=> esc_url( 'https://plus.google.com/u/0/107886266472533269268/about' ),
-                'text' 	=> __( 'Google+', 'bizlight' ),
-            ),
-            'pinterest' => array(
-                'link'	=> esc_url( 'https://www.pinterest.com/evisionthemes/' ),
-                'text' 	=> __( 'Pinterest', 'bizlight' ),
-            ),
+            )
         );
         $important_links_text = '';
         foreach ( $important_links as $important_link) {
-            $important_links_text .= '<p><a target="_blank" href="' . $important_link['link'] .'" >' . esc_attr( $important_link['text'] ) .' </a></p>';
+            $important_links_text .= '<p><a target="_blank" href="' . esc_url( $important_link['link'] ) .'" >' . esc_attr( $important_link['text'] ) .' </a></p>';
         }
         return $important_links_text;
     }
