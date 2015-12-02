@@ -42,7 +42,7 @@ class Coder_Customize_User_Dropdown_Control extends WP_Customize_Control {
                     else{
                         $coder_default_selected = 0;
                     }
-                    printf('<option value="-1" %s>%s</option>',selected($coder_default_selected, 1, false),__('Select','coder-customizer-framework'));
+                    printf('<option value="-1" %s>%s</option>',selected($coder_default_selected, 1, false),__('Select','bizlight'));
                     foreach ( $coder_users as $coder_user ) {
                         printf('<option value="%s" %s>%s</option>', $coder_user->data->ID, selected($this->value(),  $coder_user->data->ID, false), $coder_user->data->display_name);
                     }

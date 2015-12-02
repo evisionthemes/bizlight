@@ -4,7 +4,7 @@
 
 Contributors: evisiontheme
 
-Tags: light, white, blue, two-columns, right-sidebar, left-sidebar custom-background, custom-colors, custom-menu, featured-images, post-formats, sticky-post, translation-ready, responsive-layout, theme-options, threaded-comments
+Tags: light, white, blue, two-columns, right-sidebar, left-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, sticky-post, translation-ready, responsive-layout, theme-options, threaded-comments
 
 Requires at least: 4.0
 Tested up to: 4.3.1

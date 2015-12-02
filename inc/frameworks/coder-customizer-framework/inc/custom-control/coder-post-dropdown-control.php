@@ -44,7 +44,7 @@ class Coder_Customize_Post_Dropdown_Control extends WP_Customize_Control {
                     else{
                         $coder_default_selected = 0;
                     }
-                    printf('<option value="-1" %s>%s</option>',selected($coder_default_selected, 1, false),__('Select','coder-customizer-framework'));
+                    printf('<option value="-1" %s>%s</option>',selected($coder_default_selected, 1, false),__('Select','bizlight'));
                     foreach ( $coder_posts as $coder_post ) {
                         printf('<option value="%s" %s>%s</option>', $coder_post->ID, selected($this->value(), $coder_post->ID, false), $coder_post->post_title);
                     }

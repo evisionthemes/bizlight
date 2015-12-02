@@ -33,7 +33,7 @@ class Coder_Customize_Category_Dropdown_Control extends WP_Customize_Control {
             array(
                 'name'              => $coder_customizer_name,
                 'echo'              => 0,
-                'show_option_none'  =>__('Select','coder-customizer-framework'),
+                'show_option_none'  =>__('Select','bizlight'),
                 'option_none_value' => '0',
                 'selected'          => $this->value(),
             )
