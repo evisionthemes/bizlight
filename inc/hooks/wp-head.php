@@ -20,7 +20,9 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
         <style type="text/css">
             /*site identity font family*/
             .site-title,
-            .site-title a{
+            .site-title a,
+            .site-description,
+            .site-description a{
                 font-family: '<?php echo esc_attr( $bizlight_font_family_site_identity ); ?>'!important;
             }
             /*Title font family*/
