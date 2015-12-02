@@ -102,28 +102,11 @@ function bizlight_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-
-	/*woocommerce support*/
-	add_theme_support( 'woocommerce' );
+	
 }
 endif; // bizlight_setup
 add_action( 'after_setup_theme', 'bizlight_setup' );
 
-
-/*woocommerce */
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-add_action('woocommerce_before_main_content', 'bizlight_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'bizlight_wrapper_end', 10);
-
-function bizlight_wrapper_start() {
-	echo '<div id="primary" class="content-area">
-<main id="main" class="site-main" role="main">';
-}
-
-function bizlight_wrapper_end() {
-	echo '</main></div>';
-}
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
