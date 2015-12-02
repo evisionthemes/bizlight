@@ -23,7 +23,7 @@ Bizlight theme is translation ready.
 
 == License ==
 Bizlight is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License Version 3, see file license.txt
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License Version 2 or later
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Bizlight WordPress Theme, Copyright 2015 eVision Themes

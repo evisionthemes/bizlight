@@ -23,6 +23,7 @@ $bizlight_settings_controls['bizlight-default-layout'] =
         ),
         'control' => array(
             'label'                 =>  __( 'Default Layout', 'bizlight' ),
+            'description'           =>  __( 'Layout for all archives, single posts and pages', 'bizlight' ),
             'section'               => 'bizlight-layout-options',
             'type'                  => 'select',
             'choices'               => array(

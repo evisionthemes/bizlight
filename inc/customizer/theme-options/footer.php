@@ -6,7 +6,7 @@ global $bizlight_customizer_defaults;
 
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-copyright-text'] = __('Copyright &copy; eVisionThemes','bizlight');
-$bizlight_customizer_defaults['bizlight-enable-social-icons'] = 0;
+$bizlight_customizer_defaults['bizlight-enable-social-icons'] = '';
 
 $bizlight_sections['bizlight-footer-options'] =
     array(
