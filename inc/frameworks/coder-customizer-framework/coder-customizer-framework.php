@@ -233,7 +233,7 @@ if ( ! class_exists( 'Coder_Customizer_Framework' ) ){
             $this->coder_customizer_framework_path = apply_filters( 'coder_customizer_framework_path', $this->coder_customizer_framework_path );
 
             /*load translation*/
-//            add_action('init', array($this,'coder_load_textdomain') , 12);
+            add_action('init', array($this,'coder_load_textdomain') , 12);
 
             /*Basic variables initialization with filter*/
             if(defined('CODER_CUSTOMIZER_NAME')){
@@ -349,7 +349,7 @@ if ( ! class_exists( 'Coder_Customizer_Framework' ) ){
         public function coder_load_textdomain(){
             /*Added filter for text domain path*/
             $coder_customizer_framework_textdomain_path = apply_filters( 'coder_customizer_framework_textdomain_path', $this->coder_customizer_framework_path );
-            load_textdomain( 'coder-customizer-framework', $coder_customizer_framework_textdomain_path . '/languages/' . get_locale() .'.mo' );
+            load_textdomain( 'coder-customizer-framework', $coder_customizer_framework_textdomain_path . '/languages' );
         }
 
         /**
