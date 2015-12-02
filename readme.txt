@@ -54,11 +54,6 @@ product.png: ourself and GPLV2
 no-image-126_530.jpg: ourself and GPLV2
 no-image.jpg: ourself and GPLV2
 plus-icon.png: ourself and GPLV2
-header-menu-bottom.jpg : ourself and GPLV2
-header-menu-right.jpg : ourself and GPLV2
-left-sidebar.png : ourself and GPLV2
-no-sidebar.png : ourself and GPLV2
-right-sidebar.png : ourself and GPLV2
 
 == Installation ==
 	
@@ -70,5 +65,5 @@ right-sidebar.png : ourself and GPLV2
 
 = Does this theme support any plugins? =
 
-Our Bizlight themes includes support for Infinite Scroll in Jetpack and also support for WooCommerce, BBPress, Contact Form 7.
+Our Bizlight themes includes support for Infinite Scroll in Jetpack and also support for BBPress and Contact Form 7.
 
