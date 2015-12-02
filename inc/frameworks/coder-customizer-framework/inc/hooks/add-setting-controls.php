@@ -53,13 +53,8 @@ if ( ! function_exists( 'coder_add_setting_control_callback' ) ) :
                 );
             }
             else {
-                ?>
-                <script>
-                    console.log('<?php echo esc_attr( $coder_New_Customize_Custom_Control_class_name ). "not found. Please create it."?>');
-                </script>
-            <?php
+                /*no control found*/
             }
-
         }
     }
 endif;
