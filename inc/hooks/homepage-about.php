@@ -123,7 +123,7 @@ if (!function_exists('bizlight_home_about')) :
 
                                                 <div class="about-list-content">
                                                     <h3>
-                                                        <a href="<?php esc_url( $bizlight_about_array['bizlight-home-about-link'] ); ?> ">
+                                                        <a href="<?php echo esc_url( $bizlight_about_array['bizlight-home-about-link'] ); ?> ">
                                                             <?php echo esc_attr( $bizlight_about_array['bizlight-home-about-title'] ); ?>
                                                         </a>
                                                     </h3>
