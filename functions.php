@@ -102,7 +102,7 @@ function bizlight_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-	
+
 }
 endif; // bizlight_setup
 add_action( 'after_setup_theme', 'bizlight_setup' );
