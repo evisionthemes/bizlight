@@ -65,6 +65,7 @@ require $bizlight_hooks_homepage_testimonial_file_path;
 
 $bizlight_hooks_front_page_file_path = bizlight_file_directory('inc/hooks/front-page.php');
 require $bizlight_hooks_front_page_file_path;
+
 /**
  * Include sidebar widgets
  */

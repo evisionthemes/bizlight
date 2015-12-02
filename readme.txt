@@ -44,7 +44,21 @@ The exceptions to license are as follows:
 * Coder Customizer Framework - by codersantosh - GPL-2.0 or later license
 
 Image used in screenshot
-Self/Default blog
+https://pixabay.com/en/office-home-office-creative-apple-581131/
+
+Other Images
+slider.jpg : https://pixabay.com/en/office-home-office-creative-apple-581131/
+heightlight-bg.jpg : https://pixabay.com/en/photographer-tourist-snapshot-407068/
+inner-banner.png : https://pixabay.com/en/airport-cafe-coffee-belfast-775539/
+product.png: ourself and GPLV2
+no-image-126_530.jpg: ourself and GPLV2
+no-image.jpg: ourself and GPLV2
+plus-icon.png: ourself and GPLV2
+header-menu-bottom.jpg : ourself and GPLV2
+header-menu-right.jpg : ourself and GPLV2
+left-sidebar.png : ourself and GPLV2
+no-sidebar.png : ourself and GPLV2
+right-sidebar.png : ourself and GPLV2
 
 == Installation ==
 	
