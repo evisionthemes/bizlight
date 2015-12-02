@@ -1,15 +1,4 @@
 <?php
-/*
-Plugin Name: Coder Customizer Framework
-Plugin URI: http://codersantosh.com
-Description: Use WordPress Customizer in easy and standard way to your theme.
-Version: 2.2
-Author: Santosh Kunwar (CoderSantosh)
-Author URI: http://codersantosh.com
-License: GPL
-Copyright: Santosh Kunwar (CoderSantosh)
-*/
-
 /*Make sure we don't expose any info if called directly*/
 if ( !function_exists( 'add_action' ) ) {
     echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
