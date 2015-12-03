@@ -42,9 +42,6 @@ require $bizlight_hooks_footer_file_path;
 $bizlight_hooks_posts_navigation_file_path = bizlight_file_directory('inc/hooks/posts-navigation.php');
 require $bizlight_hooks_posts_navigation_file_path;
 
-$bizlight_hooks_sidebar_file_path = bizlight_file_directory('inc/hooks/sidebar.php');
-require $bizlight_hooks_sidebar_file_path;
-
 $bizlight_hooks_front_page_file_path = bizlight_file_directory('inc/hooks/featured-slider/featured-main-hook.php');
 require $bizlight_hooks_front_page_file_path;
 

@@ -1,6 +1,6 @@
 <?php
 /*Service Section*/
-$bizlight_customizer_service_setting_file_path = bizlight_file_directory('inc/customizer/home-options/service/service-panel.php');
+$bizlight_customizer_service_setting_file_path = bizlight_file_directory('inc/customizer/home-options/service/service-section.php');
 require $bizlight_customizer_service_setting_file_path;
 
 /*About Section*/
