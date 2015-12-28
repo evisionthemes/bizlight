@@ -16,8 +16,8 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
         $bizlight_fs_contents_array[0]['bizlight-fs-image'] = get_template_directory_uri()."/assets/img/slider.jpg";
 
         $bizlight_fs_args = array();
-
-        $bizlight_fs_posts = coder_get_repeated_all_value('bizlight-fs-pages');
+        $repeated = array('bizlight-fs-pages-ids');
+        $bizlight_fs_posts = bizlight_get_repeated_all_value( 3 ,$repeated);
         $bizlight_fs_posts_ids = array();
         if( null != $bizlight_fs_posts ) {
             foreach( $bizlight_fs_posts as $bizlight_fs_post ) {

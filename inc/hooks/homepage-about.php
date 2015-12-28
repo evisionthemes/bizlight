@@ -28,7 +28,8 @@ if (!function_exists('bizlight_home_about_array')) :
 
         $bizlight_icons_arrays = array();
         $bizlight_home_about_args = array();
-        $bizlight_home_about_posts = coder_get_repeated_all_value('bizlight-home-about-pages');
+        $bizlight_repeated_array = array('bizlight-home-about-page-icon','bizlight-home-about-pages-ids');
+        $bizlight_home_about_posts = bizlight_get_repeated_all_value(3,$bizlight_repeated_array);
         $bizlight_home_about_posts_ids = array();
         if (null != $bizlight_home_about_posts) {
             foreach ($bizlight_home_about_posts as $bizlight_home_about_post) {

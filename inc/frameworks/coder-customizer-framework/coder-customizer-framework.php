@@ -660,23 +660,6 @@ if ( ! class_exists( 'Coder_Customizer_Framework' ) ){
                     $coder_wp_customize->remove_control( esc_attr( $coder_remove_settings_control ));
                 }
             }
-            /*update option to save repeated values
-            * @since 1.1
-            */
-            if (defined('CODER_CUSTOMIZER_OPTION_MODE') && CODER_CUSTOMIZER_OPTION_MODE == 1 ) {
-                $coder_customizer_values = get_option( $this->coder_customizer_name);
-            }
-            else{
-                $coder_customizer_values = get_theme_mod( $this->coder_customizer_name);
-            }
-            $coder_customizer_values['coder_repeated_settings_controls'] = serialize( $this->coder_repeated_settings_controls );
-
-            if (defined('CODER_CUSTOMIZER_OPTION_MODE') && CODER_CUSTOMIZER_OPTION_MODE == 1 ) {
-                update_option( $this->coder_customizer_name, $coder_customizer_values );
-            }
-            else{
-                set_theme_mod( $this->coder_customizer_name, $coder_customizer_values );
-            }
         }/*END function coder_customize_register*/
     } /*END class Coder_Customizer_Framework*/
 

@@ -30,7 +30,9 @@ if ( ! function_exists( 'bizlight_home_service_array' ) ) :
         $bizlight_icons_arrays = array();
         $bizlight_home_service_args = array();
 
-        $bizlight_home_service_posts = coder_get_repeated_all_value('bizlight-home-service-pages');
+        $repeated = array('bizlight-home-service-page-icon','bizlight-home-service-pages-ids');
+
+        $bizlight_home_service_posts = bizlight_get_repeated_all_value(3, $repeated);
         $bizlight_home_service_posts_ids = array();
         if( null != $bizlight_home_service_posts ) {
             foreach( $bizlight_home_service_posts as $bizlight_home_service_post ) {

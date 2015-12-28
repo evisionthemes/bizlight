@@ -7,8 +7,8 @@ Contributors: evisiontheme
 Tags: light, white, blue, two-columns, right-sidebar, left-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, sticky-post, translation-ready, responsive-layout, theme-options, threaded-comments
 
 Requires at least: 4.0
-Tested up to: 4.3.1
-Stable tag: 1.0.1
+Tested up to: 4.4
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

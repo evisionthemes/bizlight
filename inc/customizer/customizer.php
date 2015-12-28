@@ -188,6 +188,29 @@ function bizlight_customize_preview_js() {
 add_action( 'customize_preview_init', 'bizlight_customize_preview_js' );
 
 /**
+ * Repeated value handling overrite
+ * @param  array $reset_options
+ * @return void
+ *
+ * @since bizlight 1.0.2
+ */
+if ( ! function_exists( 'bizlight_get_repeated_all_value' ) ) :
+    function bizlight_get_repeated_all_value ( $repeated, $repeated_saved_values_name ) {
+
+        $coder_get_customizer_all_values = coder_get_customizer_all_values( CODER_CUSTOMIZER_NAME );
+        $get_repeated_all_value = array();
+        for ( $i = 1; $i <= $repeated; $i++ ){
+            foreach( $repeated_saved_values_name as $coder_repeated_saved_value_name ){
+                if( isset($coder_get_customizer_all_values[$coder_repeated_saved_value_name.'_'.$i]) ){
+                    $get_repeated_all_value[$i][$coder_repeated_saved_value_name] = $coder_get_customizer_all_values[$coder_repeated_saved_value_name.'_'.$i];
+                }
+            }
+        }
+        return $get_repeated_all_value;
+    }
+endif;
+
+/**
  * get all saved options
  * @param  null
  * @return array saved options

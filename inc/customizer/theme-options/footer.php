@@ -5,7 +5,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-copyright-text'] = __('Copyright &copy; eVisionThemes','bizlight');
+$bizlight_customizer_defaults['bizlight-copyright-text'] = __('Copyright &copy; All right reserved','bizlight');
 $bizlight_customizer_defaults['bizlight-enable-social-icons'] = '';
 
 $bizlight_sections['bizlight-footer-options'] =
