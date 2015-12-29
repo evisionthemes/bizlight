@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.0.3 =
+*  Fixed all prefixes
+
 = 1.0.2 =
 * Requires issues fixed
 
