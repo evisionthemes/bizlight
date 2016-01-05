@@ -11,6 +11,10 @@ global $bizlight_repeated_settings_controls;
 if ( ! function_exists( 'bizlight_important_links' ) ) :
     function bizlight_important_links(){
         $important_links = array(
+            'pro_link' => array(
+                'link'	=> esc_url( 'http://themepalace.com/shop/wordpress-themes/bizlight-pro/' ),
+                'text' 	=> __( 'Upgrade to Pro', 'bizlight' ),
+            ),
             'theme_docs' => array(
                 'link'	=> esc_url( 'http://themepalace.com/theme-instructions/bizlight-pro/' ),
                 'text' 	=> __( 'Theme Documentation', 'bizlight' ),
