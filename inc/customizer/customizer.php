@@ -190,7 +190,7 @@ add_action( 'customize_preview_init', 'bizlight_customize_preview_js' );
 /*upgrade to pro*/
 function bizlight_customize_enqueue_scripts() {
     /*upgrade to pro link*/
-    wp_enqueue_script( 'bizlight-upgrade-pro', get_template_directory_uri() . '/assets/js/upgrade-pro.js', array( 'customize-preview' ), '20160105', true );
+    wp_enqueue_script( 'bizlight_upgrade_pro', get_template_directory_uri() . '/assets/js/upgrade-pro.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20160105', true );
 
     $bizlight_misc_links = array(
         'upgrade_link' 				=> esc_url( 'http://themepalace.com/shop/wordpress-themes/bizlight-pro/' ),
@@ -198,9 +198,8 @@ function bizlight_customize_enqueue_scripts() {
         'WP_version'				=> get_bloginfo( 'version' ),
         'old_version_message'		=> __( 'Some settings might be missing or disorganized in this version of WordPress. So we suggest you to upgrade to version 4.0 or better.', 'bizlight' )
     );
-
     //Add Upgrade Button, old WordPress message and color list via localized script
-    wp_localize_script( 'bizlight-upgrade-pro', 'bizlight_misc_links', $bizlight_misc_links );
+    wp_localize_script( 'bizlight_upgrade_pro', 'bizlight_misc_links', $bizlight_misc_links );
 
     wp_enqueue_style( 'bizlight-custom-customizer', get_template_directory_uri() . '/assets/css/bizlight-customizer.css');
 
