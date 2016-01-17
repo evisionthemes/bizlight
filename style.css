@@ -2486,16 +2486,9 @@ body:not(.home) .site-header.evision-nav-right{
   list-style: none;
 }
 
-.evision-main-slider, .evision-main-slider li{
+.evision-main-slider, 
+.evision-main-slider li{
     height: 100% !important;
-}
-
-.evision-slider-content {
-  position: absolute;
-  bottom: 80px;
-  z-index: 9;
-  left: 0;
-  right: 0;
 }
 
 .evision-main-slider li{
@@ -2504,6 +2497,22 @@ body:not(.home) .site-header.evision-nav-right{
     background-size: cover;
     left: 0;
 }
+
+.evision-slider-content {
+  display: table;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  position: static;
+}
+
+.evision-slider-caption{
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  width: 80%;
+}
+
 
 .evision-main-slider li img{
   width: 100%;

@@ -15,6 +15,13 @@ body {
 /* 2 General Styles */
 /* --------------------------------------- */
 
+.rtl-fright{
+  float: right;
+}
+
+.rtl-fleft{
+  float: left;
+}
 /* Accessibility */
 /* --------------------------------------- */
 
@@ -130,6 +137,17 @@ dd {
   text-align: left;
 }
 
+.nav-links .nav-previous a:before{
+  content: "\f101";
+  left: 15px;
+}
+
+.nav-links .nav-next a:after{
+  content: "\f100";
+  right: 15px;
+  left: auto;
+}
+
 /* ====================================================== */
 /* Sidebar */
 /* --------------------------------------- */
@@ -171,8 +189,8 @@ dd {
 
 .cat-links {
   padding-left: 10px;
-  border-left: 1px solid #aaaaaa;
-  border-right: 0;
+  /*border-left: 1px solid #aaaaaa;*/
+  /*border-right: 0;*/
 }
 
 .tags-links:before {
@@ -330,11 +348,6 @@ body.evision-no-sidebar #primary {
   padding-right: 0;
 }
 
-/*back-to-top section*/
-.evision-back-to-top {
-  right: auto;
-  left: 15px;
-}
 
 /* ====================================================== */
 /* 11 Custom Pages */
@@ -342,10 +355,6 @@ body.evision-no-sidebar #primary {
 
 /* Home page Style */
 /* --------------------------------------- */
-
-.evision-wrapper{
-    float: right;
-}
 
 /*-------------------- block section -----------------*/
 
@@ -374,53 +383,12 @@ body.evision-no-sidebar #primary {
 
 /*-------------------- Slider section -----------------*/
 
-.bx-viewport, .bx-wrapper{
-    left:auto;
-    right:0;
+.bx-wrapper .bx-viewport{ 
+  direction: ltr; 
 }
 
-.evision-main-slider{
-  padding-right: 0;
-}
-
-.evision-main-slider li{
-  left: auto;
-  right: 0;
-}
-
-.bx-wrapper .bx-pager {
-  left: 20px;
-  right: auto;
-  text-align: left;
-}
-
-.bx-wrapper .bx-next {
-  right: auto;
-  left: 10px;
-}
 
 /*-------------------- About section -----------------*/
-
-.wrap-about .title-divider {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 992px){
-  .about-content {
-    text-align: left;
-    padding-left: 45px;
-  }
-
-  .icon-section{
-    float: left;
-  }
-
-  .about-list-content{
-    float: right;
-  }
-
-}
 
 @media screen and (max-width: 991px){
   .wrap-about .title-divider {
