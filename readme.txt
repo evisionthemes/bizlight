@@ -4,10 +4,10 @@
 
 Contributors: evisiontheme
 
-Tags: light, white, blue, two-columns, right-sidebar, left-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, sticky-post, translation-ready, responsive-layout, theme-options, threaded-comments
+Tags: light, white, blue, two-columns, right-sidebar, left-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, sticky-post, translation-ready, responsive-layout, theme-options, threaded-comments, rtl-language-support
 
 Requires at least: 4.0
-Tested up to: 4.4
+Tested up to: 4.4.1
 Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Description: Bizlight theme is clean and elegant lightweight WordPress theme, adequate enough to create a standard site for any corporate house. Bizlight is basically designed for the normal WordPress users, in order to create a site quickly and efficiently. However, it has many competencies including responsive, bootstrap, HTML5, CSS3, retina ready, font awesome, google font, cross-browser compatibility, color control, layout control, logo upload, translation-ready, custom CSS field, etc. Documentation consists of several parts and shows you the entire process of setting up WordPress and Bizlight theme from scratch.Demo : http://demo.evisionthemes.com/bizlight-pro/ Documentation : http://doc.evisionthemes.com/bizlight/
+Description: Bizlight theme is clean and elegant lightweight WordPress theme, adequate enough to create a standard site for any corporate house. Bizlight is basically designed for the normal WordPress users, in order to create a site quickly and efficiently. However, it has many competencies including responsive, bootstrap, HTML5, CSS3, retina ready, font awesome, google font, cross-browser compatibility, color control, layout control, logo upload, translation-ready, RTL Language Support, custom CSS field, etc. Documentation consists of several parts and shows you the entire process of setting up WordPress and Bizlight theme from scratch.Demo : http://demo.evisionthemes.com/bizlight-pro/ Documentation : http://doc.evisionthemes.com/bizlight/
 
 == Translation ==
 

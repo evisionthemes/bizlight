@@ -2,6 +2,7 @@
 
 = 1.0.5 =
 *  Upgrade to Pro link added
+*  RTL Language Support
 
 = 1.0.4 =
 *  One more prefix fixed
