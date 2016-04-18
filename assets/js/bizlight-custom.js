@@ -3,10 +3,15 @@ jQuery(document).ready(function ($) {
         $(this).bxSlider({
             adaptiveHeight: true,
             controls: false,
+            touchEnabled: false,
             pager: $(this).data('control'),
             auto: $(this).data('auto')
         });
     });
+
+    $('.wrap-testimonial .carousel').carousel({
+      interval: 7000
+    })
 
     //What happen on window scroll
     function back_to_top(){
