@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
         back_to_top();
     });
     back_to_top();
-    $('a[href*=#]').on('click', function(event){
+    $('a[href*="#"]').on('click', function(event){
         if ($(this.hash).length){
             event.preventDefault();
             $("html, body").stop().animate({scrollTop: $(this.hash).offset().top - 70}, 2e3, "easeInOutExpo");

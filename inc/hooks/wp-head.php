@@ -81,7 +81,8 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
               .edit-link a:hover,
               .nav-links .nav-previous a:hover,
               .nav-links .nav-next a:hover,
-              .page-links a:hover {
+              .page-links a:hover,
+              .box-container .box-inner a:hover {
                   color: <?php echo esc_attr( $bizlight_link_hover_color ); ?> !important; /*#212121*/
               }
               <?php
