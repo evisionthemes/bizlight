@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.1.0=
+* Minor issues fixing 
+* Category option for Homepage Blog
+
 = 1.0.9=
 * Minor issues fixing 
 * Remove deprecated tags.

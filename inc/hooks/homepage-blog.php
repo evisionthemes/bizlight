@@ -15,6 +15,8 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
         global $bizlight_customizer_all_values;
 
         $bizlight_home_blog_title = $bizlight_customizer_all_values['bizlight-home-blog-title'];
+        $bizlight_home_blog_category = $bizlight_customizer_all_values['bizlight-home-blog-category'];
+
         if( 1 != $bizlight_customizer_all_values['bizlight-home-blog-enable'] ){
             return null;
         }
@@ -29,7 +31,9 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                         $bizlight_home_about_args = array(
                             'post_type' => 'post',
                             'posts_per_page' => 3,
-                            'ignore_sticky_posts' => 1
+                            'ignore_sticky_posts' => 1,
+                            'cat'           => $bizlight_home_blog_category,
+
                         );
                         $bizlight_home_about_post_query = new WP_Query($bizlight_home_about_args);
                         if ($bizlight_home_about_post_query->have_posts()) :
