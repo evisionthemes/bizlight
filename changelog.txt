@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.1.1=
+* Minor issues fixing 
+* slider option added
+
 = 1.1.0=
 * Minor issues fixing 
 * Category option for Homepage Blog

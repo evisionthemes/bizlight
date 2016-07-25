@@ -67,6 +67,24 @@ do_action( 'bizlight_action_before_header' );
  */
 do_action( 'bizlight_action_header' );
 
+/**
+ * bizlight_action_before_content hook
+ * @since Bizlight 1.0.0
+ *
+ * @hooked null
+ */
+do_action( 'bizlight_action_before_content' );
+
+/**
+ * bizlight_action_on_header hook
+ * @since Bizlight 1.0.0
+ *
+ * @hooked null
+ */
+do_action( 'bizlight_action_on_header' );
+
+
+
 
 /**
  * bizlight_action_after_header hook
@@ -76,12 +94,4 @@ do_action( 'bizlight_action_header' );
  */
 do_action( 'bizlight_action_after_header' );
 
-
-/**
- * bizlight_action_before_content hook
- * @since Bizlight 1.0.0
- *
- * @hooked null
- */
-do_action( 'bizlight_action_before_content' );
 ?>

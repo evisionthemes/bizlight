@@ -9,11 +9,15 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
      * @return array
      */
     function bizlight_featured_slider_array( ){
-
         $bizlight_fs_contents_array[0]['bizlight-fs-title'] = __('Welcome to bizlight','bizlight');
         $bizlight_fs_contents_array[0]['bizlight-fs-content'] = __('Unlike other companies, we do not charge hundreds of dollars per theme.','bizlight');
         $bizlight_fs_contents_array[0]['bizlight-fs-link'] = '#';
         $bizlight_fs_contents_array[0]['bizlight-fs-image'] = get_template_directory_uri()."/assets/img/slider.jpg";
+
+        $bizlight_fs_contents_array[1]['bizlight-fs-title'] = __('The Way We Create','bizlight');
+        $bizlight_fs_contents_array[1]['bizlight-fs-content'] = __('Unlike other companies, we do not charge hundreds of dollars per theme.','bizlight');
+        $bizlight_fs_contents_array[1]['bizlight-fs-link'] = '#';
+        $bizlight_fs_contents_array[1]['bizlight-fs-image'] = get_template_directory_uri()."/assets/img/slider2.jpg";
 
         $bizlight_fs_args = array();
         $repeated = array('bizlight-fs-pages-ids');
@@ -71,6 +75,7 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
      */
     function bizlight_featured_slider() {
         global $bizlight_customizer_all_values;
+
         if( 1 != $bizlight_customizer_all_values['bizlight-fs-enable'] ){
             return null;
         }
@@ -126,4 +131,4 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
         <?php
     }
 endif;
-add_action( 'homepage', 'bizlight_featured_slider', 10 );
+add_action( 'bizlight_main_slider', 'bizlight_featured_slider', 10 );

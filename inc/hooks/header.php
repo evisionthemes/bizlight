@@ -223,8 +223,56 @@ function bizlight_header() {
 endif;
 add_action( 'bizlight_action_header', 'bizlight_header', 10 );
 
-if( ! function_exists( 'bizlight_add_breadcrumb' ) ) :
+if( ! function_exists( 'bizlight_main_slider_setion' ) ) :
+/**
+ * Breadcrumb
+ *
+ * @since Bizlight 1.0.0
+ *
+ * @param null
+ * @return null
+ *
+ */
+    function bizlight_main_slider_setion(){
+        global $post, $wp_query;
+        global $bizlight_customizer_all_values;
 
+        // Slider status.
+        $featured_slider_status = $bizlight_customizer_all_values['bizlight-fs-enable-on'];
+
+        // Get Page ID outside Loop.
+        $page_id = $wp_query->get_queried_object_id();
+
+        // Front page displays in Reading Settings.
+        $page_on_front  = absint( get_option( 'page_on_front' ) );
+        $page_for_posts = absint( get_option( 'page_for_posts' ) );
+        switch ( $featured_slider_status ) {
+            case 'entire-site':
+                do_action('bizlight_main_slider');
+                break;
+
+            case 'front-index-page':
+                if (is_front_page()) {
+                    do_action('bizlight_main_slider');
+                }
+                break;
+
+            case 'home-page':
+                if ( $page_on_front === $page_id && $page_on_front > 0 ) {
+                    do_action('bizlight_main_slider');
+                }
+                break;
+
+            default:
+                break;
+        }
+
+    }
+endif;
+add_action( 'bizlight_action_on_header', 'bizlight_main_slider_setion', 10 );
+
+/*breadcrumb*/
+if( ! function_exists( 'bizlight_add_breadcrumb' ) ) :
 /**
  * Breadcrumb
  *

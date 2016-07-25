@@ -9,7 +9,7 @@ Tags: light, white, blue, two-columns, right-sidebar, left-sidebar, custom-backg
 Requires at least: 4.0
 
 Tested up to: 4.5.3
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -50,6 +50,7 @@ https://pixabay.com/en/office-home-office-creative-apple-581131/
 
 Other Images
 slider.jpg : https://pixabay.com/en/office-home-office-creative-apple-581131/
+slider2.jpg : https://pixabay.com/en/macbook-notebook-home-office-336704/
 heightlight-bg.jpg : https://pixabay.com/en/photographer-tourist-snapshot-407068/
 inner-banner.png : https://pixabay.com/en/airport-cafe-coffee-belfast-775539/
 product.png: ourself and GPLV2

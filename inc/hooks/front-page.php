@@ -8,7 +8,6 @@ if ( ! function_exists( 'bizlight_if_all_disable' ) ) :
     function bizlight_if_all_disable() {
         global $bizlight_customizer_all_values;
         if(
-            1 != $bizlight_customizer_all_values['bizlight-fs-enable'] &&
             1 != $bizlight_customizer_all_values['bizlight-home-service-enable'] &&
             1 != $bizlight_customizer_all_values['bizlight-home-about-enable'] &&
             1 != $bizlight_customizer_all_values['bizlight-home-featured-enable'] &&
