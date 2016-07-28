@@ -109,14 +109,8 @@ if( ! function_exists( 'bizlight_simple_breadcrumb' ) ) :
 
             } elseif ( is_attachment() ) {
                 $parent = get_post($post->post_parent);
-                $cat = get_the_category($parent->ID); $cat = $cat[0];
-                $cats = get_category_parents($cat, TRUE, $delimiter);
-                $cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-                $cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-                echo $cats;
-                printf($link, get_permalink($parent), $parent->post_title);
-                if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
-
+                if ($showCurrent == 1) 
+                echo $before . get_the_title() . $after;
             } elseif ( is_page() && !$post->post_parent ) {
                 if ($showCurrent == 1) echo $before . get_the_title() . $after;
 
