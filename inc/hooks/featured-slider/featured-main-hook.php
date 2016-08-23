@@ -89,8 +89,6 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
         $bizlight_fs_enable_control = $bizlight_customizer_all_values['bizlight-fs-enable-control'];
         $bizlight_fs_enable_autoplay = $bizlight_customizer_all_values['bizlight-fs-enable-autoplay'];
         ?>
-
-
         <section class="evision-wrapper evision-wrap-banner evision-banner-right-nav">
             <?php if( 1 == $bizlight_fs_enable_control){ ?>
                 <div class="controls">
@@ -173,65 +171,8 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
             </div>
             <div class="cycle-pager" id="bizlight-pager"></div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="evision-wrapper evision-wrap-banner evision-banner-right-nav">
-                <ul class="evision-main-slider"
-                    id="evision-slider"
-                    data-control="<?php echo esc_attr( $bizlight_fs_enable_control ); ?>"
-                    data-auto="<?php echo esc_attr( $bizlight_fs_enable_autoplay ); ?>"
-                    >
-            <?php
-            $i = 1;
-            foreach( $bizlight_slider_arrays as $bizlight_slider_array ){
-                if( 3 < $i){
-                    break;
-                }
-                if(empty($bizlight_slider_array['bizlight-fs-image'])){
-                    $bizlight_fs_image = get_template_directory_uri().'/assets/img/no-image-126_530.jpg';
-                }
-                else{
-                    $bizlight_fs_image =$bizlight_slider_array['bizlight-fs-image'];
-                }
-                ?>
-                <li style="background-image: url('<?php echo esc_url( $bizlight_fs_image ); ?>');">
-                    <div class="container evision-slider-content overhidden">
-                        <div class="evision-slider-caption evision-animate fadeInUp">
-                            <h1 class="main-title"><?php echo esc_html( $bizlight_slider_array['bizlight-fs-title'] ); ?></h1>
-                            <div class="banner-divider-container">
-                                <span class="banner-divider"></span>
-                            </div>
-                            <div class="banner-con">
-                                <p>
-                                    <?php echo wp_kses_post( $bizlight_slider_array['bizlight-fs-content'] ); ?>
-                                </p>
-                            </div>
-                            <a class="banner-btn button" href="<?php echo esc_url( $bizlight_slider_array['bizlight-fs-link'] ); ?>">
-                                <?php _e('Click to start', 'bizlight'); ?>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <?php
-                $i++;
-            }
-        }
-        ?>
-            </ul>
-        </div> --><!-- slider section -->
-        <?php
+    <?php
     }
+}
 endif;
 add_action( 'bizlight_main_slider', 'bizlight_featured_slider', 10 );
