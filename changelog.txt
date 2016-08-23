@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 1.1.2=
+* Main Slider changed from bx slider to cycle2 slider
+	- Slide item numbers controll
+	- Fade effect added
+* Minor design fixed
+
 = 1.1.1=
 * Minor issues fixing 
 * slider option added
