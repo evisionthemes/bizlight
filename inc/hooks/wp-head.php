@@ -102,7 +102,7 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
 
             if( !empty( $bizlight_banner_text_color ) ){
             ?>
-            {
+            .evision-main-slider .slide-item .main-title a{
                 color: <?php echo esc_attr( $bizlight_banner_text_color );?>!important;
             }
             <?php
