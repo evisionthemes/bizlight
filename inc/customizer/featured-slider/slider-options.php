@@ -6,6 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
+$bizlight_customizer_defaults['bizlight-fs-number'] = 2;
 $bizlight_customizer_defaults['bizlight-fs-slider-mode'] = 'horizontal';
 $bizlight_customizer_defaults['bizlight-fs-enable-control'] = 1;
 $bizlight_customizer_defaults['bizlight-fs-enable-autoplay'] = 1;
@@ -18,6 +19,27 @@ $bizlight_sections['bizlight-fs-slider-options'] =
         'panel'          => 'bizlight-featured-slider',
     );
 
+$bizlight_settings_controls['bizlight-fs-number'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-number']
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Number Of Slider', 'bizlight' ),
+            'section'               => 'bizlight-fs-slider-options',
+            'type'                  => 'select',
+            'choices'               => array(
+                1 => __( '1', 'bizlight' ),
+                2 => __( '2', 'bizlight' ),
+                3 => __( '3', 'bizlight' ),
+                4 => __( '4', 'bizlight' ),
+                5 => __( '5', 'bizlight' ),
+                6 => __( '6', 'bizlight' )
+            ),
+            'priority'              => 30,
+            'active_callback'       => ''
+        )
+    );
 
 $bizlight_settings_controls['bizlight-fs-slider-mode'] =
     array(
@@ -29,10 +51,10 @@ $bizlight_settings_controls['bizlight-fs-slider-mode'] =
             'section'               => 'bizlight-fs-slider-options',
             'type'                  => 'select',
             'choices'               => array(
-                'scrollHorz' => __( 'Default', 'bizlight' ),
+                'scrollHorz' => __( 'horizontal', 'bizlight' ),
                 'fade' => __( 'Fade', 'bizlight' ),
             ),
-            'priority'              => 10,
+            'priority'              => 40,
             'active_callback'       => ''
         )
     );
