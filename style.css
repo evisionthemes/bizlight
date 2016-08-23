@@ -613,6 +613,13 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+
+@media screen and (max-width: 767px){
+  a.button{
+    padding: 14px 20px 15px;
+  }
+}
+
 /* Clearings */
 /* ----------------------------------------------- */
 .clear:before,
@@ -686,6 +693,15 @@ dd {
 dd a{
   text-decoration: underline;
 }
+
+/*thumb overlay*/
+.thumb-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+  height: 100%;
+  width: 100%;
+}
+
 /* ====================================================== */
 /* 3 Header */
 /* --------------------------------------- */
@@ -2066,6 +2082,7 @@ body:not(.home) .site-header.evision-nav-right{
 
 .evision-main-slider .slide-item{
   width: 100%;
+  text-align: center;
 }
 
 .wrapper-slider .slide-item:not(:first-child) {
@@ -2074,14 +2091,19 @@ body:not(.home) .site-header.evision-nav-right{
 }
 
 .evision-main-slider .slide-item .container-fluid{
-  padding-top: 14%;
-  padding-bottom: 12%;
   background-color: #313131;
   color: #ffffff;
   background-position: top center;
   background-size: cover;
   background-repeat: repeat;
   overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.evision-main-slider .slide-item .container-fluid .container{
+  padding-top: 14%;
+  padding-bottom: 12%;
 }
 
 .banner-content-inner{
@@ -2106,9 +2128,9 @@ body:not(.home) .site-header.evision-nav-right{
   line-height: 1;
 }
 
-.evision-main-slider .slide-item .main-title a,
-.evision-main-slider .slide-item .main-title a:visted {
-  color: #ffffff;
+.evision-main-slider .slide-item .main-title > a,
+.evision-main-slider .slide-item .main-title > a:visted {
+  color: #fff !important;
   font-size: 36px;
   font-weight: 600;
   line-height: 1.2;
@@ -2122,15 +2144,15 @@ body:not(.home) .site-header.evision-nav-right{
 }
 
 .evision-main-slider .slide-item .banner-con {
-  -webkit-transition: all 0.5s ease-in-out 0.4s;
-  -moz-transition: all 0.5s ease-in-out 0.4s;
-  -ms-transition: all 0.5s ease-in-out 0.4s;
-  -o-transition: all 0.5s ease-in-out 0.4s;
+    -webkit-transition: all 0.5s ease-in-out 0.4s;
+    -moz-transition: all 0.5s ease-in-out 0.4s;
+    -ms-transition: all 0.5s ease-in-out 0.4s;
+    -o-transition: all 0.5s ease-in-out 0.4s;
   transition: all 0.5s ease-in-out 0.4s;
 }
 
 .banner-divider {
-  background-color: #b0b7be;
+  background-color: #fff;
   clear: both;
   content: "";
   display: inline-block;
@@ -2234,7 +2256,7 @@ body:not(.home) .site-header.evision-nav-right{
 
 @media screen and (max-width: 1199px){
 
-  .evision-main-slider .slide-item .container-fluid{
+  .evision-main-slider .slide-item .container-fluid .container{
     padding-top: 10%;
     padding-bottom: 8%;
   }
