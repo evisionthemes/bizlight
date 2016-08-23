@@ -153,9 +153,6 @@ function bizlight_scripts() {
 	/*Font-Awesome-master*/
     wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/frameworks/Font-Awesome/css/font-awesome.min.css', array(), '4.4.0' );/*added*/
 
-    /*bxslider css*/
-    wp_enqueue_style( 'jquery-bxslider', get_template_directory_uri() . '/assets/frameworks/bxslider/css/jquery.bxslider.css', array(), '4.0' );/*added*/
-
 	/*animate css*/
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/frameworks/wow/css/animate.min.css', array(), '3.4.0' );/*added*/
 	wp_enqueue_script('wow', get_template_directory_uri() . '/assets/frameworks/wow/js/wow.min.js', array('jquery'), '1.1.2', 1);
@@ -166,7 +163,14 @@ function bizlight_scripts() {
     /*jquery start*/
 	wp_enqueue_script('jquery-easing', get_template_directory_uri() . '/assets/frameworks/jquery.easing/jquery.easing.js', array('jquery'), '0.3.6', 1);
 	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/frameworks/bootstrap/js/bootstrap.min.js', array('jquery'), '3.3.5', 1);
-	wp_enqueue_script('jquery-bxslider', get_template_directory_uri() . '/assets/frameworks/bxslider/js/jquery.bxslider.js', array('jquery'), '4.0', 1);
+
+	/*cycle2 slider*/
+	wp_enqueue_script( 'cycle2-script', get_template_directory_uri() . '/assets/frameworks/cycle2/js/jquery.cycle2.js', array( 'jquery' ), '2.1.6' );
+	wp_enqueue_script( 'cycle2-script-flip', get_template_directory_uri() . '/assets/frameworks/cycle2/js/jquery.cycle2.flip.js', array( 'jquery' ), '20140128' );
+	wp_enqueue_script( 'cycle2-script-scrollVert', get_template_directory_uri() . '/assets/frameworks/cycle2/js/jquery.cycle2.scrollVert.js', array( 'jquery' ), '20140128' );
+	wp_enqueue_script( 'cycle2-script-shuffle', get_template_directory_uri() . '/assets/frameworks/cycle2/js/jquery.cycle2.shuffle.js', array( 'jquery' ), '20140128' );
+	wp_enqueue_script( 'cycle2-script-tile', get_template_directory_uri() . '/assets/frameworks/cycle2/js/jquery.cycle2.tile.js', array( 'jquery' ), '20140128' );
+	wp_enqueue_script( 'cycle2-script-swipe', get_template_directory_uri() . '/assets/frameworks/cycle2/js/jquery.cycle2.swipe.js', array( 'jquery' ), '20121120' );
 
     wp_enqueue_script( 'bizlight-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 

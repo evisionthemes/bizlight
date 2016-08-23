@@ -81,10 +81,99 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
         }
         $bizlight_slider_arrays = bizlight_featured_slider_array();
         if( is_array( $bizlight_slider_arrays )){
+        $bizlight_feature_slider_mode = $bizlight_customizer_all_values['bizlight-fs-slider-mode'];
         $bizlight_fs_enable_control = $bizlight_customizer_all_values['bizlight-fs-enable-control'];
         $bizlight_fs_enable_autoplay = $bizlight_customizer_all_values['bizlight-fs-enable-autoplay'];
         ?>
-            <div class="evision-wrapper evision-wrap-banner evision-banner-right-nav">
+
+
+        <section class="evision-wrapper evision-wrap-banner evision-banner-right-nav">
+            <?php if( 1 == $bizlight_fs_enable_control){ ?>
+                <div class="controls">
+                    <a href="#" id="bizlight-prev"><i class="fa fa-angle-left"></i></a> 
+                    <a href="#" id="bizlight-next"><i class="fa fa-angle-right"></i></a>
+                </div>
+            <?php }  ?>
+
+            <div class="evision-main-slider">
+                <div class="cycle-slideshow"
+                data-cycle-swipe=true
+                data-cycle-swipe-fx=scrollHorz
+                data-cycle-fx=<?php echo esc_attr( $bizlight_feature_slider_mode);?>
+                data-cycle-speed=1500
+                data-cycle-carousel-fluid=true
+                data-cycle-carousel-visible=1
+                data-cycle-pause-on-hover="true"
+                data-cycle-auto-height=container
+                data-cycle-slides="> div"
+                data-cycle-prev="#bizlight-prev"
+                data-cycle-next="#bizlight-next"
+                <?php if( 1 == $bizlight_fs_enable_control){ ?>
+                    data-cycle-pager="#bizlight-pager"
+                <?php }  ?>
+                <?php if( 1 != $bizlight_fs_enable_autoplay){ ?>
+                    data-cycle-timeout=0
+                <?php }  ?>
+                <?php if(1 == $bizlight_fs_enable_autoplay){ ?>
+                    data-cycle-timeout=7000
+                <?php }  ?>
+                >
+                    <?php
+                    $i = 1;
+                    foreach( $bizlight_slider_arrays as $bizlight_slider_array ){
+                        if( 3 < $i){
+                            break;
+                        }
+                        if(empty($bizlight_slider_array['bizlight-fs-image'])){
+                            $bizlight_feature_slider_image = get_template_directory_uri().'/assets/img/no-image-1260_530.png';
+                        }
+                        else{
+                            $bizlight_feature_slider_image =$bizlight_slider_array['bizlight-fs-image'];
+                        }
+                        ?>
+                        <div class="slide-item">
+                            <div class="container-fluid" style="background-image: url('<?php echo esc_url( $bizlight_feature_slider_image )?>');">
+                                <div class="container evision-slider-content overhidden">
+                                    <div class="evision-slider-caption evision-animate fadeInUp">
+                                        <h1 class="main-title"><?php echo esc_html( $bizlight_slider_array['bizlight-fs-title'] ); ?></h1>
+                                        <div class="banner-divider-container">
+                                            <span class="banner-divider"></span>
+                                        </div>
+                                        <div class="banner-con">
+                                            <p>
+                                                <?php echo wp_kses_post( $bizlight_slider_array['bizlight-fs-content'] ); ?>
+                                            </p>
+                                        </div>
+                                        <a class="banner-btn button" href="<?php echo esc_url( $bizlight_slider_array['bizlight-fs-link'] ); ?>">
+                                            <?php _e('Click to start', 'bizlight'); ?>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    $i++;
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="cycle-pager" id="bizlight-pager"></div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="evision-wrapper evision-wrap-banner evision-banner-right-nav">
                 <ul class="evision-main-slider"
                     id="evision-slider"
                     data-control="<?php echo esc_attr( $bizlight_fs_enable_control ); ?>"
@@ -127,7 +216,7 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
         }
         ?>
             </ul>
-        </div><!-- slider section -->
+        </div> --><!-- slider section -->
         <?php
     }
 endif;

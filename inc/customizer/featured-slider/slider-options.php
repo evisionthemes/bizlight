@@ -6,6 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
+$bizlight_customizer_defaults['bizlight-fs-slider-mode'] = 'horizontal';
 $bizlight_customizer_defaults['bizlight-fs-enable-control'] = 1;
 $bizlight_customizer_defaults['bizlight-fs-enable-autoplay'] = 1;
 
@@ -16,6 +17,26 @@ $bizlight_sections['bizlight-fs-slider-options'] =
         'title'          => __( 'Slider Options', 'bizlight' ),
         'panel'          => 'bizlight-featured-slider',
     );
+
+
+$bizlight_settings_controls['bizlight-fs-slider-mode'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-slider-mode']
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Slider Mode', 'bizlight' ),
+            'section'               => 'bizlight-fs-slider-options',
+            'type'                  => 'select',
+            'choices'               => array(
+                'scrollHorz' => __( 'Default', 'bizlight' ),
+                'fade' => __( 'Fade', 'bizlight' ),
+            ),
+            'priority'              => 10,
+            'active_callback'       => ''
+        )
+    );
+
 
 $bizlight_settings_controls['bizlight-fs-enable-control'] =
     array(
