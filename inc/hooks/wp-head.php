@@ -70,20 +70,48 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             }
             <?php
             }
+
+            if( !empty( $bizlight_banner_text_color ) ){
+            ?>
+            .evision-main-slider .slide-item .main-title a{
+                color: <?php echo esc_attr( $bizlight_banner_text_color );?>!important;
+            }
+            <?php
+            }
+
             /*Link Hover color*/
               if( !empty($bizlight_link_hover_color) ){
               ?>
               a:hover,
+              a:focus,
+              a:active,
               a > p:hover,
+              a > p:focus,
+              a > p:active,
               .posted-on a:hover,
-              .cat-links a:hover,
-              .tags-links a:hover,
+              .cat-links a:focus,
+              .tags-links a:active,
               .author a:hover,
+              .author a:focus,
+              .author a:active,
               .comments-link a:hover,
+              .comments-link a:focus,
+              .comments-link a:active,
               .edit-link a:hover,
+              .edit-link a:focus,
+              .edit-link a:active,
               .nav-links .nav-previous a:hover,
+              .nav-links .nav-previous a:focus,
+              .nav-links .nav-previous a:active,
               .nav-links .nav-next a:hover,
-              .page-links a:hover{
+              .nav-links .nav-next a:focus,
+              .nav-links .nav-next a:active,
+              .page-links a:hover,
+              .page-links a:focus,
+              .page-links a:active,
+              .evision-main-slider .slide-item .main-title a:hover,
+              .evision-main-slider .slide-item .main-title a:focus,
+              .evision-main-slider .slide-item .main-title a:active{
                   color: <?php echo esc_attr( $bizlight_link_hover_color ); ?> !important; /*#212121*/
               }
               <?php
@@ -96,14 +124,6 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             .site-description,
             .site-description a{
                 color: <?php echo esc_attr( $bizlight_site_identity_color );?>!important;
-            }
-            <?php
-            }
-
-            if( !empty( $bizlight_banner_text_color ) ){
-            ?>
-            .evision-main-slider .slide-item .main-title a{
-                color: <?php echo esc_attr( $bizlight_banner_text_color );?>!important;
             }
             <?php
             }

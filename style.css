@@ -2106,7 +2106,7 @@ body:not(.home) .site-header.evision-nav-right{
   padding-bottom: 12%;
 }
 
-.banner-content-inner{
+.evision-slider-content{
    color: #ffffff;
    font-size: 18px;
    font-weight: 400;
@@ -2118,7 +2118,7 @@ body:not(.home) .site-header.evision-nav-right{
    width: 80%;
 }
 
-.banner-content-inner p{
+.evision-slider-content p{
   color: #ffffff;
 }
 
@@ -2128,13 +2128,14 @@ body:not(.home) .site-header.evision-nav-right{
   line-height: 1;
 }
 
-.evision-main-slider .slide-item .main-title > a,
-.evision-main-slider .slide-item .main-title > a:visted {
-  color: #fff !important;
+.evision-main-slider .slide-item .main-title a,
+.evision-main-slider .slide-item .main-title a:visted {
+  color: #fff;
   font-size: 36px;
   font-weight: 600;
   line-height: 1.2;
   text-transform: uppercase;
+  display: block;
 }
 
 .evision-main-slider .slide-item .main-title a:hover,
@@ -2261,15 +2262,15 @@ body:not(.home) .site-header.evision-nav-right{
     padding-bottom: 8%;
   }
 
-  .banner-content-inner {
+  .evision-slider-content {
     font-size: 15px;
   }
   
-  .banner-content-inner .main-title a{
+  .evision-slider-content .main-title a{
     font-size: 30px;
   }
 
-  .banner-content-inner .banner-con {
+  .evision-slider-content .banner-con {
     margin-top: 15px;
     margin-bottom: 30px;
   }
@@ -2277,22 +2278,22 @@ body:not(.home) .site-header.evision-nav-right{
 }
 
 @media screen and (max-width: 991px){
-  .banner-content-inner {
+  .evision-slider-content {
     font-size: 14px;
     line-height: 1.4;
   }
 
-  .banner-content-inner .main-title a{
+  .evision-slider-content .main-title a{
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 10px;
   }
 
-  .banner-content-inner .banner-con {
+  .evision-slider-content .banner-con {
     margin-bottom: 0;
   }
 
-  .banner-content-inner .button {
+  .evision-slider-content .button {
     margin-top: 5px;
     padding: 9px 16px 10px;
   }
@@ -2332,7 +2333,7 @@ body:not(.home) .site-header.evision-nav-right{
 }
 
 @media screen and (max-width: 480px){
-  .banner-content-inner{
+  .evision-slider-content{
     padding: 10px 15px 12px;
   }
 
