@@ -49,8 +49,7 @@ $bizlight_settings_controls['bizlight-fs-slider-mode'] =
             'type'                  => 'select',
             'choices'               => array(
                 'scrollHorz' => __( 'horizontal', 'bizlight' ),
-                'fade' => __( 'Fade', 'bizlight' ),
-                'fadeout' => __( 'Fade-Out', 'bizlight' ),
+                'scrollVert' => __( 'Vertical', 'bizlight' )
             ),
             'priority'              => 40,
             'active_callback'       => ''

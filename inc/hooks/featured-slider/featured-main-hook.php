@@ -107,6 +107,7 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
                 data-cycle-carousel-visible=1
                 data-cycle-pause-on-hover="true"
                 data-cycle-auto-height=container
+                data-cycle-carousel-fluid=true
                 data-cycle-slides="> div"
                 data-cycle-prev="#bizlight-prev"
                 data-cycle-next="#bizlight-next"
@@ -117,7 +118,7 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
                     data-cycle-timeout=0
                 <?php }  ?>
                 <?php if(1 == $bizlight_fs_enable_autoplay){ ?>
-                    data-cycle-timeout=7000
+                    data-cycle-timeout=4000
                 <?php }  ?>
                 >
                     <?php
@@ -132,6 +133,7 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
                         else{
                             $bizlight_feature_slider_image =$bizlight_slider_array['bizlight-fs-image'];
                         }
+                        $bizlight_container_link = $bizlight_slider_array['bizlight-fs-link'];
                         ?>
                         <div class="slide-item">
                             <div class="container-fluid" style="background-image: url('<?php echo esc_url( $bizlight_feature_slider_image )?>');">
