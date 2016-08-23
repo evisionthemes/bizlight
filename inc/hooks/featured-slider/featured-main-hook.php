@@ -9,6 +9,8 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
      * @return array
      */
     function bizlight_featured_slider_array( ){
+        $bizlight_feature_slider_number = absint( $bizlight_customizer_all_values['bizlight-fs-number'] );
+
         $bizlight_fs_contents_array[0]['bizlight-fs-title'] = __('Welcome to bizlight','bizlight');
         $bizlight_fs_contents_array[0]['bizlight-fs-content'] = __('Unlike other companies, we do not charge hundreds of dollars per theme.','bizlight');
         $bizlight_fs_contents_array[0]['bizlight-fs-link'] = '#';
@@ -33,7 +35,7 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
                 $bizlight_fs_args =    array(
                     'post_type' => 'page',
                     'post__in' => $bizlight_fs_posts_ids,
-                    'posts_per_page' => 3,
+                    'posts_per_page' => $bizlight_feature_slider_number,
                     'orderby' => 'post__in'
                 );
             }
@@ -81,6 +83,7 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
         }
         $bizlight_slider_arrays = bizlight_featured_slider_array();
         if( is_array( $bizlight_slider_arrays )){
+        $bizlight_feature_slider_number = absint( $bizlight_customizer_all_values['bizlight-fs-number'] );
         $bizlight_feature_slider_mode = $bizlight_customizer_all_values['bizlight-fs-slider-mode'];
         $bizlight_fs_enable_control = $bizlight_customizer_all_values['bizlight-fs-enable-control'];
         $bizlight_fs_enable_autoplay = $bizlight_customizer_all_values['bizlight-fs-enable-autoplay'];
@@ -121,7 +124,7 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
                     <?php
                     $i = 1;
                     foreach( $bizlight_slider_arrays as $bizlight_slider_array ){
-                        if( 3 < $i){
+                        if( $bizlight_feature_slider_number < $i){
                             break;
                         }
                         if(empty($bizlight_slider_array['bizlight-fs-image'])){
