@@ -32,6 +32,7 @@ $bizlight_customizer_defaults['bizlight-h1-h6-color'] = '#212121';
 $bizlight_customizer_defaults['bizlight-link-color'] = '#212121';
 $bizlight_customizer_defaults['bizlight-link-hover-color'] = '#028484';
 $bizlight_customizer_defaults['bizlight-site-identity-color'] = '#ffffff';
+$bizlight_customizer_defaults['bizlight-banner-text-color'] = '#ffffff';
 
 $bizlight_customizer_defaults['bizlight-color-reset'] = '';
 
@@ -114,6 +115,21 @@ $bizlight_settings_controls['bizlight-site-identity-color'] =
         'control' => array(
             'label'                 =>  __( 'Site Identity Color', 'bizlight' ),
             'description'           =>  __( 'Site title and tagline color', 'bizlight' ),
+            'section'               => 'colors',
+            'type'                  => 'color',
+            'priority'              => 65,
+            'active_callback'       => ''
+        )
+    );
+
+$bizlight_settings_controls['bizlight-banner-text-color'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-banner-text-color'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Banner Text Color', 'bizlight' ),
+            'description'           =>  __( 'Text color above the image will be changed', 'bizlight' ),
             'section'               => 'colors',
             'type'                  => 'color',
             'priority'              => 65,

@@ -9,6 +9,7 @@ if ( ! function_exists( 'bizlight_featured_slider_array' ) ) :
      * @return array
      */
     function bizlight_featured_slider_array( ){
+        global $bizlight_customizer_all_values;
         $bizlight_feature_slider_number = absint( $bizlight_customizer_all_values['bizlight-fs-number'] );
 
         $bizlight_fs_contents_array[0]['bizlight-fs-title'] = __('Welcome to bizlight','bizlight');

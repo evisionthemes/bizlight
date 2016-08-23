@@ -1,13 +1,4 @@
 jQuery(document).ready(function ($) {
-    $('.evision-main-slider').each(function(){
-        $(this).bxSlider({
-            adaptiveHeight: true,
-            controls: false,
-            touchEnabled: false,
-            pager: $(this).data('control'),
-            auto: $(this).data('auto')
-        });
-    });
 
     $('.wrap-testimonial .carousel').carousel({
       interval: 7000
