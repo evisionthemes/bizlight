@@ -1,9 +1,12 @@
 == Changelog ==
 
+= 1.1.3 =
+* Minor design fixed
+
 = 1.1.2=
-* Main Slider changed from bx slider to cycle2 slider
-	- Slide item numbers controll
-	- vertical effect added
+* Main Slider changed from bx slider to cycle 2 slider
+	- Slide item numbers control
+	- Vertical effect added
 * Minor design fixed
 
 = 1.1.1=
