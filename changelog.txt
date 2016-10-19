@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.1.4 =
+* Added footer widgets
+
 = 1.1.3 =
 * Minor design fixed
 

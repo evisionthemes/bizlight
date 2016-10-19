@@ -1,4 +1,57 @@
 <?php
+if ( ! function_exists( 'bizlight_before_footer' ) ) :
+    /**
+     * Footer content
+     *
+     * @since Bizlight 1.0.0
+     *
+     * @param null
+     * @return false | void
+     *
+     */
+    function bizlight_before_footer() {
+        global $bizlight_customizer_all_values;
+?>
+        <!-- *****************************************
+             Footer before section
+    ****************************************** -->
+    <section class="evision-wrapper block-section wrap-contact">
+        <div class="container overhidden">
+            <div class="contact-inner evision-animate fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <?php if( is_active_sidebar( 'footer-col-one' ) ) : ?>
+                                <div class="contact-list col-md-4">
+                                    <?php dynamic_sidebar( 'footer-col-one' ); ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if( is_active_sidebar( 'footer-col-two' )) : ?>
+                                <div class="contact-list col-md-4">
+                                    <?php dynamic_sidebar( 'footer-col-two' ); ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if( is_active_sidebar( 'footer-col-three' )) : ?>
+                                <div class="contact-list col-md-4">
+                                    <?php dynamic_sidebar( 'footer-col-three' ); ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+        <!-- *****************************************
+                 Footer before section ends
+        ****************************************** -->
+    <?php
+    }
+endif;
+add_action( 'bizlight_action_before_footer', 'bizlight_before_footer', 10 );
+
+
 if ( ! function_exists( 'bizlight_footer' ) ) :
     /**
      * Footer content
