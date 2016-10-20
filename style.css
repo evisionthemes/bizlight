@@ -2821,12 +2821,25 @@ body:not(.home) .site-header.evision-nav-right{
   opacity: 0.6;
 }
 
-.site-footer, .site-footer p, .wrap-contact, .wrap-contact .widget-title, .wrap-contact .widgettitle, .wrap-contact ul li, .wrap-contact ul li a {
+.site-footer,
+.site-footer p,
+.wrap-contact,
+.wrap-contact .widget-title,
+.wrap-contact .widgettitle,
+.wrap-contact ul li,
+.wrap-contact ul li a, 
+.wrap-contact ul li a:visited {
   color: #fff !important;
 }
 
+.wrap-contact ul li a:hover,
+.wrap-contact ul li a:focus,
+.wrap-contact ul li a:active {
+  opacity: 0.7;
+}
+
 @media screen and (max-width: 991px){
-  .icon-area, 
+  .icon-area,
   .contact-detail {
     display: block;
     float: none;
