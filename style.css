@@ -747,9 +747,17 @@ body.home .page-inner-title {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.widget_nav_menu .menu{
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .evision-nav-right .menu{
   width: auto;
 }
+
 .site-title, 
 .site-title a {
     margin-top: 24px;
@@ -1341,6 +1349,16 @@ body.home .page-inner-title {
 /* --------------------------------------- */
 /* Site Info */
 /* --------------------------------------- */
+.site-footer,
+.site-footer p,
+.wrap-contact,
+.wrap-contact .widget-title,
+.wrap-contact .widgettitle,
+.wrap-contact ul li,
+.wrap-contact ul li a {
+  color: #fff;
+}
+
 .site-footer:after {
   display: table;
   content: "";
@@ -2745,50 +2763,68 @@ body:not(.home) .site-header.evision-nav-right{
   margin-right: 5px;
 }
 /*-------------------- Contact section -----------------*/
+
 .wrap-contact{
   background-color: #3E4444;
   color: #ffffff;
   padding-bottom: 0;
 }
+
 .wrap-contact .contact-inner{
   padding-bottom: 40px;
   border-bottom: 1px solid #555b5b;
 }
+
+.wrap-contact .widget{
+  text-align: left;
+}
+
 .contact-list:after {
   clear: both;
   content: "";
   display: table;
 }
+
 .icon-area {
   float: left;
   margin-right: 15px;
   width: 40px;
   margin-top: 15px;
 }
+
 .icon-area i {
   color: #ffffff;
   font-size: 36px;
   line-height: 26px;
   opacity: 0.2;
 }
+
 .contact-detail {
   float: left;
   text-align: left;
   width: 80%; /*fallback*/
   width: calc(100% - 60px);
 }
+
 .contact-detail p{
   color: #ffffff;
   line-height: 26px;
 }
+
 .contact-detail a {
   color: #ffffff;
   margin-top: 5px;
   display: block;
 }
+
 .contact-detail a:hover{
   opacity: 0.6;
 }
+
+.site-footer, .site-footer p, .wrap-contact, .wrap-contact .widget-title, .wrap-contact .widgettitle, .wrap-contact ul li, .wrap-contact ul li a {
+  color: #fff !important;
+}
+
 @media screen and (max-width: 991px){
   .icon-area, 
   .contact-detail {
@@ -2798,10 +2834,12 @@ body:not(.home) .site-header.evision-nav-right{
     text-align: center;
     width: 100%;
   }
+
   .icon-area{
     margin-top: 30px;
   }
 }
+
 /*-------------------- Footer section -----------------*/
 .site-footer {
   background-color: #3e4444;
@@ -2825,55 +2863,163 @@ body:not(.home) .site-header.evision-nav-right{
 }
 /*----------------------------------------------------*/
 /*-------------------- Contact Page -----------------*/
+
 .wrap-contact-page{
   font-size: 14px;
 }
+
 .wrap-contact-page h2{
   color: #24baba;
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+
 .contact-form{
   color: #414141;
   margin-top: 50px;
 }
+
 .contact-form .wpcf7-textarea{
   min-height: 210px;
 }
+
 .contact-form input,
 .contact-form textarea{
   margin-top: 10px;
 }
+
+
 .contact-sidebar p{
   margin-bottom: 10px;
 }
+
 .contact-widget{
   font-size: 15px;
   margin-bottom: 60px;
 }
+
+.wrap-contact .widget-title, 
+.wrap-contact .widgettitle{
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border-left: medium none;
+  padding-left: 0;
+}
+
 .contact-widget h3{
   color: #24baba;
   font-size: 15px;
   font-weight: 600;
 }
+
 @media screen and (min-width: 992px){
+
   .contact-right{
     margin-right: 20px;
   }
+
   .contact-sidebar{
     margin-left: 30px;
   }
+
   .contact-form .wpcf7-submit {
     display: inline-block;
     padding-left: 50px;
     padding-right: 50px;
     width: auto;
   }
+
 }
+
 @media screen and (max-width: 991px){
   .contact-sidebar{
     text-align: center;
     margin-top: 40px;
   }
+}
+
+
+/*WooCommerce Compatible*/
+
+.woocommerce nav.woocommerce-pagination ul {
+    display: block;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.woocommerce nav.woocommerce-pagination ul li{
+  float: none;
+}
+
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button,
+.woocommerce #respond input#submit:focus, 
+.woocommerce a.button:focus, 
+.woocommerce button.button:focus, 
+.woocommerce input.button:focus,
+.woocommerce .cart .button, 
+.woocommerce .cart input.button{
+  padding: 10px 16px 11px;
+  font-size: 13px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover{
+  background-color: #ccc;/*#016161*/
+}
+
+.woocommerce #content table.cart td.actions .input-text, 
+.woocommerce table.cart td.actions .input-text, 
+.woocommerce-page #content table.cart td.actions .input-text, 
+.woocommerce-page table.cart td.actions .input-text{
+  max-height: 34px;
+}
+
+.woocommerce input[type="text"], 
+.woocommerce input[type="email"], 
+.woocommerce input[type="url"], 
+.woocommerce input[type="password"], 
+.woocommerce input[type="search"],
+.woocommerce input[type="tel"]{
+  height: 34px;
+}
+
+@media screen and (max-width: 479px){
+  .woocommerce #respond input#submit, 
+  .woocommerce a.button, 
+  .woocommerce button.button, 
+  .woocommerce input.button,
+  .woocommerce #respond input#submit:focus, 
+  .woocommerce a.button:focus, 
+  .woocommerce button.button:focus, 
+  .woocommerce input.button:focus{
+    padding: 13px 20px 14px;
+    font-size: 12px;
+  }
+
+}
+
+/*BBpress Compatible*/
+.wp-editor-container input[type="button"] {
+    background-color: inherit !important;
+}
+
+.wp-editor-container input[type="button"]:hover,
+.wp-editor-container input[type="button"]:focus {
+    background-color: inherit !important;
+    border: inherit !important;
+}
+
+.slide-item:not(:first-child) {
+  display: none;
+  visibility: hidden;
 }
