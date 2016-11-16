@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.1.5 =
+* Thumbnail option in testimonial
+
 = 1.1.4 =
 * Added footer widgets
 

@@ -13,6 +13,7 @@ if (!function_exists('bizlight_home_testimonial_array')) :
         $bizlight_home_testimonial_contents_array = array();
         $bizlight_home_testimonial_contents_array[0]['bizlight-home-testimonial-title'] = __('Sayer Name, CEO','bizlight');
         $bizlight_home_testimonial_contents_array[0]['bizlight-home-testimonial-content'] = __("The set doesn't moved. Deep don't fru it fowl gathering heaven days moving creeping under from i air. Set it fifth Meat was darkness. every bring in it.",'bizlight');
+        $bizlight_home_testimonial_contents_array[0]['bizlight-home-testimonial-image'] = '';
 
         $repeated = array('bizlight-home-testimonial-pages-ids');
         $bizlight_home_testimonial_posts = bizlight_get_repeated_all_value(3, $repeated);
@@ -39,8 +40,18 @@ if (!function_exists('bizlight_home_testimonial_array')) :
             if ($bizlight_home_testimonial_post_query->have_posts()) :
                 $i = 0;
                 while ($bizlight_home_testimonial_post_query->have_posts()) : $bizlight_home_testimonial_post_query->the_post();
+                $url ='';
+                if(has_post_thumbnail()){
+                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );
+                    $url = $thumb['0'];
+                }
+                else{
+                  $url = NULL;
+                }
                     $bizlight_home_testimonial_contents_array[$i]['bizlight-home-testimonial-title'] = get_the_title();
                     $bizlight_home_testimonial_contents_array[$i]['bizlight-home-testimonial-content'] = bizlight_words_count( 30 ,get_the_content());
+                    $bizlight_home_testimonial_contents_array[$i]['bizlight-home-testimonial-image'] = $url;
+                    
                     $i++;
                 endwhile;
                 wp_reset_postdata();
@@ -62,6 +73,8 @@ if (!function_exists('bizlight_home_testimonial')) :
      */
     function bizlight_home_testimonial() {
         global $bizlight_customizer_all_values;
+        $bizlight_home_testimonial_image_option = $bizlight_customizer_all_values['bizlight-home-testimonial-image-enable'];
+
         if (1 != $bizlight_customizer_all_values['bizlight-home-testimonial-enable']) {
             return null;
         }
@@ -100,8 +113,17 @@ if (!function_exists('bizlight_home_testimonial')) :
                                             break;
                                         }
                                         ?>
+
                                         <div class="item <?php echo $i == 0 ? 'active' : '';?>">
                                             <div class="content-text">
+                                                <?php if (($bizlight_home_testimonial_image_option == 1) && $bizlight_testimonial_array['bizlight-home-testimonial-image']!= NULL) { ?>
+                                                    <div class="content-thumb">
+                                                      <span>
+                                                            <img src="<?php echo esc_url($bizlight_testimonial_array['bizlight-home-testimonial-image']); ?>">
+                                                        </span>
+                                                    </div>  
+                                                  <?php
+                                                  } else {}?>
                                                 <p>
                                                     <?php echo wp_kses_post( $bizlight_testimonial_array['bizlight-home-testimonial-content'] ); ?>
                                                 </p>

@@ -6,6 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
+$bizlight_customizer_defaults['bizlight-home-testimonial-image-enable'] = '';
 $bizlight_customizer_defaults['bizlight-home-testimonial-enable'] = 1;
 
 /*testimonialsetting*/
@@ -26,6 +27,21 @@ $bizlight_settings_controls['bizlight-home-testimonial-enable'] =
             'section'               => 'bizlight-home-testimonial-enable-setting',
             'type'                  => 'checkbox',
             'priority'              => 50,
+            'active_callback'       => ''
+        )
+    );
+
+    
+$bizlight_settings_controls['bizlight-home-testimonial-image-enable'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-image-enable']
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Enable Image On Testimonial', 'bizlight' ),
+            'section'               => 'bizlight-home-testimonial-enable-setting',
+            'type'                  => 'checkbox',
+            'priority'              => 55,
             'active_callback'       => ''
         )
     );
