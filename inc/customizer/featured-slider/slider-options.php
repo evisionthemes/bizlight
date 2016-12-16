@@ -10,6 +10,9 @@ $bizlight_customizer_defaults['bizlight-fs-number'] = 2;
 $bizlight_customizer_defaults['bizlight-fs-slider-mode'] = 'horizontal';
 $bizlight_customizer_defaults['bizlight-fs-enable-control'] = 1;
 $bizlight_customizer_defaults['bizlight-fs-enable-autoplay'] = 1;
+$bizlight_customizer_defaults['bizlight-fs-enable-button'] = 0;
+$bizlight_customizer_defaults['bizlight-fs-button-text'] = __( 'Learn More', 'bizlight' );
+$bizlight_customizer_defaults['bizlight-fs-button-url'] = '#';
 
 /*fs options*/
 $bizlight_sections['bizlight-fs-slider-options'] =
@@ -82,5 +85,47 @@ $bizlight_settings_controls['bizlight-fs-enable-autoplay'] =
             'type'                  => 'checkbox',
             'priority'              => 60,
             'active_callback'       => ''
+        )
+    );
+
+
+
+$bizlight_settings_controls['bizlight-fs-enable-button'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-enable-button'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Enable Additional Button', 'bizlight' ),
+            'section'               => 'bizlight-fs-slider-options',
+            'type'                  => 'checkbox',
+            'priority'              => 70,
+        )
+    );
+
+$bizlight_settings_controls['bizlight-fs-button-text'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-button-text'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Additional Button Title', 'bizlight' ),
+            'section'               => 'bizlight-fs-slider-options',
+            'type'                  => 'text',
+            'priority'              => 80,
+        )
+    );
+
+
+$bizlight_settings_controls['bizlight-fs-button-url'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-button-url'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Additional Button Link', 'bizlight' ),
+            'section'               => 'bizlight-fs-slider-options',
+            'type'                  => 'text',
+            'priority'              => 90,
         )
     );

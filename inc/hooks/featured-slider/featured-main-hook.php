@@ -88,6 +88,9 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
         $bizlight_feature_slider_mode = $bizlight_customizer_all_values['bizlight-fs-slider-mode'];
         $bizlight_fs_enable_control = $bizlight_customizer_all_values['bizlight-fs-enable-control'];
         $bizlight_fs_enable_autoplay = $bizlight_customizer_all_values['bizlight-fs-enable-autoplay'];
+        $bizlight_home_added_button_text = $bizlight_customizer_all_values['bizlight-fs-button-text'];
+        $bizlight_home_added_button_url = $bizlight_customizer_all_values['bizlight-fs-button-url'];
+
         ?>
         <section class="evision-wrapper evision-wrap-banner evision-banner-right-nav">
             <?php if( 1 == $bizlight_fs_enable_control){ ?>
@@ -158,6 +161,14 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
                                                     <a class="banner-btn button" href="<?php echo esc_url( $bizlight_slider_array['bizlight-fs-link'] ); ?>">
                                                         <?php _e('Click to start', 'bizlight'); ?>
                                                     </a>
+                                                    <?php
+                                                    if( 1 == $bizlight_customizer_all_values['bizlight-fs-enable-button'] ){
+                                                        ?>
+                                                            <a class="banner-btn button" href="<?php echo esc_url( $bizlight_home_added_button_url); ?>">
+                                                                <?php echo esc_html($bizlight_home_added_button_text);?>
+                                                            </a>
+                                                        <?php
+                                                    } ?>
                                                 </div>
                                             </div>
                                         </div>
