@@ -128,21 +128,27 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
             <?php
             }
             // Bail if not WP 4.7.
-            if ( ! function_exists( 'wp_get_custom_css_post' ) ) {
-              return;
-            }
-            $bizlight_custom_css = $bizlight_customizer_all_values['bizlight-custom-css'];
-            // Bail if there is no Custom CSS.
-            if ( empty( $bizlight_custom_css ) ) {
-              return;
-            }
-            $main_css = wp_get_custom_css();
-            $return = wp_update_custom_css_post( $main_css . $bizlight_custom_css );
-
-            if ( ! is_wp_error( $return ) ) {
-              // Remove from theme.
-              $options = esc_textarea($bizlight_customizer_all_values['bizlight-custom-css']);
-              echo $options;
+            if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
+              $bizlight_custom_css = $bizlight_customizer_all_values['bizlight-custom-css']; 
+              $bizlight_custom_css_output = ''; 
+              if ( ! empty( $bizlight_custom_css ) ) { 
+                  $bizlight_custom_css_output .= esc_textarea( $bizlight_custom_css ) ; 
+              } 
+             echo $bizlight_custom_css_output;/*escaping done above*/ 
+            } else {
+              $bizlight_custom_css = $bizlight_customizer_all_values['bizlight-custom-css'];
+              // Bail if there is no Custom CSS.
+                if (!empty($bizlight_custom_css)) {
+                  $core_css = wp_get_custom_css();
+                  $return = wp_update_custom_css_post( $core_css . $bizlight_custom_css );
+                  if ( ! is_wp_error( $return ) ) {
+                    // Remove from theme.
+                   $options = esc_textarea($bizlight_customizer_all_values['bizlight-custom-css']);
+                    echo $options;
+                  }
+                }
+              $bizlight_custom_css = '';
+              bizlight_reset_options($bizlight_customizer_all_values['bizlight-custom-css'] = '');
             }
             ?>
         </style>

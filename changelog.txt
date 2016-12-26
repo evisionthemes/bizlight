@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.2.1 =
+* Unexpected site error fix.
+
 = 1.2.0 =
 * Update on custom CSS field for 4.7.
 
