@@ -148,7 +148,6 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
                   }
                 }
               $bizlight_custom_css = '';
-              bizlight_reset_options($bizlight_customizer_all_values['bizlight-custom-css'] = '');
             }
             ?>
         </style>
