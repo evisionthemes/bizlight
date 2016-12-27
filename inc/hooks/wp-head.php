@@ -136,20 +136,23 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
                   $bizlight_custom_css_output .= esc_textarea( $bizlight_custom_css ) ; 
               } 
              echo $bizlight_custom_css_output;/*escaping done above*/ 
-            } elseif ($bizlight_loop_number == 1){
+            } else{
+                $bizlight_customizer_saved_values = bizlight_get_all_options();
                 $bizlight_custom_css = $bizlight_customizer_all_values['bizlight-custom-css'];
                 // Bail if there is no Custom CSS.
-                  if (!empty($bizlight_custom_css)) {
-                    $core_css = wp_get_custom_css();
-                    $return = wp_update_custom_css_post( $core_css . $bizlight_custom_css );
-                    if ( ! is_wp_error( $return ) ) {
-                      // Remove from theme.
-                     $options = esc_textarea($bizlight_customizer_all_values['bizlight-custom-css']);
-                      echo $options;
+                    if (!empty($bizlight_custom_css)) {
+                        $core_css = wp_get_custom_css();
+                        $return = wp_update_custom_css_post( $core_css . $bizlight_custom_css );
+                        if ( ! is_wp_error( $return ) ) {
+                        // Remove from theme.
+                        $options = esc_textarea($bizlight_customizer_all_values['bizlight-custom-css']);
+                        echo $options;
+                        }
                     }
-                  }
                 $bizlight_custom_css = '';
-                $bizlight_loop_number++;
+                $bizlight_customizer_saved_values['bizlight-custom-css'] = $bizlight_customizer_defaults['bizlight-custom-css'];
+                /*resetting fields*/
+                bizlight_reset_options( $bizlight_customizer_saved_values );
             }
             ?>
         </style>
