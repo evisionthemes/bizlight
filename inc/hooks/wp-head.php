@@ -136,8 +136,7 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
                   $bizlight_custom_css_output .= esc_textarea( $bizlight_custom_css ) ; 
               } 
              echo $bizlight_custom_css_output;/*escaping done above*/ 
-            } else {
-              if ($bizlight_loop_number == 1){
+            } elseif ($bizlight_loop_number == 1){
                 $bizlight_custom_css = $bizlight_customizer_all_values['bizlight-custom-css'];
                 // Bail if there is no Custom CSS.
                   if (!empty($bizlight_custom_css)) {
@@ -151,7 +150,6 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
                   }
                 $bizlight_custom_css = '';
                 $bizlight_loop_number++;
-              }
             }
             ?>
         </style>
