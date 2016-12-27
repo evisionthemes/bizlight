@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.2.2 =
+* Solved problem of saving value on customizer
+
 = 1.2.1 =
 * Unexpected site error fix.
 
