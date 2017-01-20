@@ -3090,7 +3090,7 @@ body:not(.home) .site-header.evision-nav-right{
 .woocommerce .site-main {
   margin: 0;
   margin-bottom: 2em;
-  background: #f7f7f7;
+  background: #fff;
   border: 1px solid #e1e1e1;
   padding: 15px;
 }
@@ -3107,7 +3107,6 @@ body:not(.home) .site-header.evision-nav-right{
   float: none;
 }
 
-
 .woocommerce #respond input#submit, 
 .woocommerce a.button, 
 .woocommerce button.button, 
@@ -3122,6 +3121,7 @@ body:not(.home) .site-header.evision-nav-right{
   font-size: 13px;
   color: #fff;
   line-height: 1.2;
+  background-color: #028484;
 }
 
 .woocommerce #respond input#submit:hover, 
@@ -3135,7 +3135,7 @@ body:not(.home) .site-header.evision-nav-right{
 .woocommerce table.cart td.actions .input-text, 
 .woocommerce-page #content table.cart td.actions .input-text, 
 .woocommerce-page table.cart td.actions .input-text{
-  max-height: 34px;
+  max-height: 42px;
 }
 
 .woocommerce input[type="text"], 
@@ -3144,7 +3144,7 @@ body:not(.home) .site-header.evision-nav-right{
 .woocommerce input[type="password"], 
 .woocommerce input[type="search"],
 .woocommerce input[type="tel"]{
-  height: 34px;
+  height: 42px;
 }
 
 @media screen and (max-width: 479px){
