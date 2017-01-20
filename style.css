@@ -422,6 +422,10 @@ textarea,
     -ms-box-sizing: border-box;
   padding: 8px 5px 8px 15px;
 }
+.wpcf7-form-control.wpcf7-submit {
+  display: inline-block;
+  width: 140px;
+}
 textarea{
   min-height: 200px;
 }
@@ -3160,6 +3164,20 @@ body:not(.home) .site-header.evision-nav-right{
     font-size: 12px;
   }
 
+}
+
+.woocommerce .quantity .qty {
+    width: 3.631em;
+    text-align: center;
+    height: 37px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.woocommerce div.product form.cart .button {
+    vertical-align: middle;
+    float: left;
+    height: 37px;
 }
 
 /*BBpress Compatible*/
