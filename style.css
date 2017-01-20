@@ -2504,6 +2504,7 @@ body:not(.home) .site-header.evision-nav-right{
 
 /*-------------------- Service section -----------------*/
 .wrap-service.block-section {
+  background-color: #fff;
   padding-top: 35px;
   padding-bottom: 0;
 }
@@ -2757,6 +2758,9 @@ body:not(.home) .site-header.evision-nav-right{
   margin-bottom: 50px;
 }
 /*-------------------- Blog section -----------------*/
+.wrap-blog {
+  background-color: #fff;
+}
 .single-thumb-inner{
   margin-bottom: 30px;
 }

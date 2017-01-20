@@ -73,8 +73,13 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
 
             if( !empty( $bizlight_banner_text_color ) ){
             ?>
-            .evision-main-slider .slide-item .main-title a{
+            .evision-main-slider .slide-item .main-title a,
+            .evision-main-slider .slide-item .banner-con,
+            .evision-main-slider .slide-item p{
                 color: <?php echo esc_attr( $bizlight_banner_text_color );?>!important;
+            }
+            .banner-divider-container span{
+                background-color: <?php echo esc_attr( $bizlight_banner_text_color );?>!important;
             }
             <?php
             }
