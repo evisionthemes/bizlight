@@ -13,6 +13,7 @@
 	<header class="entry-header">
 		<div class="entry-meta">
 			<?php bizlight_posted_on(); ?>
+			<?php bizlight_entry_footer(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -32,9 +33,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php bizlight_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

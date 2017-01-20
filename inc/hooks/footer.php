@@ -15,6 +15,10 @@ if ( ! function_exists( 'bizlight_before_footer' ) ) :
         <!-- *****************************************
              Footer before section
     ****************************************** -->
+    <?php 
+    if( !is_active_sidebar( 'footer-col-one' ) && !is_active_sidebar( 'footer-col-two' ) && !is_active_sidebar( 'footer-col-three' ) && !is_active_sidebar( 'footer-col-four' )){
+        return false;
+    }?>
     <section class="evision-wrapper block-section wrap-contact">
         <div class="container overhidden">
             <div class="contact-inner evision-animate fadeInUp">
@@ -69,17 +73,17 @@ if ( ! function_exists( 'bizlight_footer' ) ) :
              Footer section starts
     ****************************************** -->
         <footer id="colophon" class="evision-wrapper site-footer" role="contentinfo">
-            <div class="container footer-social-container">
-                <?php
-                if(  1 == $bizlight_customizer_all_values['bizlight-enable-social-icons']) {
-                    ?>
+            <?php
+            if(  1 == $bizlight_customizer_all_values['bizlight-enable-social-icons']) {
+                ?>
+                <div class="container footer-social-container">
                     <div class="social-group-nav social-icon-only evision-social-section">
                         <?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'primary-menu' ) ); ?>
                     </div>
-                <?php
-                }
-                ?>
-            </div>
+                </div>
+            <?php
+            }
+            ?>
             <div class="copyright">
                 <?php
                 if(isset($bizlight_customizer_all_values['bizlight-copyright-text'])){

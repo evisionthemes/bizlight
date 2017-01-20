@@ -111,6 +111,9 @@ function bizlight_setup() {
 		'default-image' => '',
 	) ) );
 
+	/*woocommerce support*/
+	add_theme_support( 'woocommerce' );
+
 }
 endif; // bizlight_setup
 add_action( 'after_setup_theme', 'bizlight_setup' );
@@ -206,3 +209,6 @@ require $bizlight_extras_tags;
  */
 $bizlight_jetpack_tags = bizlight_file_directory('inc/jetpack.php');
 require $bizlight_jetpack_tags;
+
+/*update to pro added*/
+require_once( trailingslashit( get_template_directory() ) . 'trt-customize-pro/bizlight/class-customize.php' );

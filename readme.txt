@@ -9,7 +9,7 @@ Tags: light, white, blue, two-columns, right-sidebar, left-sidebar, custom-backg
 Requires at least: 4.0
 
 Tested up to: 4.7
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -44,6 +44,11 @@ The exceptions to license are as follows:
 * WOW https://github.com/matthieua/WOW [MIT](http://opensource.org/licenses/MIT)
 * animate css http://daneden.github.io/animate.css/ [MIT](http://opensource.org/licenses/MIT)
 * Coder Customizer Framework - by codersantosh - GPL-2.0 or later license
+
+Customizer Pro:
+Author: justintadlock
+Source: https://github.com/justintadlock/trt-customizer-pro
+License: GPLv2
 
 Image used in screenshot
 https://pixabay.com/en/office-home-office-creative-apple-581131/

@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.2.3 =
+* Woocommerce added
+* inner page designed maintained
+
 = 1.2.2 =
 * Solved problem of saving value on customizer
 
