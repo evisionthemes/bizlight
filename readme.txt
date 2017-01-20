@@ -45,6 +45,11 @@ The exceptions to license are as follows:
 * animate css http://daneden.github.io/animate.css/ [MIT](http://opensource.org/licenses/MIT)
 * Coder Customizer Framework - by codersantosh - GPL-2.0 or later license
 
+Customizer Pro:
+Author: justintadlock
+Source: https://github.com/justintadlock/trt-customizer-pro
+License: GPLv2
+
 Image used in screenshot
 https://pixabay.com/en/office-home-office-creative-apple-581131/
 

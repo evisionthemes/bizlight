@@ -209,3 +209,6 @@ require $bizlight_extras_tags;
  */
 $bizlight_jetpack_tags = bizlight_file_directory('inc/jetpack.php');
 require $bizlight_jetpack_tags;
+
+/*update to pro added*/
+require_once( trailingslashit( get_template_directory() ) . 'trt-customize-pro/bizlight/class-customize.php' );
