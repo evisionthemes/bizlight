@@ -155,6 +155,11 @@ dd {
 /* Sidebar */
 /* --------------------------------------- */
 
+.entry-meta span,
+.entry-footer span {
+  margin-right: 8px;
+}
+
 .entry-meta span{
   margin-left: 10px;
   margin-right: auto;

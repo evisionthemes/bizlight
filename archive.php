@@ -9,13 +9,14 @@
 
 get_header(); ?>
 	<div class="wrapper page-inner-title">
-	<header class="page-header">
-		<?php
-			the_archive_title( '<h1 class="page-title">', '</h1>' );
-			the_archive_description( '<div class="taxonomy-description">', '</div>' );
-		?>
-	</header><!-- .page-header -->
+		<header class="page-header">
+			<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+			?>
+		</header><!-- .page-header -->
 	</div>
+	
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
@@ -59,4 +60,5 @@ get_header(); ?>
 
 		<?php get_sidebar(); ?>
 	</div><!-- #content -->
+
 <?php get_footer(); ?>
