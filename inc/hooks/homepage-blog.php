@@ -60,7 +60,7 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                                             </div>
                                         </div>
                                         <div class="single-thumb-content">
-                                            <h3><?php the_title_attribute(); ?></h3>
+                                            <h3> <a href="<?php the_permalink(); ?>"><?php the_title();?> </a></h3>
                                             <div class="single-thumb-content-text">
                                                 <p>
                                                     <?php the_excerpt();?>
