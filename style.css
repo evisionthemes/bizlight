@@ -1536,6 +1536,13 @@ body.evision-no-sidebar #primary {
   width: 100%;
 }
 
+body.error404 #primary {
+  float: none;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*no-sidebar ends*/
 @media only screen and (max-width: 1170px){
   .site-content{
@@ -1875,12 +1882,11 @@ article.hentry .image-full{
 }
 /* Posts and Pages */
 /* --------------------------------------- */
-.error404 #primary {
-  width: 100%;
-}
+
 .error404 .search-form{
   margin-bottom: 30px;
 }
+
 /* ====================================================== */
 /* Infinite scroll */
 /* --------------------------------------- */

@@ -21,7 +21,7 @@ get_header(); ?>
 
 
 					<div class="page-content">
-						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bizlight' ); ?></p>
+						<h3><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bizlight' ); ?></h3>
 
 						<?php get_search_form(); ?>
 
