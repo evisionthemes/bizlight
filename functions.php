@@ -111,6 +111,9 @@ function bizlight_setup() {
 		'default-image' => '',
 	) ) );
 
+	/*woocommerce support*/
+	add_theme_support( 'woocommerce' );
+
 }
 endif; // bizlight_setup
 add_action( 'after_setup_theme', 'bizlight_setup' );
