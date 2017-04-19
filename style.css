@@ -3210,7 +3210,7 @@ ul.trail-items {
     padding: 0;
 }
 
-ul.trail-items li.trail-item.trail-begin {    
+ul.trail-items li.trail-item.trail-begin {
     list-style-type: none;
     float: left;
 }
@@ -3225,4 +3225,5 @@ li.trail-item.trail-end {
 }
 #breadcrumb span {
     margin-right: 15px;
-}/*   breadcrumb fixing    */
+}
+/*   breadcrumb fixing    */
