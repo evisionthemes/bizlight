@@ -3269,3 +3269,26 @@ body:not(.home) .site-header.evision-nav-right{
   display: none;
   visibility: hidden;
 }
+
+
+
+
+
+
+/*   breadcrumb fixing    */
+ul.trail-items {
+    margin: 0;
+    padding: 0;
+}
+
+ul.trail-items li {
+    list-style-type: none;
+    float: left;
+    margin-right: 15px;
+}
+
+#breadcrumb a {
+  color: #212121 !important;
+}
+
+/*   breadcrumb fixing    */
