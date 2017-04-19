@@ -212,3 +212,29 @@ require $bizlight_jetpack_tags;
 
 /*update to pro added*/
 require_once( trailingslashit( get_template_directory() ) . 'trt-customize-pro/bizlight/class-customize.php' );
+
+
+/*breadcrum function*/
+
+if ( ! function_exists( 'bizlight_simple_breadcrumb' ) ) :
+
+	/**
+	 * Simple breadcrumb.
+	 *
+	 * @since 1.0.0
+	 */
+	function bizlight_simple_breadcrumb() {
+
+		if ( ! function_exists( 'breadcrumb_trail' ) ) {
+			require_once get_template_directory() . '/assets/frameworks/breadcrumbs/breadcrumbs.php';
+		}
+
+		$breadcrumb_args = array(
+			'container'   => 'div',
+			'show_browse' => false,
+		);
+		breadcrumb_trail( $breadcrumb_args );
+
+	}
+
+endif;

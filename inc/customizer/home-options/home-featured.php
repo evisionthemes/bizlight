@@ -8,6 +8,7 @@ global $bizlight_customizer_defaults;
 $bizlight_customizer_defaults['bizlight-home-featured-title'] = __( 'WANT TO KNOW MORE ABOUT OUR COMPANY?', 'bizlight' );
 $bizlight_customizer_defaults['bizlight-home-featured-button-url'] = esc_url( home_url( '/about-us' ) );
 $bizlight_customizer_defaults['bizlight-home-featured-enable'] = 1;
+$bizlight_customizer_defaults['bizlight-home-featured-fix-bg-image'] = 1;
 
 $bizlight_sections['bizlight-home-featured'] =
     array(
@@ -51,5 +52,18 @@ $bizlight_settings_controls['bizlight-home-featured-enable'] =
             'section'               => 'bizlight-home-featured',
             'type'                  => 'checkbox',
             'priority'              => 50,
+        )
+    );
+
+$bizlight_settings_controls['bizlight-home-featured-fix-bg-image'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-featured-fix-bg-image'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Fix Image Background', 'bizlight' ),
+            'section'               => 'bizlight-home-featured',
+            'type'                  => 'checkbox',
+            'priority'              => 60,
         )
     );

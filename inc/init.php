@@ -16,8 +16,6 @@ require $bizlight_customizer_file_path;
 /**
  * Include Functions
  */
-$bizlight_breadcrumb_file_path = bizlight_file_directory('inc/function/breadcrumb.php');
-require $bizlight_breadcrumb_file_path;
 
 $bizlight_words_count_file_path = bizlight_file_directory('inc/function/words-count.php');
 require $bizlight_words_count_file_path;

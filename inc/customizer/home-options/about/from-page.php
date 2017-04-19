@@ -30,7 +30,7 @@ $bizlight_repeated_settings_controls['bizlight-home-about-pages'] =
                 'section'               => 'bizlight-home-about-pages',
                 'type'                  => 'text',
                 'priority'              => 5,
-                'description'           => sprintf( __( 'Use font awesome icon: Eg: %s. %sSee more here%s', 'bizlight' ), 'fa-desktop','<a href="'.esc_url('http://fontawesome.io/cheatsheet/').'" target="_blank">','</a>' ),
+                'description'           => sprintf( __( 'Use font awesome icon: Eg: %1$s. %2$s See more here %3$s', 'bizlight' ), 'fa-desktop','<a href="'.esc_url('http://fontawesome.io/cheatsheet/').'" target="_blank">','</a>' ),
             )
         ),
         'bizlight-home-about-pages-ids' => array(

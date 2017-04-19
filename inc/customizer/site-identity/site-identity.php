@@ -6,7 +6,7 @@ global $bizlight_customizer_defaults;
 
 /*defaults values*/
 $bizlight_customizer_defaults['bizlight-logo'] = '';
-$bizlight_customizer_defaults['bizlight-title-tagline-message'] = sprintf( __( '%s If you do not have a logo %s', 'bizlight' ), '<span class="customize-control-title">','</span>' );
+$bizlight_customizer_defaults['bizlight-title-tagline-message'] = sprintf( __( '%1$s If you do not have a logo %2$s', 'bizlight' ), '<span class="customize-control-title">','</span>' );
 $bizlight_customizer_defaults['bizlight-enable-title'] = 1;
 $bizlight_customizer_defaults['bizlight-enable-tagline'] = 1;
 

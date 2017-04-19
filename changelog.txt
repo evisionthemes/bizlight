@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.2.4 =
+* Breadcrum changed
+* Banner fixed for feature option added
+
 = 1.2.3 =
 * Woocommerce added
 * inner page designed maintained

@@ -8,8 +8,8 @@ Tags: light, white, blue, two-columns, right-sidebar, left-sidebar, custom-backg
 
 Requires at least: 4.0
 
-Tested up to: 4.7
-Stable tag: 1.2.3
+Tested up to: 4.7.3
+Stable tag: 1.2.4
 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,6 +49,10 @@ Customizer Pro:
 Author: justintadlock
 Source: https://github.com/justintadlock/trt-customizer-pro
 License: GPLv2
+Breadcrumb Trail:
+Author: Justin Tadlock, 
+Source: http://themehybrid.com/plugins/breadcrumb-trail/
+License: [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
 
 Image used in screenshot
 https://pixabay.com/en/office-home-office-creative-apple-581131/
