@@ -287,7 +287,7 @@ if( ! function_exists( 'bizlight_add_breadcrumb' ) ) :
         if ( is_front_page() || is_home() ) {
             return;
         }
-        echo '<div id="breadcrumb"><div class="container">';
+        echo '<div id="breadcrumb" class="wrapper wrap-breadcrumb"><div class="container">';
          bizlight_simple_breadcrumb();
         echo '</div><!-- .container --></div><!-- #breadcrumb -->';
         return;
