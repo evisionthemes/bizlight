@@ -3198,3 +3198,31 @@ body:not(.home) .site-header.evision-nav-right{
   display: none;
   visibility: hidden;
 }
+
+
+
+
+
+
+/*   breadcrumb fixing    */
+ul.trail-items {
+    margin: 0;
+    padding: 0;
+}
+
+ul.trail-items li.trail-item.trail-begin {    
+    list-style-type: none;
+    float: left;
+}
+
+#breadcrumb a {
+  color:#e1e1e1;
+}
+
+li.trail-item.trail-end {
+    float: left;
+    list-style-type: none;
+}
+#breadcrumb span {
+    margin-right: 15px;
+}/*   breadcrumb fixing    */
