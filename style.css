@@ -3210,20 +3210,14 @@ ul.trail-items {
     padding: 0;
 }
 
-ul.trail-items li.trail-item.trail-begin {
+ul.trail-items li {
     list-style-type: none;
     float: left;
+    margin-right: 15px;
 }
 
 #breadcrumb a {
-  color:#e1e1e1;
+  color: #212121 !important;
 }
 
-li.trail-item.trail-end {
-    float: left;
-    list-style-type: none;
-}
-#breadcrumb span {
-    margin-right: 15px;
-}
 /*   breadcrumb fixing    */
