@@ -20,7 +20,7 @@ $bizlight_sections['bizlight-fs-pages'] =
 /*creating setting control for bizlight-fs-page start*/
 $bizlight_repeated_settings_controls['bizlight-fs-pages'] =
     array(
-        'repeated' => 3,
+        'repeated' => 4,
         'bizlight-fs-pages-ids' => array(
             'setting' =>     array(
                 'default'              => $bizlight_customizer_defaults['bizlight-fs-pages'],

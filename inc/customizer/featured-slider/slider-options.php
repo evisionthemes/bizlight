@@ -34,7 +34,8 @@ $bizlight_settings_controls['bizlight-fs-number'] =
             'choices'               => array(
                 1 => __( '1', 'bizlight' ),
                 2 => __( '2', 'bizlight' ),
-                3 => __( '3', 'bizlight' )
+                3 => __( '3', 'bizlight' ),
+                4 => __( '4', 'bizlight' )
             ),
             'priority'              => 30,
             'active_callback'       => ''
