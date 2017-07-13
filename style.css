@@ -2921,6 +2921,9 @@ body:not(.home) .site-header.evision-nav-right{
 .single-thumb-image .icon:hover{
   opacity: 0.7;
 }
+.single-thumb-inner:hover h3 a {
+    color: #028484 !important;
+}
 .single-thumb-content{
   text-align: left;
 }
@@ -3300,7 +3303,7 @@ ul.trail-items li {
 
 /*nav fixing */
 nav#site-navigation ul ul li{
-    width: 100%;
+   min-width: 210px;
     display: inline-grid;
 }
 
