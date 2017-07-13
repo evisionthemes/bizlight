@@ -873,7 +873,6 @@ body.home .page-inner-title {
   border-bottom: 1px solid #666666;
   font-size: 14px;
   padding: 12px 18px;
-  width: 200px;
 }
 .main-navigation ul ul li:last-child a{
   border-top: none;
@@ -2635,6 +2634,12 @@ body:not(.home) .site-header.evision-nav-right{
 .box-container .box-inner:hover .box-content{
   background-color: #028484;
 }
+
+.box-content {
+  background: #f8f8f9;
+  border: 1px solid rgba(232, 232, 232, 0.45);
+}
+
 .box-container .box-inner:hover h3,
 .box-container .box-inner:hover .box-content p{
   color: #ffffff;
@@ -2892,11 +2897,11 @@ body:not(.home) .site-header.evision-nav-right{
     -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-.single-thumb-image:hover .overlay,
-.single-thumb-image:hover .icon{
+.single-thumb-inner:hover .overlay,
+.single-thumb-inner:hover .icon{
   opacity: 1; 
 }
-.single-thumb-image:hover .icon{
+.single-thumb-inner:hover .icon{
   bottom: 0;
 }
 .single-thumb-image .icon a {
@@ -3292,3 +3297,23 @@ ul.trail-items li {
 }
 
 /*   breadcrumb fixing    */
+
+
+/*nav fixing */
+nav#site-navigation ul ul li{
+    width: 100%;
+    display: inline-grid;
+}
+
+ul.sub-menu:before {
+  content: "\f0d8";
+    font-family: fontAwesome;
+    position: absolute;
+    top: -19px;
+    font-size: 50px;
+    color: #333;
+    left: 12px;
+}
+ul.sub-menu ul.sub-menu:before {
+  content: " ";
+}
