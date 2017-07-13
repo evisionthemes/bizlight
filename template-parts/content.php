@@ -23,6 +23,15 @@ global $bizlight_customizer_all_values;
 
 	<div class="entry-content">
 		<?php
+		if (!is_single()) {
+			if( has_post_thumbnail()){
+				echo "<div class='image-full'>";
+				the_post_thumbnail('full');
+				echo "</div>";/*div end*/
+			}
+		}
+		?>
+		<?php
 		the_excerpt();
 		?>
 		<?php

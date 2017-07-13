@@ -1,7 +1,13 @@
 == Changelog ==
 
+= 1.2.6 =
+* Image on category/blog archive section
+* Design bug fixed
+
 = 1.2.5 =
 * Number of slider increase to 4
+
+
 = 1.2.4 =
 * Breadcrum changed
 * Banner fixed for feature option added
