@@ -91,6 +91,7 @@ $bizlight_customizer_theme_options_setting_file_path = bizlight_file_directory('
 require $bizlight_customizer_theme_options_setting_file_path;
 
 
+
 /*Resetting all Values*/
 /**
  * Reset color settings to default
@@ -98,10 +99,13 @@ require $bizlight_customizer_theme_options_setting_file_path;
  *
  * @since bizlight 1.0
  */
+global $bizlight_customizer_defaults;
 $bizlight_customizer_defaults['bizlight-customizer-reset'] = '';
 if ( ! function_exists( 'bizlight_customizer_reset' ) ) :
-    function bizlight_customizer_reset( $input ) {
-        if ( $input == 1 ) {
+    function bizlight_customizer_reset( ) {
+        global $bizlight_customizer_saved_values;
+        $bizlight_customizer_saved_values = bizlight_get_all_options();
+        if ( $bizlight_customizer_saved_values['bizlight-customizer-reset'] == 1 ) {
             global $bizlight_customizer_defaults;
 
             $bizlight_customizer_defaults['bizlight-customizer-reset'] = '';
@@ -113,6 +117,9 @@ if ( ! function_exists( 'bizlight_customizer_reset' ) ) :
         }
     }
 endif;
+add_action( 'customize_save_after','bizlight_customizer_reset' );
+
+
 $bizlight_sections['bizlight-customizer-reset'] =
     array(
         'priority'       => 999,

@@ -17,7 +17,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Description: Bizlight theme is clean and elegant lightweight WordPress theme, adequate enough to create a standard site for any corporate house. Bizlight is basically designed for the normal WordPress users, in order to create a site quickly and efficiently. However, it has many competencies including responsive, bootstrap, HTML5, CSS3, retina ready, font awesome, google font, cross-browser compatibility, color control, layout control, logo upload, translation-ready, RTL Language Support, custom CSS field, etc. Documentation consists of several parts and shows you the entire process of setting up WordPress and Bizlight theme from scratch.Demo : http://demo.evisionthemes.com/bizlight-pro/ Documentation : http://doc.evisionthemes.com/bizlight/
+Bizlight, is a beautiful, powerful, feature-rich free business theme. It is most suited for business and corporation websites. The theme can be customized using just the customizer API and you have a great deal of options for customization. You can change the color and the font of each and every text, link in the theme. We won’t bind you to settle for a dull background; you can choose a color or a cool image instead. What do you want as your front page: a static page, or your latest post, it’s all up to you. The header of your website can have an image-banner or an elegant image slider. Your website is sure to have a professional look with the different sections (service, about us, featured, blog, testimonial) offered by the theme. Apart from the professional look, you site will be well organized and very eye-catching. This free business theme is completely responsive. So your website will look great on any device, any screen size, browsers. It also makes your website SEO friendly and user friendly as well. 
+Preview : http://demo.evisionthemes.com/bizlight-pro/ 
+Documentation : http://doc.evisionthemes.com/bizlight/
+
 
 == Translation ==
 
