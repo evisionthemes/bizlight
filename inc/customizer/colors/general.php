@@ -45,8 +45,11 @@ $bizlight_customizer_defaults['bizlight-color-reset'] = '';
  */
 if ( ! function_exists( 'bizlight_color_reset' ) ) :
     function bizlight_color_reset( $input ) {
-        if ( $input == 1 ) {
+        global $bizlight_customizer_saved_values;
+        $bizlight_customizer_saved_values = bizlight_get_all_options();
+        if ( $bizlight_customizer_saved_values['bizlight-color-reset'] == 1 ) {
             global $bizlight_customizer_defaults;
+            global $bizlight_customizer_saved_values;
 
             /*getting fields*/
             $bizlight_customizer_saved_values = bizlight_get_all_options();
