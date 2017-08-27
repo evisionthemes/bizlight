@@ -1,6 +1,9 @@
 == Changelog ==
 
 = 1.2.6 =
+* Update to pro URL maintianed
+
+= 1.2.6 =
 * Image on category/blog archive section
 * Design bug fixed
 

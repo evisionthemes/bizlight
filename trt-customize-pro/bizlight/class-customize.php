@@ -75,7 +75,7 @@ final class bizlight_Customize {
 				array(
         			'priority'       => 10,					
 					'pro_text' => esc_html__( 'Bizlight Pro - Buy Now',  'bizlight' ),
-					'pro_url'  => 'http://themepalace.com/downloads/bizlight-pro'
+					'pro_url'  => 'https://evisionthemes.com/product/bizlight-premium-theme/'
 				)
 			)
 		);
