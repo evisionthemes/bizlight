@@ -1,6 +1,9 @@
 == Changelog ==
 
-= 1.2.6 =
+= 1.2.8 =
+* Theme URL maintained.
+
+= 1.2.7 =
 * Update to pro URL maintianed
 
 = 1.2.6 =
