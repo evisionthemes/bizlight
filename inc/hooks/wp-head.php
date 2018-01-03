@@ -16,7 +16,7 @@ if( ! function_exists( 'bizlight_wp_head' ) ) :
         $bizlight_link_color = $bizlight_customizer_all_values['bizlight-link-color'];
         $bizlight_link_hover_color = $bizlight_customizer_all_values['bizlight-link-hover-color'];
         $bizlight_site_identity_color = $bizlight_customizer_all_values['bizlight-site-identity-color'];
-        // $bizlight_banner_text_color = $bizlight_customizer_all_values['bizlight-banner-text-color'];
+        $bizlight_banner_text_color = $bizlight_customizer_all_values['bizlight-banner-text-color'];
         ?>
         <style type="text/css">
             /*site identity font family*/
