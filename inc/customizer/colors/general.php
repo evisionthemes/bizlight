@@ -60,7 +60,7 @@ if ( ! function_exists( 'bizlight_color_reset' ) ) :
             $bizlight_customizer_saved_values['bizlight-link-hover-color'] = $bizlight_customizer_defaults['bizlight-link-hover-color'];
             $bizlight_customizer_saved_values['bizlight-site-identity-color'] = $bizlight_customizer_defaults['bizlight-site-identity-color'];
 
-            $bizlight_customizer_defaults['bizlight-color-reset'] = '';
+            $bizlight_customizer_saved_values['bizlight-color-reset'] = '';
 
             /*resetting fields*/
             bizlight_reset_options( $bizlight_customizer_saved_values );
