@@ -1,4 +1,8 @@
 == Changelog ==
+= 1.2.8 =
+* sub nav issue fixed.
+= 1.2.8 =
+* som issue fixed.
 
 = 1.2.8 =
 * Theme URL maintained.
