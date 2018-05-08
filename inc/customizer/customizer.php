@@ -129,7 +129,7 @@ $bizlight_settings_controls['bizlight-customizer-reset'] =
     array(
         'setting' =>     array(
             'default'              => $bizlight_customizer_defaults['bizlight-customizer-reset'],
-            'sanitize_callback'    => 'bizlight_customizer_reset',
+            'sanitize_callback'    => 'coder_sanitize_checkbox',
             'transport'            => 'postmessage',
         ),
         'control' => array(

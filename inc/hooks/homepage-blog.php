@@ -16,6 +16,7 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
 
         $bizlight_home_blog_title = $bizlight_customizer_all_values['bizlight-home-blog-title'];
         $bizlight_home_blog_category = $bizlight_customizer_all_values['bizlight-home-blog-category'];
+        $bizlight_bolg_Single_number = $bizlight_customizer_all_values['bizlight-blog-sinle-word'];
 
         if( 1 != $bizlight_customizer_all_values['bizlight-home-blog-enable'] ){
             return null;
@@ -63,7 +64,8 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                                             <h3> <a href="<?php the_permalink(); ?>"><?php the_title();?> </a></h3>
                                             <div class="single-thumb-content-text">
                                                 <p>
-                                                    <?php the_excerpt();?>
+                                                    <?php echo wp_kses_post(bizlight_words_count($bizlight_bolg_Single_number, get_the_content()) );?>
+                                                    
                                                 </p>
                                             </div>
                                         </div>
