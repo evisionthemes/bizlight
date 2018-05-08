@@ -2359,7 +2359,7 @@ body:not(.home) .site-header.evision-nav-right{
 }
 
 .evision-main-slider .slide-item .main-title {
-  color: #ffffff;
+  color: red;
   line-height: 1;
 }
 
@@ -3318,4 +3318,9 @@ ul.sub-menu:before {
 }
 ul.sub-menu ul.sub-menu:before {
   content: " ";
+}
+
+/*additional slider css*/
+h1.main-title a {
+    color: #fff !important;
 }
