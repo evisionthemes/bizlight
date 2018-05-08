@@ -10,7 +10,8 @@ $bizlight_customizer_defaults['bizlight-fs-number'] = 2;
 $bizlight_customizer_defaults['bizlight-fs-slider-mode'] = 'horizontal';
 $bizlight_customizer_defaults['bizlight-fs-enable-control'] = 1;
 $bizlight_customizer_defaults['bizlight-fs-enable-autoplay'] = 1;
-$bizlight_customizer_defaults['bizlight-fs-enable-button'] = 0;
+$bizlight_customizer_defaults['bizlight-fs-extra-enable-button'] = 0;
+// var_dump($bizlight_customizer_defaults['bizlight-fs-enable-button']);die('hello');
 $bizlight_customizer_defaults['bizlight-fs-button-text'] = __( 'Learn More', 'bizlight' );
 $bizlight_customizer_defaults['bizlight-fs-button-url'] = '#';
 
@@ -91,10 +92,10 @@ $bizlight_settings_controls['bizlight-fs-enable-autoplay'] =
 
 
 
-$bizlight_settings_controls['bizlight-fs-enable-button'] =
+$bizlight_settings_controls['bizlight-fs-extra-enable-button'] =
     array(
         'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-fs-enable-button'],
+            'default'              => $bizlight_customizer_defaults['bizlight-fs-extra-enable-button'],
         ),
         'control' => array(
             'label'                 =>  __( 'Enable Additional Button', 'bizlight' ),
