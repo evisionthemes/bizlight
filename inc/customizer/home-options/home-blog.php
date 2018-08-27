@@ -54,7 +54,7 @@ $bizlight_settings_controls['bizlight-blog-sinle-word'] =
             'default'              => $bizlight_customizer_defaults['bizlight-blog-sinle-word']
         ),
         'control' => array(
-            'label'                 =>  __( 'Select single number of word--', 'bizlight' ),
+            'label'                 =>  __( 'Number of words', 'bizlight' ),
             'section'               => 'bizlight-home-blog-options',
             'type'                  => 'number',
             'priority'              => 70,
@@ -69,7 +69,7 @@ $bizlight_settings_controls['bizlight-home-blog-category'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-blog-category']
         ),
         'control' => array(
-            'label'                 =>  __( 'Select Category For Blog', 'bizlight' ),
+            'label'                 =>  __( 'Select Category', 'bizlight' ),
             'description'           =>  __( 'Blog will only displayed from this category', 'bizlight' ),
             'section'               => 'bizlight-home-blog-options',
             'type'                  => 'category_dropdown',

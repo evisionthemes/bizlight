@@ -25,7 +25,7 @@ $bizlight_repeated_settings_controls['bizlight-home-testimonial-pages'] =
                 'default'              => $bizlight_customizer_defaults['bizlight-home-testimonial-pages'],
             ),
             'control' => array(
-                'label'                 =>  __( 'Select Page For Testimonial %s', 'bizlight' ),
+                'label'                 =>  __( 'Select Testimonial Page %s', 'bizlight' ),
                 'section'               => 'bizlight-home-testimonial-pages',
                 'type'                  => 'dropdown-pages',
                 'priority'              => 10,
@@ -37,7 +37,7 @@ $bizlight_repeated_settings_controls['bizlight-home-testimonial-pages'] =
                 'section'               => 'bizlight-home-testimonial-pages',
                 'type'                  => 'message',
                 'priority'              => 20,
-                'description'           => '<br /><hr />'
+                // 'description'           => '<br /><hr />'
             )
         )
     );

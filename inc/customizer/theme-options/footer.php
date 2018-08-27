@@ -17,6 +17,20 @@ $bizlight_sections['bizlight-footer-options'] =
     );
 
 
+$bizlight_settings_controls['bizlight-enable-social-icons'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-enable-social-icons'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Enable Social Icons', 'bizlight' ),
+            'description'                 =>  __( 'Please <a href="#" class="menu_locations">click here</a> to create menus for Social Icons.', 'bizlight' ),
+            'section'               => 'bizlight-footer-options',
+            'type'                  => 'checkbox',
+            'priority'              => 10,
+        )
+    );
+
 $bizlight_settings_controls['bizlight-copyright-text'] =
     array(
         'setting' =>     array(
@@ -27,19 +41,5 @@ $bizlight_settings_controls['bizlight-copyright-text'] =
             'section'               => 'bizlight-footer-options',
             'type'                  => 'text_html',
             'priority'              => 20,
-        )
-    );
-
-$bizlight_settings_controls['bizlight-enable-social-icons'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-enable-social-icons'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Enable Social Icons', 'bizlight' ),
-            'description'                 =>  __( 'Please <a href="#" class="menu_locations">click here</a> to create menus for Social Icons. Go to Menus for setting up', 'bizlight' ),
-            'section'               => 'bizlight-footer-options',
-            'type'                  => 'checkbox',
-            'priority'              => 30,
         )
     );
