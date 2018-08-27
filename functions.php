@@ -154,7 +154,7 @@ function bizlight_scripts() {
 	}
 	wp_enqueue_style( 'bizlight-googleapis-other-font-family', '//fonts.googleapis.com/css?family=Raleway', array(), '' );/*added*/
 	/*Font-Awesome-master*/
-    wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/frameworks/Font-Awesome/css/font-awesome.min.css', array(), '4.4.0' );/*added*/
+    wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/frameworks/Font-Awesome/5.2.0/css/fontawesome-all.min.css', array(), '4.4.0' );/*added*/
 
 	/*animate css*/
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/frameworks/wow/css/animate.min.css', array(), '3.4.0' );/*added*/
@@ -168,6 +168,7 @@ function bizlight_scripts() {
 	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/frameworks/bootstrap/js/bootstrap.min.js', array('jquery'), '3.3.5', 1);
 
 	/*cycle2 slider*/
+    wp_enqueue_script( 'holderjs', get_template_directory_uri() . '/assets/frameworks/holder/holder.js', array( 'jquery' ), '20121122' );
 	wp_enqueue_script( 'cycle2-script', get_template_directory_uri() . '/assets/frameworks/cycle2/js/jquery.cycle2.js', array( 'jquery' ), '2.1.6' );
 	wp_enqueue_script( 'cycle2-script-flip', get_template_directory_uri() . '/assets/frameworks/cycle2/js/jquery.cycle2.flip.js', array( 'jquery' ), '20140128' );
 	wp_enqueue_script( 'cycle2-script-scrollVert', get_template_directory_uri() . '/assets/frameworks/cycle2/js/jquery.cycle2.scrollVert.js', array( 'jquery' ), '20140128' );
@@ -238,3 +239,17 @@ if ( ! function_exists( 'bizlight_simple_breadcrumb' ) ) :
 	}
 
 endif;
+
+
+/**
+ * Enqueue the stylesheet.
+ */
+function evt_enqueue_customizer_stylesheet() {
+
+	wp_register_style( 'evt-customizer-css', get_template_directory_uri() . '/assets/css/customizer.css', NULL, NULL, 'all' );
+	wp_enqueue_style( 'evt-customizer-css' );
+
+    wp_enqueue_script('evt-customize-controls-scripts', get_template_directory_uri() . '/assets/js/customizer-script.js');
+
+}
+add_action( 'customize_controls_print_styles', 'evt_enqueue_customizer_stylesheet' );

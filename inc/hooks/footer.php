@@ -19,24 +19,24 @@ if ( ! function_exists( 'bizlight_before_footer' ) ) :
     if( !is_active_sidebar( 'footer-col-one' ) && !is_active_sidebar( 'footer-col-two' ) && !is_active_sidebar( 'footer-col-three' ) && !is_active_sidebar( 'footer-col-four' )){
         return false;
     }?>
-    <section class="evision-wrapper block-section wrap-contact">
+    <section class="evision-wrapper block-section wrap-contact footer-widget">
         <div class="container overhidden">
             <div class="contact-inner evision-animate fadeInUp">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
                             <?php if( is_active_sidebar( 'footer-col-one' ) ) : ?>
-                                <div class="contact-list col-md-4">
+                                <div class="contact-list col-xs-12 col-sm-6 col">
                                     <?php dynamic_sidebar( 'footer-col-one' ); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( is_active_sidebar( 'footer-col-two' )) : ?>
-                                <div class="contact-list col-md-4">
+                                <div class="contact-list col-xs-12 col-sm-6 col">
                                     <?php dynamic_sidebar( 'footer-col-two' ); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( is_active_sidebar( 'footer-col-three' )) : ?>
-                                <div class="contact-list col-md-4">
+                                <div class="contact-list col-xs-12 col-sm-6 col">
                                     <?php dynamic_sidebar( 'footer-col-three' ); ?>
                                 </div>
                             <?php endif; ?>

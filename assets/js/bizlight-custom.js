@@ -32,6 +32,22 @@ jQuery(document).ready(function ($) {
     );
     wow.init();
 
+    function bannerCaptionMargin() {
+      if($('.site-header').hasClass('evision-nav-right')) {
+        var bannerCaptionMargin = $('header.site-header').height()/2;
+        // banner top margin
+        if($(window).width() <= 767) {
+          bannerCaptionMargin = 0;
+        }
+        $('.banner-content-inner').css({'margin-top': bannerCaptionMargin + 'px'});
+      }
+    }
+    bannerCaptionMargin();
+
+    jQuery(window).on('resize', function() {
+      bannerCaptionMargin();
+    });
+
     // fixed navigation
     jQuery(window).on('scroll', function(){
 

@@ -6,7 +6,7 @@ global $bizlight_repeated_settings_controls;
 global $bizlight_customizer_defaults;
 
 /*defaults values*/
-$bizlight_customizer_defaults['bizlight-home-testimonial-image-enable'] = '';
+$bizlight_customizer_defaults['bizlight-home-testimonial-image-enable'] = 1;
 $bizlight_customizer_defaults['bizlight-home-testimonial-enable'] = 1;
 
 /*testimonialsetting*/

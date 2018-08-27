@@ -101,6 +101,7 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
             <?php }  ?>
 
             <div class="evision-main-slider">
+                <?php //data-cycle-auto-height=container ?>
                 <div class="cycle-slideshow"
                 data-cycle-swipe=true
                 data-cycle-swipe-fx=scrollHorz
@@ -109,7 +110,6 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
                 data-cycle-carousel-fluid=true
                 data-cycle-carousel-visible=1
                 data-cycle-pause-on-hover="true"
-                data-cycle-auto-height=container
                 data-cycle-carousel-fluid=true
                 data-cycle-slides="> div"
                 data-cycle-prev="#bizlight-prev"
@@ -138,43 +138,68 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
                         }
                         $bizlight_container_link = $bizlight_slider_array['bizlight-fs-link'];
                         ?>
-                        <div class="slide-item">
-                            <div class="container-fluid" style="background-image: url('<?php echo esc_url( $bizlight_feature_slider_image )?>');">
+                        <div class="slide-item" style="background-image: url('<?php echo esc_url( $bizlight_feature_slider_image )?>');">
                                 <div class="thumb-overlay">
-                                    <div class="container evision-slider-content overhidden">
-                                        <div class="row">
-                                            <div class="col-xs-10 col-sm-10 col-md-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-2 banner-content">
-                                                <div class="evision-slider-caption evision-animate fadeInUp">
-                                                    <h1 class="main-title">
-                                                        <a href="<?php echo esc_url( $bizlight_slider_array['bizlight-fs-link'] ); ?>">
-                                                            <?php echo esc_html( $bizlight_slider_array['bizlight-fs-title'] ); ?>
-                                                        </a>
-                                                    </h1>
-                                                    <div class="banner-divider-container">
-                                                        <span class="banner-divider"></span>
-                                                    </div>
-                                                    <div class="banner-con">
-                                                        <p>
-                                                            <?php echo wp_kses_post( $bizlight_slider_array['bizlight-fs-content'] ); ?>
-                                                        </p>
-                                                    </div>
-                                                    <a class="banner-btn button" href="<?php echo esc_url( $bizlight_slider_array['bizlight-fs-link'] ); ?>">
-                                                        <?php _e('Click to start', 'bizlight'); ?>
-                                                    </a>
-                                                    <?php
-                                                    if( 1 == $bizlight_customizer_all_values['bizlight-fs-extra-enable-button'] ){
-                                                        ?>
-                                                            <a class="banner-btn button" href="<?php echo esc_url( $bizlight_home_added_button_url); ?>">
-                                                                <?php echo esc_html($bizlight_home_added_button_text);?>
+                                    <?php
+                                    // aspect ratio
+
+                                    // less than 767px = 1 x 1
+                                    $resolution_xs = 1 . 'x' . 1;
+
+                                    // greater than 768px and less than 991 = 3 x 2
+                                    $resolution_sm = 1343 . 'x' . 767;
+
+                                    // greater than 992px and less than 1199 = 3 x 2
+                                    // $resolution = 3 . 'x' . 2;
+                                    $resolution_md = 1343 . 'x' . 767;
+
+                                    // greater than 1200 = 1343 x 767
+                                    $resolution_lg = 1343 . 'x' . 667;
+                                    ?>
+                                    <!-- <img src="holder.js/<?php echo $resolution_xs;?>" style="opacity: 0;" class="holder visible-xs"> -->
+                                    <img src="holder.js/<?php echo $resolution_sm;?>" style="opacity: 0;" class="holder visible-sm">
+                                    <img src="holder.js/<?php echo $resolution_md;?>" style="opacity: 0;" class="holder visible-md">
+                                    <img src="holder.js/<?php echo $resolution_lg;?>" style="opacity: 0;" class="holder visible-lg">
+                                    
+                                    <div class="container-fluid">
+                                        <div class="container evision-slider-content overhidden">
+                                            <div class="row">
+                                                <div class="col-xs-10 col-sm-10 col-md-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-2 banner-content">
+                                                    <div class="evision-slider-caption evision-animate fadeInUp">
+                                                        <div class="banner-content-inner">
+                                                            
+                                                        <h1 class="main-title">
+                                                            <a href="<?php echo esc_url( $bizlight_slider_array['bizlight-fs-link'] ); ?>">
+                                                                <?php echo esc_html( $bizlight_slider_array['bizlight-fs-title'] ); ?>
                                                             </a>
+                                                        </h1>
+                                                        <div class="banner-divider-container">
+                                                            <span class="banner-divider"></span>
+                                                        </div>
+                                                        <div class="banner-con">
+                                                            <p>
+                                                                <?php echo wp_kses_post( $bizlight_slider_array['bizlight-fs-content'] ); ?>
+                                                            </p>
+                                                        </div>
+                                                        <a class="banner-btn button" href="<?php echo esc_url( $bizlight_slider_array['bizlight-fs-link'] ); ?>">
+                                                            <?php _e('Click to start', 'bizlight'); ?>
+                                                        </a>
                                                         <?php
-                                                    } ?>
+                                                        if( 1 == $bizlight_customizer_all_values['bizlight-fs-extra-enable-button'] ){
+                                                            ?>
+                                                                <a class="banner-btn button" href="<?php echo esc_url( $bizlight_home_added_button_url); ?>">
+                                                                    <?php echo esc_html($bizlight_home_added_button_text);?>
+                                                                </a>
+                                                            <?php
+                                                        } ?>
+
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                         <?php
                     $i++;

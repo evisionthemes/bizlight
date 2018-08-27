@@ -36,8 +36,8 @@ $bizlight_settings_controls['bizlight-enable-social-icons'] =
             'default'              => $bizlight_customizer_defaults['bizlight-enable-social-icons'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable Social', 'bizlight' ),
-            'description'                 =>  __( 'Please add Social menus for enabling Social menus. Go to Menus for setting up', 'bizlight' ),
+            'label'                 =>  __( 'Enable Social Icons', 'bizlight' ),
+            'description'                 =>  __( 'Please <a href="#" class="menu_locations">click here</a> to create menus for Social Icons. Go to Menus for setting up', 'bizlight' ),
             'section'               => 'bizlight-footer-options',
             'type'                  => 'checkbox',
             'priority'              => 30,

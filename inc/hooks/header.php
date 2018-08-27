@@ -160,7 +160,7 @@ function bizlight_header() {
      <!-- header and navigation option second - navigation right  -->
         <header id="masthead" class="site-header evision-nav-right navbar-fixed-top" role="banner">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-xs-12 col-sm-3 col-md-4 rtl-fright">
                         <?php if ( isset($bizlight_customizer_all_values['bizlight-logo']) && !empty($bizlight_customizer_all_values['bizlight-logo'])) :
                             if ( is_front_page() && is_home() ){
