@@ -162,7 +162,9 @@ function bizlight_header() {
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xs-12 col-sm-3 col-md-4 rtl-fright">
+                        <?php the_custom_logo();?>
                         <?php if ( isset($bizlight_customizer_all_values['bizlight-logo']) && !empty($bizlight_customizer_all_values['bizlight-logo'])) :
+                        
                             if ( is_front_page() && is_home() ){
                                 echo '<h1 class="site-title">';
                             }
@@ -211,7 +213,7 @@ function bizlight_header() {
                     <div class="col-xs-12 col-sm-9 col-md-8 rtl-fleft">
                         <nav id="site-navigation" class="main-navigation" role="navigation">
                             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
-                            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'fallback_cb' => 'set_primary_menu_fallback' ) ); ?>
                         </nav>
                     </div>
                 </div>

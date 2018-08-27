@@ -60,6 +60,22 @@ if ( ! function_exists( 'bizlight_home_blog' ) ) :
                                                 </a>
                                             </div>
                                         </div>
+
+                                        <div class="entry-meta">
+                                            <span class="posted-on ">
+                                                <?php
+                                                    $archive_year    = get_the_time('Y');
+                                                    $archive_month   = get_the_time('m');
+                                                    $archive_day     = get_the_time('d'); ?>
+
+                                                    <a href="<?php echo esc_url(get_day_link($archive_year , $archive_month, $archive_day) );?>"><?php echo get_the_date('m j,Y');?></a> 
+                                            </span> 
+                                            <span class="byline">
+                                                <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta( 'ID' )) )?>"><?php echo esc_html(get_the_author());?></a>
+                                                
+                                            </span>    
+                                        </div>
+
                                         <div class="single-thumb-content">
                                             <h3> <a href="<?php the_permalink(); ?>"><?php the_title();?> </a></h3>
                                             <div class="single-thumb-content-text">
