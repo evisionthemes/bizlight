@@ -12,31 +12,6 @@ Tags: two-columns, right-sidebar, left-sidebar, custom-background, custom-colors
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-.woocommerce span.onsale {
-  background-color: #028484;
-}
-
-.woocommerce ul.products li.product .price {
-  color: #028484;
-}
-
-.dropdown-toggle:after,
-.dropdown-toggle:visited:after,
-.dropdown-toggle.toggled-on:after,
-.dropdown-toggle:visited.toggled-on:after,
-.main-navigation .menu-item-has-children > a:after,
-.cat-links:before,
-.tags-links:before,
-.comments-link:before,
-.posted-on:before,
-.nav-links .nav-previous a:before,
-.nav-links .nav-next a:after,
-.byline:before,
-.evision-social-section a:before,
-ul.sub-menu:before {
-  font-weight: 900;
-}
-
 /*======================================
 Bizlight - Table Of Content
 1. Normalize
@@ -3715,6 +3690,31 @@ ul.sub-menu ul.sub-menu:before {
 /*additional slider css*/
 h1.main-title a {
   color: #fff !important;
+}
+
+.woocommerce span.onsale {
+  background-color: #028484;
+}
+
+.woocommerce ul.products li.product .price {
+  color: #028484;
+}
+
+.dropdown-toggle:after,
+.dropdown-toggle:visited:after,
+.dropdown-toggle.toggled-on:after,
+.dropdown-toggle:visited.toggled-on:after,
+.main-navigation .menu-item-has-children > a:after,
+.cat-links:before,
+.tags-links:before,
+.comments-link:before,
+.posted-on:before,
+.nav-links .nav-previous a:before,
+.nav-links .nav-next a:after,
+.byline:before,
+.evision-social-section a:before,
+ul.sub-menu:before {
+  font-weight: 900;
 }
 
 .align-items-center {
