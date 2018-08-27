@@ -3958,6 +3958,14 @@ body.home.blog .site-content {
   padding-top: 20px;
 }
 
+.thumb-overlay {
+  background: rgba(51, 77, 92, 0.4);
+}
+
+.evision-main-slider .slide-item {
+  background-position: center center;
+}
+
 .banner-content-inner a {
   color: #ffffff !important;
 }
