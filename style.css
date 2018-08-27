@@ -4010,12 +4010,6 @@ body.home.blog .site-content {
   background-size: cover;
 }
 
-.widget, .blog article.hentry, #blog-post article.hentry, .search article.hentry,
-.archive article.hentry, .tag article.hentry, .category article.hentry, #ak-blog-post article.hentry,
-.page article.hentry, .single article.hentry, .woocommerce article.hentry, .woocommerce .site-main {
-  margin-bottom: 70px;
-}
-
 .widget .slick-dots li {
   border: 0;
 }
