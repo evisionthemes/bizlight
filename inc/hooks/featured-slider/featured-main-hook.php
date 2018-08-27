@@ -185,7 +185,7 @@ if ( ! function_exists( 'bizlight_featured_slider' ) ) :
                                                             <?php _e('Click to start', 'bizlight'); ?>
                                                         </a>
                                                         <?php
-                                                        if( 1 == $bizlight_customizer_all_values['bizlight-fs-extra-enable-button'] ){
+                                                        if(  !empty($bizlight_home_added_button_text ) ){
                                                             ?>
                                                                 <a class="banner-btn button" href="<?php echo esc_url( $bizlight_home_added_button_url); ?>">
                                                                     <?php echo esc_html($bizlight_home_added_button_text);?>

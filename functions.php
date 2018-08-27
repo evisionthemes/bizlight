@@ -105,6 +105,19 @@ function bizlight_setup() {
 		'link',
 	) );
 
+	/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 250,
+			'width'       => 250,
+			'flex-width'  => true,
+			'flex-height' => true,
+		) );
+		
+
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'bizlight_custom_background_args', array(
 		'default-color' => 'ffffff',
@@ -253,3 +266,22 @@ function evt_enqueue_customizer_stylesheet() {
 
 }
 add_action( 'customize_controls_print_styles', 'evt_enqueue_customizer_stylesheet' );
+
+
+
+if( !function_exists('set_primary_menu_fallback') ) :
+	/**
+	 * Fallback menu to primary menu 
+	 * 
+	 * @since business-click 1.0.0
+	 */
+
+function set_primary_menu_fallback() {
+	?>
+		<ul id="mobile-menu">
+			<li><a href="<?php echo esc_url( home_url( '/' ) );?>"><?php esc_html_e('Home','bizlight');?></a></li>
+			<li><a href="<?php echo esc_url( admin_url( '/nav-menus.php' ) );?>"><?php esc_html_e('Set Primary Menu','bizlight');?></a></li>
+		</ul>
+	<?php
+}
+endif;

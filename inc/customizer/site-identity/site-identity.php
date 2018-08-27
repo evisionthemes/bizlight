@@ -11,20 +11,20 @@ $bizlight_customizer_defaults['bizlight-enable-title'] = 1;
 $bizlight_customizer_defaults['bizlight-enable-tagline'] = 1;
 
 /*creating setting control*/
-$bizlight_settings_controls['bizlight-logo'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-logo'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Logo', 'bizlight' ),
-            'section'               => 'title_tagline',
-            'type'                  => 'image',
-            'priority'              => 70,
-            'description'           =>  __( 'Recommended logo size 165*50', 'bizlight' ),
-            'active_callback'       => ''
-        )
-    );
+// $bizlight_settings_controls['bizlight-logo'] =
+//     array(
+//         'setting' =>     array(
+//             'default'              => $bizlight_customizer_defaults['bizlight-logo'],
+//         ),
+//         'control' => array(
+//             'label'                 =>  __( 'Logo', 'bizlight' ),
+//             'section'               => 'title_tagline',
+//             'type'                  => 'image',
+//             'priority'              => 70,
+//             'description'           =>  __( 'Recommended logo size 165*50', 'bizlight' ),
+//             'active_callback'       => ''
+//         )
+//     );
 
 /*enable option for enable tagline in header*/
 $bizlight_settings_controls['bizlight-title-tagline-message'] =
