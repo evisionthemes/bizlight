@@ -38,7 +38,7 @@ $bizlight_repeated_settings_controls['bizlight-home-service-pages'] =
                 'default'              => $bizlight_customizer_defaults['bizlight-home-service-pages'],
             ),
             'control' => array(
-                'label'                 =>  __( 'Select Page For Service %s', 'bizlight' ),
+                'label'                 =>  __( 'Select Service Page %s', 'bizlight' ),
                 'section'               => 'bizlight-home-service-pages',
                 'type'                  => 'dropdown-pages',
                 'priority'              => 10,

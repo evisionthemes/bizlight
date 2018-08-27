@@ -16,6 +16,19 @@ $bizlight_sections['bizlight-home-featured'] =
         'title'          => __( 'Home/Front Featured Section', 'bizlight' ),
     );
 
+$bizlight_settings_controls['bizlight-home-featured-enable'] =
+    array(
+        'setting' =>     array(
+            'default'              => $bizlight_customizer_defaults['bizlight-home-featured-enable'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Enable Home Featured', 'bizlight' ),
+            'section'               => 'bizlight-home-featured',
+            'type'                  => 'checkbox',
+            'priority'              => 5,
+        )
+    );
+
 $bizlight_settings_controls['bizlight-home-featured-title'] =
     array(
         'setting' =>     array(
@@ -35,23 +48,10 @@ $bizlight_settings_controls['bizlight-home-featured-button-url'] =
             'default'              => $bizlight_customizer_defaults['bizlight-home-featured-button-url'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Learn More Button Link', 'bizlight' ),
+            'label'                 =>  __( 'Button Link', 'bizlight' ),
             'section'               => 'bizlight-home-featured',
             'type'                  => 'text',
             'priority'              => 40,
-        )
-    );
-
-$bizlight_settings_controls['bizlight-home-featured-enable'] =
-    array(
-        'setting' =>     array(
-            'default'              => $bizlight_customizer_defaults['bizlight-home-featured-enable'],
-        ),
-        'control' => array(
-            'label'                 =>  __( 'Home Featured Enable', 'bizlight' ),
-            'section'               => 'bizlight-home-featured',
-            'type'                  => 'checkbox',
-            'priority'              => 50,
         )
     );
 

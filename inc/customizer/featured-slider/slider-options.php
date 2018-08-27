@@ -29,7 +29,7 @@ $bizlight_settings_controls['bizlight-fs-number'] =
             'default'              => $bizlight_customizer_defaults['bizlight-fs-number']
         ),
         'control' => array(
-            'label'                 =>  __( 'Number Of Slider', 'bizlight' ),
+            'label'                 =>  __( 'Number of Slider', 'bizlight' ),
             'section'               => 'bizlight-fs-slider-options',
             'type'                  => 'select',
             'choices'               => array(
@@ -68,7 +68,7 @@ $bizlight_settings_controls['bizlight-fs-enable-control'] =
             'default'              => $bizlight_customizer_defaults['bizlight-fs-enable-control']
         ),
         'control' => array(
-            'label'                 =>  __( 'Enabele Slider Arrow', 'bizlight' ),
+            'label'                 =>  __( 'Enable Slider Arrow', 'bizlight' ),
             'section'               => 'bizlight-fs-slider-options',
             'type'                  => 'checkbox',
             'priority'              => 50,

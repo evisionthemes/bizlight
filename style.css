@@ -2382,6 +2382,14 @@ article.hentry .image-full {
   content: "\f167";
 }
 
+.evision-social-section a[href*="instagram.com"]:before {
+  content: "\f16d";
+}
+
+.evision-social-section a[href*="pinterest.com"]:before {
+  content: "\f0d2";
+}
+
 .evision-social-section a:hover[href*="facebook.com"] {
   background-color: #3C579E;
 }
@@ -2396,6 +2404,14 @@ article.hentry .image-full {
 
 .evision-social-section a:hover[href*="youtube.com"] {
   background-color: #D62424;
+}
+
+.evision-social-section a:hover[href*="instagram.com"] {
+  background-color: #2D6A93;
+}
+
+.evision-social-section a:hover[href*="pinterest.com"] {
+  background-color: #BD2126;
 }
 
 /*social group in nav section*/

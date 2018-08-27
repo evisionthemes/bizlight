@@ -38,7 +38,7 @@ $bizlight_repeated_settings_controls['bizlight-home-about-pages'] =
                 'default'              => $bizlight_customizer_defaults['bizlight-home-about-pages'],
             ),
             'control' => array(
-                'label'                 =>  __( 'Select Page For About %s', 'bizlight' ),
+                'label'                 =>  __( 'Select About Page %s', 'bizlight' ),
                 'section'               => 'bizlight-home-about-pages',
                 'type'                  => 'dropdown-pages',
                 'priority'              => 10,

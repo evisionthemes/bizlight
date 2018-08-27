@@ -13,7 +13,7 @@ $bizlight_customizer_defaults['bizlight-fs-enable'] = 1;
 $bizlight_sections['bizlight-fs-enable-setting'] =
     array(
         'priority'       => 10,
-        'title'          => __( 'Enable Slider On', 'bizlight' ),
+        'title'          => __( 'Enable Slider', 'bizlight' ),
         'panel'          => 'bizlight-featured-slider',
     );
 
@@ -38,7 +38,8 @@ $bizlight_settings_controls['bizlight-fs-enable-on'] =
             'default'              => $bizlight_customizer_defaults['bizlight-fs-enable-on']
         ),
         'control' => array(
-            'label'                 =>  __( 'Select Enable Slider On', 'bizlight' ),
+            'label'                 =>  __( 'Enable Slider On', 'bizlight' ),
+            'description'           =>  __( 'You can enable slider for home / static front page, home / blog page and all inside pages from this option.', 'bizlight' ),
             'section'               => 'bizlight-fs-enable-setting',
             'type'                  => 'select',
             'choices'               => array(

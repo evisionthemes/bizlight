@@ -26,7 +26,7 @@ $bizlight_repeated_settings_controls['bizlight-fs-pages'] =
                 'default'              => $bizlight_customizer_defaults['bizlight-fs-pages'],
             ),
             'control' => array(
-                'label'                 =>  __( 'Select Page For Slide %s', 'bizlight' ),
+                'label'                 =>  __( 'Select Slide %s', 'bizlight' ),
                 'section'               => 'bizlight-fs-pages',
                 'type'                  => 'dropdown-pages',
                 'priority'              => 10,
@@ -38,7 +38,7 @@ $bizlight_repeated_settings_controls['bizlight-fs-pages'] =
                 'section'               => 'bizlight-fs-pages',
                 'type'                  => 'message',
                 'priority'              => 20,
-                'description'           => '<br /><hr />'
+                // 'description'           => '<br /><hr />'
             )
         )
     );
